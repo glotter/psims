@@ -1,0 +1,461 @@
+4.0 Pools
+           7 Number of layers for soil organic matter
+0.0000000000 C13    in structural litter layer  0
+0.0000000000 C13    in metabolic litter layer  0
+0.0000000000 C13    in fine wood litter layer  0
+0.0000000000 C13    in coarse wood litter layer  0
+0.0000000000 C13    in active organic matter layer  0
+0.0000000000 C13    in slow organic matter layer  0
+0.0000000000 C13    in resistant organic matter layer  0
+0.0000000000 C13    in inert organic matter layer  0
+0.0000000000 C13    in soluble organic matter layer  0
+0.0000000000 C13    in structural litter layer  1
+0.0000000000 C13    in metabolic litter layer  1
+0.0000000000 C13    in fine wood litter layer  1
+0.0000000000 C13    in coarse wood litter layer  1
+0.0000000000 C13    in active organic matter layer  1
+0.0000000000 C13    in slow organic matter layer  1
+0.0000000000 C13    in resistant organic matter layer  1
+0.0000000000 C13    in inert organic matter layer  1
+0.0000000000 C13    in soluble organic matter layer  1
+0.0000000000 C13    in structural litter layer  2
+0.0000000000 C13    in metabolic litter layer  2
+0.0000000000 C13    in fine wood litter layer  2
+0.0000000000 C13    in coarse wood litter layer  2
+0.0000000000 C13    in active organic matter layer  2
+0.0000000000 C13    in slow organic matter layer  2
+0.0000000000 C13    in resistant organic matter layer  2
+0.0000000000 C13    in inert organic matter layer  2
+0.0000000000 C13    in soluble organic matter layer  2
+0.0000000000 C13    in structural litter layer  3
+0.0000000000 C13    in metabolic litter layer  3
+0.0000000000 C13    in fine wood litter layer  3
+0.0000000000 C13    in coarse wood litter layer  3
+0.0000000000 C13    in active organic matter layer  3
+0.0000000000 C13    in slow organic matter layer  3
+0.0000000000 C13    in resistant organic matter layer  3
+0.0000000000 C13    in inert organic matter layer  3
+0.0000000000 C13    in soluble organic matter layer  3
+0.0000000000 C13    in structural litter layer  4
+0.0000000000 C13    in metabolic litter layer  4
+0.0000000000 C13    in fine wood litter layer  4
+0.0000000000 C13    in coarse wood litter layer  4
+0.0000000000 C13    in active organic matter layer  4
+0.0000000000 C13    in slow organic matter layer  4
+0.0000000000 C13    in resistant organic matter layer  4
+0.0000000000 C13    in inert organic matter layer  4
+0.0000000000 C13    in soluble organic matter layer  4
+0.0000000000 C13    in structural litter layer  5
+0.0000000000 C13    in metabolic litter layer  5
+0.0000000000 C13    in fine wood litter layer  5
+0.0000000000 C13    in coarse wood litter layer  5
+0.0000000000 C13    in active organic matter layer  5
+0.0000000000 C13    in slow organic matter layer  5
+0.0000000000 C13    in resistant organic matter layer  5
+0.0000000000 C13    in inert organic matter layer  5
+0.0000000000 C13    in soluble organic matter layer  5
+0.0000000000 C13    in structural litter layer  6
+0.0000000000 C13    in metabolic litter layer  6
+0.0000000000 C13    in fine wood litter layer  6
+0.0000000000 C13    in coarse wood litter layer  6
+0.0000000000 C13    in active organic matter layer  6
+0.0000000000 C13    in slow organic matter layer  6
+0.0000000000 C13    in resistant organic matter layer  6
+0.0000000000 C13    in inert organic matter layer  6
+0.0000000000 C13    in soluble organic matter layer  6
+0.0000000000 C13    in structural litter layer  7
+0.0000000000 C13    in metabolic litter layer  7
+0.0000000000 C13    in fine wood litter layer  7
+0.0000000000 C13    in coarse wood litter layer  7
+0.0000000000 C13    in active organic matter layer  7
+0.0000000000 C13    in slow organic matter layer  7
+0.0000000000 C13    in resistant organic matter layer  7
+0.0000000000 C13    in inert organic matter layer  7
+0.0000000000 C13    in soluble organic matter layer  7
+0.0000000000 C13    in dead coarse wood
+0.0000000000 C13    in dead fine wood
+0.0000000000 C13    in dead coarse root
+0.0000000000 C13    in dead fine root
+0.0000000000 C13    in dead leaves
+0.0000000000 C13    in dead other material
+0.0000000000 C13    in sapwood
+0.0000000000 C13    in heartwood
+0.0000000000 C13    in coarse roots
+0.0000000000 C13    in fine root
+0.0000000000 C13    in branches
+0.0000000000 C13    in bark
+0.0000000000 C13    in foliage reserves
+0.0000000000 C13    in leaves
+0.0000000000 C13    in pollen
+0.0000000000 C13    in fruit
+0.0000000000 C13    in non-structural form
+0.0000000000 C13    in weed leaves
+0.0000000000 C13    in weed roots
+1072.7000000 Carbon in structural litter layer  0
+14.482000000 Carbon in metabolic litter layer  0
+12161.000000 Carbon in fine wood litter layer  0
+195988.00000 Carbon in coarse wood litter layer  0
+4017.9000000 Carbon in active organic matter layer  0
+26253.000000 Carbon in slow organic matter layer  0
+294.52000000 Carbon in resistant organic matter layer  0
+165.00000000 Carbon in inert organic matter layer  0
+0.0000000000 Carbon in soluble organic matter layer  0
+4172.9000000 Carbon in structural litter layer  1
+23.137000000 Carbon in metabolic litter layer  1
+0.0000000000 Carbon in fine wood litter layer  1
+8724.8000000 Carbon in coarse wood litter layer  1
+1662.5000000 Carbon in active organic matter layer  1
+45507.000000 Carbon in slow organic matter layer  1
+3737.1000000 Carbon in resistant organic matter layer  1
+4125.0000000 Carbon in inert organic matter layer  1
+0.0000000000 Carbon in soluble organic matter layer  1
+788.02000000 Carbon in structural litter layer  2
+9.4513000000 Carbon in metabolic litter layer  2
+0.0000000000 Carbon in fine wood litter layer  2
+9043.3000000 Carbon in coarse wood litter layer  2
+462.87000000 Carbon in active organic matter layer  2
+14319.000000 Carbon in slow organic matter layer  2
+4333.4000000 Carbon in resistant organic matter layer  2
+11550.000000 Carbon in inert organic matter layer  2
+0.0000000000 Carbon in soluble organic matter layer  2
+299.64000000 Carbon in structural litter layer  3
+7.2260000000 Carbon in metabolic litter layer  3
+0.0000000000 Carbon in fine wood litter layer  3
+9467.9000000 Carbon in coarse wood litter layer  3
+411.97000000 Carbon in active organic matter layer  3
+10527.000000 Carbon in slow organic matter layer  3
+9318.8000000 Carbon in resistant organic matter layer  3
+13200.000000 Carbon in inert organic matter layer  3
+0.0000000000 Carbon in soluble organic matter layer  3
+107.02000000 Carbon in structural litter layer  4
+1.4182000000 Carbon in metabolic litter layer  4
+0.0000000000 Carbon in fine wood litter layer  4
+4217.4000000 Carbon in coarse wood litter layer  4
+184.13000000 Carbon in active organic matter layer  4
+4303.9000000 Carbon in slow organic matter layer  4
+28009.000000 Carbon in resistant organic matter layer  4
+1650.0000000 Carbon in inert organic matter layer  4
+0.0000000000 Carbon in soluble organic matter layer  4
+18.807000000 Carbon in structural litter layer  5
+0.1074000000 Carbon in metabolic litter layer  5
+0.0000000000 Carbon in fine wood litter layer  5
+2053.0000000 Carbon in coarse wood litter layer  5
+74.105000000 Carbon in active organic matter layer  5
+1069.5000000 Carbon in slow organic matter layer  5
+18719.000000 Carbon in resistant organic matter layer  5
+825.00000000 Carbon in inert organic matter layer  5
+0.0000000000 Carbon in soluble organic matter layer  5
+1.8886000000 Carbon in structural litter layer  6
+0.0104000000 Carbon in metabolic litter layer  6
+0.0000000000 Carbon in fine wood litter layer  6
+823.37000000 Carbon in coarse wood litter layer  6
+23.522000000 Carbon in active organic matter layer  6
+309.54000000 Carbon in slow organic matter layer  6
+1151.3000000 Carbon in resistant organic matter layer  6
+825.00000000 Carbon in inert organic matter layer  6
+0.0000000000 Carbon in soluble organic matter layer  6
+0.0000000000 Carbon in structural litter layer  7
+0.0000000000 Carbon in metabolic litter layer  7
+0.0000000000 Carbon in fine wood litter layer  7
+0.0000000000 Carbon in coarse wood litter layer  7
+0.0000000000 Carbon in active organic matter layer  7
+0.0000000000 Carbon in slow organic matter layer  7
+0.0000000000 Carbon in resistant organic matter layer  7
+0.0000000000 Carbon in inert organic matter layer  7
+0.0000000000 Carbon in soluble organic matter layer  7
+0.3467850971 Carbon in dead coarse wood
+0.6593508469 Carbon in dead fine wood
+0.0693570194 Carbon in dead coarse root
+2.3820691647 Carbon in dead fine root
+1.7675433132 Carbon in dead leaves
+0.2946982615 Carbon in dead other material
+12659.000000 Carbon in sapwood
+0.0000000000 Carbon in heartwood
+2531.7500000 Carbon in coarse roots
+560.65000000 Carbon in fine root
+4010.9000000 Carbon in branches
+1792.3500000 Carbon in bark
+0.0000000000 Carbon in foliage reserves
+4451.0000000 Carbon in leaves
+0.0021000000 Carbon in pollen
+0.0309000000 Carbon in fruit
+135.37000000 Carbon in non-structural form
+250.00000000 Carbon in weed leaves
+0.0000000000 Carbon in weed roots
+13.521000000 Nitrogen in structural litter layer  0
+0.7411000000 Nitrogen in metabolic litter layer  0
+55.008000000 Nitrogen in fine wood litter layer  0
+275.30000000 Nitrogen in coarse wood litter layer  0
+135.39000000 Nitrogen in active organic matter layer  0
+251.03000000 Nitrogen in slow organic matter layer  0
+7.2741000000 Nitrogen in resistant organic matter layer  0
+1.6500000000 Nitrogen in inert organic matter layer  0
+0.0000000000 Nitrogen in soluble organic matter layer  0
+51.445000000 Nitrogen in structural litter layer  1
+1.0844000000 Nitrogen in metabolic litter layer  1
+0.0000000000 Nitrogen in fine wood litter layer  1
+17.614000000 Nitrogen in coarse wood litter layer  1
+156.61000000 Nitrogen in active organic matter layer  1
+1225.7000000 Nitrogen in slow organic matter layer  1
+216.04000000 Nitrogen in resistant organic matter layer  1
+41.250000000 Nitrogen in inert organic matter layer  1
+0.0000000000 Nitrogen in soluble organic matter layer  1
+8.9951000000 Nitrogen in structural litter layer  2
+0.4414000000 Nitrogen in metabolic litter layer  2
+0.0000000000 Nitrogen in fine wood litter layer  2
+18.235000000 Nitrogen in coarse wood litter layer  2
+46.287000000 Nitrogen in active organic matter layer  2
+559.12000000 Nitrogen in slow organic matter layer  2
+524.71000000 Nitrogen in resistant organic matter layer  2
+115.50000000 Nitrogen in inert organic matter layer  2
+0.0100000000 Nitrogen in soluble organic matter layer  2
+3.3457000000 Nitrogen in structural litter layer  3
+0.3367000000 Nitrogen in metabolic litter layer  3
+0.0000000000 Nitrogen in fine wood litter layer  3
+19.637000000 Nitrogen in coarse wood litter layer  3
+41.197000000 Nitrogen in active organic matter layer  3
+475.18000000 Nitrogen in slow organic matter layer  3
+1030.4000000 Nitrogen in resistant organic matter layer  3
+132.00000000 Nitrogen in inert organic matter layer  3
+0.0080000000 Nitrogen in soluble organic matter layer  3
+1.2130000000 Nitrogen in structural litter layer  4
+0.0665000000 Nitrogen in metabolic litter layer  4
+0.0000000000 Nitrogen in fine wood litter layer  4
+8.7082000000 Nitrogen in coarse wood litter layer  4
+18.413000000 Nitrogen in active organic matter layer  4
+222.84000000 Nitrogen in slow organic matter layer  4
+2793.3000000 Nitrogen in resistant organic matter layer  4
+16.500000000 Nitrogen in inert organic matter layer  4
+0.0220000000 Nitrogen in soluble organic matter layer  4
+0.2147000000 Nitrogen in structural litter layer  5
+0.0051000000 Nitrogen in metabolic litter layer  5
+0.0000000000 Nitrogen in fine wood litter layer  5
+4.1080000000 Nitrogen in coarse wood litter layer  5
+7.5624000000 Nitrogen in active organic matter layer  5
+61.607000000 Nitrogen in slow organic matter layer  5
+2967.4000000 Nitrogen in resistant organic matter layer  5
+8.2500000000 Nitrogen in inert organic matter layer  5
+0.0291000000 Nitrogen in soluble organic matter layer  5
+0.0216000000 Nitrogen in structural litter layer  6
+0.0005000000 Nitrogen in metabolic litter layer  6
+0.0000000000 Nitrogen in fine wood litter layer  6
+1.6475000000 Nitrogen in coarse wood litter layer  6
+2.4340000000 Nitrogen in active organic matter layer  6
+7.9712000000 Nitrogen in slow organic matter layer  6
+577.05000000 Nitrogen in resistant organic matter layer  6
+8.2500000000 Nitrogen in inert organic matter layer  6
+0.0052000000 Nitrogen in soluble organic matter layer  6
+0.0000000000 Nitrogen in structural litter layer  7
+0.0000000000 Nitrogen in metabolic litter layer  7
+0.0000000000 Nitrogen in fine wood litter layer  7
+0.0000000000 Nitrogen in coarse wood litter layer  7
+0.0000000000 Nitrogen in active organic matter layer  7
+0.0000000000 Nitrogen in slow organic matter layer  7
+0.0000000000 Nitrogen in resistant organic matter layer  7
+0.0000000000 Nitrogen in inert organic matter layer  7
+0.0000000000 Nitrogen in soluble organic matter layer  7
+0.0003959789 Nitrogen in dead coarse wood
+0.0014970212 Nitrogen in dead fine wood
+0.0000791958 Nitrogen in dead coarse root
+0.0311883743 Nitrogen in dead fine root
+0.0282621955 Nitrogen in dead leaves
+0.0006654849 Nitrogen in dead other material
+14.457000000 Nitrogen in sapwood
+0.0000000000 Nitrogen in heartwood
+2.8914000000 Nitrogen in coarse roots
+7.3483000000 Nitrogen in fine root
+9.1084000000 Nitrogen in branches
+4.0444000000 Nitrogen in bark
+0.0000000000 Nitrogen in foliage reserves
+94.902000000 Nitrogen in leaves
+0.0001000000 Nitrogen in pollen
+0.0003000000 Nitrogen in fruit
+3.2583000000 Nitrogen in non-structural form
+2.0000000000 Nitrogen in weed leaves
+0.0000000000 Nitrogen in weed roots
+4487.2000000 Phosphorus in structural litter layer  0
+418.15000000 Phosphorus in metabolic litter layer  0
+4527.7000000 Phosphorus in fine wood litter layer  0
+38191.000000 Phosphorus in coarse wood litter layer  0
+30.460000000 Phosphorus in active organic matter layer  0
+9756.3000000 Phosphorus in slow organic matter layer  0
+233.29000000 Phosphorus in resistant organic matter layer  0
+0.0000000000 Phosphorus in inert organic matter layer  0
+18.303000000 Phosphorus in soluble organic matter layer  0
+1.0000000000 Phosphorus (in rocks) in layer  0
+2.0000000000 Phosphorus (occluded) in layer  0
+3.0000000000 Phosphorus (secondary inorganic) in layer  0
+9930.3000000 Phosphorus in structural litter layer  1
+311.27000000 Phosphorus in metabolic litter layer  1
+0.0000000000 Phosphorus in fine wood litter layer  1
+1853.1000000 Phosphorus in coarse wood litter layer  1
+13.376000000 Phosphorus in active organic matter layer  1
+23717.000000 Phosphorus in slow organic matter layer  1
+3819.7000000 Phosphorus in resistant organic matter layer  1
+0.0000000000 Phosphorus in inert organic matter layer  1
+2.6497000000 Phosphorus in soluble organic matter layer  1
+0.0000000000 Phosphorus (in rocks) in layer  1
+0.0000000000 Phosphorus (occluded) in layer  1
+0.0000000000 Phosphorus (secondary inorganic) in layer  1
+3076.8000000 Phosphorus in structural litter layer  2
+117.77000000 Phosphorus in metabolic litter layer  2
+0.0000000000 Phosphorus in fine wood litter layer  2
+1901.0000000 Phosphorus in coarse wood litter layer  2
+3.6323000000 Phosphorus in active organic matter layer  2
+8399.4000000 Phosphorus in slow organic matter layer  2
+4385.3000000 Phosphorus in resistant organic matter layer  2
+0.0000000000 Phosphorus in inert organic matter layer  2
+1.0825000000 Phosphorus in soluble organic matter layer  2
+0.0000000000 Phosphorus (in rocks) in layer  2
+0.0000000000 Phosphorus (occluded) in layer  2
+0.0000000000 Phosphorus (secondary inorganic) in layer  2
+1472.1000000 Phosphorus in structural litter layer  3
+90.980000000 Phosphorus in metabolic litter layer  3
+0.0000000000 Phosphorus in fine wood litter layer  3
+2108.9000000 Phosphorus in coarse wood litter layer  3
+3.9386000000 Phosphorus in active organic matter layer  3
+4693.6000000 Phosphorus in slow organic matter layer  3
+7605.5000000 Phosphorus in resistant organic matter layer  3
+0.0000000000 Phosphorus in inert organic matter layer  3
+0.7166000000 Phosphorus in soluble organic matter layer  3
+0.0000000000 Phosphorus (in rocks) in layer  3
+0.0000000000 Phosphorus (occluded) in layer  3
+0.0000000000 Phosphorus (secondary inorganic) in layer  3
+573.66000000 Phosphorus in structural litter layer  4
+17.616000000 Phosphorus in metabolic litter layer  4
+0.0000000000 Phosphorus in fine wood litter layer  4
+937.66000000 Phosphorus in coarse wood litter layer  4
+1.4907000000 Phosphorus in active organic matter layer  4
+1818.7000000 Phosphorus in slow organic matter layer  4
+15613.000000 Phosphorus in resistant organic matter layer  4
+0.0000000000 Phosphorus in inert organic matter layer  4
+0.9001000000 Phosphorus in soluble organic matter layer  4
+0.0000000000 Phosphorus (in rocks) in layer  4
+0.0000000000 Phosphorus (occluded) in layer  4
+0.0000000000 Phosphorus (secondary inorganic) in layer  4
+106.11000000 Phosphorus in structural litter layer  5
+1.3249000000 Phosphorus in metabolic litter layer  5
+0.0000000000 Phosphorus in fine wood litter layer  5
+445.41000000 Phosphorus in coarse wood litter layer  5
+0.5482000000 Phosphorus in active organic matter layer  5
+252.55000000 Phosphorus in slow organic matter layer  5
+9178.5000000 Phosphorus in resistant organic matter layer  5
+0.0000000000 Phosphorus in inert organic matter layer  5
+0.5078000000 Phosphorus in soluble organic matter layer  5
+0.0000000000 Phosphorus (in rocks) in layer  5
+0.0000000000 Phosphorus (occluded) in layer  5
+0.0000000000 Phosphorus (secondary inorganic) in layer  5
+10.683000000 Phosphorus in structural litter layer  6
+0.1284000000 Phosphorus in metabolic litter layer  6
+0.0000000000 Phosphorus in fine wood litter layer  6
+162.77000000 Phosphorus in coarse wood litter layer  6
+0.1799000000 Phosphorus in active organic matter layer  6
+61.853000000 Phosphorus in slow organic matter layer  6
+434.92000000 Phosphorus in resistant organic matter layer  6
+0.0000000000 Phosphorus in inert organic matter layer  6
+0.1303000000 Phosphorus in soluble organic matter layer  6
+0.0000000000 Phosphorus (in rocks) in layer  6
+0.0000000000 Phosphorus (occluded) in layer  6
+0.0000000000 Phosphorus (secondary inorganic) in layer  6
+0.0000000000 Phosphorus in structural litter layer  7
+0.0000000000 Phosphorus in metabolic litter layer  7
+0.0000000000 Phosphorus in fine wood litter layer  7
+0.0000000000 Phosphorus in coarse wood litter layer  7
+0.0000000000 Phosphorus in active organic matter layer  7
+0.0000000000 Phosphorus in slow organic matter layer  7
+0.0000000000 Phosphorus in resistant organic matter layer  7
+0.0000000000 Phosphorus in inert organic matter layer  7
+0.0000000000 Phosphorus in soluble organic matter layer  7
+0.0000000000 Phosphorus (in rocks) in layer  7
+0.0000000000 Phosphorus (occluded) in layer  7
+0.0000000000 Phosphorus (secondary inorganic) in layer  7
+0.1317225188 Phosphorus in dead coarse wood
+0.4876279152 Phosphorus in dead fine wood
+0.0263445038 Phosphorus in dead coarse root
+10.759262244 Phosphorus in dead fine root
+16.176685311 Phosphorus in dead leaves
+0.2185114713 Phosphorus in dead other material
+4810.7000000 Phosphorus in sapwood
+0.0000000000 Phosphorus in heartwood
+962.14000000 Phosphorus in coarse roots
+2538.6000000 Phosphorus in fine root
+2967.9000000 Phosphorus in branches
+1329.5000000 Phosphorus in bark
+0.0000000000 Phosphorus in foliage reserves
+54326.000000 Phosphorus in leaves
+0.0101000000 Phosphorus in pollen
+0.0349000000 Phosphorus in fruit
+0.0000000000 Phosphorus in non-structural form
+0.0000000000 Phosphorus in weed leaves
+0.0000000000 Phosphorus in weed roots
+1000.0000000 Stocking rate in stems per ha
+0.3337700000 Litter lignin concentration in layer  0
+0.3000000000 Fine-wood lignin concentration in layer  0
+0.3000000000 Coarse-wood lignin concentration in layer  0
+0.5673500000 Litter lignin concentration in layer  1
+0.0000000000 Fine-wood lignin concentration in layer  1
+0.3000000000 Coarse-wood lignin concentration in layer  1
+0.5225300000 Litter lignin concentration in layer  2
+0.0000000000 Fine-wood lignin concentration in layer  2
+0.3000000000 Coarse-wood lignin concentration in layer  2
+0.4899300000 Litter lignin concentration in layer  3
+0.0000000000 Fine-wood lignin concentration in layer  3
+0.3000000000 Coarse-wood lignin concentration in layer  3
+0.4571500000 Litter lignin concentration in layer  4
+0.0000000000 Fine-wood lignin concentration in layer  4
+0.3000000000 Coarse-wood lignin concentration in layer  4
+0.4385300000 Litter lignin concentration in layer  5
+0.0000000000 Fine-wood lignin concentration in layer  5
+0.3000000000 Coarse-wood lignin concentration in layer  5
+0.4337800000 Litter lignin concentration in layer  6
+0.0000000000 Fine-wood lignin concentration in layer  6
+0.3000000000 Coarse-wood lignin concentration in layer  6
+0.0000000000 Litter lignin concentration in layer  7
+0.0000000000 Fine-wood lignin concentration in layer  7
+0.0000000000 Coarse-wood lignin concentration in layer  7
+0.0000000000 Size of snow pack (mm)
+175.12000000 Total water held in the soil
+1.0000000000 Total relative water extraction term for all layers
+           7 Number of layers for soil water
+0.2933040011 Amount of water (mm) in layer  0
+0.0014831942 Amount of water (mm) in layer  1
+0.0048657129 Amount of water (mm) in layer  2
+0.0010672873 Amount of water (mm) in layer  3
+2.0619853441 Amount of water (mm) in layer  4
+38.289291833 Amount of water (mm) in layer  5
+134.76130663 Amount of water (mm) in layer  6
+0.0000000000 Amount of water (mm) in layer  7
+        1940 Starting Year
+           6 Starting Month
+          30 Starting Day
+           0 Plant age
+0.0000000000 Average stand height
+0.0000000000 Cross-sectional area of sapwood
+0.0000000000 Diameter at breast height
+0.0447000000 Stand canopy cover
+0.3699000000 Light extinction coefficient
+0.0000000000 Temperature damage units
+0.0000000000 Damage units by heavy rain
+0.0438107405 Water limitation term
+1.0000000000 Water limitation term for decomposition
+1.0000000000 Seasonal capacity to convert foliage reserves into new foliage
+0.0000000000 Seasonal foliage shedding term
+0.0000000000 Nitrogen in excess of the ability of trees to absorb it
+10.000000000 Base rate for respiration rate (for temperature adjustments)
+20.350000000 Heat sum
+15.000000000 Annual mean temperature
+14.100000000 Previous day minimum temperature
+0.0000000000 Previous day absolute humidity
+0.0000000000 Previous day relative humidity
+10.000000000 Average spring-time maximum temperature
+0.0000000000 Cumulative spring time temperatures
+           0 Counter for calculating the next spring-time temperature
+20.168782666 Soil temperature
+0.0000000000 Height of the weed layer
+           1 Sequence counter for phenology settings
+           0 Number of days for which the current phenological setting has been operative (if that is the critical element)
+(Dummy) Previous values for various counters
+0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 0.0000000 
+0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 

@@ -1,0 +1,10 @@
+scenarios        https://svn.ci.uchicago.edu/svn/see/frameworks/impacts/cenw/pj_files/harv_thin/CenW.PJ!
+weather          /gpfs/pads/projects/emc-gct/data/tree/..../CenW.CL!
+refdata          /gpfs/pads/projects/emc-gct/data/tree/..../CenW.ST!
+xfile            
+bindata          
+variables        
+years            
+num_scenarios    
+crop             pine
+executable       ./CenW

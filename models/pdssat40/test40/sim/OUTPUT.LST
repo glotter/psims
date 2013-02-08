@@ -1,0 +1,6 @@
+*Output file list
+
+@FILENAME        DESCRIPTION
+Summary.OUT      Seasonal summary output file                      
+Evaluate.OUT     Evaluation output file (simulated vs. measured)   
+Warning.OUT      Warning messages                                  

@@ -1,0 +1,756 @@
+3.1 Project
+CenW_(basic_set) (Project name)
+0 Colour for display of Carbon gain
+526468 Colour for display of CAI
+14445996 Colour for display of NPP
+3398744 Colour for display of NEE
+3398744 Colour for display of Respn
+11268491 Colour for display of Day C Flux
+5346752 Colour for display of Night C Flux
+4578859 Colour for display of SolubleCH2O
+8323072 Colour for display of LAI
+7141620 Colour for display of pi
+2714477 Colour for display of Wood
+6245123 Colour for display of SapW
+7141620 Colour for display of HeartW
+1375935 Colour for display of Reserves
+7965722 Colour for display of Leaf
+1183956 Colour for display of FineRoot
+15389483 Colour for display of Bark
+14107196 Colour for display of CoarseRoot
+1002006 Colour for display of Branches
+4920699 Colour for display of Reprod
+15389483 Colour for display of Height
+6172446 Colour for display of DBH
+12996720 Colour for display of CanopyCover
+5501677 Colour for display of kex
+11705043 Colour for display of BasalArea
+5528033 Colour for display of Stocking
+14162838 Colour for display of TDamage
+255 Colour for display of NConc
+5144587 Colour for display of NConc (top)
+2728409 Colour for display of SolubleN
+5528033 Colour for display of WoodN
+7818525 Colour for display of SapWN
+4138161 Colour for display of HeartWN
+13852551 Colour for display of ReservesN
+4681337 Colour for display of LeafN
+8082697 Colour for display of FineRootN
+8263248 Colour for display of Bark N
+2502907 Colour for display of CoarseRootN
+14668907 Colour for display of BranchN
+4819996 Colour for display of ReprodN
+16711935 Colour for display of NSum
+16382278 Colour for display of PConc
+8263248 Colour for display of Puptake
+14897094 Colour for display of PSum
+13879398 Colour for display of CLeafLitter
+340525 Colour for display of CAll_Litter
+1493109 Colour for display of CAg_Litter
+2366530 Colour for display of CMetabSurf
+2407601 Colour for display of CMetabSoil
+8402160 Colour for display of CStructSurf
+363660 Colour for display of CStructSoil
+9947790 Colour for display of CWoodyLitter
+161883 Colour for display of CActive
+12993584 Colour for display of CSlow
+10916223 Colour for display of CResistant
+12926655 Colour for display of SoilRespn
+11880063 Colour for display of NLeafLitter
+9353428 Colour for display of NAll_Litter
+13231645 Colour for display of NAg_Litter
+3456611 Colour for display of NMetabSurf
+11426721 Colour for display of NMetabSoil
+9946393 Colour for display of NStructSurf
+16029895 Colour for display of NStructSoil
+10805459 Colour for display of NWoodyLitter
+16749888 Colour for display of NActive
+4089958 Colour for display of NSlow
+11344182 Colour for display of NResistant
+127 Colour for display of NMineral
+255 Colour for display of NLeached
+12957408 Colour for display of NSoilRespn
+8309387 Colour for display of PLeafLitter
+14792199 Colour for display of PAll_Litter
+6799848 Colour for display of PAg_Litter
+8555814 Colour for display of PMetabSurf
+9618757 Colour for display of PMetabSoil
+15991924 Colour for display of PStructSurf
+11489604 Colour for display of PStructSoil
+5682629 Colour for display of PWoodyLitter
+127633 Colour for display of PActive
+11833821 Colour for display of PSlow
+16591613 Colour for display of PResistant
+12986322 Colour for display of PMineral
+12575742 Colour for display of PSoilRespn
+3316976 Colour for display of Tmax
+2409998 Colour for display of Tmin
+15327639 Colour for display of Tmean
+13156618 Colour for display of Tsoil
+9886491 Colour for display of Tday
+14507411 Colour for display of PAR
+11565730 Colour for display of CO2
+4829040 Colour for display of Rain
+1571081 Colour for display of StoredWater
+10551529 Colour for display of AbsHum
+4698046 Colour for display of RelHum
+14716716 Colour for display of WaterLimit
+4498330 Colour for display of Transpiration
+2977239 Colour for display of Evaporation
+4583339 Colour for display of Drainage
+8357667 Colour for display of Heat sum
+9121527 Colour for display of Snow
+FALSE    Boolean variable for display of total carbon uptake
+500.00000000 Upper range for display of total carbon uptake
+0.0000000000 Lower range for display of total carbon uptake
+FALSE    Boolean variable for display of current annual increment
+5000.0000000 Upper range for display of current annual increment
+0.0000000000 Lower range for display of current annual increment
+FALSE    Boolean variable for display of net primary production
+10000.000000 Upper range for display of net primary production
+0.0000000000 Lower range for display of net primary production
+FALSE    Boolean variable for display of net ecosystem exchange
+100.00000000 Upper range for display of net ecosystem exchange
+-100.0000000 Lower range for display of net ecosystem exchange
+FALSE    Boolean variable for display of respiration rate
+100.00000000 Upper range for display of respiration rate
+0.0000000000 Lower range for display of respiration rate
+FALSE    Boolean variable for display of daytime carbon flux
+500.00000000 Upper range for display of daytime carbon flux
+0.0000000000 Lower range for display of daytime carbon flux
+FALSE    Boolean variable for display of nighttime carbon flux
+0.0000000000 Upper range for display of nighttime carbon flux
+-500.0000000 Lower range for display of nighttime carbon flux
+FALSE    Boolean variable for display of soluble carbohydrate
+5000.0000000 Upper range for display of soluble carbohydrate
+0.0000000000 Lower range for display of soluble carbohydrate
+TRUE    Boolean variable for display of LAI
+8.0000000000 Upper range for display of LAI
+0.0000000000 Lower range for display of LAI
+FALSE    Boolean variable for display of pi
+500.00000000 Upper range for display of pi
+0.0000000000 Lower range for display of pi
+TRUE    Boolean variable for display of wood
+250.00000000 Upper range for display of wood
+0.0000000000 Lower range for display of wood
+FALSE    Boolean variable for display of sapwood
+250.00000000 Upper range for display of sapwood
+0.0000000000 Lower range for display of sapwood
+FALSE    Boolean variable for display of heartwood
+250.00000000 Upper range for display of heartwood
+0.0000000000 Lower range for display of heartwood
+FALSE    Boolean variable for display of bark
+50.000000000 Upper range for display of bark
+0.0000000000 Lower range for display of bark
+FALSE    Boolean variable for display of foliage reserves
+5.0000000000 Upper range for display of foliage reserves
+0.0000000000 Lower range for display of foliage reserves
+FALSE    Boolean variable for display of leaves
+10.000000000 Upper range for display of leaves
+0.0000000000 Lower range for display of leaves
+FALSE    Boolean variable for display of fine roots
+10.000000000 Upper range for display of fine roots
+0.0000000000 Lower range for display of fine roots
+FALSE    Boolean variable for display of coarse roots
+50.000000000 Upper range for display of coarse roots
+0.0000000000 Lower range for display of coarse roots
+FALSE    Boolean variable for display of branches
+50.000000000 Upper range for display of branches
+0.0000000000 Lower range for display of branches
+FALSE    Boolean variable for display of reproductive carbon
+5.0000000000 Upper range for display of reproductive carbon
+0.0000000000 Lower range for display of reproductive carbon
+TRUE    Boolean variable for display of stand height
+20.000000000 Upper range for display of stand height
+0.0000000000 Lower range for display of stand height
+FALSE    Boolean variable for display of DBH
+50.000000000 Upper range for display of DBH
+0.0000000000 Lower range for display of DBH
+FALSE    Boolean variable for display of Canopy cover
+100.00000000 Upper range for display of Canopy cover
+0.0000000000 Lower range for display of Canopy cover
+FALSE    Boolean variable for display of light extinction coeff.
+1.0000000000 Upper range for display of light extinction coeff.
+0.0000000000 Lower range for display of light extinction coeff.
+FALSE    Boolean variable for display of basal area
+50.000000000 Upper range for display of basal area
+0.0000000000 Lower range for display of basal area
+FALSE    Boolean variable for display of stocking
+2000.0000000 Upper range for display of stocking
+0.0000000000 Lower range for display of stocking
+FALSE    Boolean variable for display of temperature damage units
+5.0000000000 Upper range for display of temperature damage units
+0.0000000000 Lower range for display of temperature damage units
+FALSE    Boolean variable for display of foliar [N]
+20.000000000 Upper range for display of foliar [N]
+0.0000000000 Lower range for display of foliar [N]
+TRUE    Boolean variable for display of [N] in top canopy level
+20.000000000 Upper range for display of [N] in top canopy level
+0.0000000000 Lower range for display of [N] in top canopy level
+FALSE    Boolean variable for display of soluble nitrogen in plants
+20.000000000 Upper range for display of soluble nitrogen in plants
+0.0000000000 Lower range for display of soluble nitrogen in plants
+FALSE    Boolean variable for display of wood nitrogen
+100.00000000 Upper range for display of wood nitrogen
+0.0000000000 Lower range for display of wood nitrogen
+FALSE    Boolean variable for display of sapwood nitrogen
+100.00000000 Upper range for display of sapwood nitrogen
+0.0000000000 Lower range for display of sapwood nitrogen
+FALSE    Boolean variable for display of heartwood nitrogen
+100.00000000 Upper range for display of heartwood nitrogen
+0.0000000000 Lower range for display of heartwood nitrogen
+FALSE    Boolean variable for display of bark nitrogen
+100.00000000 Upper range for display of bark nitrogen
+0.0000000000 Lower range for display of bark nitrogen
+FALSE    Boolean variable for display of foliage reserves nitrogen
+100.00000000 Upper range for display of foliage reserves nitrogen
+0.0000000000 Lower range for display of foliage reserves nitrogen
+TRUE    Boolean variable for display of leaf nitrogen
+200.00000000 Upper range for display of leaf nitrogen
+0.0000000000 Lower range for display of leaf nitrogen
+FALSE    Boolean variable for display of fine root nitrogen
+100.00000000 Upper range for display of fine root nitrogen
+0.0000000000 Lower range for display of fine root nitrogen
+FALSE    Boolean variable for display of coarse root nitrogen
+100.00000000 Upper range for display of coarse root nitrogen
+0.0000000000 Lower range for display of coarse root nitrogen
+FALSE    Boolean variable for display of branch nitrogen
+100.00000000 Upper range for display of branch nitrogen
+0.0000000000 Lower range for display of branch nitrogen
+FALSE    Boolean variable for display of reproductive nitrogen
+100.00000000 Upper range for display of reproductive nitrogen
+0.0000000000 Lower range for display of reproductive nitrogen
+FALSE    Boolean variable for display of total nitrogen in system
+10000.000000 Upper range for display of total nitrogen in system
+0.0000000000 Lower range for display of total nitrogen in system
+FALSE    Boolean variable for display of [P] 
+0.0000000000 Upper range for display of [P]
+0.0000000000 Lower range for display of [P]
+FALSE    Boolean variable for display of P uptake
+0.0000000000 Upper range for display of P uptake
+0.0000000000 Lower range for display of P uptake
+FALSE    Boolean variable for display of total P in system
+0.0000000000 Upper range for display of total P in system
+0.0000000000 Lower range for display of total P in system
+FALSE    Boolean variable for display of fresh foliage litter
+50.000000000 Upper range for display of fresh foliage litter
+0.0000000000 Lower range for display of fresh foliage litter
+FALSE    Boolean variable for display of all fresh litter
+200.00000000 Upper range for display of all fresh litter
+0.0000000000 Lower range for display of all fresh litter
+FALSE    Boolean variable for display of above-ground fresh litter
+50.000000000 Upper range for display of above-ground fresh litter
+0.0000000000 Lower range for display of above-ground fresh litter
+FALSE    Boolean variable for display of metabolic surface litter
+1.0000000000 Upper range for display of metabolic surface litter
+0.0000000000 Lower range for display of metabolic surface litter
+FALSE    Boolean variable for display of metabolic soil litter
+1.0000000000 Upper range for display of metabolic soil litter
+0.0000000000 Lower range for display of metabolic soil litter
+FALSE    Boolean variable for display of structural surface litter
+10.000000000 Upper range for display of structural surface litter
+0.0000000000 Lower range for display of structural surface litter
+FALSE    Boolean variable for display of structural soil litter
+10.000000000 Upper range for display of structural soil litter
+0.0000000000 Lower range for display of structural soil litter
+FALSE    Boolean variable for display of the woody litter pool
+10.000000000 Upper range for display of the woody litter pool
+0.0000000000 Lower range for display of the woody litter pool
+FALSE    Boolean variable for display of the active pool
+10.000000000 Upper range for display of the active pool
+0.0000000000 Lower range for display of the active pool
+TRUE    Boolean variable for display of the slow pool
+100.00000000 Upper range for display of the slow pool
+0.0000000000 Lower range for display of the slow pool
+TRUE    Boolean variable for display of the resistant pool
+100.00000000 Upper range for display of the resistant pool
+0.0000000000 Lower range for display of the resistant pool
+FALSE    Boolean variable for display of soil respiration
+200.00000000 Upper range for display of soil respiration
+0.0000000000 Lower range for display of soil respiration
+FALSE    Boolean variable for display of fresh foliage litter nitrogen
+1.0000000000 Upper range for display of fresh foliage litter nitrogen
+0.0000000000 Lower range for display of fresh foliage litter nitrogen
+FALSE    Boolean variable for display of all fresh litter nitrogen
+1.0000000000 Upper range for display of all fresh litter nitrogen
+0.0000000000 Lower range for display of all fresh litter nitrogen
+FALSE    Boolean variable for display of above-ground fresh litter nitrogen
+1.0000000000 Upper range for display of above-ground fresh litter nitrogen
+0.0000000000 Lower range for display of above-ground fresh litter nitrogen
+FALSE    Boolean variable for display of N in the metabolic surface litter
+100.00000000 Upper range for display of N in the metabolic surface litter
+0.0000000000 Lower range for display of N in the metabolic surface litter
+FALSE    Boolean variable for display of N in the metabolic soil litter
+100.00000000 Upper range for display of N in the metabolic soil litter
+0.0000000000 Lower range for display of N in the metabolic soil litter
+FALSE    Boolean variable for display of N in the structural surface litter
+100.00000000 Upper range for display of N in the structural surface litter
+0.0000000000 Lower range for display of N in the structural surface litter
+FALSE    Boolean variable for display of N in the structural soil litter
+100.00000000 Upper range for display of N in the structural soil litter
+0.0000000000 Lower range for display of N in the structural soil litter
+FALSE    Boolean variable for display of N in the woody litter pool
+100.00000000 Upper range for display of N in the woody litter pool
+0.0000000000 Lower range for display of N in the woody litter pool
+FALSE    Boolean variable for display of N in the active pool
+2000.0000000 Upper range for display of N in the active pool
+0.0000000000 Lower range for display of N in the active pool
+FALSE    Boolean variable for display of N in the slow pool
+5000.0000000 Upper range for display of N in the slow pool
+0.0000000000 Lower range for display of N in the slow pool
+FALSE    Boolean variable for display of N in the resistant pool
+5000.0000000 Upper range for display of N in the resistant pool
+0.0000000000 Lower range for display of N in the resistant pool
+TRUE    Boolean variable for display of N in the mineral pool
+1.0000000000 Upper range for display of N in the mineral pool
+0.0000000000 Lower range for display of N in the mineral pool
+FALSE    Boolean variable for display of leached N
+10.000000000 Upper range for display of leached N
+0.0000000000 Lower range for display of leached N
+FALSE    Dummy variable
+0.0000000000 Dummy variable
+0.0000000000 Dummy variable
+FALSE    Boolean variable for display of fresh foliage litter phosphorus
+0.0000000000 Upper range for display of fresh foliage litter phosphorus
+0.0000000000 Lower range for display of fresh foliage litter phosphorus
+FALSE    Boolean variable for display of all fresh litter phosphorus
+0.0000000000 Upper range for display of all fresh litter phosphorus
+0.0000000000 Lower range for display of all fresh litter phosphorus
+FALSE    Boolean variable for display of P in metabolic surface litter
+0.0000000000 Upper range for display of P in metabolic surface litter
+0.0000000000 Lower range for display of P in metabolic surface litter
+FALSE    Boolean variable for display of P in metabolic soil litter
+0.0000000000 Upper range for display of P in metabolic soil litter
+0.0000000000 Lower range for display of P in metabolic soil litter
+FALSE    Boolean variable for display of P in structural surface litter
+0.0000000000 Upper range for display of P in structural surface litter
+0.0000000000 Lower range for display of P in structural surface litter
+FALSE    Boolean variable for display of P in structural soil litter
+0.0000000000 Upper range for display of P in structural soil litter
+0.0000000000 Lower range for display of P in structural soil litter
+FALSE    Boolean variable for display of P in the woody litter pool
+0.0000000000 Upper range for display of P in the woody litter pool
+0.0000000000 Lower range for display of P in the woody litter pool
+FALSE    Boolean variable for display of P in the active pool
+0.0000000000 Upper range for display of P in the active pool
+0.0000000000 Lower range for display of P in the active pool
+FALSE    Boolean variable for display of P in the slow pool
+0.0000000000 Upper range for display of P in the slow pool
+0.0000000000 Lower range for display of P in the slow pool
+FALSE    Boolean variable for display of P in the resistant pool
+0.0000000000 Upper range for display of P in the resistant pool
+0.0000000000 Lower range for display of P in the resistant pool
+FALSE    Boolean variable for display of P in the mineral pool
+0.0000000000 Upper range for display of P in the mineral pool
+0.0000000000 Lower range for display of P in the mineral pool
+FALSE    Dummy variable
+0.0000000000 Dummy variable
+0.0000000000 Dummy variable
+FALSE    Boolean variable for display of Tmax
+40.000000000 Upper range for display of Tmax
+0.0000000000 Lower range for display of Tmax
+FALSE    Boolean variable for display of Tmin
+30.000000000 Upper range for display of Tmin
+0.0000000000 Lower range for display of Tmin
+FALSE    Boolean variable for display of Tmean
+30.000000000 Upper range for display of Tmean
+0.0000000000 Lower range for display of Tmean
+FALSE    Boolean variable for display of Tsoil
+30.000000000 Upper range for display of Tsoil
+0.0000000000 Lower range for display of Tsoil
+FALSE    Boolean variable for display of Tday
+30.000000000 Upper range for display of Tday
+0.0000000000 Lower range for display of Tday
+FALSE    Boolean variable for display of PAR
+40.000000000 Upper range for display of PAR
+0.0000000000 Lower range for display of PAR
+FALSE    Boolean variable for display of ambient CO2
+500.00000000 Upper range for display of ambient CO2
+0.0000000000 Lower range for display of ambient CO2
+FALSE    Boolean variable for display of Rain
+200.00000000 Upper range for display of Rain
+0.0000000000 Lower range for display of Rain
+FALSE    Boolean variable for display of stored water
+400.00000000 Upper range for display of stored water
+0.0000000000 Lower range for display of stored water
+FALSE    Boolean variable for display of absolute humidity
+1.1000000000 Upper range for display of absolute humidity
+0.0000000000 Lower range for display of absolute humidity
+FALSE    Boolean variable for display of relative humidity
+1.1000000000 Upper range for display of relative humidity
+0.0000000000 Lower range for display of relative humidity
+FALSE    Boolean variable for display of water limitation
+1.1000000000 Upper range for display of water limitation
+0.0000000000 Lower range for display of water limitation
+FALSE    Boolean variable for display of heat sums
+500.00000000 Upper range for display of heat sums
+0.0000000000 Lower range for display of heat sums
+FALSE    Boolean variable for display of transpiration rate
+5.0000000000 Upper range for display of transpiration rate
+0.0000000000 Lower range for display of transpiration rate
+FALSE    Boolean variable for display of evaporation rate
+5.0000000000 Upper range for display of evaporation rate
+0.0000000000 Lower range for display of evaporation rate
+FALSE    Boolean variable for display of snow
+300.00000000 Upper range for display of snow
+0.0000000000 Lower range for display of snow
+FALSE    Boolean variable for display of deep drainage
+10.000000000 Upper range for display of deep drainage
+-10.00000000 Lower range for display of deep drainage
+FALSE    Boolean variable for display of dummy variable
+0.0000000000 Upper range for display of deep dummy variable
+0.0000000000 Lower range for display of deep dummy variable
+TRUE    Boolean variable for filesave of particular variables
+TRUE    Boolean variable for filesave of particular variables
+TRUE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+TRUE    Boolean variable for filesave of particular variables
+TRUE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+TRUE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+TRUE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+TRUE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+TRUE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+TRUE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+TRUE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+TRUE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+TRUE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for filesave of particular variables
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+FALSE    Boolean variable for sensitivity testing of particular parameters
+TRUE    Boolean variable to read Tmax 
+TRUE    Boolean variable to read Tmin
+FALSE    Boolean variable to read Tmean
+FALSE    Boolean variable to read Tsoil
+TRUE    Boolean variable to read PAR
+TRUE    Boolean variable to read Rainfall
+FALSE    Boolean variable to read absolute humidity
+FALSE    Boolean variable to read relative humidity
+FALSE    Boolean variable to read CO2 concentration
+           8 Variable to define the width for each variable in the output file
+0.0000273973 Fraction of trees dying annually
+0.1000000000 Daily rate of fertiliser release
+D       Interpretation of fertiliser dates
+           0 Number of times that fertiliser is to be applied
+%       Interpretation of harvest units
+B       Interpretation of harvest dates
+           0 Number of harvests or thinnings
+        Interpretation of pest dates
+        Units in which pest damage is expressed (% or W)
+           0 Number of pest outbreaks
+        Interpretation of fire dates
+           0 Number of fire outbreaks
+B       Interpretation of plough dates
+           0 Number of ploughing events
+           0 Number of times environmental variables are changed
+FALSE    Boolean variable to indicate whether irrigation is applied
+S       Type of irrigation
+50.000000000 Amount of irrigation applied
+0.9900000000 Fraction of field capacity to which irrigation water is applied
+           3 Interval between applications of irrigation
+           0 Starting day for irrigation
+           0 Starting month for irrigation
+          -1 Starting year for irrigation
+           0 Last day for irrigation
+           0 Last month for irrigation
+          -1 Last year for irrigation
+          20 years for simulation run
+           0 months for simulation run
+           0 number of days for simulation run
+0.0000000000 Initial setting for sapwood carbon
+0.0000000000 Initial setting for heartwood carbon
+0.0000000000 Initial setting for coarseroot carbon
+0.0000000000 Initial setting for fineroot carbon
+0.0000000000 Initial setting for branch carbon
+0.0000000000 Initial setting for bark carbon
+0.0000000000 Initial setting for foliage carbon
+0.0000000000 Initial setting for pollen carbon
+0.0000000000 Initial setting for fruit carbon
+0.0000000000 Initial setting for soluble carbon
+0.0000000000 Initial setting for leaf primordia carbon
+0.0000000000 Initial setting for sapwood nitrogen
+0.0000000000 Initial setting for heartwood nitrogen
+0.0000000000 Initial setting for coarseroot nitrogen
+0.0000000000 Initial setting for fineroot nitrogen
+0.0000000000 Initial setting for branch nitrogen
+0.0000000000 Initial setting for bark nitrogen
+0.0000000000 Initial setting for foliage nitrogen
+0.0000000000 Initial setting for pollen nitrogen
+0.0000000000 Initial setting for fruit nitrogen
+0.0000000000 Initial setting for soluble nitrogen
+0.0000000000 Initial setting for leaf primordia nitrogen
+0  Initial setting for stand age
+0.0000000000 Initial setting for stocking
+0.0000000000 Initial setting for diameter
+0.0000000000 Initial setting for height
+0  Initial setting starting day
+0  Initial setting starting month
+0  Initial setting starting year
+         243 number of times output is given
+         240 number of times output is written to disk
+D       Calculation type
+FALSE    Boolean variable to indicate whether plant pools should be reset at the beginning of a run
+FALSE    Boolean variable for calculations of organic matter decomposition only
+FALSE    Boolean variable for organic matter to be treated as single layer
+TRUE    Boolean variable whether output is to be given by soil layer
+FALSE    Boolean variable whether to include information about carbon isotopes
+1.0000000000 Adjustment to soil fertility level at start-up
+O       Type of climate input
+2   Number of projects to load for multiple project runs
+Default.IL!
+CENW.PJ!
+cenw.PJ!
+CENW.CL!
+CenW.DT!
+CENW.IL!
+CENW.SL!
+CenW.ST!
+1   Number of cohorts to simulate
+Forest.PL!
+2.0000000000 Coefficient to convert between carbon and biomass
+1.0000000000 Coefficient to convert between nitrogen units in model and output
+2000000.0000 Conversion factor from MJ to umol
+CenW.BT!
+-1  For batch run: number of calculations
+Foliage_nitrogen   Type of target value for equilibrium runs
+Biological_N_fixation  Type of parameter to change for equilibrium runs
+500  Maximum number of iterations for equlibrium runs
+10  Required number of good fits to satisfy user of equlibrium conditions
+0.0010000000 Value for equilibrium criterium 1 in equilibrium runs
+0.0010000000 Value for equilibrium criterium 2 in equilibrium runs
+0.0010000000 Value for equilibrium criterium 3 in equilibrium runs
+100.00000000 Target value for equilibrium runs
+0.1000000000 Minimum delta value for equilibrium runs
+5.0000000000 Maximum delta value for equilibrium runs
+50.000000000 Percentage adjustment of delta value for equilibrium runs
+2.0000000000 Maximum change ratio in equilibrium runs
+2.0000000000 Boosting of changes in resistant organic matter relative to other changes
+TRUE    Boolean variable to indicate whether to keep the same initial plant pools in searching for equilibrium
+Fraction:        Type of function to calculate mortality
+1.0000000000 Ratio of tree sizes of dieing and average trees

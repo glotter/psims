@@ -1,0 +1,9 @@
+model            dssat45
+scenarios        /project/joshuaelliott/data/isi-mip-input/scenarios/rcp8p5_whe
+weather          /project/joshuaelliott/data/isi-mip-input/wth/HadGEM2-ES/rcp8p5
+refdata          /project/joshuaelliott/psims/models/pdssat/inp/common/isimip
+bindata          /project/joshuaelliott/psims/bin
+bintransfer      $PWD/bin/DSCSM045.EXE,$PWD/bin/gen_part_dssat.pl
+executable       DSCSM045.EXE:A:X1234567.WHX
+outtypes         .OUT,.WHX
+postprocess      ./gen_part_dssat.pl:--num_scenarios:20:--years:150:--variables:PDAT,ADAT,MDAT,CWAM,HWAM,IRCM,PRCM,ETCM:--crop:whe

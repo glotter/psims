@@ -1,0 +1,10 @@
+use.wrapper.staging=false
+wrapperlog.always.transfer=true
+sitedir.keep=false
+execution.retries=0
+lazy.errors=true
+status.mode=provider
+use.provider.staging=true
+provider.staging.pin.swiftfiles=false
+
+#app bash=/bin/bash

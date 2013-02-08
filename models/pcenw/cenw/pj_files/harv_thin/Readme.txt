@@ -1,0 +1,1 @@
+PJ file created using harvest and thinning as defined in CenW 3.0 GUI but from CenW 4.0

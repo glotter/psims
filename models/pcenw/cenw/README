@@ -1,0 +1,12 @@
+These folders contain several versions of the CenW source code:
+  windows/FullSourceCode/ is the windows delphi v3.1
+  windows/Source4.0/ is the windows delphi v4.0
+  cmdapp/ is the free pascal version successfully compiled and run on PADS
+  test3/ is an intermediate workspace produced during the conversion from 
+    delphi to fpc.
+
+It also contains a set of test suite of CenW I/O files called test_suite/testX
+
+It also contains reparam.sh which is just a code stub for now that's 
+  included here because we plan to use it (or similar) to generate the 
+  parameter files using a tag and replace model. 

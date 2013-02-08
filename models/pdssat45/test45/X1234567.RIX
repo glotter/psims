@@ -1,0 +1,379 @@
+*EXP.DETAILS:  Global pDSSAT maize RCP8.5
+
+*GENERAL
+@PEOPLE
+Joshua Elliott
+@ADDRESS
+Computation Institute, University of Chicago
+@SITE
+55.7500, -132.250
+
+*TREATMENTS                        -------------FACTOR LEVELS------------
+@N R O C TNAME.................... CU FL SA IC MP MI MF MR MC MT ME MH SM
+ 0 1 0 0 320p_R58(Irri-High)        7  1  0  1  1  0  1  0  0  0  1  0  1
+ 1 1 0 0 350p_R58(Irri-High)        7  2  0  2  1  0  1  0  0  0  2  0  5
+ 2 1 0 0 432p_R58(Irri-High)        7  3  0  1  1  0  1  0  0  0  3  0  1
+ 3 1 0 0 572p_R58(Irri-High)        7  4  0  2  1  0  1  0  0  0  4  0  5
+ 4 1 0 0 801p_R58(Irri-High)        7  5  0  1  1  0  1  0  0  0  5  0  1
+ 5 1 0 0 320p_R58(Irri-Mid)         7  1  0  1  1  0  3  0  0  0  1  0  1
+ 6 1 0 0 350p_R58(Irri-Mid)         7  2  0  2  1  0  3  0  0  0  2  0  5
+ 7 1 0 0 432p_R58(Irri-Mid)         7  3  0  1  1  0  3  0  0  0  3  0  1
+ 8 1 0 0 572p_R58(Irri-Mid)         7  4  0  2  1  0  3  0  0  0  4  0  5
+ 9 1 0 0 801p_R58(Irri-Mid)         7  5  0  1  1  0  3  0  0  0  5  0  1
+10 1 0 0 320p_R58(rain-High)        7  1  0  1  1  0  1  0  0  0  1  0  2
+11 1 0 0 350p_R58(rain-High)        7  2  0  2  1  0  1  0  0  0  2  0  6
+12 1 0 0 432p_R58(rain-High)        7  3  0  1  1  0  1  0  0  0  3  0  2
+13 1 0 0 572p_R58(rain-High)        7  4  0  2  1  0  1  0  0  0  4  0  6
+14 1 0 0 801p_R58(rain-High)        7  5  0  1  1  0  1  0  0  0  5  0  2
+15 1 0 0 320p_R58(rain-mid)         7  1  0  1  1  0  3  0  0  0  1  0  2
+16 1 0 0 350p_R58(rain-mid)         7  2  0  2  1  0  3  0  0  0  2  0  6
+17 1 0 0 432p_R58(rain-mid)         7  3  0  1  1  0  3  0  0  0  3  0  2
+18 1 0 0 572p_R58(rain-mid)         7  4  0  2  1  0  3  0  0  0  4  0  6
+19 1 0 0 801p_R58(rain-mid)         7  5  0  1  1  0  3  0  0  0  5  0  2
+20 1 0 0 320p_R58(rain-None)        7  1  0  1  1  0  4  0  0  0  1  0  2
+21 1 0 0 350p_R58(rain-None)        7  2  0  2  1  0  4  0  0  0  2  0  6
+22 1 0 0 432p_R58(rain-None)        7  3  0  1  1  0  4  0  0  0  3  0  2
+23 1 0 0 572p_R58(rain-None)        7  4  0  2  1  0  4  0  0  0  4  0  6
+24 1 0 0 801p_R58(rain-None)        7  5  0  1  1  0  4  0  0  0  5  0  2
+25 1 0 0 320p_R54(Irri-High)        6  1  0  1  1  0  1  0  0  0  1  0  1
+26 1 0 0 350p_R54(Irri-High)        6  2  0  2  1  0  1  0  0  0  2  0  5
+27 1 0 0 432p_R54(Irri-High)        6  3  0  1  1  0  1  0  0  0  3  0  1
+28 1 0 0 572p_R54(Irri-High)        6  4  0  2  1  0  1  0  0  0  4  0  5
+29 1 0 0 801p_R54(Irri-High)        6  5  0  1  1  0  1  0  0  0  5  0  1
+30 1 0 0 320p_R54(Irri-Mid)         6  1  0  1  1  0  3  0  0  0  1  0  1
+31 1 0 0 350p_R54(Irri-Mid)         6  2  0  2  1  0  3  0  0  0  2  0  5
+32 1 0 0 432p_R54(Irri-Mid)         6  3  0  1  1  0  3  0  0  0  3  0  1
+33 1 0 0 572p_R54(Irri-Mid)         6  4  0  2  1  0  3  0  0  0  4  0  5
+34 1 0 0 801p_R54(Irri-Mid)         6  5  0  1  1  0  3  0  0  0  5  0  1
+35 1 0 0 320p_R54(rain-High)        6  1  0  1  1  0  1  0  0  0  1  0  2
+36 1 0 0 350p_R54(rain-High)        6  2  0  2  1  0  1  0  0  0  2  0  6
+37 1 0 0 432p_R54(rain-High)        6  3  0  1  1  0  1  0  0  0  3  0  2
+38 1 0 0 572p_R54(rain-High)        6  4  0  2  1  0  1  0  0  0  4  0  6
+39 1 0 0 801p_R54(rain-High)        6  5  0  1  1  0  1  0  0  0  5  0  2
+40 1 0 0 320p_R54(rain-mid)         6  1  0  1  1  0  3  0  0  0  1  0  2
+41 1 0 0 350p_R54(rain-mid)         6  2  0  2  1  0  3  0  0  0  2  0  6
+42 1 0 0 432p_R54(rain-mid)         6  3  0  1  1  0  3  0  0  0  3  0  2
+43 1 0 0 572p_R54(rain-mid)         6  4  0  2  1  0  3  0  0  0  4  0  6
+44 1 0 0 801p_R54(rain-mid)         6  5  0  1  1  0  3  0  0  0  5  0  2
+45 1 0 0 320p_R54(rain-None)        6  1  0  1  1  0  4  0  0  0  1  0  2
+46 1 0 0 350p_R54(rain-None)        6  2  0  2  1  0  4  0  0  0  2  0  6
+47 1 0 0 432p_R54(rain-None)        6  3  0  1  1  0  4  0  0  0  3  0  2
+48 1 0 0 572p_R54(rain-None)        6  4  0  2  1  0  4  0  0  0  4  0  6
+49 1 0 0 801p_R54(rain-None)        6  5  0  1  1  0  4  0  0  0  5  0  2
+50 1 0 0 320p_R58(Irri-High-noco2)  7  1  0  1  1  0  1  0  0  0  2  0  3
+51 1 0 0 350p_R58(Irri-High-noco2)  7  2  0  2  1  0  1  0  0  0  2  0  7
+52 1 0 0 432p_R58(Irri-High-noco2)  7  3  0  1  1  0  1  0  0  0  2  0  3
+53 1 0 0 572p_R58(Irri-High-noco2)  7  4  0  2  1  0  1  0  0  0  2  0  7
+54 1 0 0 801p_R58(Irri-High-noco2)  7  5  0  1  1  0  1  0  0  0  2  0  3
+55 1 0 0 320p_R58(Irri-Mid-noco2)   7  1  0  1  1  0  3  0  0  0  2  0  3
+56 1 0 0 350p_R58(Irri-Mid-noco2)   7  2  0  2  1  0  3  0  0  0  2  0  7
+57 1 0 0 432p_R58(Irri-Mid-noco2)   7  3  0  1  1  0  3  0  0  0  2  0  3
+58 1 0 0 572p_R58(Irri-Mid-noco2)   7  4  0  2  1  0  3  0  0  0  2  0  7
+59 1 0 0 801p_R58(Irri-Mid-noco2)   7  5  0  1  1  0  3  0  0  0  2  0  3
+60 1 0 0 320p_R58(rain-High-noco2)  7  1  0  1  1  0  1  0  0  0  2  0  4
+61 1 0 0 350p_R58(rain-High-noco2)  7  2  0  2  1  0  1  0  0  0  2  0  8
+62 1 0 0 432p_R58(rain-High-noco2)  7  3  0  1  1  0  1  0  0  0  2  0  4
+63 1 0 0 572p_R58(rain-High-noco2)  7  4  0  2  1  0  1  0  0  0  2  0  8
+64 1 0 0 801p_R58(rain-High-noco2)  7  5  0  1  1  0  1  0  0  0  2  0  4
+65 1 0 0 320p_R58(rain-mid-noco2)   7  1  0  1  1  0  3  0  0  0  2  0  4
+66 1 0 0 350p_R58(rain-mid-noco2)   7  2  0  2  1  0  3  0  0  0  2  0  8
+67 1 0 0 432p_R58(rain-mid-noco2)   7  3  0  1  1  0  3  0  0  0  2  0  4
+68 1 0 0 572p_R58(rain-mid-noco2)   7  4  0  2  1  0  3  0  0  0  2  0  8
+69 1 0 0 801p_R58(rain-mid-noco2)   7  5  0  1  1  0  3  0  0  0  2  0  4
+70 1 0 0 320p_R58(rain-None-noco2)  7  1  0  1  1  0  4  0  0  0  2  0  4
+71 1 0 0 350p_R58(rain-None-noco2)  7  2  0  2  1  0  4  0  0  0  2  0  8
+72 1 0 0 432p_R58(rain-None-noco2)  7  3  0  1  1  0  4  0  0  0  2  0  4
+73 1 0 0 572p_R58(rain-None-noco2)  7  4  0  2  1  0  4  0  0  0  2  0  8
+74 1 0 0 801p_R58(rain-None-noco2)  7  5  0  1  1  0  4  0  0  0  2  0  4
+75 1 0 0 320p_R54(Irri-High-noco2)  6  1  0  1  1  0  1  0  0  0  2  0  3
+76 1 0 0 350p_R54(Irri-High-noco2)  6  2  0  2  1  0  1  0  0  0  2  0  7
+77 1 0 0 432p_R54(Irri-High-noco2)  6  3  0  1  1  0  1  0  0  0  2  0  3
+78 1 0 0 572p_R54(Irri-High-noco2)  6  4  0  2  1  0  1  0  0  0  2  0  7
+79 1 0 0 801p_R54(Irri-High-noco2)  6  5  0  1  1  0  1  0  0  0  2  0  3
+80 1 0 0 320p_R54(Irri-Mid-noco2)   6  1  0  1  1  0  3  0  0  0  2  0  3
+81 1 0 0 350p_R54(Irri-Mid-noco2)   6  2  0  2  1  0  3  0  0  0  2  0  7
+82 1 0 0 432p_R54(Irri-Mid-noco2)   6  3  0  1  1  0  3  0  0  0  2  0  3
+83 1 0 0 572p_R54(Irri-Mid-noco2)   6  4  0  2  1  0  3  0  0  0  2  0  7
+84 1 0 0 801p_R54(Irri-Mid-noco2)   6  5  0  1  1  0  3  0  0  0  2  0  3
+85 1 0 0 320p_R54(rain-High-noco2)  6  1  0  1  1  0  1  0  0  0  2  0  4
+86 1 0 0 350p_R54(rain-High-noco2)  6  2  0  2  1  0  1  0  0  0  2  0  8
+87 1 0 0 432p_R54(rain-High-noco2)  6  3  0  1  1  0  1  0  0  0  2  0  4
+88 1 0 0 572p_R54(rain-High-noco2)  6  4  0  2  1  0  1  0  0  0  2  0  8
+89 1 0 0 801p_R54(rain-High-noco2)  6  5  0  1  1  0  1  0  0  0  2  0  4
+90 1 0 0 320p_R54(rain-mid-noco2)   6  1  0  1  1  0  3  0  0  0  2  0  4
+91 1 0 0 350p_R54(rain-mid-noco2)   6  2  0  2  1  0  3  0  0  0  2  0  8
+92 1 0 0 432p_R54(rain-mid-noco2)   6  3  0  1  1  0  3  0  0  0  2  0  4
+93 1 0 0 572p_R54(rain-mid-noco2)   6  4  0  2  1  0  3  0  0  0  2  0  8
+94 1 0 0 801p_R54(rain-mid-noco2)   6  5  0  1  1  0  3  0  0  0  2  0  4
+95 1 0 0 320p_R54(rain-None-noco2)  6  1  0  1  1  0  4  0  0  0  2  0  4
+96 1 0 0 350p_R54(rain-None-noco2)  6  2  0  2  1  0  4  0  0  0  2  0  8
+97 1 0 0 432p_R54(rain-None-noco2)  6  3  0  1  1  0  4  0  0  0  2  0  4
+98 1 0 0 572p_R54(rain-None-noco2)  6  4  0  2  1  0  4  0  0  0  2  0  8
+99 1 0 0 801p_R54(rain-None-noco2)  6  5  0  1  1  0  4  0  0  0  2  0  4
+
+*CULTIVARS
+@C CR INGENO CNAME
+ 1 RI IB0012 IR 58
+ 2 RI IB0001 IR 8
+ 3 RI IB0002 IR 20
+ 4 RI IB0003 IR 36
+ 5 RI IB0004 IR 43
+ 6 RI IB0014 IR 54
+ 7 RI IB0012 IR 58
+ 8 RI IB0016 IR 60
+ 9 RI IB0015 IR 64
+10 RI IB0115 IR 64-2
+11 RI IB0017 IR 66
+12 RI IB0118 IR 72
+13 RI IB0018 IR 72x
+14 RI 990004 N.AMERIC
+15 RI 990003 JAPANESE
+
+*FIELDS
+@L ID_FIELD WSTA....  FLSA  FLOB  FLDT  FLDD  FLDS  FLST SLTX  SLDP  ID_SOIL    FLNAME
+ 1 GENERIC  GENERIC1   -99   -99   -99   -99   -99   -99 -99    -99  XY01234567 Weather 1950-1979
+ 2 GENERIC  GENERIC2   -99   -99   -99   -99   -99   -99 -99    -99  XY01234567 Weather 1980-2009
+ 3 GENERIC  GENERIC3   -99   -99   -99   -99   -99   -99 -99    -99  XY01234567 Weather 2010-2039
+ 4 GENERIC  GENERIC4   -99   -99   -99   -99   -99   -99 -99    -99  XY01234567 Weather 2040-2069
+ 5 GENERIC  GENERIC5   -99   -99   -99   -99   -99   -99 -99    -99  XY01234567 Weather 2070-2099
+@L ...........XCRD ...........YCRD .....ELEV .............AREA .SLEN .FLWR .SLAS FLHST FHDUR
+ 1             -99             -99       -99               -99   -99   -99   -99   -99   -99
+ 2             -99             -99       -99               -99   -99   -99   -99   -99   -99
+ 3             -99             -99       -99               -99   -99   -99   -99   -99   -99
+ 4             -99             -99       -99               -99   -99   -99   -99   -99   -99
+ 5             -99             -99       -99               -99   -99   -99   -99   -99   -99
+
+*INITIAL CONDITIONS
+@C   PCR ICDAT  ICRT  ICND  ICRN  ICRE  ICWD ICRES ICREN ICREP ICRIP ICRID ICNAME
+ 1    RI 10033   600   -99  1.00  1.00 -99.0     0  0.00  0.00   100    15 -99
+@C  ICBL  SH2O  SNH4  SNO3
+ 1     5 0.650  10.1   0.1
+ 1    20 0.600  10.1   0.1
+ 1    35 0.550   0.7   0.1
+ 1    50 0.550   0.7   0.1
+@C   PCR ICDAT  ICRT  ICND  ICRN  ICRE  ICWD ICRES ICREN ICREP ICRIP ICRID ICNAME
+ 2    RI 00033   600   -99  1.00  1.00 -99.0     0  0.00  0.00   100    15 -99
+@C  ICBL  SH2O  SNH4  SNO3
+ 2     5 0.350  10.1   0.1
+ 2    20 0.300  10.1   0.1
+ 2    35 0.350   0.7   0.1
+ 2    50 0.350   0.7   0.1
+
+*PLANTING DETAILS
+@P PDATE EDATE  PPOP  PPOE  PLME  PLDS  PLRS  PLRD  PLDP  PLWT  PAGE  PENV  PLPH  SPRL                        PLNAME
+ 1   -99   -99  75.0  25.0     T     H    20     0   2.0     0    23  26.0   3.0   0.0                        -99
+
+*IRRIGATION AND WATER MANAGEMENT
+@I  EFIR  IDEP  ITHR  IEPT  IOFF  IAME  IAMT IRNAME
+ 1   -99   -99   -99   -99   -99   -99     1 -99
+@I IDATE  IROP IRVAL
+ 1   -99 IR010   0.0
+
+*FERTILIZERS (INORGANIC)
+@F FDATE  FMCD  FACD  FDEP  FAMN  FAMP  FAMK  FAMC  FAMO  FOCD FERNAME
+ 1     1 FE005 AP014     1    75   -99   -99   -99   -99   -99 high
+ 1    30 FE005 AP011     1    75   -99   -99   -99   -99   -99 high
+ 2     1 FE005 AP011     1    50   -99   -99   -99   -99   -99 med
+ 2    30 FE005 AP014     1    50   -99   -99   -99   -99   -99 med
+ 3     1 FE005 AP011     1    38   -99   -99   -99   -99   -99 mid
+ 3    30 FE005 AP014     1    37   -99   -99   -99   -99   -99 mid
+ 4     1 FE005 AP011     1     0   -99   -99   -99   -99   -99 none
+
+*RESIDUES AND ORGANIC FERTILIZER
+@R RDATE  RCOD  RAMT  RESN  RESP  RESK  RINP  RDEP  RMET RENAME
+ 1   -99 RE001   800  1.10   -99   -99   -99    15   -99 -99
+
+*ENVIRONMENT MODIFICATIONS
+@E ODATE EDAY  ERAD  EMAX  EMIN  ERAIN ECO2  EDEW  EWIND ENVNAME  
+ 1 10001 A   0 A   0 A   0 A   0 A 0.0 R 320 A   0 A   0 320 ppm 
+ 2 00001 A   0 A   0 A   0 A   0 A 0.0 R 350 A   0 A   0 350 ppm 
+ 3 10001 A   0 A   0 A   0 A   0 A 0.0 R 432 A   0 A   0 432 ppm 
+ 4 00001 A   0 A   0 A   0 A   0 A 0.0 R 572 A   0 A   0 572 ppm 
+ 5 10001 A   0 A   0 A   0 A   0 A 0.0 R 801 A   0 A   0 801 ppm 
+
+!!!!!!!!!!!!!1950-1979, 2010-2039, and 2070-2099
+*SIMULATION CONTROLS
+@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL
+ 1 GE             30     1     S 10001  2150 Irrigated                 MZCER
+@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2
+ 1 OP              Y     Y     Y     N     N     N     N     N     R
+@N METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT MESOM MESEV MESOL
+ 1 ME              M     M     E     F     S     L     R     1     G     S     2
+@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+ 1 MA              A     A     D     R     M
+@N OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT VBOSE CHOUT OPOUT
+ 1 OU              N     N     Y    14     N     N     N     N     N     N     N     N     N
+
+@  AUTOMATIC MANAGEMENT
+@N PLANTING    PFRST PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+ 1 PL          10121 10156    40   100    30    40    10
+@N IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+ 1 IR             30    50   100 IB001 IB001    10  1.00
+@N NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+ 1 NI             30    50    25 IB001 IB001
+@N RESIDUES    RIPCN RTIME RIDEP
+ 1 RE            100     1    20
+@N HARVEST     HFRST HLAST HPCNP HPCNR
+ 1 HA              0 11365   100     0
+
+@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL
+ 2 GE             30     1     S 10001  2150 Rainfed                   MZCER
+@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2
+ 2 OP              Y     Y     Y     N     N     N     N     N     R
+@N METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT MESOM MESEV MESOL
+ 2 ME              M     M     E     F     S     L     R     1     G     S     2
+@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+ 2 MA              A     N     D     R     M
+@N OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT VBOSE CHOUT OPOUT
+ 2 OU              N     N     Y    14     N     N     N     N     N     N     N     N     N
+
+@  AUTOMATIC MANAGEMENT
+@N PLANTING    PFRST PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+ 2 PL          10121 10156    40   100    30    40    10
+@N IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+ 2 IR             30    50   100 IB001 IB001    10  1.00
+@N NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+ 2 NI             30    50    25 IB001 IB001
+@N RESIDUES    RIPCN RTIME RIDEP
+ 2 RE            100     1    20
+@N HARVEST     HFRST HLAST HPCNP HPCNR
+ 2 HA              0 11365   100     0
+
+@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL
+ 3 GE             30     1     S 10001  2150 Irrigated_NoCO2           MZCER
+@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2
+ 3 OP              Y     Y     Y     N     N     N     N     N     N
+@N METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT MESOM MESEV MESOL
+ 3 ME              M     M     E     F     S     L     R     1     G     S     2
+@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+ 3 MA              A     A     D     R     M
+@N OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT VBOSE CHOUT OPOUT
+ 3 OU              N     N     Y    14     N     N     N     N     N     N     N     N     N
+
+@  AUTOMATIC MANAGEMENT
+@N PLANTING    PFRST PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+ 3 PL          10121 10156    40   100    30    40    10
+@N IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+ 3 IR             30    50   100 IB001 IB001    10  1.00
+@N NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+ 3 NI             30    50    25 IB001 IB001
+@N RESIDUES    RIPCN RTIME RIDEP
+ 3 RE            100     1    20
+@N HARVEST     HFRST HLAST HPCNP HPCNR
+ 3 HA              0 11365   100     0
+
+@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL
+ 4 GE             30     1     S 10001  2150 Rainfed_NoCO2             MZCER
+@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2
+ 4 OP              Y     Y     Y     N     N     N     N     N     N
+@N METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT MESOM MESEV MESOL
+ 4 ME              M     M     E     F     S     L     R     1     G     S     2
+@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+ 4 MA              A     N     D     R     M
+@N OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT VBOSE CHOUT OPOUT
+ 4 OU              N     N     Y    14     N     N     N     N     N     N     N     N     N
+
+@  AUTOMATIC MANAGEMENT
+@N PLANTING    PFRST PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+ 4 PL          10121 10156    40   100    30    40    10
+@N IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+ 4 IR             30    50   100 IB001 IB001    10  1.00
+@N NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+ 4 NI             30    50    25 IB001 IB001
+@N RESIDUES    RIPCN RTIME RIDEP
+ 4 RE            100     1    20
+@N HARVEST     HFRST HLAST HPCNP HPCNR
+ 4 HA              0 11365   100     0
+
+!!!!!!!!!!!!!1980-2009, 2040-2069
+@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL
+ 5 GE             30     1     S 00001  2150 Irrigated                 MZCER
+@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2
+ 5 OP              Y     Y     Y     N     N     N     N     N     R
+@N METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT MESOM MESEV MESOL
+ 5 ME              M     M     E     F     S     L     R     1     G     S     2
+@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+ 5 MA              A     A     D     R     M
+@N OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT VBOSE CHOUT OPOUT
+ 5 OU              N     N     Y    14     N     N     N     N     N     N     N     N     N
+
+@  AUTOMATIC MANAGEMENT
+@N PLANTING    PFRST PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+ 5 PL          00121 00156    40   100    30    40    10
+@N IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+ 5 IR             30    50   100 IB001 IB001    10  1.00
+@N NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+ 5 NI             30    50    25 IB001 IB001
+@N RESIDUES    RIPCN RTIME RIDEP
+ 5 RE            100     1    20
+@N HARVEST     HFRST HLAST HPCNP HPCNR
+ 5 HA              0 01365   100     0
+
+@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL
+ 6 GE             30     1     S 00001  2150 Rainfed                   MZCER
+@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2
+ 6 OP              Y     Y     Y     N     N     N     N     N     R
+@N METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT MESOM MESEV MESOL
+ 6 ME              M     M     E     F     S     L     R     1     G     S     2
+@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+ 6 MA              A     N     D     R     M
+@N OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT VBOSE CHOUT OPOUT
+ 6 OU              N     N     Y    14     N     N     N     N     N     N     N     N     N
+
+@  AUTOMATIC MANAGEMENT
+@N PLANTING    PFRST PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+ 6 PL          00121 00156    40   100    30    40    10
+@N IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+ 6 IR             30    50   100 IB001 IB001    10  1.00
+@N NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+ 6 NI             30    50    25 IB001 IB001
+@N RESIDUES    RIPCN RTIME RIDEP
+ 6 RE            100     1    20
+@N HARVEST     HFRST HLAST HPCNP HPCNR
+ 6 HA              0 01365   100     0
+
+@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL
+ 7 GE             30     1     S 00001  2150 Irrigated_NoCO2           MZCER
+@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2
+ 7 OP              Y     Y     Y     N     N     N     N     N     N
+@N METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT MESOM MESEV MESOL
+ 7 ME              M     M     E     F     S     L     R     1     G     S     2
+@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+ 7 MA              A     A     D     R     M
+@N OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT VBOSE CHOUT OPOUT
+ 7 OU              N     N     Y    14     N     N     N     N     N     N     N     N     N
+
+@  AUTOMATIC MANAGEMENT
+@N PLANTING    PFRST PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+ 7 PL          00121 00156    40   100    30    40    10
+@N IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+ 7 IR             30    50   100 IB001 IB001    10  1.00
+@N NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+ 7 NI             30    50    25 IB001 IB001
+@N RESIDUES    RIPCN RTIME RIDEP
+ 7 RE            100     1    20
+@N HARVEST     HFRST HLAST HPCNP HPCNR
+ 7 HA              0 01365   100     0
+
+@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL
+ 8 GE             30     1     S 00001  2150 Rainfed_NoCO2             MZCER
+@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2
+ 8 OP              Y     Y     Y     N     N     N     N     N     N
+@N METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT MESOM MESEV MESOL
+ 8 ME              M     M     E     F     S     L     R     1     G     S     2
+@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+ 8 MA              A     N     D     R     M
+@N OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT VBOSE CHOUT OPOUT
+ 8 OU              N     N     Y    14     N     N     N     N     N     N     N     N     N
+
+@  AUTOMATIC MANAGEMENT
+@N PLANTING    PFRST PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+ 8 PL          00121 00156    40   100    30    40    10
+@N IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+ 8 IR             30    50   100 IB001 IB001    10  1.00
+@N NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+ 8 NI             30    50    25 IB001 IB001
+@N RESIDUES    RIPCN RTIME RIDEP
+ 8 RE            100     1    20
+@N HARVEST     HFRST HLAST HPCNP HPCNR
+ 8 HA              0 01365   100     0

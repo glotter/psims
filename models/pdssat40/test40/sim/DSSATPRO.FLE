@@ -1,0 +1,23 @@
+*** *  DSSAT PROFILE * ***     
+WED    
+WGD    
+CLD    
+SLD    
+CRD    
+ASD    
+AQD    
+PSD    
+ECD    
+C--------
+C  Data folders where the raw data is stored; for now, I will direct 
+C  all files to the sim folder to keep everything together. 
+C--------
+C  WEATHER
+C  WEATHER/gen
+C  WEATHER/climate
+C  SOIL
+C  GENOTYPE
+C  SEASONAL
+C  SEQUENCE
+C  PEST
+C  ECONOMIC

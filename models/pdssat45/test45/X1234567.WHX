@@ -1,0 +1,473 @@
+*EXP.DETAILS:  Global pDSSAT maize RCP8.5
+
+*GENERAL
+@PEOPLE
+Joshua Elliott
+@ADDRESS
+Computation Institute, University of Chicago
+@SITE
+42.2500, 87.7500
+
+*TREATMENTS                        -------------FACTOR LEVELS------------
+@N R O C TNAME.................... CU FL SA IC MP MI MF MR MC MT ME MH SM
+ 0 1 0 0 320p_SHL(Irri-High)        1  1  0  1  1  0  1  0  0  0  1  0  1
+ 1 1 0 0 350p_SHL(Irri-High)        1  2  0  2  1  0  1  0  0  0  2  0  5
+ 2 1 0 0 432p_SHL(Irri-High)        1  3  0  1  1  0  1  0  0  0  3  0  1
+ 3 1 0 0 572p_SHL(Irri-High)        1  4  0  2  1  0  1  0  0  0  4  0  5
+ 4 1 0 0 801p_SHL(Irri-High)        1  5  0  1  1  0  1  0  0  0  5  0  1
+ 5 1 0 0 320p_SHL(Irri-Mid)         1  1  0  1  1  0  3  0  0  0  1  0  1
+ 6 1 0 0 350p_SHL(Irri-Mid)         1  2  0  2  1  0  3  0  0  0  2  0  5
+ 7 1 0 0 432p_SHL(Irri-Mid)         1  3  0  1  1  0  3  0  0  0  3  0  1
+ 8 1 0 0 572p_SHL(Irri-Mid)         1  4  0  2  1  0  3  0  0  0  4  0  5
+ 9 1 0 0 801p_SHL(Irri-Mid)         1  5  0  1  1  0  3  0  0  0  5  0  1
+10 1 0 0 320p_WUK(Irri-High)        4  1  0  1  1  0  1  0  0  0  1  0  9
+11 1 0 0 350p_WUK(Irri-High)        4  2  0  2  1  0  1  0  0  0  2  0 13
+12 1 0 0 432p_WUK(Irri-High)        4  3  0  1  1  0  1  0  0  0  3  0  9
+13 1 0 0 572p_WUK(Irri-High)        4  4  0  2  1  0  1  0  0  0  4  0 13
+14 1 0 0 801p_WUK(Irri-High)        4  5  0  1  1  0  1  0  0  0  5  0  9
+15 1 0 0 320p_WUK(Irri-Mid)         4  1  0  1  1  0  3  0  0  0  1  0  9
+16 1 0 0 350p_WUK(Irri-Mid)         4  2  0  2  1  0  3  0  0  0  2  0 13
+17 1 0 0 432p_WUK(Irri-Mid)         4  3  0  1  1  0  3  0  0  0  3  0  9
+18 1 0 0 572p_WUK(Irri-Mid)         4  4  0  2  1  0  3  0  0  0  4  0 13
+19 1 0 0 801p_WUK(Irri-Mid)         4  5  0  1  1  0  3  0  0  0  5  0  9
+
+*CULTIVARS
+@C CR INGENO CNAME
+ 1 WH 990001 SPRING-HIGH LAT
+ 2 WH 990002 WINTER-EUROPE
+ 3 WH 990003 WINTER-US 
+ 4 WH 990004 WINTER-UKRAINE
+ 5 WH 990005 FACULTATIVE 
+ 6 WH 990006 SPRING-LOW LAT
+ 7 WH 990010 CHELSEA SRW-US
+
+*FIELDS
+@L ID_FIELD WSTA....  FLSA  FLOB  FLDT  FLDD  FLDS  FLST SLTX  SLDP  ID_SOIL    FLNAME
+ 1 GENERIC  GENERIC1   -99   -99   -99   -99   -99   -99 -99    -99  XY01234567 Weather 1950-1979
+ 2 GENERIC  GENERIC2   -99   -99   -99   -99   -99   -99 -99    -99  XY01234567 Weather 1980-2009
+ 3 GENERIC  GENERIC3   -99   -99   -99   -99   -99   -99 -99    -99  XY01234567 Weather 2010-2039
+ 4 GENERIC  GENERIC4   -99   -99   -99   -99   -99   -99 -99    -99  XY01234567 Weather 2040-2069
+ 5 GENERIC  GENERIC5   -99   -99   -99   -99   -99   -99 -99    -99  XY01234567 Weather 2070-2099
+@L ...........XCRD ...........YCRD .....ELEV .............AREA .SLEN .FLWR .SLAS FLHST FHDUR
+ 1             -99             -99       -99               -99   -99   -99   -99   -99   -99
+ 2             -99             -99       -99               -99   -99   -99   -99   -99   -99
+ 3             -99             -99       -99               -99   -99   -99   -99   -99   -99
+ 4             -99             -99       -99               -99   -99   -99   -99   -99   -99
+ 5             -99             -99       -99               -99   -99   -99   -99   -99   -99
+
+*INITIAL CONDITIONS
+@C   PCR ICDAT  ICRT  ICND  ICRN  ICRE  ICWD ICRES ICREN ICREP ICRIP ICRID ICNAME
+ 1    WH 10001  2000     0  1.00  1.00 -99.0  3000  0.57  0.00   100    10 -99
+@C  ICBL  SH2O  SNH4  SNO3
+ 1    10 0.330   3.0   6.0
+ 1    25 0.330   3.0   5.0
+ 1    45 0.330   3.0   4.0
+ 1    65 0.330   2.0   3.0
+ 1    95 0.330   2.0   2.0
+ 1   125 0.330   1.0   0.5
+ 1   155 0.330   0.5   0.5
+@C   PCR ICDAT  ICRT  ICND  ICRN  ICRE  ICWD ICRES ICREN ICREP ICRIP ICRID ICNAME
+ 2    WH 00001  2000     0  1.00  1.00 -99.0  3000  0.57  0.00   100    10 -99
+@C  ICBL  SH2O  SNH4  SNO3
+ 2    10 0.330   3.0   6.0
+ 2    25 0.330   3.0   5.0
+ 2    45 0.330   3.0   4.0
+ 2    65 0.330   2.0   3.0
+ 2    95 0.330   2.0   2.0
+ 2   125 0.330   1.0   0.5
+ 2   155 0.330   0.5   0.5
+
+*PLANTING DETAILS
+@P PDATE EDATE  PPOP  PPOE  PLME  PLDS  PLRS  PLRD  PLDP  PLWT  PAGE  PENV  PLPH  SPRL                        PLNAME
+ 1   -99   -99 277.0 277.0     S     R    17     0   4.0   -99   -99 -99.0 -99.0   0.0                        -99
+
+*FERTILIZERS (INORGANIC)
+@F FDATE  FMCD  FACD  FDEP  FAMN  FAMP  FAMK  FAMC  FAMO  FOCD FERNAME
+ 1     1 FE001 AP001    15    75     0     0     0     0   -99 high
+ 1    40 FE001 AP001    15    75     0     0     0     0   -99 high
+ 2     1 FE001 AP001    15    50     0     0     0     0   -99 med
+ 2    40 FE001 AP001    15    50     0     0     0     0   -99 med
+ 3     1 FE001 AP001    15    38     0     0     0     0   -99 mid
+ 3    40 FE001 AP001    15    37     0     0     0     0   -99 mid
+ 4     1 FE001 AP001    15     0     0     0     0     0   -99 none
+
+*ENVIRONMENT MODIFICATIONS
+@E ODATE EDAY  ERAD  EMAX  EMIN  ERAIN ECO2  EDEW  EWIND ENVNAME  
+ 1 10001 A   0 A   0 A   0 A   0 A 0.0 R 320 A   0 A   0 320 ppm 
+ 2 00001 A   0 A   0 A   0 A   0 A 0.0 R 350 A   0 A   0 350 ppm 
+ 3 10001 A   0 A   0 A   0 A   0 A 0.0 R 432 A   0 A   0 432 ppm 
+ 4 00001 A   0 A   0 A   0 A   0 A 0.0 R 572 A   0 A   0 572 ppm 
+ 5 10001 A   0 A   0 A   0 A   0 A 0.0 R 801 A   0 A   0 801 ppm 
+
+*SIMULATION CONTROLS
+!!!!!!!!!!!!!1950-1979, 2010-2039, and 2070-2099
+@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL
+ 1 GE             30     1     S 10001  2150 Irrigated                 
+@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2
+ 1 OP              Y     Y     Y     N     N     N     N     N     R
+@N METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT MESOM MESEV MESOL
+ 1 ME              M     M     E     R     S     C     R     1     G     S     2
+@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+ 1 MA              A     A     D     N     M
+@N OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT VBOSE CHOUT OPOUT
+ 1 OU              N     N     Y    14     N     N     N     N     N     N     N     N     N
+
+@  AUTOMATIC MANAGEMENT
+@N PLANTING    PFRST PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+ 1 PL          10130 10141    40   100    30    40    10
+@N IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+ 1 IR             40    80   100 GS000 IR001    10   .75
+@N NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+ 1 NI             30    50    25 FE001 GS000
+@N RESIDUES    RIPCN RTIME RIDEP
+ 1 RE            100     1    20
+@N HARVEST     HFRST HLAST HPCNP HPCNR
+ 1 HA              0 11365   100     0
+
+@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL
+ 2 GE             30     1     S 10001  2150 Rainfed                   
+@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2
+ 2 OP              Y     Y     Y     N     N     N     N     N     R
+@N METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT MESOM MESEV MESOL
+ 2 ME              M     M     E     R     S     C     R     1     G     S     2
+@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+ 2 MA              A     N     D     N     M
+@N OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT VBOSE CHOUT OPOUT
+ 2 OU              N     N     Y    14     N     N     N     N     N     N     N     N     N
+
+@  AUTOMATIC MANAGEMENT
+@N PLANTING    PFRST PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+ 2 PL          10130 10141    40   100    30    40    10
+@N IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+ 2 IR             40    80   100 GS000 IR001    10   .75
+@N NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+ 2 NI             30    50    25 FE001 GS000
+@N RESIDUES    RIPCN RTIME RIDEP
+ 2 RE            100     1    20
+@N HARVEST     HFRST HLAST HPCNP HPCNR
+ 2 HA              0 11365   100     0
+
+@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL
+ 3 GE             30     1     S 10001  2150 Irrigated_NoCO2           
+@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2
+ 3 OP              Y     Y     Y     N     N     N     N     N     N
+@N METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT MESOM MESEV MESOL
+ 3 ME              M     M     E     R     S     C     R     1     G     S     2
+@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+ 3 MA              A     A     D     N     M
+@N OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT VBOSE CHOUT OPOUT
+ 3 OU              N     N     Y    14     N     N     N     N     N     N     N     N     N
+
+@  AUTOMATIC MANAGEMENT
+@N PLANTING    PFRST PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+ 3 PL          10130 10141    40   100    30    40    10
+@N IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+ 3 IR             40    80   100 GS000 IR001    10   .75
+@N NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+ 3 NI             30    50    25 FE001 GS000
+@N RESIDUES    RIPCN RTIME RIDEP
+ 3 RE            100     1    20
+@N HARVEST     HFRST HLAST HPCNP HPCNR
+ 3 HA              0 11365   100     0
+
+@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL
+ 4 GE             30     1     S 10001  2150 Rainfed_NoCO2             
+@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2
+ 4 OP              Y     Y     Y     N     N     N     N     N     N
+@N METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT MESOM MESEV MESOL
+ 4 ME              M     M     E     R     S     C     R     1     G     S     2
+@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+ 4 MA              A     N     D     N     M
+@N OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT VBOSE CHOUT OPOUT
+ 4 OU              N     N     Y    14     N     N     N     N     N     N     N     N     N
+
+@  AUTOMATIC MANAGEMENT
+@N PLANTING    PFRST PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+ 4 PL          10130 10141    40   100    30    40    10
+@N IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+ 4 IR             40    80   100 GS000 IR001    10   .75
+@N NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+ 4 NI             30    50    25 FE001 GS000
+@N RESIDUES    RIPCN RTIME RIDEP
+ 4 RE            100     1    20
+@N HARVEST     HFRST HLAST HPCNP HPCNR
+ 4 HA              0 11365   100     0
+
+!!!!!!!!!!!!!1980-2009, 2040-2069
+@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL
+ 5 GE             30     1     S 00001  2150 Irrigated                 
+@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2
+ 5 OP              Y     Y     Y     N     N     N     N     N     R
+@N METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT MESOM MESEV MESOL
+ 5 ME              M     M     E     R     S     C     R     1     G     S     2
+@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+ 5 MA              A     A     D     N     M
+@N OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT VBOSE CHOUT OPOUT
+ 5 OU              N     N     Y    14     N     N     N     N     N     N     N     N     N
+
+@  AUTOMATIC MANAGEMENT
+@N PLANTING    PFRST PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+ 5 PL          00130 00141    40   100    30    40    10
+@N IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+ 5 IR             40    80   100 GS000 IR001    10   .75
+@N NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+ 5 NI             30    50    25 FE001 GS000
+@N RESIDUES    RIPCN RTIME RIDEP
+ 5 RE            100     1    20
+@N HARVEST     HFRST HLAST HPCNP HPCNR
+ 5 HA              0 01365   100     0
+
+@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL
+ 6 GE             30     1     S 00001  2150 Rainfed                   
+@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2
+ 6 OP              Y     Y     Y     N     N     N     N     N     R
+@N METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT MESOM MESEV MESOL
+ 6 ME              M     M     E     R     S     C     R     1     G     S     2
+@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+ 6 MA              A     N     D     N     M
+@N OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT VBOSE CHOUT OPOUT
+ 6 OU              N     N     Y    14     N     N     N     N     N     N     N     N     N
+
+@  AUTOMATIC MANAGEMENT
+@N PLANTING    PFRST PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+ 6 PL          00130 00141    40   100    30    40    10
+@N IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+ 6 IR             40    80   100 GS000 IR001    10   .75
+@N NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+ 6 NI             30    50    25 FE001 GS000
+@N RESIDUES    RIPCN RTIME RIDEP
+ 6 RE            100     1    20
+@N HARVEST     HFRST HLAST HPCNP HPCNR
+ 6 HA              0 01365   100     0
+
+@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL
+ 7 GE             30     1     S 00001  2150 Irrigated_NoCO2           
+@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2
+ 7 OP              Y     Y     Y     N     N     N     N     N     N
+@N METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT MESOM MESEV MESOL
+ 7 ME              M     M     E     R     S     C     R     1     G     S     2
+@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+ 7 MA              A     A     D     N     M
+@N OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT VBOSE CHOUT OPOUT
+ 7 OU              N     N     Y    14     N     N     N     N     N     N     N     N     N
+
+@  AUTOMATIC MANAGEMENT
+@N PLANTING    PFRST PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+ 7 PL          00130 00141    40   100    30    40    10
+@N IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+ 7 IR             40    80   100 GS000 IR001    10   .75
+@N NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+ 7 NI             30    50    25 FE001 GS000
+@N RESIDUES    RIPCN RTIME RIDEP
+ 7 RE            100     1    20
+@N HARVEST     HFRST HLAST HPCNP HPCNR
+ 7 HA              0 01365   100     0
+
+@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL
+ 8 GE             30     1     S 00001  2150 Rainfed_NoCO2             
+@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2
+ 8 OP              Y     Y     Y     N     N     N     N     N     N
+@N METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT MESOM MESEV MESOL
+ 8 ME              M     M     E     R     S     C     R     1     G     S     2
+@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+ 8 MA              A     N     D     N     M
+@N OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT VBOSE CHOUT OPOUT
+ 8 OU              N     N     Y    14     N     N     N     N     N     N     N     N     N
+
+@  AUTOMATIC MANAGEMENT
+@N PLANTING    PFRST PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+ 8 PL          00130 00141    40   100    30    40    10
+@N IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+ 8 IR             40    80   100 GS000 IR001    10   .75
+@N NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+ 8 NI             30    50    25 FE001 GS000
+@N RESIDUES    RIPCN RTIME RIDEP
+ 8 RE            100     1    20
+@N HARVEST     HFRST HLAST HPCNP HPCNR
+ 8 HA              0 01365   100     0
+
+!These are for the winter wheat cultivar 2
+@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL
+ 9 GE             30     1     S 10001  2150 Irrigated                 
+@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2
+ 9 OP              Y     Y     Y     N     N     N     N     N     R
+@N METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT MESOM MESEV MESOL
+ 9 ME              M     M     E     R     S     C     R     1     G     S     2
+@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+ 9 MA              A     A     D     N     M
+@N OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT VBOSE CHOUT OPOUT
+ 9 OU              N     N     Y    14     N     N     N     N     N     N     N     N     N
+
+@  AUTOMATIC MANAGEMENT
+@N PLANTING    PFRST PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+ 9 PL          10229 10284    40   100    30    40    10
+@N IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+ 9 IR             40    80   100 GS000 IR001    10   .75
+@N NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+ 9 NI             30    50    25 FE001 GS000
+@N RESIDUES    RIPCN RTIME RIDEP
+ 9 RE            100     1    20
+@N HARVEST     HFRST HLAST HPCNP HPCNR
+ 9 HA              0 11365   100     0
+
+@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL
+10 GE             30     1     S 10001  2150 Rainfed                   
+@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2
+10 OP              Y     Y     Y     N     N     N     N     N     R
+@N METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT MESOM MESEV MESOL
+10 ME              M     M     E     R     S     C     R     1     G     S     2
+@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+10 MA              A     N     D     N     M
+@N OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT VBOSE CHOUT OPOUT
+10 OU              N     N     Y    14     N     N     N     N     N     N     N     N     N
+
+@  AUTOMATIC MANAGEMENT
+@N PLANTING    PFRST PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+10 PL          10229 10284    40   100    30    40    10
+@N IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+10 IR             40    80   100 GS000 IR001    10   .75
+@N NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+10 NI             30    50    25 FE001 GS000
+@N RESIDUES    RIPCN RTIME RIDEP
+10 RE            100     1    20
+@N HARVEST     HFRST HLAST HPCNP HPCNR
+10 HA              0 11365   100     0
+
+@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL
+11 GE             30     1     S 10001  2150 Irrigated_NoCO2           
+@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2
+11 OP              Y     Y     Y     N     N     N     N     N     N
+@N METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT MESOM MESEV MESOL
+11 ME              M     M     E     R     S     C     R     1     G     S     2
+@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+11 MA              A     A     D     N     M
+@N OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT VBOSE CHOUT OPOUT
+11 OU              N     N     Y    14     N     N     N     N     N     N     N     N     N
+
+@  AUTOMATIC MANAGEMENT
+@N PLANTING    PFRST PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+11 PL          10229 10284    40   100    30    40    10
+@N IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+11 IR             40    80   100 GS000 IR001    10   .75
+@N NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+11 NI             30    50    25 FE001 GS000
+@N RESIDUES    RIPCN RTIME RIDEP
+11 RE            100     1    20
+@N HARVEST     HFRST HLAST HPCNP HPCNR
+11 HA              0 11365   100     0
+
+@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL
+12 GE             30     1     S 10001  2150 Rainfed_NoCO2             
+@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2
+12 OP              Y     Y     Y     N     N     N     N     N     N
+@N METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT MESOM MESEV MESOL
+12 ME              M     M     E     R     S     C     R     1     G     S     2
+@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+12 MA              A     N     D     N     M
+@N OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT VBOSE CHOUT OPOUT
+12 OU              N     N     Y    14     N     N     N     N     N     N     N     N     N
+
+@  AUTOMATIC MANAGEMENT
+@N PLANTING    PFRST PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+12 PL          10229 10284    40   100    30    40    10
+@N IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+12 IR             40    80   100 GS000 IR001    10   .75
+@N NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+12 NI             30    50    25 FE001 GS000
+@N RESIDUES    RIPCN RTIME RIDEP
+12 RE            100     1    20
+@N HARVEST     HFRST HLAST HPCNP HPCNR
+12 HA              0 11365   100     0
+
+!!!!!!!!!!!!!1980-2009, 2040-2069
+@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL
+13 GE             30     1     S 00001  2150 Irrigated                 
+@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2
+13 OP              Y     Y     Y     N     N     N     N     N     R
+@N METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT MESOM MESEV MESOL
+13 ME              M     M     E     R     S     C     R     1     G     S     2
+@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+13 MA              A     A     D     N     M
+@N OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT VBOSE CHOUT OPOUT
+13 OU              N     N     Y    14     N     N     N     N     N     N     N     N     N
+
+@  AUTOMATIC MANAGEMENT
+@N PLANTING    PFRST PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+13 PL          00229 00284    40   100    30    40    10
+@N IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+13 IR             40    80   100 GS000 IR001    10   .75
+@N NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+13 NI             30    50    25 FE001 GS000
+@N RESIDUES    RIPCN RTIME RIDEP
+13 RE            100     1    20
+@N HARVEST     HFRST HLAST HPCNP HPCNR
+13 HA              0 01365   100     0
+
+@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL
+14 GE             30     1     S 00001  2150 Rainfed                   
+@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2
+14 OP              Y     Y     Y     N     N     N     N     N     R
+@N METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT MESOM MESEV MESOL
+14 ME              M     M     E     R     S     C     R     1     G     S     2
+@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+14 MA              A     N     D     N     M
+@N OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT VBOSE CHOUT OPOUT
+14 OU              N     N     Y    14     N     N     N     N     N     N     N     N     N
+
+@  AUTOMATIC MANAGEMENT
+@N PLANTING    PFRST PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+14 PL          00229 00284    40   100    30    40    10
+@N IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+14 IR             40    80   100 GS000 IR001    10   .75
+@N NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+14 NI             30    50    25 FE001 GS000
+@N RESIDUES    RIPCN RTIME RIDEP
+14 RE            100     1    20
+@N HARVEST     HFRST HLAST HPCNP HPCNR
+14 HA              0 01365   100     0
+
+@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL
+15 GE             30     1     S 00001  2150 Irrigated_NoCO2           
+@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2
+15 OP              Y     Y     Y     N     N     N     N     N     N
+@N METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT MESOM MESEV MESOL
+15 ME              M     M     E     R     S     C     R     1     G     S     2
+@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+15 MA              A     A     D     N     M
+@N OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT VBOSE CHOUT OPOUT
+15 OU              N     N     Y    14     N     N     N     N     N     N     N     N     N
+
+@  AUTOMATIC MANAGEMENT
+@N PLANTING    PFRST PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+15 PL          00229 00284    40   100    30    40    10
+@N IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+15 IR             40    80   100 GS000 IR001    10   .75
+@N NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+15 NI             30    50    25 FE001 GS000
+@N RESIDUES    RIPCN RTIME RIDEP
+15 RE            100     1    20
+@N HARVEST     HFRST HLAST HPCNP HPCNR
+15 HA              0 01365   100     0
+
+@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL
+16 GE             30     1     S 00001  2150 Rainfed_NoCO2            
+@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2
+16 OP              Y     Y     Y     N     N     N     N     N     N
+@N METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT MESOM MESEV MESOL
+16 ME              M     M     E     R     S     C     R     1     G     S     2
+@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+16 MA              A     N     D     N     M
+@N OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT VBOSE CHOUT OPOUT
+16 OU              N     N     Y    14     N     N     N     N     N     N     N     N     N
+
+@  AUTOMATIC MANAGEMENT
+@N PLANTING    PFRST PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+16 PL          00229 00284    40   100    30    40    10
+@N IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+16 IR             40    80   100 GS000 IR001    10   .75
+@N NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+16 NI             30    50    25 FE001 GS000
+@N RESIDUES    RIPCN RTIME RIDEP
+16 RE            100     1    20
+@N HARVEST     HFRST HLAST HPCNP HPCNR
+16 HA              0 01365   100     0

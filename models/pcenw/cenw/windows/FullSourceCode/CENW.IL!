@@ -1,0 +1,298 @@
+3.1 Pools
+           6 Number of layers for soil organic matter
+0.0000000000 C13    in structural litter layer  0
+0.0000000000 C13    in metabolic litter layer  0
+0.0000000000 C13    in fine wood litter layer  0
+0.0000000000 C13    in coarse wood litter layer  0
+0.0000000000 C13    in active organic matter layer  0
+0.0000000000 C13    in slow organic matter layer  0
+0.0000000000 C13    in resistant organic matter layer  0
+0.0000000000 C13    in inert organic matter layer  0
+0.0000000000 C13    in soluble organic matter layer  0
+0.0000000000 C13    in structural litter layer  1
+0.0000000000 C13    in metabolic litter layer  1
+0.0000000000 C13    in fine wood litter layer  1
+0.0000000000 C13    in coarse wood litter layer  1
+0.0000000000 C13    in active organic matter layer  1
+0.0000000000 C13    in slow organic matter layer  1
+0.0000000000 C13    in resistant organic matter layer  1
+0.0000000000 C13    in inert organic matter layer  1
+0.0000000000 C13    in soluble organic matter layer  1
+17.793369453 C13    in structural litter layer  2
+17.122570416 C13    in metabolic litter layer  2
+0.0000000000 C13    in fine wood litter layer  2
+14.115384630 C13    in coarse wood litter layer  2
+16.377442732 C13    in active organic matter layer  2
+14.783868634 C13    in slow organic matter layer  2
+14.037911055 C13    in resistant organic matter layer  2
+14.629447165 C13    in inert organic matter layer  2
+0.0000000000 C13    in soluble organic matter layer  2
+17.712805354 C13    in structural litter layer  3
+17.067406893 C13    in metabolic litter layer  3
+0.0000000000 C13    in fine wood litter layer  3
+14.110178543 C13    in coarse wood litter layer  3
+16.194413633 C13    in active organic matter layer  3
+14.712815932 C13    in slow organic matter layer  3
+14.014679016 C13    in resistant organic matter layer  3
+14.009769873 C13    in inert organic matter layer  3
+0.0000000000 C13    in soluble organic matter layer  3
+17.914068325 C13    in structural litter layer  4
+17.343806707 C13    in metabolic litter layer  4
+0.0000000000 C13    in fine wood litter layer  4
+14.136850940 C13    in coarse wood litter layer  4
+16.540000076 C13    in active organic matter layer  4
+15.266482149 C13    in slow organic matter layer  4
+14.008063186 C13    in resistant organic matter layer  4
+14.000047461 C13    in inert organic matter layer  4
+0.0000000000 C13    in soluble organic matter layer  4
+17.935172193 C13    in structural litter layer  5
+17.432054059 C13    in metabolic litter layer  5
+0.0000000000 C13    in fine wood litter layer  5
+14.153806358 C13    in coarse wood litter layer  5
+16.367961996 C13    in active organic matter layer  5
+15.507799620 C13    in slow organic matter layer  5
+14.002785635 C13    in resistant organic matter layer  5
+14.000000153 C13    in inert organic matter layer  5
+0.0000000000 C13    in soluble organic matter layer  5
+14.681605504 C13    in structural litter layer  6
+17.383848887 C13    in metabolic litter layer  6
+0.0000000000 C13    in fine wood litter layer  6
+14.155083443 C13    in coarse wood litter layer  6
+14.211855078 C13    in active organic matter layer  6
+14.040208507 C13    in slow organic matter layer  6
+14.000039569 C13    in resistant organic matter layer  6
+14.000000000 C13    in inert organic matter layer  6
+0.0000000000 C13    in soluble organic matter layer  6
+0.0000000000 C13    in dead coarse wood
+0.0000000000 C13    in dead fine wood
+0.0000000000 C13    in dead coarse root
+0.0000000000 C13    in dead fine root
+0.0000000000 C13    in dead leaves
+0.0000000000 C13    in dead other material
+0.0000000000 C13    in sapwood
+0.0000000000 C13    in heartwood
+0.0000000000 C13    in coarse roots
+0.0000000000 C13    in fine root
+0.0000000000 C13    in branches
+0.0000000000 C13    in bark
+0.0000000000 C13    in foliage reserves
+0.0000000000 C13    in leaves
+0.0000000000 C13    in pollen
+0.0000000000 C13    in fruit
+0.0000000000 C13    in non-structural form
+3060.3131078 Carbon in structural litter layer  0
+0.0000000000 Carbon in metabolic litter layer  0
+2876.4370544 Carbon in fine wood litter layer  0
+475.07132184 Carbon in coarse wood litter layer  0
+399.11800039 Carbon in active organic matter layer  0
+3314.1371598 Carbon in slow organic matter layer  0
+66.905295547 Carbon in resistant organic matter layer  0
+0.0000000000 Carbon in inert organic matter layer  0
+0.0000000000 Carbon in soluble organic matter layer  0
+2564.5191521 Carbon in structural litter layer  1
+6.1668947854 Carbon in metabolic litter layer  1
+0.0000000000 Carbon in fine wood litter layer  1
+27.992462278 Carbon in coarse wood litter layer  1
+482.97244081 Carbon in active organic matter layer  1
+13310.671788 Carbon in slow organic matter layer  1
+2383.6887545 Carbon in resistant organic matter layer  1
+0.0000000000 Carbon in inert organic matter layer  1
+0.0000000000 Carbon in soluble organic matter layer  1
+927.73715362 Carbon in structural litter layer  2
+2.6584928110 Carbon in metabolic litter layer  2
+0.0000000000 Carbon in fine wood litter layer  2
+31.312843411 Carbon in coarse wood litter layer  2
+183.47593468 Carbon in active organic matter layer  2
+5698.5662408 Carbon in slow organic matter layer  2
+2777.9308498 Carbon in resistant organic matter layer  2
+0.0000000000 Carbon in inert organic matter layer  2
+0.0000000000 Carbon in soluble organic matter layer  2
+580.05103464 Carbon in structural litter layer  3
+1.6565153096 Carbon in metabolic litter layer  3
+0.0000000000 Carbon in fine wood litter layer  3
+36.621042227 Carbon in coarse wood litter layer  3
+107.13963216 Carbon in active organic matter layer  3
+3032.7369429 Carbon in slow organic matter layer  3
+2798.6665978 Carbon in resistant organic matter layer  3
+0.0000000000 Carbon in inert organic matter layer  3
+0.0000000000 Carbon in soluble organic matter layer  3
+256.87735139 Carbon in structural litter layer  4
+0.6894787290 Carbon in metabolic litter layer  4
+0.0000000000 Carbon in fine wood litter layer  4
+16.317933265 Carbon in coarse wood litter layer  4
+53.408386990 Carbon in active organic matter layer  4
+1615.9105082 Carbon in slow organic matter layer  4
+4745.8542143 Carbon in resistant organic matter layer  4
+0.0000000000 Carbon in inert organic matter layer  4
+0.0000000000 Carbon in soluble organic matter layer  4
+36.984903538 Carbon in structural litter layer  5
+0.0624344750 Carbon in metabolic litter layer  5
+0.0000000000 Carbon in fine wood litter layer  5
+6.6799107946 Carbon in coarse wood litter layer  5
+12.915006262 Carbon in active organic matter layer  5
+357.49157712 Carbon in slow organic matter layer  5
+6504.1860315 Carbon in resistant organic matter layer  5
+0.0000000000 Carbon in inert organic matter layer  5
+0.0000000000 Carbon in soluble organic matter layer  5
+2.7240273420 Carbon in structural litter layer  6
+0.0029513507 Carbon in metabolic litter layer  6
+0.0000000000 Carbon in fine wood litter layer  6
+2.2478589635 Carbon in coarse wood litter layer  6
+3.2701578204 Carbon in active organic matter layer  6
+49.197988540 Carbon in slow organic matter layer  6
+4188.5481153 Carbon in resistant organic matter layer  6
+0.0000000000 Carbon in inert organic matter layer  6
+0.0000000000 Carbon in soluble organic matter layer  6
+0.2248227841 Carbon in dead coarse wood
+2.5410189983 Carbon in dead fine wood
+0.0449645568 Carbon in dead coarse root
+3.4357083464 Carbon in dead fine root
+2.2888644327 Carbon in dead leaves
+2.3798128504 Carbon in dead other material
+0.0000000000 Carbon in sapwood
+0.0000000000 Carbon in heartwood
+0.0000000000 Carbon in coarse roots
+50.000000000 Carbon in fine root
+0.0000000000 Carbon in branches
+0.0000000000 Carbon in bark
+0.0000000000 Carbon in foliage reserves
+50.000000000 Carbon in leaves
+0.0000000000 Carbon in pollen
+0.0000000000 Carbon in fruit
+0.0000000000 Carbon in non-structural form
+29.607832255 Nitrogen in structural litter layer  0
+0.0000000000 Nitrogen in metabolic litter layer  0
+4.2437600182 Nitrogen in fine wood litter layer  0
+0.3266783986 Nitrogen in coarse wood litter layer  0
+39.180094704 Nitrogen in active organic matter layer  0
+88.390259844 Nitrogen in slow organic matter layer  0
+3.6477222737 Nitrogen in resistant organic matter layer  0
+0.0000000000 Nitrogen in inert organic matter layer  0
+0.0000000000 Nitrogen in soluble organic matter layer  0
+28.502253183 Nitrogen in structural litter layer  1
+0.3447955744 Nitrogen in metabolic litter layer  1
+0.0000000000 Nitrogen in fine wood litter layer  1
+0.0197247160 Nitrogen in coarse wood litter layer  1
+48.297244081 Nitrogen in active organic matter layer  1
+578.33905451 Nitrogen in slow organic matter layer  1
+140.20444078 Nitrogen in resistant organic matter layer  1
+0.0000000000 Nitrogen in inert organic matter layer  1
+0.0099498077 Nitrogen in soluble organic matter layer  1
+10.792165419 Nitrogen in structural litter layer  2
+0.1485172801 Nitrogen in metabolic litter layer  2
+0.0000000000 Nitrogen in fine wood litter layer  2
+0.0220106122 Nitrogen in coarse wood litter layer  2
+18.347593468 Nitrogen in active organic matter layer  2
+283.92782305 Nitrogen in slow organic matter layer  2
+172.52033801 Nitrogen in resistant organic matter layer  2
+0.0000000000 Nitrogen in inert organic matter layer  2
+0.0052083334 Nitrogen in soluble organic matter layer  2
+6.7363058905 Nitrogen in structural litter layer  3
+0.0925455383 Nitrogen in metabolic litter layer  3
+0.0000000000 Nitrogen in fine wood litter layer  3
+0.0256581983 Nitrogen in coarse wood litter layer  3
+10.713963216 Nitrogen in active organic matter layer  3
+158.52685680 Nitrogen in slow organic matter layer  3
+179.24083587 Nitrogen in resistant organic matter layer  3
+0.0000000000 Nitrogen in inert organic matter layer  3
+0.0029470592 Nitrogen in soluble organic matter layer  3
+2.9928136355 Nitrogen in structural litter layer  4
+0.0385353565 Nitrogen in metabolic litter layer  4
+0.0000000000 Nitrogen in fine wood litter layer  4
+0.0114606871 Nitrogen in coarse wood litter layer  4
+5.3408386990 Nitrogen in active organic matter layer  4
+88.764382231 Nitrogen in slow organic matter layer  4
+310.10792610 Nitrogen in resistant organic matter layer  4
+0.0000000000 Nitrogen in inert organic matter layer  4
+0.0018813915 Nitrogen in soluble organic matter layer  4
+0.4320794889 Nitrogen in structural litter layer  5
+0.0034929310 Nitrogen in metabolic litter layer  5
+0.0000000000 Nitrogen in fine wood litter layer  5
+0.0047105690 Nitrogen in coarse wood litter layer  5
+1.2915006262 Nitrogen in active organic matter layer  5
+21.938825427 Nitrogen in slow organic matter layer  5
+430.86487909 Nitrogen in resistant organic matter layer  5
+0.0000000000 Nitrogen in inert organic matter layer  5
+0.0014029664 Nitrogen in soluble organic matter layer  5
+0.0318786616 Nitrogen in structural litter layer  6
+0.0001651057 Nitrogen in metabolic litter layer  6
+0.0000000000 Nitrogen in fine wood litter layer  6
+0.0015923451 Nitrogen in coarse wood litter layer  6
+0.3270157820 Nitrogen in active organic matter layer  6
+3.9667184535 Nitrogen in slow organic matter layer  6
+281.19962517 Nitrogen in resistant organic matter layer  6
+0.0000000000 Nitrogen in inert organic matter layer  6
+0.0020845645 Nitrogen in soluble organic matter layer  6
+0.0001501210 Nitrogen in dead coarse wood
+0.0038346861 Nitrogen in dead fine wood
+0.0000330862 Nitrogen in dead coarse root
+0.0362562360 Nitrogen in dead fine root
+0.0265965694 Nitrogen in dead leaves
+0.0150585280 Nitrogen in dead other material
+0.0000000000 Nitrogen in sapwood
+0.0000000000 Nitrogen in heartwood
+0.0000000000 Nitrogen in coarse roots
+1.5000000000 Nitrogen in fine root
+0.0000000000 Nitrogen in branches
+0.0000000000 Nitrogen in bark
+0.0000000000 Nitrogen in foliage reserves
+2.0000000000 Nitrogen in leaves
+0.0000000000 Nitrogen in pollen
+0.0000000000 Nitrogen in fruit
+0.0000000000 Nitrogen in non-structural form
+2000.0000000 Stocking rate in stems per ha
+0.3000000131 Litter lignin concentration in layer  0
+0.3000000000 Fine-wood lignin concentration in layer  0
+0.3000000000 Coarse-wood lignin concentration in layer  0
+0.3037988939 Litter lignin concentration in layer  1
+0.0000000000 Fine-wood lignin concentration in layer  1
+0.3000000000 Coarse-wood lignin concentration in layer  1
+0.3038705909 Litter lignin concentration in layer  2
+0.0000000000 Fine-wood lignin concentration in layer  2
+0.3000000000 Coarse-wood lignin concentration in layer  2
+0.3035068236 Litter lignin concentration in layer  3
+0.0000000000 Fine-wood lignin concentration in layer  3
+0.3000000000 Coarse-wood lignin concentration in layer  3
+0.3036996141 Litter lignin concentration in layer  4
+0.0000000000 Fine-wood lignin concentration in layer  4
+0.3000000000 Coarse-wood lignin concentration in layer  4
+0.3041746888 Litter lignin concentration in layer  5
+0.0000000000 Fine-wood lignin concentration in layer  5
+0.3000000000 Coarse-wood lignin concentration in layer  5
+0.3046337820 Litter lignin concentration in layer  6
+0.0000000000 Fine-wood lignin concentration in layer  6
+0.3000000000 Coarse-wood lignin concentration in layer  6
+0.0000000000 Size of snow pack (mm)
+100.00000000 Total water held in the soil
+1.0000000000 Total relative water extraction term for all layers
+           6 Number of layers for soil water
+0.2548286164 Amount of water (mm) in layer  0
+0.0000000000 Amount of water (mm) in layer  1
+0.0000000000 Amount of water (mm) in layer  2
+0.0000000000 Amount of water (mm) in layer  3
+0.0000000000 Amount of water (mm) in layer  4
+0.0834314422 Amount of water (mm) in layer  5
+99.916568558 Amount of water (mm) in layer  6
+        2000 Starting Year
+           1 Starting Month
+           1 Starting Day
+           0 Plant age
+0.0000000000 Average stand height
+364633.17427 Cross-sectional area of sapwood
+0.0000000000 Diameter at breast height
+1.0000000000 Stand canopy cover
+0.5000000000 Light extinction coefficient
+0.0000000000 Temperature damage units
+0.2198924514 Water limitation term
+0.0000000000 Water limitation term for decomposition
+1.0000000000 Seasonal capacity to convert foliage reserves into new foliage
+0.0000000000 Seasonal foliage shedding term
+0.0000000000 Nitrogen in excess of the ability of trees to absorb it
+10.000000000 Base rate for respiration rate (for temperature adjustments)
+2214.4000000 Heat sum
+14.100000000 Previous day minimum temperature
+0.0000000000 Previous day absolute humidity
+0.0000000000 Previous day relative humidity
+19.900448871 Soil temperature
+           1 Sequence counter for phenology settings
+           0 Number of days for which the current phenological setting has been operative (if that is the critical element)

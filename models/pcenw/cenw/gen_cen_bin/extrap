@@ -1,0 +1,11 @@
+module unload R
+module load R
+module load ncdf
+module load ncdf4
+module load raster
+module load zoo
+module load cdo
+module load rgdal
+
+Rscript /gpfs/pads/projects/emc-gct/users/kanikaj/split/fut_data_linr_loop5_pads_half.R
+

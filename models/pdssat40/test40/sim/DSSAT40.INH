@@ -1,0 +1,95 @@
+*EXP.DETAILS: R1234567MZ  template, A1B CO2                                          
+
+*FILES
+@N  EXP.DATA    AFILE        ADIR
+  2 EXP         R1234567.MZA
+@N  SPECIES     SPFILE       SPDIR
+  2 SPE         MZCER040.SPE                                                                                 
+@N  ECOTYPE     EFILE        EDIR
+  2 ECO         MZCER040.ECO                                                                                 
+@N  CULTIVAR    CFILE        CDIR
+  2 CUL         MZCER040.CUL                                                                                 
+@N  SOIL        SFILE        SDIR
+  2 SOIL        SOIL.SOL                                                                                     
+@N  WEATHER     WFILE        WDIR
+  2 WEATH       GENERIC2.WTH                                                                                 
+
+*SIMULATION CONTROL
+@N  GENERAL     NYERS NREPS START   SDATE RSEED SNAME.................... MODEL
+  2 GE             28     1     S 2000001  2150 Rainfed                   MZCER
+@N  OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL
+  2 OP              Y     Y     N     N     N     N     N     N
+@N  METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT SOMDY
+  2 ME              M     M     E     F     S     C     R     1     G
+@N  MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+  2 MA              A     N     D     A     M
+@N  OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT  LONG CHOUT OPOUT
+  2 OU              N     N     Y    14     N     N     N     N     N     N     N     N     N
+
+!AUTOMATIC MANAGEM
+@N  PLANTING      PFRST   PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+  2 PL          2000050 2000200   40.  100.   30.   40.   10.
+@N  IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+  2 IR            40.   70.   90. GS000 IR001  10.0 0.750
+@N  NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+  2 NI            30.   10.   50. FE001 GS000
+@N  RESIDUES    RIPCN RTIME RIDEP
+  2 RE           100.     1   20.
+@N  HARVEST     HFRST   HLAST HPCNP HRCNR
+  2 HA              0 2001125  100.    0.
+
+*TREATMENTS
+@N   R O C TNAME....................  CU  FL  SA  IC  MP  MI  MF  MR  MC  MT  ME  MH  SM
+ 16  1 0 0 550p_No_N_no_H2O            1   2   0   0   1   0   4   1   0   0   2   0   2
+
+*CULTIVARS
+@C  CR INGENO CNAME
+  1 MZ 990002 MEDIUM SEASON   
+
+*FIELDS
+@L  ID_FIELD WSTA....  FLSA  FLOB  FLDT  FLDD  FLDS  FLST SLTX   SLDP ID_SOIL
+  2 GENERIC  GENERIC2   0.0  -99.   -99  -99.  100.   -99 L      -99. XY01234567
+@L             XCRD            YCRD      ELEV              AREA  SLEN  FLWR  SLAS
+  2       -99.00000       -99.00000    -99.00               1.0  100.   1.0 -99.0
+
+*INITIAL CONDITIONS
+@C  PCR     ICDAT  ICRT  ICND  ICRN  ICRE  ICWD ICRES ICREN ICREP ICRIP ICRID
+  0             0    0.    0.  1.00  1.00   0.0     0  0.00  0.00  100.    0.
+@C   ICBL  SH2O  SNH4  SNO3
+  0    5. 0.250   0.1   0.1
+  0   15. 0.250   0.1   0.1
+  0   30. 0.250   0.1   0.1
+  0   45. 0.299   0.1   0.1
+  0   60. 0.299   0.1   0.1
+  0   80. 0.299   0.1   0.1
+  0  100. 0.299   0.1   0.1
+
+*PLANTING DETAILS
+@P    PDATE   EDATE  PPOP  PPOE  PLME  PLDS  PLRS  PLRD          PLDP  PLWT  PAGE  PENV  PLPH  SPRL
+  1 2000120     -99   6.5   6.5     S     R   91.  -99.   5.0  -99.  -99. -99.0 -99.0 -99.0
+
+*IRRIGATION
+@I   IEFF  IDEP  ITHR  IEPT  IOFF  IAME  IAMT
+  0 1.000    0.    0.    0. GS000 IR001   0.0
+@I    IDATE  IROP IRVAL
+
+*FERTILIZERS
+@F    FDATE  FMCD  FACD  FDEP  FAMN  FAMP  FAMK  FAMC  FAMO  FOCD
+  4       1 FE001 AP002   15.    0.  -99.  -99.  -99.  -99.   -99
+
+*RESIDUES
+@R    RDATE  RCOD  RAMT  RESN  RESP  RESK  RINP  RDEP  RMET
+  1       1 RE001  1000  1.00  0.00  0.00  100.   15. AP003
+
+*CHEMICALS
+@C    CDATE CHCOD CHAMT  CHME CHDEP   CHT
+
+*TILLAGE
+@T    TDATE TIMPL  TDEP
+
+*ENVIRONMENT
+@E    ODATE  EDAY  ERAD  EMAX  EMIN ERAIN  ECO2  EDEW EWIND
+  2 2000001 A 0.0 A 0.0 A 0.0 A 0.0 A 0.0 R 550 A 0.0 A 0.0
+
+*HARVEST
+@H    HDATE  HSTG  HCOM HSIZE   HPC  HBPC

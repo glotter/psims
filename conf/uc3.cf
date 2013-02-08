@@ -1,0 +1,6 @@
+use.provider.staging=true
+wrapperlog.always.transfer=true
+execution.retries=100
+provider.staging.pin.swiftfiles=true
+sitedir.keep=false
+use.wrapper.staging=false

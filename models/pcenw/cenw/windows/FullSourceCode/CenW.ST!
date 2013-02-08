@@ -1,0 +1,91 @@
+3.1 Site parameters
+2.0000000000 Scaling factor for soil evaporation
+0.0054794521 Annual atmosperic input of nitrogen
+0.1000000000 Fraction of N not taken up by plants that is leached
+0.2500000000 Fine soil fraction
+FALSE Give a separate water stress sensitivity for different layers in the soil
+           6 Number of layers for soil water
+10.000000000 Depth of ith layer
+15.000000000 Percentage pores of ith layer
+15.000000000 Maximum water (mm) in ith layer
+0.5807200928 Relative decomposition activity
+0.2597402597 Relative coarse-root litter addition
+0.6250000000 Relative evaporation rate
+0.0500000000 Relative water stress sensitivity
+0.2597259726 Effort for water extraction from ith layer
+10.000000000 Depth of ith layer
+15.000000000 Percentage pores of ith layer
+15.000000000 Maximum water (mm) in ith layer
+0.2322880372 Relative decomposition activity
+0.2597402597 Relative coarse-root litter addition
+0.3125000000 Relative evaporation rate
+0.0500000000 Relative water stress sensitivity
+0.2597259726 Effort for water extraction from ith layer
+10.000000000 Depth of ith layer
+15.000000000 Percentage pores of ith layer
+15.000000000 Maximum water (mm) in ith layer
+0.1161440186 Relative decomposition activity
+0.2597402597 Relative coarse-root litter addition
+0.0625000000 Relative evaporation rate
+0.0500000000 Relative water stress sensitivity
+0.2597259726 Effort for water extraction from ith layer
+20.000000000 Depth of ith layer
+15.000000000 Percentage pores of ith layer
+30.000000000 Maximum water (mm) in ith layer
+0.0580720093 Relative decomposition activity
+0.1298701299 Relative coarse-root litter addition
+0.0000000000 Relative evaporation rate
+0.1000000000 Relative water stress sensitivity
+0.1299129913 Effort for water extraction from ith layer
+50.000000000 Depth of ith layer
+15.000000000 Percentage pores of ith layer
+75.000000000 Maximum water (mm) in ith layer
+0.0116144019 Relative decomposition activity
+0.0649350649 Relative coarse-root litter addition
+0.0000000000 Relative evaporation rate
+0.2500000000 Relative water stress sensitivity
+0.0649064906 Effort for water extraction from ith layer
+100.00000000 Depth of ith layer
+15.000000000 Percentage pores of ith layer
+150.00000000 Maximum water (mm) in ith layer
+0.0011614402 Relative decomposition activity
+0.0259740260 Relative coarse-root litter addition
+0.0000000000 Relative evaporation rate
+0.5000000000 Relative water stress sensitivity
+0.0260026003 Effort for water extraction from ith layer
+300.00000000 Maximum amount of water that can be held in the soil
+20.000000000 Mean soil temperature
+380.00000000 CO2 concentration
+1000.0000000 Atmospheric pressure
+500.00000000 Annual rainfall
+0.2500000000 Daily rainfall probability
+25.000000000 Annual mean maximum temperature
+10.000000000 Annual mean minimum temperature
+15.000000000 Annual mean radiation
+0.0100000000 Annual mean absolute humidity
+10.000000000 Annual temperature amplitude
+5.0000000000 Annual radiation amplitude
+7.5000000000 Daily temperature amplitude
+0.0030000000 Annual amplitude in absolute humidity
+0.5000000000 Sensitivity of decomposition to water stress relative to that of plant processes
+0.1000000000 Residual decomposition rate under extremely dry conditions
+5.0000000000 RATIO OF C/N RATIOS IN METABOLIC AND STRUCTURAL POOLS
+10.000000000 Critical C/N RATIO OF ACTIVE POOL
+0.1000000000 Annual transfer of organic matter from one layer to the next lower layer
+0.1000000000 Annual incorporation of organic matter from the surface to first soil layer
+2.0000000000 Decay constant fine woody litter (branches) relative to structural litter
+5.0000000000 Decay constant coarse woody litter (logs) relative to structural litter
+0.1000000000 Ratio of decay constants of inert and resistant pools
+          19 Warmest day of the year (for simulated climate runs)
+         356 Day with highest solar radiation (for simulated climate runs)
+-40.00000000 Latitude of the site
+1.0000000000 Adjustment to soil organic matter decomposition rates
+0.0100000000 Fraction of inorganic nitrogen that is immobilised at each time step
+0.5000000000 Fraction of immobilised N that is immobilised in the slow pool
+0.8000000000 mm of snow that melt per degree above zero
+0.2000000000 mm of snow that melt per MJ m-2
+5.0000000000 Soil resistance to temperature changes
+10.000000000 Extra insulation due to snow layer: extra resistance per mm in snow pack
+0.2000000000 The proportional increase of soil temperature aboveaverage air temperature
+0.5000000000 Dependence of increase in soil temperature on LAI
+3.0000000000 Lignin-inhibition parameter of organic matter decomposition

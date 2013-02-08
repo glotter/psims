@@ -1,0 +1,11 @@
+This is just the same as test1 except i've replaced the 4 year climate file with a 20 year climate file that miko sent (originally the file was called 19866.cl!).
+
+(The current files are for test3b)
+
+Test3a has an interesting result. this was my first test with the 20 year weather file, before i tried to run the delphi sim by first loading and then resaving all the data files. As in test3.png, there are basically just 8 variables that do very bad the whole way and they're all carbon and nitrogen variable for layer 7. very interesting. 
+
+Test3b is also very interesting. Same climate file as test3a but here I made sure to load the project and initial condition file into the delphi cenw and save the full configuration before running. then i copied that config over, edited out the windows paths and ran this directly. This gives the most similar results yet of any of the simulations. In this case, there are only 200 measures out of 74000 that have differences larger than 1%, all of them are on secondary variables, all the very large differences are in year 1, implying that there is still some sort of initialization difference, and there is a cluster of small errors at the end of the simulation in the Nitrogen metabolation variable in all 7 layers (NMetab). test4.png shows a list of all the variables that have more than a 0.5% difference in values in the first year. The soil water in layers 1-7 is off by far the most followed by a bunch of shit i don't recognize:
+NEE	D C Flux	N_Leache	Het. res	Evap	N_Minl	N_Minl
+DW	DW		Nitro.		DW		Water	Nitro.	Nitro.
+kg/ha/d	kg/ha/d		kg/ha/d		kg/ha/d		mm d-1	kg ha-1	kg ha-1
+								Layer 5	Layer 6

@@ -1,0 +1,46 @@
+README- specific to PADS. Most paths are hardcoded in
+
+code 
+
+to be run in the terminal. takes the vcsn and extracts rows of data and puts them in a separate folder under vcsn-nc/lines. These files are names by the longitude.
+*************************
+
+fut_data_linr_loop5_pads.R
+
+run using qsub. (look at qsub to see how to run it- extrap1). Takes the lines data and extracts each point and puts it in a grid with the extrapolated data. 
+Takes the lines of longitude and interpolates and extrapolates the data and then outputs them as correspondig grid ids in the tree structure.
+
+fut_data_linr_loop5_pads_half.R
+
+Also run using qsub (extrap)
+Once the other file has stopped running run this version so that the data are all extrapolated using the same combination of random years etc. ie for consistency. NB make sure to change a to the new longitude that you want to start running the program from. Look at the outputted a, c and l to see where it reached. 
+************************************
+
+sep_cenw_files_site_info_st
+
+Take the site infor and create files with this data in it separately. Also put in corresponding folders based on grid ids. Puts it in the fromat of the .ST files. 
+**********************************
+
+co2 pathways
+Also realsiee that we need co2 pathways data for CenW. So take the online ISAMS and BERN co2 pathways and put them in tree form in data/raw/ not really manipulated in any way. Will have to edit CenW code for it to be able to read in new random file ie CenW.CO!
+************************************
+
+Gridlist 
+list of all the points using the grid ids for NZ at a 0.05 degree scale which have land on it. 
+nb: gridlist is generated with an x as a column heading which has just been deleted at this point. 
+************************************
+
+onlynzpoints.R
+used to create gridlist 
+-takes the grid that we have ie the original grid with one of the future predictions in it. 
+-converts it to a matrix 
+-matches the gridid extent to the nzdata. 
+-zero out all points in grid id that are ocean
+-make into a row and remove all 0 
+-output as ####/######## in a list= gridlist. 
+**********************************************
+
+gridid_to_longlat.R
+Converts grid_id to longlat coordinate
+also finds the point in a map and plots it so you know where it is
+also given you know what area you want a point you can find the corresponding grid id

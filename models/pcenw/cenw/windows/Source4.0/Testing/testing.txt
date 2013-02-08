@@ -1,0 +1,81 @@
+RUNS- ALL IN WINDOWS
+
+default harvest and thinning=thinning from CenW 3.1 GUI
+
+
+cenw_default_windows - used in windows linux comparison. all original .ie no mgmt and default cl.
+**************************
+
+30 years
+our climate
+start 1972
+
+CenWco2.dt- co2.en! also use our climate and no mgmt
+CenWirr.dt - turn on default irrigation (99% of capicity daily)
+cenwfert.dt- 500 n yr=1 from beginning of run
+ourclime_win.dt - default with our climate
+CenWharv_thin_win.dt- With pruning and thinning from 3.1 defaults. ie use "default_thinning31.hv!"
+
+
+Same thing done on climate starting 90 years after original date 1972+90 ie with the most global warming
+
+co2_90
+irr_90
+fert_90
+CenW90.DT!
+
+********************
+climate simulations
+30 years
+start various years
+no mgmt
+
+cenw ourclim
+15_win - 15 years in ie delete first 15 years of our climate file
+30
+45
+60
+75
+90
+*****************
+
+
+RUN for 100 YEARS
+our climate
+starting in various years
+
+our_100
+2000_100
+2030_100
+
+then also with thinning and pruning
+our_100_thin
+2000_100_thin
+2030_100_thin
+****************
+
+nl= point in northland
+cenw_nl.dt- default 30 years
+cenw_nl_thin.dt - default harvest and thinning
+
+*******************************
+
+
+thinning_only.hv- thinning only
+
+***********************
+
+
+nl_prune- no harvest
+nl_prune_30- harvest at 30 years
+...
+
+change the simulation to 100 years and try changing the age of harvest to see if the former part of the data stays the same with the same pruning regime
+If it changes suggests that there is forward looking aspect to model or there is plently of static. 
+
+
+
+
+
+
+

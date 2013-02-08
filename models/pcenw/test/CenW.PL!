@@ -1,0 +1,149 @@
+4.0 Plant parameters
+True   Calculate biological N fixation as a function of N status?
+True   Recalculate the allometric HD relationship based on on-going data?
+False   Use the W=f(h,d) relationship for calculating height and diameter increments (rather than using wood density explicitly)
+True   Boolean variable to indicate whether to include temperature acclimation for plant respiration
+False   Boolean variable to indicate whether to include age-related NPP decline
+False   Boolean variable to indicate whether to include size-related NPP decline
+True   Boolean variable to indicate whether to include foliage clumping for plant light interception
+False   Boolean variable to indicate whether to run with constant leaf nitrogen
+0.5000000000 Max. light extinction coefficient
+0.4200000000 Max. decrease of max. light extinction coeff
+0.7500000000 Intercept in canopy width dbh relationship
+0.1400000000 Slope of canopy width dbh relationship
+0.0700000000 Leaf albedo
+10.000000000 Specific leaf area
+0.0050000000 Loss rate of non-methyl volatile organic carbon
+8.0000000000 Ball-Berry parameter that gives the slope between gs and Ah/c in unstressed plants
+4.0000000000 Ball-Berry parameter that gives the slope between gs and Ah/c in stressed plants
+0.0045000000 Fraction of "Active SON" taken up daily through micorrhizal associations
+0.0000000000 Amount of nitrogen fixed biologically per unit carbon fixed
+0.0500000000 Daily respiration rate per unit N
+0.2500000000 Fraction of carbon used up in growth respiration
+10.000000000 Time constant for adjustments in temperature response of respiration rate
+0.7500000000 Ratio of N in senescing and living leaves
+0.7500000000 Ratio of N between average foliage and top foliage layers
+0.0014000000 Maximum fraction of leaves and branches dying daily during drought
+0.4000000000 Relative soil water content for the commencement of plant stress
+0.3000000000 Slope of relationship relating intercepted rain and LAI
+0.2040000000 Fraction of rain lost to direct evaporation
+0.0001095890 Fraction of bark senescing daily
+0.0001369863 Fraction of foliage senescing daily
+0.0001095890 Fraction of branches senescing daily
+0.0021917808 Fraction of roots senescing daily
+0.0013698630 Fraction of fruit senescing daily
+0.0136986301 Fraction of pollen senescing daily (can be greater than 1)
+0.5000000000 Low-light level at which foliage senesces
+0.0025000000 Maximum daily foliage senescence rate due to low light
+0.3500000000 Ratio of fine roots to foliage in unstressed plants
+0.7000000000 Ratio of fine roots to foliage in nutritionally stressed plants
+0.7000000000 Ratio of foliage to branches
+3.6000000000 Ratio of wood to branches
+0.2000000000 Ratio of coarse roots to stem wood
+0.1000000000 Ratio of bark to wood
+0.1000000000 Minimum amount of carbon allocated to stem-wood production in young trees
+0.0100000000 Carbon allocation to fruiting bodies
+0.0100000000 Carbon allocation to pollen
+0.0300000000 Nitrogen concentration that is saturating
+0.0600000000 Maximum nitrogen concentration to which nitrogen can be taken up by foliage
+0.0200000000 Nitrogen concentration 'compensation point'
+0.0050000000 Phosphorus concentration that is saturating
+0.0100000000 Maximum phosphorus concentration to which phosphorus can be taken up by foliage
+0.0010000000 Phosphorus concentration 'compensation point'
+0.2000000000 Km term for the soluble carbohydrate dependence of growth
+0.1000000000 Km term for the soluble inorganic nitrogen dependence of growth
+0.0500000000 Fraction of N volatilised during mineralisation processes
+0.5000000000 ratio of nitrogen concentrations in heartwood and sapwood
+0.4500000000 ratio of nitrogen concentrations in roots and foliage
+0.0900000000 ratio of nitrogen concentrations in wood and foliage
+0.1000000000 ratio of nitrogen concentrations in bark and foliage
+0.2300000000 ratio of nitrogen concentrations in branches and foliage
+0.2500000000 ratio of nitrogen concentrations in fruit and foliage
+1.0000000000 ratio of nitrogen concentrations in pollen and foliage
+0.3000000000 Lignin concentration in wood
+0.2500000000 Lignin concentration in leaves
+0.2500000000 Lignin concentration in roots
+3.0000000000 Term that describes the extent by which structural-litter decomposition is inhibited by lignin
+40.000000000 Maximum nitrogen use efficiency (Amax / [N])
+0.0850000000 Photosynthetic quantum yield
+0.7500000000 Theta - curvature term in light dependence of daily carbon gain
+0.0050000000 PEP carboxylase activity relative to maximum assimilation rate (for C4 phs)
+0.9500000000 Curvature term in the transition from CO2 limited to CO2 saturated phs (in C4 phs)
+5.0000000000 Lower mean daytime temperature limit for plant growth
+15.000000000 Lower mean daytime temperature limit for optimum plant growth
+25.000000000 Upper mean daytime temperature limit for optimum plant growth
+40.000000000 Upper mean daytime temperature limit for plant growth
+1.0000000000 Threshold nighttime temperature for leaf damage
+30.000000000 Threshold daytime temperature for leaf damage
+0.1500000000 Growth sensitivity to accumulated temperature damage
+1.0000000000 Rate of repair from accumulated temperature damage
+100.00000000 Rain intensity to damage by heavy rain
+0.0000000000 Sensitivity to damage by heavy rain
+0.7500000000 Rate of repair from heavy rain damage
+0.6200000000 Intercept in the allometric relationship of height versus DBH
+1.0520000000 Slope in the allometric relationship of height versus DBH
+1.7900000000 Slope in the allometric relationship of stem weight versus DBH
+1.0100000000 Slope in the allometric relationship of stem weight versus height
+0.6600000000 Constant if the allometric relationship of height versus DBH is continually recalculated
+0.0381000000 Temperature dependence if the allometric relationship of height versus DBH is continually recalculated
+0.0003500000 Dependence on stocking if the allometric relationship of height versus DBH is continually recalculated
+-0.320000000 Dependence on nitrogen status if the allometric relationship of height versus DBH is continually recalculated
+-0.000850000 Dependence on age (term 1) if the allometric relationship of height versus DBH is continually recalculated
+0.0000280000 Dependence on age (term 2) if the allometric relationship of height versus DBH is continually recalculated
+0.5150000000 Initial slope of the height vs DBH allometric relationship up to the defined minimum diameter if the allometric relationship is continually recalculated
+0.6200000000 Intercept of the height vs DBH allometric relationship up to the defined minimum diameter if the allometric relationship is continually recalculated
+0.3600000000 Minimum marginal slope of the ht vs dbh allometric relationship
+1.2400000000 Maximum marginal slope of the ht vs dbh allometric relationship
+10.000000000 Minimum dbh at which to apply the allometric relationship
+0.0000000000 Wood density
+340.00000000 Wood density at age 0
+420.00000000 Wood density at age 25
+17.000000000 Wood density dependence on temperature
+45.000000000 Wood density dependence on nutrition
+1.0000000000 Wood density depdendence on stocking
+0.0000000000 Scaling term for calculating the effect of stand crowding on stem slenderness
+0.0000000000 Power term for calculating the effect of stand crowding on stem slenderness
+0.0000000000 Maximal value for crowding term in calculating the effect of stand crowding on stem slenderness
+0.0000000000 Offset needed to compensate for crowding-related averaged increase in stem slenderness
+0.0100000000 Leaf transmissivity
+30.000000000 Maximum number of days for temperature damage to be fully repaired
+1.1000000000 Ratio of total nitrogen uptake into foliage and that utilised in new growth
+0.9800000000 Soil water content to start water-log limitation
+1.0000000000 Sensitivity to water-logging
+0.7500000000 Water holding capacity of surface litter
+5.0000000000 Mulching effect of surface litter
+15.000000000 Canopy aerodynamic resistance (s m-1)
+-1.875000000 Parameter alpha in the T-respn relationship
+0.0010000000 Parameter beta in the T-respn relationship
+50.000000000 Temperature for maximum respiration rate
+3612822.9308 Parameter in the 3/2 power law relationship
+0.4000000000 Ratio of respiration rate to daily photosynthetic carbon gain
+0.0231200000 Constant leaf [N] (if that is to be kept constant)
+5.0000000000 Power term in age related decline in NPP
+4.0000000000 Power term in size related decline in NPP
+18.000000000 Default plant carbon isotope ratio
+25.000000000 Set value for carbon isotope discrimination of newly fixed carbon
+0.2000000000 CO2 leakage from bundle-sheet cells (only relevant for C4 plants)
+4.0000000000 Max height of weed layer
+2000.0000000 Half max height of weed layer at weed foliar biomass
+0.0027397260 Turn-over (senescence) of weed foliage
+0.3330000000 Weed carbon allocation to new foliage growth
+500.00000000 KM for plant root required for nitrogen uptake
+500.00000000 KM for plant root required for phosphorus uptake
+0.5000000000 Max. light extinction coefficient
+0.4200000000 Max. decrease of max. light extinction coeff
+0.0700000000 Leaf albedo
+10.000000000 Specific leaf area 
+0.0050000000 Loss rate of non-methyl volatile organic carbon
+8.0000000000 Ball-Berry parameter that gives the slope between gs and Ah/c in unstressed plants
+4.0000000000 Ball-Berry parameter that gives the slope between gs and Ah/c in stressed plants
+L       Flag whether direct rain evap is calculated as const or f(LAI)
+          10 Minimum age for sexual reproduction
+          16 Longevity of sapwood before turning into heartwood
+Ratio:        Type of respiration function
+50  Age of maturity (at which NPP is only 50% of young-tree NPP
+1000  Size of maturity (at which NPP is only 50% of young-tree NPP
+C3:     Photosynthetic pathway
+SetValue:     Type of delta setting for new carbon
+0  number of changes in plant phenology
+ 1.000E+0001 Threshold temperature for counting heat sums

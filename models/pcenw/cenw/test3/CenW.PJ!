@@ -1,0 +1,919 @@
+4.0 Project
+Pinus_radiata (Project name)
+FALSE    Boolean variable for display of Carbon gain
+500.00000000 Upper range for display of Carbon gain
+0.0000000000 Lower range for display of Carbon gain
+5012597 Colour for display of Carbon gain
+FALSE    Boolean variable for display of CAI
+0.0000000000 Upper range for display of CAI
+0.0000000000 Lower range for display of CAI
+14126219 Colour for display of CAI
+FALSE    Boolean variable for display of NPP
+20.000000000 Upper range for display of NPP
+0.0000000000 Lower range for display of NPP
+9723519 Colour for display of NPP
+FALSE    Boolean variable for display of NEE
+0.0000000000 Upper range for display of NEE
+0.0000000000 Lower range for display of NEE
+12522635 Colour for display of NEE
+FALSE    Boolean variable for display of Respn
+500.00000000 Upper range for display of Respn
+0.0000000000 Lower range for display of Respn
+4722643 Colour for display of Respn
+FALSE    Boolean variable for display of Day C Flux
+0.0000000000 Upper range for display of Day C Flux
+0.0000000000 Lower range for display of Day C Flux
+1280547 Colour for display of Day C Flux
+FALSE    Boolean variable for display of Night C Flux
+500.00000000 Upper range for display of Night C Flux
+-500.0000000 Lower range for display of Night C Flux
+1002973 Colour for display of Night C Flux
+FALSE    Boolean variable for display of SolubleCH2O
+0.0000000000 Upper range for display of SolubleCH2O
+0.0000000000 Lower range for display of SolubleCH2O
+10800221 Colour for display of SolubleCH2O
+TRUE    Boolean variable for display of LAI
+10.000000000 Upper range for display of LAI
+0.0000000000 Lower range for display of LAI
+14772353 Colour for display of LAI
+FALSE    Boolean variable for display of pi
+1000.0000000 Upper range for display of pi
+0.0000000000 Lower range for display of pi
+13520576 Colour for display of pi
+TRUE    Boolean variable for display of Wood
+500.00000000 Upper range for display of Wood
+0.0000000000 Lower range for display of Wood
+255 Colour for display of Wood
+FALSE    Boolean variable for display of SapW
+0.0000000000 Upper range for display of SapW
+0.0000000000 Lower range for display of SapW
+764817 Colour for display of SapW
+FALSE    Boolean variable for display of HeartW
+500.00000000 Upper range for display of HeartW
+0.0000000000 Lower range for display of HeartW
+7954933 Colour for display of HeartW
+FALSE    Boolean variable for display of Reserves
+0.0000000000 Upper range for display of Reserves
+0.0000000000 Lower range for display of Reserves
+13802221 Colour for display of Reserves
+FALSE    Boolean variable for display of Leaf
+20.000000000 Upper range for display of Leaf
+0.0000000000 Lower range for display of Leaf
+14554333 Colour for display of Leaf
+FALSE    Boolean variable for display of FineRoot
+0.0000000000 Upper range for display of FineRoot
+0.0000000000 Lower range for display of FineRoot
+3708909 Colour for display of FineRoot
+FALSE    Boolean variable for display of Bark
+0.0000000000 Upper range for display of Bark
+0.0000000000 Lower range for display of Bark
+13738481 Colour for display of Bark
+FALSE    Boolean variable for display of CoarseRoot
+0.0000000000 Upper range for display of CoarseRoot
+0.0000000000 Lower range for display of CoarseRoot
+16408113 Colour for display of CoarseRoot
+FALSE    Boolean variable for display of Branches
+0.0000000000 Upper range for display of Branches
+0.0000000000 Lower range for display of Branches
+11214924 Colour for display of Branches
+FALSE    Boolean variable for display of Reprod
+0.0000000000 Upper range for display of Reprod
+0.0000000000 Lower range for display of Reprod
+11757734 Colour for display of Reprod
+TRUE    Boolean variable for display of Weed leaves
+10.000000000 Upper range for display of Weed leaves
+0.0000000000 Lower range for display of Weed leaves
+32512 Colour for display of Weed leaves
+FALSE    Boolean variable for display of Weed height
+10.000000000 Upper range for display of Weed height
+0.0000000000 Lower range for display of Weed height
+32639 Colour for display of Weed height
+TRUE    Boolean variable for display of Height
+40.000000000 Upper range for display of Height
+0.0000000000 Lower range for display of Height
+0 Colour for display of Height
+FALSE    Boolean variable for display of DBH
+5000.0000000 Upper range for display of DBH
+0.0000000000 Lower range for display of DBH
+15199171 Colour for display of DBH
+FALSE    Boolean variable for display of CanopyCover
+0.0000000000 Upper range for display of CanopyCover
+0.0000000000 Lower range for display of CanopyCover
+3961173 Colour for display of CanopyCover
+FALSE    Boolean variable for display of kex
+0.0000000000 Upper range for display of kex
+0.0000000000 Lower range for display of kex
+8028099 Colour for display of kex
+FALSE    Boolean variable for display of BasalArea
+0.0000000000 Upper range for display of BasalArea
+0.0000000000 Lower range for display of BasalArea
+5919950 Colour for display of BasalArea
+FALSE    Boolean variable for display of Stocking
+1000.0000000 Upper range for display of Stocking
+0.0000000000 Lower range for display of Stocking
+9568983 Colour for display of Stocking
+FALSE    Boolean variable for display of TDamage
+0.0000000000 Upper range for display of TDamage
+0.0000000000 Lower range for display of TDamage
+13553270 Colour for display of TDamage
+FALSE    Boolean variable for display of NConc
+0.0000000000 Upper range for display of NConc
+0.0000000000 Lower range for display of NConc
+10195204 Colour for display of NConc
+FALSE    Boolean variable for display of NConc (top)
+0.0000000000 Upper range for display of NConc (top)
+0.0000000000 Lower range for display of NConc (top)
+416031 Colour for display of NConc (top)
+FALSE    Boolean variable for display of SolubleN
+0.0000000000 Upper range for display of SolubleN
+0.0000000000 Lower range for display of SolubleN
+6978122 Colour for display of SolubleN
+FALSE    Boolean variable for display of WoodN
+0.0000000000 Upper range for display of WoodN
+0.0000000000 Lower range for display of WoodN
+3853142 Colour for display of WoodN
+FALSE    Boolean variable for display of SapWN
+0.0000000000 Upper range for display of SapWN
+0.0000000000 Lower range for display of SapWN
+8226966 Colour for display of SapWN
+FALSE    Boolean variable for display of HeartWN
+0.0000000000 Upper range for display of HeartWN
+0.0000000000 Lower range for display of HeartWN
+8590055 Colour for display of HeartWN
+FALSE    Boolean variable for display of ReservesN
+0.0000000000 Upper range for display of ReservesN
+0.0000000000 Lower range for display of ReservesN
+4214496 Colour for display of ReservesN
+FALSE    Boolean variable for display of LeafN
+0.0000000000 Upper range for display of LeafN
+0.0000000000 Lower range for display of LeafN
+9286832 Colour for display of LeafN
+FALSE    Boolean variable for display of FineRootN
+0.0000000000 Upper range for display of FineRootN
+0.0000000000 Lower range for display of FineRootN
+10134405 Colour for display of FineRootN
+FALSE    Boolean variable for display of Bark N
+0.0000000000 Upper range for display of Bark N
+0.0000000000 Lower range for display of Bark N
+4974038 Colour for display of Bark N
+FALSE    Boolean variable for display of CoarseRootN
+0.0000000000 Upper range for display of CoarseRootN
+0.0000000000 Lower range for display of CoarseRootN
+5641861 Colour for display of CoarseRootN
+FALSE    Boolean variable for display of BranchN
+0.0000000000 Upper range for display of BranchN
+0.0000000000 Lower range for display of BranchN
+9605545 Colour for display of BranchN
+FALSE    Boolean variable for display of ReprodN
+0.0000000000 Upper range for display of ReprodN
+0.0000000000 Lower range for display of ReprodN
+12826127 Colour for display of ReprodN
+FALSE    Boolean variable for display of N limit
+1.1000000000 Upper range for display of N limit
+0.0000000000 Lower range for display of N limit
+255 Colour for display of N limit
+FALSE    Boolean variable for display of N biol. fixed
+0.1000000000 Upper range for display of N biol. fixed
+-0.001000000 Lower range for display of N biol. fixed
+16711935 Colour for display of N biol. fixed
+FALSE    Boolean variable for display of NSum
+20000.000000 Upper range for display of NSum
+0.0000000000 Lower range for display of NSum
+127 Colour for display of NSum
+FALSE    Boolean variable for display of CLeafLitter
+0.0000000000 Upper range for display of CLeafLitter
+0.0000000000 Lower range for display of CLeafLitter
+255 Colour for display of CLeafLitter
+FALSE    Boolean variable for display of CAll_Litter
+0.0000000000 Upper range for display of CAll_Litter
+0.0000000000 Lower range for display of CAll_Litter
+9363768 Colour for display of CAll_Litter
+FALSE    Boolean variable for display of CAg_Litter
+0.0000000000 Upper range for display of CAg_Litter
+0.0000000000 Lower range for display of CAg_Litter
+1925345 Colour for display of CAg_Litter
+FALSE    Boolean variable for display of CMetabSurf
+0.0000000000 Upper range for display of CMetabSurf
+0.0000000000 Lower range for display of CMetabSurf
+127 Colour for display of CMetabSurf
+FALSE    Boolean variable for display of CMetabSoil
+1.0000000000 Upper range for display of CMetabSoil
+0.0000000000 Lower range for display of CMetabSoil
+127 Colour for display of CMetabSoil
+FALSE    Boolean variable for display of CStructSurf
+0.0000000000 Upper range for display of CStructSurf
+0.0000000000 Lower range for display of CStructSurf
+255 Colour for display of CStructSurf
+FALSE    Boolean variable for display of CStructSoil
+0.0000000000 Upper range for display of CStructSoil
+0.0000000000 Lower range for display of CStructSoil
+255 Colour for display of CStructSoil
+FALSE    Boolean variable for display of CWoodyLitter
+0.0000000000 Upper range for display of CWoodyLitter
+0.0000000000 Lower range for display of CWoodyLitter
+9207319 Colour for display of CWoodyLitter
+FALSE    Boolean variable for display of CActive
+0.0000000000 Upper range for display of CActive
+0.0000000000 Lower range for display of CActive
+10122371 Colour for display of CActive
+FALSE    Boolean variable for display of CSlow
+100.00000000 Upper range for display of CSlow
+0.0000000000 Lower range for display of CSlow
+14189923 Colour for display of CSlow
+FALSE    Boolean variable for display of CResistant
+100.00000000 Upper range for display of CResistant
+0.0000000000 Lower range for display of CResistant
+7155097 Colour for display of CResistant
+FALSE    Boolean variable for display of CInert
+0.0000000000 Upper range for display of CInert
+0.0000000000 Lower range for display of CInert
+0 Colour for display of CInert
+FALSE    Boolean variable for display of SoilRespn
+0.0000000000 Upper range for display of SoilRespn
+0.0000000000 Lower range for display of SoilRespn
+354761 Colour for display of SoilRespn
+FALSE    Boolean variable for display of NLeafLitter
+0.0000000000 Upper range for display of NLeafLitter
+0.0000000000 Lower range for display of NLeafLitter
+15853166 Colour for display of NLeafLitter
+FALSE    Boolean variable for display of NAll_Litter
+0.0000000000 Upper range for display of NAll_Litter
+0.0000000000 Lower range for display of NAll_Litter
+635950 Colour for display of NAll_Litter
+FALSE    Boolean variable for display of NAg_Litter
+0.0000000000 Upper range for display of NAg_Litter
+0.0000000000 Lower range for display of NAg_Litter
+8388595 Colour for display of NAg_Litter
+FALSE    Boolean variable for display of NMetabSurf
+0.0000000000 Upper range for display of NMetabSurf
+0.0000000000 Lower range for display of NMetabSurf
+12296575 Colour for display of NMetabSurf
+FALSE    Boolean variable for display of NMetabSoil
+0.0000000000 Upper range for display of NMetabSoil
+0.0000000000 Lower range for display of NMetabSoil
+15212283 Colour for display of NMetabSoil
+FALSE    Boolean variable for display of NStructSurf
+0.0000000000 Upper range for display of NStructSurf
+0.0000000000 Lower range for display of NStructSurf
+4352219 Colour for display of NStructSurf
+FALSE    Boolean variable for display of NStructSoil
+0.0000000000 Upper range for display of NStructSoil
+0.0000000000 Lower range for display of NStructSoil
+10803839 Colour for display of NStructSoil
+FALSE    Boolean variable for display of NWoodyLitter
+0.0000000000 Upper range for display of NWoodyLitter
+0.0000000000 Lower range for display of NWoodyLitter
+15672326 Colour for display of NWoodyLitter
+FALSE    Boolean variable for display of NActive
+0.0000000000 Upper range for display of NActive
+0.0000000000 Lower range for display of NActive
+13122122 Colour for display of NActive
+FALSE    Boolean variable for display of NSlow
+0.0000000000 Upper range for display of NSlow
+0.0000000000 Lower range for display of NSlow
+948950 Colour for display of NSlow
+FALSE    Boolean variable for display of NResistant
+0.0000000000 Upper range for display of NResistant
+0.0000000000 Lower range for display of NResistant
+1614739 Colour for display of NResistant
+FALSE    Boolean variable for display of NInert
+0.0000000000 Upper range for display of NInert
+0.0000000000 Lower range for display of NInert
+0 Colour for display of NInert
+TRUE    Boolean variable for display of NMineral
+0.5000000000 Upper range for display of NMineral
+0.0000000000 Lower range for display of NMineral
+6028631 Colour for display of NMineral
+FALSE    Boolean variable for display of NLeached
+0.0000000000 Upper range for display of NLeached
+0.0000000000 Lower range for display of NLeached
+14800017 Colour for display of NLeached
+FALSE    Boolean variable for display of PConc
+10.000000000 Upper range for display of PConc
+0.0000000000 Lower range for display of PConc
+2720935 Colour for display of PConc
+FALSE    Boolean variable for display of Puptake
+0.0000000000 Upper range for display of Puptake
+0.0000000000 Lower range for display of Puptake
+15504899 Colour for display of Puptake
+TRUE    Boolean variable for display of P limit
+1.1000000000 Upper range for display of P limit
+0.0000000000 Lower range for display of P limit
+16711680 Colour for display of P limit
+FALSE    Boolean variable for display of PSum
+5000.0000000 Upper range for display of PSum
+0.0000000000 Lower range for display of PSum
+7397439 Colour for display of PSum
+FALSE    Boolean variable for display of Organic P sum
+0.0000000000 Upper range for display of Organic P sum
+0.0000000000 Lower range for display of Organic P sum
+0 Colour for display of Organic P sum
+FALSE    Boolean variable for display of PLeafLitter
+0.0000000000 Upper range for display of PLeafLitter
+0.0000000000 Lower range for display of PLeafLitter
+15850724 Colour for display of PLeafLitter
+FALSE    Boolean variable for display of PAll_Litter
+0.0000000000 Upper range for display of PAll_Litter
+0.0000000000 Lower range for display of PAll_Litter
+9838816 Colour for display of PAll_Litter
+FALSE    Boolean variable for display of PAg_Litter
+0.0000000000 Upper range for display of PAg_Litter
+0.0000000000 Lower range for display of PAg_Litter
+1689235 Colour for display of PAg_Litter
+FALSE    Boolean variable for display of PMetabSurf
+0.0000000000 Upper range for display of PMetabSurf
+0.0000000000 Lower range for display of PMetabSurf
+16539373 Colour for display of PMetabSurf
+FALSE    Boolean variable for display of PMetabSoil
+0.0000000000 Upper range for display of PMetabSoil
+0.0000000000 Lower range for display of PMetabSoil
+13285346 Colour for display of PMetabSoil
+FALSE    Boolean variable for display of PStructSurf
+0.0000000000 Upper range for display of PStructSurf
+0.0000000000 Lower range for display of PStructSurf
+6484528 Colour for display of PStructSurf
+FALSE    Boolean variable for display of PStructSoil
+0.0000000000 Upper range for display of PStructSoil
+0.0000000000 Lower range for display of PStructSoil
+432460 Colour for display of PStructSoil
+FALSE    Boolean variable for display of PWoodyLitter
+0.0000000000 Upper range for display of PWoodyLitter
+0.0000000000 Lower range for display of PWoodyLitter
+376504 Colour for display of PWoodyLitter
+FALSE    Boolean variable for display of PActive
+30.000000000 Upper range for display of PActive
+0.0000000000 Lower range for display of PActive
+10187596 Colour for display of PActive
+FALSE    Boolean variable for display of PSlow
+0.0000000000 Upper range for display of PSlow
+0.0000000000 Lower range for display of PSlow
+13216115 Colour for display of PSlow
+FALSE    Boolean variable for display of PResistant
+0.0000000000 Upper range for display of PResistant
+0.0000000000 Lower range for display of PResistant
+7877767 Colour for display of PResistant
+FALSE    Boolean variable for display of PInert
+1.1000000000 Upper range for display of PInert
+0.0000000000 Lower range for display of PInert
+0 Colour for display of PInert
+TRUE    Boolean variable for display of PMineral
+1.0000000000 Upper range for display of PMineral
+0.0000000000 Lower range for display of PMineral
+8497552 Colour for display of PMineral
+FALSE    Boolean variable for display of Rock P
+0.0000000000 Upper range for display of Rock P
+0.0000000000 Lower range for display of Rock P
+0 Colour for display of Rock P
+FALSE    Boolean variable for display of Occluded P
+0.0000000000 Upper range for display of Occluded P
+0.0000000000 Lower range for display of Occluded P
+0 Colour for display of Occluded P
+FALSE    Boolean variable for display of 2ndary P
+0.0000000000 Upper range for display of 2ndary P
+0.0000000000 Lower range for display of 2ndary P
+0 Colour for display of 2ndary P
+FALSE    Boolean variable for display of Tmax
+40.000000000 Upper range for display of Tmax
+0.0000000000 Lower range for display of Tmax
+255 Colour for display of Tmax
+FALSE    Boolean variable for display of Tmin
+40.000000000 Upper range for display of Tmin
+0.0000000000 Lower range for display of Tmin
+16711680 Colour for display of Tmin
+FALSE    Boolean variable for display of Tmean
+30.000000000 Upper range for display of Tmean
+0.0000000000 Lower range for display of Tmean
+2703696 Colour for display of Tmean
+FALSE    Boolean variable for display of Tsoil
+30.000000000 Upper range for display of Tsoil
+0.0000000000 Lower range for display of Tsoil
+2300964 Colour for display of Tsoil
+FALSE    Boolean variable for display of Tday
+300.00000000 Upper range for display of Tday
+0.0000000000 Lower range for display of Tday
+16646410 Colour for display of Tday
+FALSE    Boolean variable for display of Radiation
+40.000000000 Upper range for display of Radiation
+0.0000000000 Lower range for display of Radiation
+0 Colour for display of Radiation
+FALSE    Boolean variable for display of CO2
+0.0000000000 Upper range for display of CO2
+0.0000000000 Lower range for display of CO2
+5697557 Colour for display of CO2
+FALSE    Boolean variable for display of Rain
+200.00000000 Upper range for display of Rain
+0.0000000000 Lower range for display of Rain
+2598250 Colour for display of Rain
+FALSE    Boolean variable for display of StoredWater
+200.00000000 Upper range for display of StoredWater
+0.0000000000 Lower range for display of StoredWater
+7015575 Colour for display of StoredWater
+FALSE    Boolean variable for display of AbsHum
+0.0000000000 Upper range for display of AbsHum
+0.0000000000 Lower range for display of AbsHum
+8351500 Colour for display of AbsHum
+FALSE    Boolean variable for display of RelHum
+0.0000000000 Upper range for display of RelHum
+0.0000000000 Lower range for display of RelHum
+1737785 Colour for display of RelHum
+FALSE    Boolean variable for display of WaterLimit
+1.1000000000 Upper range for display of WaterLimit
+0.0000000000 Lower range for display of WaterLimit
+6376081 Colour for display of WaterLimit
+FALSE    Boolean variable for display of Transpiration
+0.0000000000 Upper range for display of Transpiration
+0.0000000000 Lower range for display of Transpiration
+8280604 Colour for display of Transpiration
+FALSE    Boolean variable for display of Evaporation
+0.0000000000 Upper range for display of Evaporation
+0.0000000000 Lower range for display of Evaporation
+2140341 Colour for display of Evaporation
+FALSE    Boolean variable for display of Drainage
+0.0000000000 Upper range for display of Drainage
+0.0000000000 Lower range for display of Drainage
+4613564 Colour for display of Drainage
+FALSE    Boolean variable for display of Heat sum
+0.0000000000 Upper range for display of Heat sum
+0.0000000000 Lower range for display of Heat sum
+6765364 Colour for display of Heat sum
+FALSE    Boolean variable for display of Snow
+0.0000000000 Upper range for display of Snow
+0.0000000000 Lower range for display of Snow
+1150042 Colour for display of Snow
+FALSE    Boolean variable for display of Dummy
+0.0000000000 Upper range for display of Dummy
+0.0000000000 Lower range for display of Dummy
+0 Colour for display of Dummy
+TRUE    Boolean variable for filesave of Year
+TRUE    Boolean variable for filesave of Month
+TRUE    Boolean variable for filesave of Day
+FALSE    Boolean variable for filesave of CH2O
+FALSE    Boolean variable for filesave of Sapwood C
+FALSE    Boolean variable for filesave of Heartwood C
+FALSE    Boolean variable for filesave of Foliage C
+FALSE    Boolean variable for filesave of Fineroot C
+FALSE    Boolean variable for filesave of Bark C
+FALSE    Boolean variable for filesave of Coarseroot C
+FALSE    Boolean variable for filesave of Branch C
+FALSE    Boolean variable for filesave of Reproductive C
+FALSE    Boolean variable for filesave of Reserves C
+FALSE    Boolean variable for filesave of Soluble N
+FALSE    Boolean variable for filesave of Sapwood N
+FALSE    Boolean variable for filesave of Heartwood N
+FALSE    Boolean variable for filesave of Foliage N
+FALSE    Boolean variable for filesave of Fineroot N
+FALSE    Boolean variable for filesave of Bark N
+FALSE    Boolean variable for filesave of Coarseroot N
+FALSE    Boolean variable for filesave of Branch N
+FALSE    Boolean variable for filesave of Reproductive N
+FALSE    Boolean variable for filesave of Reserves N
+FALSE    Boolean variable for filesave of Nlimit
+FALSE    Boolean variable for filesave of Total N
+TRUE    Boolean variable for filesave of LAI
+FALSE    Boolean variable for filesave of Height
+FALSE    Boolean variable for filesave of DBH
+FALSE    Boolean variable for filesave of Canopy cover
+FALSE    Boolean variable for filesave of Extinction coeff.
+FALSE    Boolean variable for filesave of Basal area
+FALSE    Boolean variable for filesave of Stocking
+FALSE    Boolean variable for filesave of pi
+FALSE    Boolean variable for filesave of CAI
+TRUE    Boolean variable for filesave of NPP
+FALSE    Boolean variable for filesave of NEE
+FALSE    Boolean variable for filesave of Carbon gain
+FALSE    Boolean variable for filesave of Autotrophic respn
+FALSE    Boolean variable for filesave of Day C Flux
+FALSE    Boolean variable for filesave of Night C Flux
+FALSE    Boolean variable for filesave of Temp. damage
+FALSE    Boolean variable for filesave of Transpiration
+FALSE    Boolean variable for filesave of Biol. N fixation
+FALSE    Boolean variable for filesave of N Concentration
+FALSE    Boolean variable for filesave of C Metabolic
+FALSE    Boolean variable for filesave of N Metabolic
+FALSE    Boolean variable for filesave of C Structural
+FALSE    Boolean variable for filesave of N Structural
+FALSE    Boolean variable for filesave of C Woody litter
+FALSE    Boolean variable for filesave of N Woody litter
+FALSE    Boolean variable for filesave of C Active
+FALSE    Boolean variable for filesave of N Active
+FALSE    Boolean variable for filesave of C Slow
+FALSE    Boolean variable for filesave of N Slow
+FALSE    Boolean variable for filesave of C Resistant
+FALSE    Boolean variable for filesave of N Resistant
+FALSE    Boolean variable for filesave of C Inert
+FALSE    Boolean variable for filesave of N Inert
+TRUE    Boolean variable for filesave of C Necromass
+TRUE    Boolean variable for filesave of N Necromass
+FALSE    Boolean variable for filesave of C All litter prod
+FALSE    Boolean variable for filesave of N All litter prod
+FALSE    Boolean variable for filesave of C A-g Litterfall
+FALSE    Boolean variable for filesave of N A-g Litterfall
+FALSE    Boolean variable for filesave of C Leaf litter fall
+FALSE    Boolean variable for filesave of N Leaf litter fall
+FALSE    Boolean variable for filesave of N Mineral
+FALSE    Boolean variable for filesave of N Leached
+FALSE    Boolean variable for filesave of Heterotrophic respn
+TRUE    Boolean variable for filesave of Soil Respiration
+TRUE    Boolean variable for filesave of Soluble P
+TRUE    Boolean variable for filesave of SapWood P
+FALSE    Boolean variable for filesave of Heartwood P
+FALSE    Boolean variable for filesave of Foliage P
+TRUE    Boolean variable for filesave of Fineroot P
+FALSE    Boolean variable for filesave of Bark P
+FALSE    Boolean variable for filesave of Coarseroot P
+FALSE    Boolean variable for filesave of Branch P
+FALSE    Boolean variable for filesave of Reprod P
+FALSE    Boolean variable for filesave of Reserves P
+FALSE    Boolean variable for filesave of Metabolic P
+FALSE    Boolean variable for filesave of Structural P
+FALSE    Boolean variable for filesave of Woody litter P
+FALSE    Boolean variable for filesave of Active P
+FALSE    Boolean variable for filesave of Slow P
+TRUE    Boolean variable for filesave of Resistant P
+TRUE    Boolean variable for filesave of Inert P
+FALSE    Boolean variable for filesave of P Necromass
+TRUE    Boolean variable for filesave of Mineral P
+FALSE    Boolean variable for filesave of RockP
+FALSE    Boolean variable for filesave of OccludedP
+TRUE    Boolean variable for filesave of 2ndary P
+TRUE    Boolean variable for filesave of Total Organic P
+TRUE    Boolean variable for filesave of Plimit
+TRUE    Boolean variable for filesave of Total P
+TRUE    Boolean variable for filesave of Tmax
+TRUE    Boolean variable for filesave of Tmin
+TRUE    Boolean variable for filesave of Tmean
+TRUE    Boolean variable for filesave of Tsoil
+FALSE    Boolean variable for filesave of Tday
+FALSE    Boolean variable for filesave of Absolute Humidity
+FALSE    Boolean variable for filesave of Relative Humidity
+FALSE    Boolean variable for filesave of Radiation
+FALSE    Boolean variable for filesave of Rain
+FALSE    Boolean variable for filesave of Stored water
+FALSE    Boolean variable for filesave of WaterLimit
+FALSE    Boolean variable for filesave of Rel. decomposition
+FALSE    Boolean variable for filesave of Snow
+FALSE    Boolean variable for filesave of Drainage
+FALSE    Boolean variable for filesave of Heat sum
+FALSE    Boolean variable for filesave of Evaporation
+FALSE    Boolean variable for filesave of Dummy
+FALSE    Do sensitivity test of Dummy
+FALSE    Do sensitivity test of FineSoil
+FALSE    Do sensitivity test of MeanSoilTemp
+FALSE    Do sensitivity test of CO2
+FALSE    Do sensitivity test of AtmosPressure
+FALSE    Do sensitivity test of WoodLignin
+FALSE    Do sensitivity test of LeafLignin
+FALSE    Do sensitivity test of RootLignin
+FALSE    Do sensitivity test of AnnualRain
+FALSE    Do sensitivity test of RainProb
+FALSE    Do sensitivity test of MeanTmax
+FALSE    Do sensitivity test of MeanTmin
+FALSE    Do sensitivity test of MeanRadn
+FALSE    Do sensitivity test of MeanAbsHum
+FALSE    Do sensitivity test of Latitude
+FALSE    Do sensitivity test of FertiliserRelease
+FALSE    Do sensitivity test of FertilityAdjust
+FALSE    Do sensitivity test of RateAdjust
+FALSE    Do sensitivity test of TMaxRepairTime
+FALSE    Do sensitivity test of Immobilise
+FALSE    Do sensitivity test of DirectEvapSlope
+FALSE    Do sensitivity test of DirectEvapFract
+FALSE    Do sensitivity test of Decay1
+FALSE    Do sensitivity test of Decay2
+FALSE    Do sensitivity test of Decay3
+FALSE    Do sensitivity test of Decay4
+FALSE    Do sensitivity test of Decay5
+FALSE    Do sensitivity test of Decay6
+FALSE    Do sensitivity test of Decay7
+FALSE    Do sensitivity test of Decay8
+FALSE    Do sensitivity test of Decay9
+FALSE    Do sensitivity test of RelativeCN
+FALSE    Do sensitivity test of CriticalCN
+FALSE    Do sensitivity test of Transmit
+FALSE    Do sensitivity test of BallBerry1
+FALSE    Do sensitivity test of BallBerry2
+FALSE    Do sensitivity test of Nloss
+FALSE    Do sensitivity test of Leaching
+FALSE    Do sensitivity test of MicroFract
+FALSE    Do sensitivity test of Atmos_N
+FALSE    Do sensitivity test of BiolFix
+FALSE    Do sensitivity test of GrowthRespn
+FALSE    Do sensitivity test of BarkSenesc
+FALSE    Do sensitivity test of RespFromN
+FALSE    Do sensitivity test of StemDeath
+FALSE    Do sensitivity test of SenescLeafRatio
+FALSE    Do sensitivity test of InternalNRatio
+FALSE    Do sensitivity test of LeafSenesc
+FALSE    Do sensitivity test of BranchSenesc
+FALSE    Do sensitivity test of RootSenesc
+FALSE    Do sensitivity test of FruitSenesc
+FALSE    Do sensitivity test of PollenSenesc
+FALSE    Do sensitivity test of SenescLowLight
+FALSE    Do sensitivity test of MaxSenescLowLight
+FALSE    Do sensitivity test of RootLeafRatio1
+FALSE    Do sensitivity test of RootLeafRatio2
+FALSE    Do sensitivity test of WoodBranchRatio
+FALSE    Do sensitivity test of LeafBranchRatio
+FALSE    Do sensitivity test of BarkWoodRatio
+FALSE    Do sensitivity test of CoarseRootWoodRatio
+FALSE    Do sensitivity test of C_FruitAlloc
+FALSE    Do sensitivity test of C_PollenAlloc
+FALSE    Do sensitivity test of SLA
+FALSE    Do sensitivity test of Amax
+FALSE    Do sensitivity test of Theta
+FALSE    Do sensitivity test of Kexmax
+FALSE    Do sensitivity test of KlowRange
+FALSE    Do sensitivity test of Albedo
+FALSE    Do sensitivity test of Temp_Amplitude
+FALSE    Do sensitivity test of Radn_Amplitude
+FALSE    Do sensitivity test of Daily_Amplitude
+FALSE    Do sensitivity test of Humid_Amplitude
+FALSE    Do sensitivity test of DrySenesc
+FALSE    Do sensitivity test of StressLimit
+FALSE    Do sensitivity test of SoilEvap
+FALSE    Do sensitivity test of HDInter
+FALSE    Do sensitivity test of HDSlope
+FALSE    Do sensitivity test of WDSlope
+FALSE    Do sensitivity test of WHSlope
+FALSE    Do sensitivity test of WeedMaxHeight
+FALSE    Do sensitivity test of WeedKmHeight
+FALSE    Do sensitivity test of WeedFolTurnover
+FALSE    Do sensitivity test of WeedFolAlloc
+FALSE    Do sensitivity test of WeedKmTreeRoots
+FALSE    Do sensitivity test of WeedPKmTreeRoots
+FALSE    Do sensitivity test of WoodDensPith
+FALSE    Do sensitivity test of WoodDensOuter
+FALSE    Do sensitivity test of WoodDensTemperature
+FALSE    Do sensitivity test of WoodDensFertility
+FALSE    Do sensitivity test of WoodDensStocking
+FALSE    Do sensitivity test of HDConst
+FALSE    Do sensitivity test of HDTemp
+FALSE    Do sensitivity test of HDStocking
+FALSE    Do sensitivity test of HDFertility
+FALSE    Do sensitivity test of HDAge1
+FALSE    Do sensitivity test of HDAge2
+FALSE    Do sensitivity test of HDInitSlope
+FALSE    Do sensitivity test of HDInitIntercept
+FALSE    Do sensitivity test of HDSlopeMin
+FALSE    Do sensitivity test of HDSlopeMax
+FALSE    Do sensitivity test of TMinLim
+FALSE    Do sensitivity test of TOpt1
+FALSE    Do sensitivity test of TOpt2
+FALSE    Do sensitivity test of TmaxLim
+FALSE    Do sensitivity test of TFrost
+FALSE    Do sensitivity test of TScorch
+FALSE    Do sensitivity test of TSensitivity
+FALSE    Do sensitivity test of TRepair
+FALSE    Do sensitivity test of WoodRetrans
+FALSE    Do sensitivity test of bRoots
+FALSE    Do sensitivity test of bWood
+FALSE    Do sensitivity test of bBark
+FALSE    Do sensitivity test of bBranch
+FALSE    Do sensitivity test of bFruit
+FALSE    Do sensitivity test of bPollen
+FALSE    Do sensitivity test of RelWaterSens
+FALSE    Do sensitivity test of N0
+FALSE    Do sensitivity test of Ncrit
+FALSE    Do sensitivity test of Nmax
+FALSE    Do sensitivity test of SapwoodC
+FALSE    Do sensitivity test of HeartWoodC
+FALSE    Do sensitivity test of CoarseRootC
+FALSE    Do sensitivity test of FineRootC
+FALSE    Do sensitivity test of BranchesC
+FALSE    Do sensitivity test of BarkC
+FALSE    Do sensitivity test of LeavesC
+FALSE    Do sensitivity test of SapwoodN
+FALSE    Do sensitivity test of HeartWoodN
+FALSE    Do sensitivity test of CoarseRootN
+FALSE    Do sensitivity test of FineRootN
+FALSE    Do sensitivity test of BranchesN
+FALSE    Do sensitivity test of BarkN
+FALSE    Do sensitivity test of LeavesN
+FALSE    Do sensitivity test of Stocking
+FALSE    Do sensitivity test of FineWoodSurfC
+FALSE    Do sensitivity test of CoarseWoodSurfC
+FALSE    Do sensitivity test of CoarseWoodSoilC
+FALSE    Do sensitivity test of StructSurfC
+FALSE    Do sensitivity test of StructSoilC
+FALSE    Do sensitivity test of MetabSurfC
+FALSE    Do sensitivity test of MetabSoilC
+FALSE    Do sensitivity test of SlowC
+FALSE    Do sensitivity test of ActiveC
+FALSE    Do sensitivity test of ResistantC
+FALSE    Do sensitivity test of FineWoodSurfN
+FALSE    Do sensitivity test of CoarseWoodSurfN
+FALSE    Do sensitivity test of CoarseWoodSoilN
+FALSE    Do sensitivity test of StructSurfN
+FALSE    Do sensitivity test of StructSoilN
+FALSE    Do sensitivity test of MetabSurfN
+FALSE    Do sensitivity test of MetabSoilN
+FALSE    Do sensitivity test of SlowN
+FALSE    Do sensitivity test of ActiveN
+FALSE    Do sensitivity test of ResistantN
+FALSE    Do sensitivity test of EndInputs
+FALSE    Do sensitivity test of CAI
+FALSE    Do sensitivity test of NConc
+FALSE    Do sensitivity test of LAI
+FALSE    Do sensitivity test of Wood
+FALSE    Do sensitivity test of ShowFineRootC
+FALSE    Do sensitivity test of ShowFineRootN
+FALSE    Do sensitivity test of ShowBranches
+FALSE    Do sensitivity test of ShowLeaves
+FALSE    Do sensitivity test of ShowLeafN
+FALSE    Do sensitivity test of Height
+FALSE    Do sensitivity test of DBH
+FALSE    Do sensitivity test of CanopyCover
+FALSE    Do sensitivity test of kex
+FALSE    Do sensitivity test of ShowFineWoodSurfC
+FALSE    Do sensitivity test of ShowCoarseWoodSurfC
+FALSE    Do sensitivity test of ShowCoarseWoodSoilC
+FALSE    Do sensitivity test of ShowStructSurfC
+FALSE    Do sensitivity test of ShowMetabSurfC
+FALSE    Do sensitivity test of ShowStructSurfN
+FALSE    Do sensitivity test of ShowMetabSurfN
+FALSE    Do sensitivity test of ShowSlowC
+FALSE    Do sensitivity test of ShowActiveC
+FALSE    Do sensitivity test of ShowResistantC
+FALSE    Do sensitivity test of ShowSlowN
+FALSE    Do sensitivity test of ShowActiveN
+FALSE    Do sensitivity test of ShowResistantN
+FALSE    Do sensitivity test of End dummy
+FALSE    Boolean variable for batchfile selection of Dummy
+TRUE    Boolean variable for batchfile selection of Run length - days
+TRUE    Boolean variable for batchfile selection of Run length - months
+TRUE    Boolean variable for batchfile selection of Run length - years
+TRUE    Boolean variable for batchfile selection of Initial stocking
+TRUE    Boolean variable for batchfile selection of Latitude
+FALSE    Boolean variable for batchfile selection of ExtraCO2
+FALSE    Boolean variable for batchfile selection of Extra temperature
+FALSE    Boolean variable for batchfile selection of Extra rain
+FALSE    Boolean variable for batchfile selection of Extra vapour pressure
+FALSE    Boolean variable for batchfile selection of Extra radiation
+FALSE    Boolean variable for batchfile selection of Leaf lignin
+FALSE    Boolean variable for batchfile selection of Root lignin
+TRUE    Boolean variable for batchfile selection of Water holding capacity
+TRUE    Boolean variable for batchfile selection of Fine soil fraction
+TRUE    Boolean variable for batchfile selection of Fertility index
+FALSE    Boolean variable for batchfile selection of Constant leaf N
+FALSE    Boolean variable for batchfile selection of Irrigation
+FALSE    Boolean variable for batchfile selection of N Fertiliser added
+FALSE    Boolean variable for batchfile selection of P Fertiliser added
+TRUE    Boolean variable for batchfile selection of Climate file
+TRUE    Boolean variable for batchfile selection of Harvesting
+FALSE    Boolean variable for batchfile selection of Environment changes
+FALSE    Boolean variable for batchfile selection of End dummy
+           8 Variable to define the width for each variable in the output file
+           1 Number of cohorts to simulate
+           8 Variable to define the width for each variable in the output file
+           1 Interval between applications of irrigation
+           0 Starting day for irrigation
+           0 Starting month for irrigation
+          -1 Starting year for irrigation
+           0 Last day for irrigation
+           0 Last month for irrigation
+          -1 Last year for irrigation
+          30 years for simulation run
+           0 months for simulation run
+           0 number of days for simulation run
+           0 Initial setting for stand age
+           1 Initial setting starting day
+           1 Initial setting starting month
+        1974 Initial setting starting year
+           0 Initial for spatial runs
+         100 Calculations for spatial runs
+          -1 For batch run: number of calculations
+         500 Maximum number of iterations for equlibrium runs
+          10 Required number of good fits to satisfy user of equlibrium conditions
+           3 Sequence length to check for oscillations
+1.0000000000 Adjustment to soil fertility level at start-up
+0.0000000000 Fraction of trees dying annually
+0.1000000000 Daily rate of fertiliser release
+0.0000000000 Initial setting for sapwood carbon
+0.0000000000 Initial setting for heartwood carbon
+0.0000000000 Initial setting for coarseroot carbon
+0.0000000000 Initial setting for fineroot carbon
+0.0000000000 Initial setting for branch carbon
+0.0000000000 Initial setting for bark carbon
+50.000000000 Initial setting for foliage carbon
+0.0000000000 Initial setting for pollen carbon
+0.0000000000 Initial setting for fruit carbon
+0.0000000000 Initial setting for soluble carbon
+0.0000000000 Initial setting for leaf primordia carbon
+250.00000000 Initial setting for weed leaf carbon
+0.0000000000 Initial setting for weed root carbon
+0.0000000000 Initial setting for sapwood nitrogen
+0.0000000000 Initial setting for heartwood nitrogen
+0.0000000000 Initial setting for coarseroot nitrogen
+0.0000000000 Initial setting for fineroot nitrogen
+0.0000000000 Initial setting for branch nitrogen
+0.0000000000 Initial setting for bark nitrogen
+2.0000000000 Initial setting for foliage nitrogen
+0.0000000000 Initial setting for pollen nitrogen
+0.0000000000 Initial setting for fruit nitrogen
+0.0000000000 Initial setting for soluble nitrogen
+0.0000000000 Initial setting for leaf primordia nitrogen
+2.0000000000 Initial setting for weed leaf nitrogen
+0.0000000000 Initial setting for weed root nitrogen
+0.0000000000 Initial setting for sapwood phosphorus
+0.0000000000 Initial setting for heartwood phosphorus
+0.0000000000 Initial setting for coarseroot phosphorus
+0.0000000000 Initial setting for fineroot phosphorus
+0.0000000000 Initial setting for branch phosphorus
+0.0000000000 Initial setting for bark phosphorus
+1.0000000000 Initial setting for foliage phosphorus
+0.0000000000 Initial setting for pollen phosphorus
+0.0000000000 Initial setting for fruit phosphorus
+0.0000000000 Initial setting for soluble phosphorus
+0.0000000000 Initial setting for leaf primordia phosphorus
+0.0000000000 Initial setting for weed leaf phosphorus
+0.0000000000 Initial setting for weed root phosphorus
+1000.0000000 Initial setting for stocking
+0.0000000000 Initial setting for height
+0.0000000000 Initial setting for diameter
+2.0000000000 Coefficient to convert between carbon and biomass
+1.0000000000 Coefficient to convert between nitrogen units in model and output
+2000000.0000 Conversion factor from MJ to umol
+0.5000000000 Ratio of tree sizes of dieing and average trees
+0.0025000000 Value for equilibrium criterium 1 in equilibrium runs
+0.0010000000 Value for equilibrium criterium 2 in equilibrium runs
+0.0010000000 Value for equilibrium criterium 3 in equilibrium runs
+15.000000000 Target value for equilibrium runs
+0.8000000000 Target value for phosphorus limitation
+0.1000000000 Minimum delta value for equilibrium runs
+10.000000000 Maximum delta value for equilibrium runs
+20.000000000 Percentage adjustment of delta value for equilibrium runs
+2.0000000000 Maximum change ratio in equilibrium runs
+20.000000000 Boosting of changes in resistant organic matter relative to other changes
+0.0000000000 Fractional change in variables for testing sensitivity
+179.00000000 Minimum Longitude for spatial mode
+166.00000000 Maximum Longitude for spatial mode
+0.2500000000 Longitude interval for spatial mode
+-48.00000000 Minimum Latitude for spatial mode
+-34.00000000 Maximum Latitude for spatial mode
+0.2500000000 Latitude interval for spatial mode
+50.000000000 Minimum rain for spatial mode
+3000.0000000 Maximum rain for spatial mode
+0.0000000000 Minimum temperature for spatial mode
+40.000000000 Maximum temperature for spatial mode
+TRUE Boolean variable to read Tmax
+TRUE Boolean variable to read Tmin
+FALSE Boolean variable to read Tmean
+FALSE Boolean variable to read Tsoil
+TRUE Boolean variable to read Tmax
+TRUE Boolean variable to read Radn
+TRUE Boolean variable to read Rainfall
+FALSE Boolean variable to read absolute humidity
+FALSE Boolean variable to read relative humidity
+FALSE Boolean variable to read CO2 concentration
+FALSE Boolean variable for calculations of organic matter decomposition only
+FALSE Boolean variable for organic matter to be treated as single layer
+TRUE Boolean variable to indicate whether plant pools should be reset at the beginning of a run
+TRUE Boolean variable whether output is to be given by soil layer
+FALSE Boolean variable whether to include information about carbon isotopes
+FALSE Boolean variable whether to include the phosphorus cycle
+TRUE Boolean variable whether to give numeric output as part of spatial runs
+FALSE Boolean variable to indiate whether to keep the same initial plant pools in searching for equilibrium
+FALSE Boolean variable to indiate whether to adjust P input rates in searching for equilibrium
+TRUE Indicates whether to include flags in the output for background events
+TRUE Indicates whether to include weed competition
+TRUE Indicates whether to include vapur pressure adjustments if the tempeature is changed
+D       Interpretation of fertiliser dates
+           0 Number of times that fertiliser is to be applied
+%       Interpretation of harvest units
+D       Interpretation of harvest dates
+           0 Number of harvests or thinnings
+D       Interpretation of pest dates
+W       Units in which pest damage is expressed (% or W)
+           0 Number of pest outbreaks
+B       Interpretation of fire dates
+           0 Number of fire outbreaks
+B       Interpretation of plough dates
+           0 Number of ploughing events
+B       Interpretation of OMAdditions dates
+           0 Number of OMAdditions events
+  Interpretation of grazing units
+           0 Number of Grazing events
+           0 Number of times environmental variables are changed
+FALSE    Boolean variable to indicate whether irrigation is applied
+S       Type of irrigation
+50.000000000 Amount of irrigation applied
+0.9900000000 Fraction of field capacity to which irrigation water is applied
+0  Start saving data after nominated no. of iterations
+ Exotic plant type for spatial runs
+ SoilSet soil type for spatial runs
+         480 number of times output is given
+         360 number of times output is written to disk
+D       Calculation type
+O       Type of climate input
+0   Number of projects to load for multiple project runs
+CenW.CL!
+CenW.DT!
+CenW.IL!
+Spatial.sp!
+D:\Files\CenW*4.0\Test.Sl!
+CenW.ST!
+CenW.PL!
+CenW.BT!
+Foliage_[N]   Type of target value for equilibrium runs
+Biological_N_fixation  Type of parameter to change for equilibrium runs
+Fraction:        Type of function to calculate mortality

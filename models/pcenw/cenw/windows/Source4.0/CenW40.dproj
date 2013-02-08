@@ -1,0 +1,225 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{9c91f76b-0818-4b2f-87c5-a5c7ef48730a}</ProjectGuid>
+			<MainSource>CenW40.dpr</MainSource>
+			<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+			<DCC_DependencyCheckOutputName>CenW40.exe</DCC_DependencyCheckOutputName>
+			<ProjectVersion>12.3</ProjectVersion>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<Platform>Win32</Platform>
+			<AppType>Application</AppType>
+			<FrameworkType>VCL</FrameworkType>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<Version>7.0</Version>
+			<DCC_DebugInformation>False</DCC_DebugInformation>
+			<DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<Version>7.0</Version>
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType>VCLApplication</Borland.ProjectType>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Parameters/>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">5129</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Source>
+						<Source Name="MainSource">CenW40.dpr</Source>
+					</Source>
+				</Delphi.Personality>
+				<ModelSupport>False</ModelSupport>
+				<Platforms>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+		<ItemGroup>
+			<DelphiCompile Include="CenW40.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="untDeclarations.pas"/>
+			<DCCReference Include="untMain.pas">
+				<Form>frmMain</Form>
+			</DCCReference>
+			<DCCReference Include="untAbout.pas">
+				<Form>frmAbout</Form>
+			</DCCReference>
+			<DCCReference Include="untPools.pas">
+				<Form>frmPools</Form>
+			</DCCReference>
+			<DCCReference Include="untC13Pools.pas">
+				<Form>frmC13Pools</Form>
+			</DCCReference>
+			<DCCReference Include="untInitialPools.pas">
+				<Form>frmInitialPools</Form>
+			</DCCReference>
+			<DCCReference Include="untControlParameters.pas">
+				<Form>frmControlParameters</Form>
+			</DCCReference>
+			<DCCReference Include="untDecompositionParameters.pas">
+				<Form>frmDecompositionParameters</Form>
+			</DCCReference>
+			<DCCReference Include="untGenericListDialogue.pas">
+				<Form>frmGenericListDialogue</Form>
+			</DCCReference>
+			<DCCReference Include="untAllocationParameters.pas">
+				<Form>frmAllocationParameters</Form>
+			</DCCReference>
+			<DCCReference Include="untWeatherParameters.pas">
+				<Form>frmWeatherParameters</Form>
+			</DCCReference>
+			<DCCReference Include="untPhotoSyntheticParameters.pas">
+				<Form>frmPhotoSyntheticParameters</Form>
+			</DCCReference>
+			<DCCReference Include="untFileReadWeather.pas">
+				<Form>frmFileReadWeather</Form>
+			</DCCReference>
+			<DCCReference Include="untSiteParameters.pas">
+				<Form>frmSiteParameters</Form>
+			</DCCReference>
+			<DCCReference Include="untStandParameters.pas">
+				<Form>frmStandParameters</Form>
+			</DCCReference>
+			<DCCReference Include="untHelpConsts.pas"/>
+			<DCCReference Include="untIrrigationManagement.pas">
+				<Form>frmIrrigationManagement</Form>
+			</DCCReference>
+			<DCCReference Include="untMultipleRunParameters.pas">
+				<Form>frmMultipleRunParameters</Form>
+			</DCCReference>
+			<DCCReference Include="untRun.pas"/>
+			<DCCReference Include="untDiskOut.pas"/>
+			<DCCReference Include="untLoadSaveProject.PAS"/>
+			<DCCReference Include="untLoadSavePlant.pas"/>
+			<DCCReference Include="untLoadSaveSite.pas"/>
+			<DCCReference Include="untLoadSaveInitial.pas"/>
+			<DCCReference Include="untLoadSaveCenW.pas"/>
+			<DCCReference Include="untDefaults.PAS"/>
+			<DCCReference Include="untSimulate.pas"/>
+			<DCCReference Include="untSimsoil.pas"/>
+			<DCCReference Include="untRunOptions.PAS"/>
+			<DCCReference Include="untTrigValidation.pas"/>
+			<DCCReference Include="untFieldValidation.pas"/>
+			<DCCReference Include="untPowerValidation.pas"/>
+			<DCCReference Include="untSathumValidation.pas"/>
+			<DCCReference Include="untDivideValidation.pas"/>
+			<DCCReference Include="untGraph.pas">
+				<Form>frmGraph</Form>
+			</DCCReference>
+			<DCCReference Include="untProgress.pas">
+				<Form>frmProgress</Form>
+			</DCCReference>
+			<DCCReference Include="untEquilProgress.pas">
+				<Form>frmEquilProgress</Form>
+			</DCCReference>
+			<DCCReference Include="untEquilAdjust.pas">
+				<Form>frmEquilAdjust</Form>
+			</DCCReference>
+			<DCCReference Include="untAgreement.pas">
+				<Form>frmAgreement</Form>
+			</DCCReference>
+			<DCCReference Include="untFileIO.pas">
+				<Form>frmFileIO</Form>
+			</DCCReference>
+			<DCCReference Include="untNotices.pas">
+				<Form>frmNotices</Form>
+			</DCCReference>
+			<DCCReference Include="untBatchParameters.pas">
+				<Form>frmBatchParameters</Form>
+			</DCCReference>
+			<DCCReference Include="untEquilParameters.pas">
+				<Form>frmEquilParameters</Form>
+			</DCCReference>
+			<DCCReference Include="untEquilFinished.pas">
+				<Form>frmEquilFinished</Form>
+			</DCCReference>
+			<DCCReference Include="untGenericDisplay.pas">
+				<Form>frmGenericDisplay</Form>
+			</DCCReference>
+			<DCCReference Include="untBatchList.pas">
+				<Form>frmBatchList</Form>
+			</DCCReference>
+			<DCCReference Include="untSpatialParameters.pas">
+				<Form>frmSpatialParameters</Form>
+			</DCCReference>
+			<DCCReference Include="untSpatialProgress.pas">
+				<Form>frmSpatialProgress</Form>
+			</DCCReference>
+			<DCCReference Include="untGenericListColumns.pas">
+				<Form>frmGenericListColumns</Form>
+			</DCCReference>
+			<DCCReference Include="untGenericSave.pas">
+				<Form>frmGenericSave</Form>
+			</DCCReference>
+			<DCCReference Include="untMiscellaneous.PAS"/>
+			<DCCReference Include="untWeedParameters.pas">
+				<Form>frmWeedParameters</Form>
+			</DCCReference>
+			<DCCReference Include="untSensSelect.pas">
+				<Form>frmSensSelect</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+	</Project>

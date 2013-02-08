@@ -1,0 +1,17 @@
+module load cdo
+
+#bin/bash
+
+i=166475
+
+while (($i<166476))
+do
+f=$(echo "scale=3; $i/1000" | bc -l)
+a=$(echo "scale=3; $f-0.001" | bc -l) 
+b=$(echo "scale=3; $f+0.001" | bc -l)
+
+cdo sellonlatbox,$a,$b,-47.276,-34.424 /gpfs/pads/projects/emc-gct/data/vcsn-nc/vcsn.nc /gpfs/pads/projects/emc-gct/data/vcsn-nc/lines/domain_$f.nc
+
+((i=i+50))
+done
+

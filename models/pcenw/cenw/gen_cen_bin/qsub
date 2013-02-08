@@ -1,0 +1,27 @@
+qsub -m abe -l walltime=00:06:00 code
+## for long one
+qsub -q long -m abe -l walltime=00:01:00 code
+
+#find out about jobs in queus
+qstat -u kanikaj
+
+#find everything out about the job
+qstat -f jobnumber
+
+#delete job
+qdel  2876013.svc.pads 
+
+#website
+http://wiki.ci.uchicago.edu/Resources/JobManagement#HPC_Job_Management
+http://www.clusterresources.com/torquedocs21/
+
+
+
+#check status when started running
+checkjob jobnumber
+
+
+qsub -m abe -l walltime=00:10:00 extrap1
+
+
+qsub -m abe -l walltime=00:02:00 extrap

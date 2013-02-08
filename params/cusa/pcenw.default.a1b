@@ -1,0 +1,9 @@
+model            cenw
+scenarios        /project/joshuaelliott/psims/models/pcenw/inp/scen/defaultH5-3
+weather          /project/joshuaelliott/psims/models/pcenw/inp/wth/a1b_hadcm3
+refdata          /project/joshuaelliott/psims/models/pcenw/inp/common
+bindata          /project/joshuaelliott/psims/bin
+bintransfer      $PWD/bin/CenW.EXE
+executable       CenW.EXE
+outtypes         .DT\!,.PJ\!,.OUT
+postprocess      ./gen_part_cenw.pl:--num_scenarios:100:--years:101:--variables:LAI,Height,NPP:--crop:pine
