@@ -30,7 +30,7 @@ commandToRun="$executable"
 # some steps in between. this may be difficult to generalize to all models... 
 if [ "$model" == "cenw" ]; then
  mv CenW.CL! CenW-T.CL!
-  for tt in {0..95..5} ; do
+  for tt in {0..95..1} ; do
     let "tlin = ( 129 - $tt )*1461/4"
     lin=$( printf "%0.f\n" $tlin )
     tailcom="tail -$lin CenW-T.CL! "
@@ -38,7 +38,7 @@ if [ "$model" == "cenw" ]; then
     for cap in {1..7} ; do 
       tail -3652 CenW-T.CL! >> CenW.CL!
     done
-    for hh in {1..5} ; do
+    for hh in {1..9} ; do
       cp PJHead.TMP CenW.PJ! 
       cat Scene-$hh.PJ! >> CenW.PJ!
       ./$commandToRun > RESULT-T.OUT 2>&1

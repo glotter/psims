@@ -6,5 +6,6 @@ lazy.errors=true
 status.mode=provider
 use.provider.staging=true
 provider.staging.pin.swiftfiles=false
+foreach.max.threads=2000
 
 #app bash=/bin/bash
