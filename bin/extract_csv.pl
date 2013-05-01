@@ -2,9 +2,38 @@
 
 use strict;
 
-# Extract and reformat the data
+$SIG{'INT'} = \&sigIntHandler;
+
 my @part_files=`find parts -type f`;
 my %accumulated_values = (); 
+my %csv_file_handles = ();
+my $filecount=0;
+my $sync_frequency=100;
+
+sub sync {
+   print "Syncing data\n";
+   for my $filename ( keys %accumulated_values ) {
+      if(!defined($csv_file_handles{$filename})) {
+         open($csv_file_handles{$filename}, ">$filename") || die "Can't open $filename: $!";
+      }
+      print {$csv_file_handles{$filename}} @{$accumulated_values{$filename}};
+   } 
+   %accumulated_values = ();
+}
+
+sub close_files {
+   print "Closing " . (keys %csv_file_handles) . " files..\n";
+   for my $fh ( values %csv_file_handles ) {
+      close($fh);
+   }
+   print "Done\n";
+}
+
+sub sigIntHandler {
+    print "Ctrl-C caught, closing files and exiting\n";
+    close_files(); 
+    exit;
+}
 
 foreach my $part_file(@part_files) {
    
@@ -18,11 +47,15 @@ foreach my $part_file(@part_files) {
       my $columns = join(',', @rdata);
       push(@{$accumulated_values{$file_to_create}}, $columns);
    }
+
+   $filecount++;
+
+   if($filecount >= $sync_frequency ) { 
+      sync(); 
+      $filecount=0;   
+   }
 }
 
-for my $filename ( keys %accumulated_values ) {
-    print "Writing $filename\n";
-    open(FILE, ">$filename") || die "Unable to open $filename\n";
-    print FILE @{$accumulated_values{$filename}};
-    close(FILE);
-}
+sync();
+close_files();
+
