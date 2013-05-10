@@ -20,7 +20,7 @@ do
 done
 
 # Run translator application
-translator=$( echo $translator | sed s/:/' '/g | sed s/INPUT.nc4/$( ls *.nc4 )/g )
+translator=$( echo $translator | sed s/:/' '/g | sed s/INPUT.psims.nc4/$( ls *.nc4 )/g )
 echo Translator command: $translator
 translator_executable=$( echo $translator | awk '{print $1}' )
 ls -l *.WTH 1>&2
