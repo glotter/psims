@@ -4,12 +4,9 @@ out=$1
 executable=$2
 outtypes=$3
 postprocess=$4
-model=$5
-shift 5
-
-
-# Replace :'s in executable and postprocess with spaces
-executable=$( echo $executable | sed s/:/' '/g )
+translator=$5
+model=$6
+shift 6
 
 # All other arguments beyond this are lists of input files
 mkdir -p data
@@ -22,10 +19,27 @@ do
    done
 done
 
+# Run translator application
+translator=$( echo $translator | sed s/:/' '/g | sed s/INPUT.nc4/$( ls *.nc4 )/g )
+echo Translator command: $translator
+translator_executable=$( echo $translator | awk '{print $1}' )
+ls -l *.WTH 1>&2
+if [ -f "$translator_executable" ]; then
+   chmod +x ./$translator_executable
+   ./$translator
+   for file in $( ls *.WTH )
+   do
+      ln -s $PWD/$file data/$( basename $file )
+   done
+fi
+ls -l *.WTH 1>&2
+
 # Run pSIMS
 chmod +x *.EXE
 cd data
+executable=$( echo $executable | sed s/:/' '/g )
 commandToRun="$executable"
+echo Executable: $executable
 # if batch is set to true, we're going to do multiple executable calls with 
 # some steps in between. this may be difficult to generalize to all models... 
 if [ "$model" == "cenw" ]; then
