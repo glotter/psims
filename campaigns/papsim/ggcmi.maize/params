@@ -1,0 +1,14 @@
+model            apsim75
+campaign         /project/joshuaelliott/psims/campaigns/papsim/ggcmi.maize
+soils            /project/joshuaelliott/psims/data/soils/hwsd200.wrld.30min
+weather          /project/joshuaelliott/psims/data/clim/agmerra
+refdata          /project/joshuaelliott/psims/campaigns/papsim/common
+bintransfer      $PWD/bin/Apsim75.exe.tar.gz,$PWD/tapps/papsim/psims2met.py,$PWD/tapps/papsim/out2psims.py,$PWD/bin/camp2json.py,$PWD/tapps/papsim/jsons2apsim.py
+tappwth          psims2met.py:-o:Generic.met:-v:tasmin,tasmax,rsds,pr,wind,hurtmax
+tappcamp         camp2json.py:-c:Campaign.nc4:-e:exp_template.json:-o:experiment.json
+tappinp          jsons2apsim.py:-o:Generic.apsim:-t:template.apsim:-s:soil.json:-e:experiment.json
+executable       mono:./Model/Apsim.exe
+outtypes         .met,.apsim,.out,.sum,.json
+postprocess      ./out2psims.py:-i:Generic.out:-s:4:-v:yield,biomass,lai:--delta:30:--ref_year:1980
+NCconcat         ../bin/append.sh:yield,biomass,lai:"Cropyield,Totalbiomass,LAI":"kg/ha,kg/ha,fraction":720:360:30:31:4:1980:./parts:out.psims.apsim75.agmerra.maize.nc4
+

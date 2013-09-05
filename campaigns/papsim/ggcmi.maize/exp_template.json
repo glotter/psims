@@ -1,0 +1,67 @@
+{
+      "crop_name": "Maize",
+      "start_date": "01/01/1980",
+      "end_date": "31/12/2010",
+      "log": "",  
+      "reporting_frequency": "harvesting",
+      "output_variables": [
+        {"name": "dd/mm/yyyy as Date"},
+        {"name": "biomass"},
+        {"name": "yield"},
+        {"name": "lai"},
+        {"name": "no3()"}
+      ],
+      "initial_condition": {
+        "icrn": ".5",
+        "icrip": "100",
+        "icnd": "0",
+        "icrp": "0",
+        "icrt": "300",
+        "icrz#": "1",
+        "icrze": "1",
+        "icrag": "500",
+        "icrdp": "30",
+        "icdat": "19800101",
+        "standing_fraction": "0",
+        "soilLayer": [
+          {"ich2o": ".18" ,"icno3": "1.8","icbl": "22" ,"icnh4": "2.5"},
+          {"ich2o": ".195","icno3": "4.5","icbl": "52" ,"icnh4": "3"},
+          {"ich2o": ".21" ,"icno3": "5"  ,"icbl": "82" ,"icnh4": "3.5"},
+          {"ich2o": ".2"  ,"icno3": "2"  ,"icbl": "112","icnh4": "2"},
+          {"ich2o": ".2"  ,"icno3": ".7" ,"icbl": "127","icnh4": "1"},
+          {"ich2o": ".2"  ,"icno3": ".6" ,"icbl": "156","icnh4": "1"}
+        ]
+      },
+      "weather": {
+        "file": "Generic"
+      },
+      "planting": {
+        "sow_start_window": "1-mar",
+        "sow_end_window": "1-dec",
+        "cultivar": "HY0001",
+        "row_spacing": "0.9",
+        "depth": "30",
+        "sowing_density": "4.4",
+        "amount_rainfall": "30",
+        "num_days_rainfall": "7",
+        "min_allowable_soil_water": "50"
+      },
+      "fertilizer": {
+        "initial_amount": "100",
+        "type": "NH4NO3",
+        "days_after_sowing": "45",
+        "subsequent_amount": "100",
+        "depth": "40"
+      },
+      "irrigation": {
+        "automatic_irrigation": "off",
+        "asw_depth": "600",
+        "crit_fr_asw": "0.75",
+        "efficiency": "1",
+        "allocation_limits": "off",
+        "allocation": "10",
+        "default_no3_conc": "0.0",
+        "default_nh4_conc": "0.0",
+        "default_cl_conc": "0.0"
+      }
+}
