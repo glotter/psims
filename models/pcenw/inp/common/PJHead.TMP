@@ -742,7 +742,7 @@ FALSE    Boolean variable for batchfile selection of Dummy
 FALSE    Boolean variable for batchfile selection of Run length - days
 FALSE    Boolean variable for batchfile selection of Run length - months
 FALSE    Boolean variable for batchfile selection of Run length - years
-FALSE    Boolean variable for batchfile selection of Initial stocking
+TRUE     Boolean variable for batchfile selection of Initial stocking
 FALSE    Boolean variable for batchfile selection of Latitude
 FALSE    Boolean variable for batchfile selection of ExtraCO2
 FALSE    Boolean variable for batchfile selection of Extra temperature

@@ -130,7 +130,8 @@ fi
 
 # Post Post processing
 echo
-echo Running CSV extractions.. please wait
-time ../bin/extract_csv.pl
+echo Running extractions.. please wait
+NCconcat=$( echo $NCconcat | sed s/:/' '/g )
+time ./$NCconcat
 
 exit

@@ -1,0 +1,21 @@
+gridlist file is /data/gridlists/other/nrw.grid.all
+
+because the experiment is so simple that there is nothing changing spatially, and because the grid_ids are all messed up by the fact that they never told us the actual damn longitudes. 
+
+
+Initial conditions:
+	initial soil water per layer
+layer 1a	50% of FC
+layer 1b	50% of FC
+layer 2		50% of FC
+layer 3		50% of FC
+ 
+Output variables:
+Variable	Unit	Remarks
+Yield		t DM/ha	-
+Total above ground biomass	t DM/ha	-
+Total ET over the growing season  mm/growing season	Indicate which method has been used to calculate ET and PET
+Total intercepted PAR over the growing season 		MJ/ha/growing season  -
+Maximum LAI during the growing season  m2/m2		-
+Anthesis date	   DOY Indicate if it is a fixed value or simulated per year
+Harvest date	   DOY Indicate if maturity date is meant and if it is a fixed value or simulated per year

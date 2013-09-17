@@ -1,3 +1,8 @@
 run*
 *~
 *.log
+*.o
+*.EXE
+*.so
+*.dll
+*.tar.gz

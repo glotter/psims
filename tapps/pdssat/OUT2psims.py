@@ -24,7 +24,7 @@ var_names = {'SDAT': 'Simulation start date', 'PDAT': 'Planting date', \
              'DRCM': 'Season water drainage', 'SWXM': 'Extractable water at maturity', \
              'NI#M': 'N applications', 'NICM': 'Inorganic N applied', \
              'NFXM': 'N fixed during season (kg/ha)', 'NUCM': 'N uptake during season', \
-             'NLCM': 'N leacehd during season', 'NIAM': 'Inorganic N at maturity', \
+             'NLCM': 'N leached during season', 'NIAM': 'Inorganic N at maturity', \
              'CNAM': 'Tops N at maturity', 'GNAM': 'Grain N at maturity', \
              'PI#M': 'Number of P applications', 'PICM': 'Inorganic P applied', \
              'PUPC': 'Seasonal cumulative P uptake', 'SPAM': 'Soil P at maturity', \
@@ -43,9 +43,9 @@ var_names = {'SDAT': 'Simulation start date', 'PDAT': 'Planting date', \
              'TMINA': 'Avg minimum air temperature', 'SRADA': 'Average solar radiation, planting - harvest', \
              'DAYLA': 'Average daylength, planting - harvest', 'CO2A': 'Average atmospheric CO2, planting - harvest', \
              'PRCP': 'Total season precipitation, planting - harvest', 'ETCP': 'Total evapotransportation, planting - harvest'}
-var_units = {'SDAT': 'YrDoy', 'PDAT': 'YrDoy', \
-             'EDAT': 'YrDoy', 'ADAT': 'YrDoy', \
-             'MDAT': 'YrDoy', 'HDAT': 'YrDoy', \
+var_units = {'SDAT': 'YrDoy', 'PDAT': 'Doy', \
+             'EDAT': 'YrDoy', 'ADAT': 'Days since planting', \
+             'MDAT': 'Days since planting', 'HDAT': 'YrDoy', \
              'DWAP': 'kg [dm]/ha', 'CWAM': 'kg [dm]/ha', \
              'HWAM': 'kg [dm]/ha', 'HWAH': 'kg [dm]/ha', \
              'BWAH': 'kg [dm]/ha', 'PWAM': 'kg [dm]/ha', \
@@ -183,6 +183,17 @@ trim_data[func(trim_data)] = '-99'
 
 # convert to double
 trim_data = trim_data.astype(double)
+
+# convert units on the date variables
+# [[je: james should probably fix this to make sure its smart enough to handle
+#       cases where the user doesn't ask for ADAT or PDAT or whatever]]
+from numpy import nan;
+trim_data[trim_data == -99] = nan
+trim_data[:, variables == 'PDAT'] =   trim_data[:, variables == 'PDAT'] % 1000
+trim_data[:, variables == 'ADAT'] = ((trim_data[:, variables == 'ADAT'] % 1000) - trim_data[:, variables == 'PDAT']) % 365
+trim_data[:, variables == 'MDAT'] = ((trim_data[:, variables == 'MDAT'] % 1000) - trim_data[:, variables == 'PDAT']) % 365
+from numpy import isnan; 
+trim_data[isnan(trim_data)] = -99
 
 # create pSIMS NetCDF4 file
 dirname = os.path.dirname(options.outputfile)

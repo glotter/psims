@@ -1,0 +1,13 @@
+model            dssat45
+campaign         /project/joshuaelliott/psims/campaigns/pdssat/ggcmi.maize
+soils            /project/joshuaelliott/psims/data/soils/hwsd1.wrld.30min
+weather          /project/joshuaelliott/psims/data/clim/agcfsr
+refdata          /project/joshuaelliott/psims/campaigns/pdssat/common.isimip
+bintransfer      $PWD/bin/DSCSM045.EXE,$PWD/tapps/pdssat/psims2WTH.py,$PWD/tapps/pdssat/OUT2psims.py,$PWD/tapps/pdssat/camp2json_dssat.py,$PWD/tapps/pdssat/jsons2dssat.py
+tappwth          psims2WTH.py:-o:GENERIC1.WTH:-v:tasmin,tasmax,rsds,pr,wind
+tappcamp         camp2json_dssat.py:-c:Campaign.nc4:-e:exp_template.json:-o:experiment.json
+tappinp          jsons2dssat.py:-x:X1234567.MZX:-s:soil.json:-e:experiment.json:-S:SOIL.SOL
+executable       DSCSM045.EXE:A:X1234567.MZX
+outtypes         .WTH,.MZX,.SOL,.OUT,.json
+postprocess      ./OUT2psims.py:-i:Summary.OUT:-v:PDAT,ADAT,MDAT,CWAM,HWAM,IRCM,PRCM,ETCM:--delta:30:-s:4:-y:31:--ref_year:1980
+NCconcat         ../bin/append.sh:PDAT,ADAT,MDAT,CWAM,HWAM,IRCM,PRCM,ETCM:"PlantDate,AnthesisDate,MaturityDate,TotalBiomass,Yield,IrrigationApplied,GrowingSeasonPrecip,GrowingSeasonET":"DOY,DOY,DOY,kg/ha,kg/ha,mm,mm,mm":720:360:30:31:4:1980:./parts:out.psims.dssat45.agcfsr.maize.nc4

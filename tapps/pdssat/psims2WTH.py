@@ -127,7 +127,7 @@ for i in range(nv): # round variables
 # ensure that after rounding tmax > tmin and solar > 0.0
 bad_idx = alldata[:, tmax_idx] <= alldata[:, tmin_idx]
 alldata[bad_idx, tmax_idx] = alldata[bad_idx, tmin_idx] + 0.1
-alldata[alldata[:, 0] <= 0.0] = 0.1
+alldata[alldata[:, 0] <= 0.0, 0] = 0.1
 
 # write file
 filler = -99 # used for ELEV, REFHT

@@ -1,9 +1,0 @@
-model            dssat45
-scenarios        /project/joshuaelliott/psims/models/pdssat/inp/scen/p2012.grid.mzx.2
-weather          /project/joshuaelliott/psims/models/pdssat/inp/wth/cusa.narr.p2012
-refdata          /project/joshuaelliott/psims/models/pdssat/inp/common
-bindata          /project/joshuaelliott/psims/bin
-bintransfer      $PWD/bin/DSCSM045.EXE,$PWD/bin/gen_part_dssat.pl
-executable       DSCSM045.EXE:A:X1234567.MZX
-outtypes         .OUT,.MZX
-postprocess      ./gen_part_dssat.pl:--num_scenarios:10:--years:36:--variables:PDAT,ADAT,MDAT,CWAM,HWAM,IRCM,PRCM,ETCM:--crop:mai

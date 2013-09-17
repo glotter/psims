@@ -275,6 +275,7 @@ def get_initial_condition(exp, thicknesses):
     ic_struct['residueType'] = get_field(exp, 'crop_name')
     ic_struct['residueWeight'] = get_field(ic, 'icrag')
     ic_struct['standing_fraction'] = get_field(ic, 'standing_fraction')
+    ic_struct['water_fraction_full'] = get_field(ic, 'water_fraction_full')
     
     # layer data
     layers = [0] * len(thicknesses)
@@ -339,6 +340,8 @@ for i in range(num_experiments):
     s_tmp['fertilizer'] = exp_i['fertilizer']
     # irrigation
     s_tmp['irrigation'] = exp_i['irrigation']
+    # reset
+    s_tmp['reset'] = exp_i['reset']
     # output variables
     s_tmp['output_variables'] = exp_i['output_variables']
     s['experiments'][i] = s_tmp

@@ -132,15 +132,12 @@
 					</Layer>
 #end          
 				</Sample>
-				<Sample name="Initial water">
-					<Date type="date" description="Sample date:">$simulation.initialCondition.date</Date>
-#foreach ($initialLayer in $simulation.initialCondition.soilLayers)        
-					<Layer>
-						<Thickness units="mm">$initialLayer.thickness</Thickness>
-						<SW units="mm/mm">$initialLayer.soilWater</SW>
-					</Layer>
-#end          
-				</Sample>            
+        		      <InitialWater>
+           		      	      <FractionFull>$simulation.initialCondition.water_fraction_full</FractionFull>
+          			      <DepthWetSoil>NaN</DepthWetSoil>
+           			      <PercentMethod>EvenlyDistributed</PercentMethod>
+          			      <RelativeTo>ll15</RelativeTo>
+        		      </InitialWater>
 			</soil>
 			<surfaceom name="SurfaceOrganicMatter">
 				<PoolName type="text" description="Organic Matter pool name">OrganicMatter</PoolName>
@@ -150,22 +147,22 @@
 				<standing_fraction type="text" description="Fraction of residue standing">$simulation.initialCondition.standing_fraction</standing_fraction>
 			</surfaceom>
 			<fertiliser />
-			<irrigation name="Irrigation">
-				<automatic_irrigation type="list" listvalues="on,off" description="Automatic irrigation">$simulation.irrigation.automatic_irrigation</automatic_irrigation>
-				<asw_depth type="text" description="Depth to which ASW is calculated. (mm)">$simulation.irrigation.asw_depth</asw_depth>
-				<crit_fr_asw type="text" description="Fraction of ASW below which irrigation is applied (0-1.0)">$simulation.irrigation.crit_fr_asw</crit_fr_asw>
-				<irrigation_efficiency type="text" description="Efficiency of the irrigation. (0-1.0)">$simulation.irrigation.efficiency</irrigation_efficiency>
-				<irrigation_allocation type="list" listvalues="on,off" description="Allocation limits">$simulation.irrigation.allocation_limits</irrigation_allocation>
-				<allocation type="text" description="Allocation in mm">$simulation.irrigation.allocation</allocation>
-				<default_no3_conc type="text" description="Nitrate concentration (ppm N)">$simulation.irrigation.default_no3_conc</default_no3_conc>
-				<default_nh4_conc type="text" description="Ammonium concentration (ppm N)">$simulation.irrigation.default_nh4_conc</default_nh4_conc>
-				<default_cl_conc type="text" description="Chloride concentration (ppm Cl)">$simulation.irrigation.default_cl_conc</default_cl_conc>
-			</irrigation>
-			<$simulation.cropName>
+      <irrigation name="Irrigation">
+        <automatic_irrigation type="list" listvalues="on,off" description="Automatic irrigation">$simulation.irrigation.automatic_irrigation</automatic_irrigation>
+        <asw_depth type="text" description="Depth to which ASW is calculated. (mm)">$simulation.irrigation.asw_depth</asw_depth>
+        <crit_fr_asw type="text" description="Fraction of ASW below which irrigation is applied (0-1.0)">$simulation.irrigation.crit_fr_asw</crit_fr_asw>
+        <irrigation_efficiency type="text" description="Efficiency of the irrigation. (0-1.0)">$simulation.irrigation.efficiency</irrigation_efficiency>
+        <irrigation_allocation type="list" listvalues="on,off" description="Allocation limits">$simulation.irrigation.allocation_limits</irrigation_allocation>
+        <allocation type="text" description="Allocation in mm">$simulation.irrigation.allocation</allocation>
+        <default_no3_conc type="text" description="Nitrate concentration (ppm N)">$simulation.irrigation.default_no3_conc</default_no3_conc>
+        <default_nh4_conc type="text" description="Ammonium concentration (ppm N)">$simulation.irrigation.default_nh4_conc</default_nh4_conc>
+        <default_cl_conc type="text" description="Chloride concentration (ppm Cl)">$simulation.irrigation.default_cl_conc</default_cl_conc>
+      </irrigation>
+      <$simulation.cropName>
             <ini>
                <filename>./Model/${simulation.cropName}.xml</filename>
             </ini>
-         </$simulation.cropName>
+      </$simulation.cropName>
 			<folder name="Manager folder">
 				<operations name="Operations">
 #foreach ($event in $simulation.management.events)        
@@ -177,22 +174,43 @@
 #end               
 #end        
 				</operations>
-<manager name="Harvesting rule"><ui><category type="category" description="Harvesting criteria" />
-                                    <crop type="crop" description="Enter name of crop to harvest when ripe : ">$simulation.cropName</crop></ui><script><text>if [crop].StageName = 'harvest_ripe'  or [crop].plant_status = 'dead' then
-   [crop] harvest
-   [crop] end_crop
-endif
-</text><event>end_of_day</event></script></manager>
-        <manager name="Sow using a variable rule">
+        <manager name="Reset">
           <ui>
-            <category description="Sowing criteria" type="category" />
-            <date1 type="ddmmmdate" description="Enter sowing window START date (dd-mmm) : ">$simulation.planting.sow_start_window</date1>
-            <date2 type="ddmmmdate" description="Enter sowing window END date (dd-mmm) : ">$simulation.planting.sow_end_window</date2>
-            <must_sow type="yesno" description="Must sow? : ">yes</must_sow>
-            <raincrit type="text" description="Amount of rainfall : ">$simulation.planting.amount_rainfall</raincrit>
-            <rainnumdays type="text" description="Number of days of rainfall : ">$simulation.planting.num_days_rainfall</rainnumdays>
-            <esw_amount type="text" description="Enter minimum allowable available soil water (mm) : ">$simulation.planting.min_allowable_soil_water</esw_amount>
-            <category description="Sowing parameters" type="category" />
+            <category type="category" description="When should a reset be done" />
+            <reset_date type="ddmmmdate" description="Enter date of reset (dd-mmm) : ">$simulation.reset.date</reset_date>
+            <category type="category" description="Reset details" />
+            <soilmodule type="modulename" description="Name of your soil module : ">Soil</soilmodule>
+            <surfaceommodule type="modulename" description="Name of your surface organic matter module : ">SurfaceOrganicMatter</surfaceommodule>
+            <resetWater type="yesno" description="Reset soil water?">$simulation.reset.water</resetWater>
+            <resetNitrogen type="yesno" description="Reset soil nitrogen?">$simulation.reset.nitrogen</resetNitrogen>
+            <resetSurfaceOM type="yesno" description="Reset surface organic matter?">$simulation.reset.surfaceOM</resetSurfaceOM>
+          </ui>
+          <script>
+            <text>
+         if (today = date('[reset_date]')) then
+            resetWater = '[resetWater]'
+            resetNitrogen  = '[resetNitrogen]'
+            resetSurfaceOM = '[resetSurfaceOM]'
+            if (resetWater = 'yes') then
+                '[soilmodule] Water' reset
+            endif
+            if (resetNitrogen = 'yes') then
+                '[soilmodule] Nitrogen' reset
+            endif
+            if (resetSurfaceOM = 'yes') then
+                '[surfaceommodule]' reset
+            endif
+            act_mods reseting
+         endif
+      </text>
+            <event>start_of_day</event>
+          </script>
+        </manager>
+  <manager name="Sow on a fixed date">
+          <ui>
+            <category type="category" description="Sowing criteria" />
+            <date type="text" description="Enter sowing date (dd-mmm) : ">$simulation.planting.pdate</date>
+            <category type="category" description="Sowing parameters" />
             <crop type="crop" description="Enter name of crop to sow : ">$simulation.cropName</crop>
             <density type="text" description="Enter sowing density  (plants/m2) : ">$simulation.planting.sowing_density</density>
             <depth type="text" description="Enter sowing depth  (mm) : ">$simulation.planting.depth</depth>
@@ -200,63 +218,116 @@ endif
             <class type="classes" description="Enter crop growth class : ">plant</class>
             <row_spacing type="text" description="Enter row spacing (mm) : ">$simulation.planting.row_spacing</row_spacing>
           </ui>
-          <script name="start_of_day">
-            <text><![CDATA[
-      if (paddock_is_fallow() = 1 and FallowIn <> 'yes' and (NextCrop = 0 or NextCrop = '[crop]')) then
-         if (date_within('[date1], [date2]') = 1) then
-            if (rain[[rainnumdays]] >= [raincrit] AND esw >= [esw_amount]) OR
-                ('[must_sow]' = 'yes' AND today = date('[date2]'))) THEN
-               ChooseNextCrop = 'yes'   ! for rotations
-               [crop] sow plants =[density], sowing_depth = [depth], cultivar = [cultivar], row_spacing = [row_spacing], crop_class = [class]
-            endif
-            if today = date('[date2]') then
-               ChooseNextCrop = 'yes'
-            endif
+          <script>
+            <text>
+        if (today = date('[date]') then
+              [crop] sow plants =[density], sowing_depth = [depth], cultivar = [cultivar], row_spacing = [row_spacing], crop_class = [class]
          endif
-      endif
-            ]]></text>
+               </text>
             <event>start_of_day</event>
           </script>
         </manager>
         <manager name="Fertilise N at sowing">
           <ui>
-            <category description="When should fertiliser be applied" type="category" />
+            <category type="category" description="When should fertiliser be applied" />
             <modulename type="modulename" description="On which module should the event come from : ">$simulation.cropName</modulename>
             <eventname type="text" description="On which event should fertiliser be applied : ">sowing</eventname>
-            <category description="Fertiliser application details" type="category" />
-            <fertmodule type="modulename" description="Module used to apply the fertiliser : ">Fertiliser</fertmodule>
-            <fert_depth>$simulation.fertilizer.depth</fert_depth>
+            <category type="category" description="Fertiliser application details" />
+            <fertmodule type="modulename" description="Module used to apply the fertiliser : ">fertiliser</fertmodule>
+            <fert_depth type="text" description="fert_depth">$simulation.fertilizer.depth</fert_depth>
             <fert_amount_sow type="text" description="Amount of starter fertiliser at sowing (kg/ha) : ">$simulation.fertilizer.initial_amount</fert_amount_sow>
             <fert_type_sow type="list" listvalues="NO3_N, NH4_N, NH4NO3, urea_N, urea_no3, urea, nh4so4_n, rock_p, banded_p, broadcast_p" description="Sowing fertiliser type : ">$simulation.fertilizer.type</fert_type_sow>
           </ui>
-          <script name="[modulename].[eventname]">
+          <script>
             <text>
         [fertmodule] apply amount = [fert_amount_sow] (kg/ha), depth = [fert_depth] (mm), type = [fert_type_sow]
             </text>
             <event>[modulename].[eventname]</event>
           </script>
         </manager>
-<manager name="Fertilise on days after sowing">
-	<ui>
-        	<category type="category" description="When should fertiliser be applied" />
-            	<modulename type="modulename" description="On which crop is fertiliser being applied : ">$simulation.cropName</modulename>
-            	<fert_das type="text" description="Enter fertiliser days after sowing  : ">$simulation.fertilizer.days_after_sowing</fert_das>
-            	<fert_criteria type="text" description="Amount of N required in top 3 layers (kg/ha) : ">$simulation.fertilizer.subsequent_amount</fert_criteria>
-            	<category type="category" description="Fertiliser application details" />
-            	<fertmodule type="modulename" description="Module used to apply the fertiliser : ">fertiliser</fertmodule>
-	    	<fert_depth>$simulation.fertilizer.depth</fert_depth>
-            	<fert_type type="list" listvalues="NO3_N, NH4_N, NH4NO3, urea_N, urea_no3, urea, nh4so4_n, rock_p, banded_p, broadcast_p" description="Fertiliser type : ">$simulation.fertilizer.type</fert_type>
-	</ui>
-        <script>
-        	<text>
+        <manager name="Fertilise on DAS">
+          <ui>
+            <category type="category" description="When should fertiliser be applied" />
+            <modulename type="modulename" description="On which crop is fertiliser being applied : ">$simulation.cropName</modulename>
+            <fert_das type="text" description="Enter fertiliser days after sowing  : ">$simulation.fertilizer.days_after_sowing</fert_das>
+            <fert_criteria type="text" description="Amount of N required in top 3 layers (kg/ha) : ">$simulation.fertilizer.subsequent_amount</fert_criteria>
+            <category type="category" description="Fertiliser application details" />
+            <fertmodule type="modulename" description="Module used to apply the fertiliser : ">fertiliser</fertmodule>
+            <fert_depth type="text" description="fert_depth">$simulation.fertilizer.depth</fert_depth>
+            <fert_type type="list" listvalues="NO3_N, NH4_N, NH4NO3, urea_N, urea_no3, urea, nh4so4_n, rock_p, banded_p, broadcast_p" description="Fertiliser type : ">$simulation.fertilizer.type</fert_type>
+          </ui>
+          <script>
+            <text>
          if ([modulename].DaysAfterSowing = [fert_das]) then
-            N_deficit = [fert_criteria] - (no3(1) + nh4(1) + no3(2) + nh4(2) + no3(3) + nh4(3))
-            '[fertmodule]' apply amount = N_deficit (kg/ha), depth = [fert_depth] (mm), type = [fert_type] ()
+            '[fertmodule]' apply amount = [fert_criteria] (kg/ha), depth = [fert_depth] (mm), type = [fert_type] ()
          endif </text>
-            	<event>start_of_day</event>
-	</script>
-</manager>
+            <event>start_of_day</event>
+          </script>
+        </manager>
+        <manager name="Harvesting rule">
+          <ui>
+            <category type="category" description="Harvesting criteria" />
+            <crop type="crop" description="Enter name of crop to harvest when ripe : ">$simulation.cropName</crop>
+          </ui>
+          <script>
+            <text>if [crop].StageName = 'harvest_ripe'  or [crop].plant_status = 'dead' then
+   [crop] harvest
+   [crop] end_crop
+endif
+</text>
+            <event>end_of_day</event>
+          </script>
+        </manager>
+        <manager name="End crop on a fixed date">
+          <ui>
+            <category type="category" description="Harvesting criteria" />
+            <crop type="crop" description="Enter name of crop to harvest when ripe : ">$simulation.cropName</crop>
+            <date type="text" description="Enter ending date (dd-mmm) : ">$simulation.planting.edate</date>
+          </ui>
+          <script>
+            <text>
+
+        if (today = date('[date]') then
+              [crop]  end_crop
+        endif
+
+            </text>
+            <event>end_of_day</event>
+          </script>
+        </manager>
 			</folder>
+      <manager name="derived variables">
+        <script>
+          <text>AET = es + ep
+T_average = (maxt + mint) * 0.5 
+N_uptake = biomass_n * 10 ! kg/ha
+soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
+</text>
+          <event>start_of_day</event>
+        </script>
+        <script>
+          <text>
+          </text>
+          <event>end_of_day</event>
+        </script>
+      </manager>
+      <tracker>
+        <variable>sum of irrigation on end_of_day from sowing to harvesting as IrrigationIn</variable>
+        <variable>sum of ep on end_of_day from sowing to harvesting as WaterUse</variable>
+        <variable>sum of AET on end_of_day from sowing to harvesting as actual_ET</variable>
+        <variable>sum of fertiliser on end_of_day from sowing to harvesting as FertiliserIn</variable>
+        <variable>sum of leach_no3 on end_of_day from sowing to harvesting as NO3_leaching</variable>
+        <variable>sum of radn on end_of_day from sowing to harvesting as RadiationIn</variable>
+        <variable>sum of n2o_atm() on end_of_day from sowing to harvesting as N2OemissionIn</variable>
+        <variable>sum of n2o_atm() on end_of_day from reported to now as N2Oemission_year</variable>
+        <variable>sum of soil_co2 on end_of_day from sowing to harvesting as CO2emissionIn</variable>
+        <variable>sum of soil_co2 on end_of_day from reported to now as CO2emission_year</variable>
+        <variable>average of T_average on end_of_day from sowing to harvesting as TempIn</variable>
+        <variable>average of T_average on end_of_day from reported to now as Temp_year</variable>
+        <variable>sum of rain on end_of_day from sowing to harvesting as RainIn</variable>
+        <variable>sum of rain on end_of_day from reported to now as Rain_year</variable>
+        <variable>sum of radn on end_of_day from reported to now as Radiation_year</variable>
+      </tracker>
 			<outputfile>
 				<filename output="yes">Generic.out</filename>
 				<title>AgMIP</title>

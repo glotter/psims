@@ -525,7 +525,7 @@
       <tt_endjuv_to_init units="oC">0.0</tt_endjuv_to_init>
       <photoperiod_crit1 units="hours">12.5</photoperiod_crit1>
       <photoperiod_crit2 units="hours">24.0</photoperiod_crit2>
-      <photoperiod_slope units="oC/hour">18.0</photoperiod_slope>
+      <photoperiod_slope units="oC/hour">0</photoperiod_slope>
       <tt_flower_to_maturity description="660 in CM-KEN (oC)">680 </tt_flower_to_maturity>
       <tt_flag_to_flower units="oC">10</tt_flag_to_flower>
       <tt_flower_to_start_grain description="70 !  170 (oC)">120 </tt_flower_to_start_grain>
@@ -553,7 +553,7 @@
       <tt_endjuv_to_init units="oC">0.0</tt_endjuv_to_init>
       <photoperiod_crit1 units="hours">12.5</photoperiod_crit1>
       <photoperiod_crit2 units="hours">24.0</photoperiod_crit2>
-      <photoperiod_slope units="oC/hour">18.0</photoperiod_slope>
+      <photoperiod_slope units="oC/hour">0</photoperiod_slope>
       <tt_flower_to_maturity description="660 in CM-KEN (oC)">730 </tt_flower_to_maturity>
       <tt_flag_to_flower units="oC">10</tt_flag_to_flower>
       <tt_flower_to_start_grain description="70 !  170 (oC)">120 </tt_flower_to_start_grain>
@@ -581,7 +581,7 @@
       <tt_endjuv_to_init units="oC">0.0</tt_endjuv_to_init>
       <photoperiod_crit1 units="hours">12.5</photoperiod_crit1>
       <photoperiod_crit2 units="hours">24.0</photoperiod_crit2>
-      <photoperiod_slope units="oC/hour">18.0</photoperiod_slope>
+      <photoperiod_slope units="oC/hour">0</photoperiod_slope>
       <tt_flower_to_maturity description="660 in CM-KEN (oC)">780 </tt_flower_to_maturity>
       <tt_flag_to_flower units="oC">10</tt_flag_to_flower>
       <tt_flower_to_start_grain description="70 !  170 (oC)">120 </tt_flower_to_start_grain>
@@ -609,7 +609,7 @@
       <tt_endjuv_to_init units="oC">0.0</tt_endjuv_to_init>
       <photoperiod_crit1 units="hours">12.5</photoperiod_crit1>
       <photoperiod_crit2 units="hours">24.0</photoperiod_crit2>
-      <photoperiod_slope units="oC/hour">18.0</photoperiod_slope>
+      <photoperiod_slope units="oC/hour">0</photoperiod_slope>
       <tt_flower_to_maturity description="660 in CM-KEN (oC)">850 </tt_flower_to_maturity>
       <tt_flag_to_flower units="oC">10</tt_flag_to_flower>
       <tt_flower_to_start_grain description="70 !  170 (oC)">120 </tt_flower_to_start_grain>
@@ -637,7 +637,7 @@
       <tt_endjuv_to_init units="oC">0.0</tt_endjuv_to_init>
       <photoperiod_crit1 units="hours">12.5</photoperiod_crit1>
       <photoperiod_crit2 units="hours">24.0</photoperiod_crit2>
-      <photoperiod_slope units="oC/hour">18.0</photoperiod_slope>
+      <photoperiod_slope units="oC/hour">0</photoperiod_slope>
       <tt_flower_to_maturity description="660 in CM-KEN (oC)">850 </tt_flower_to_maturity>
       <tt_flag_to_flower units="oC">10</tt_flag_to_flower>
       <tt_flower_to_start_grain description="70 !  170 (oC)">120 </tt_flower_to_start_grain>
@@ -665,7 +665,7 @@
       <tt_endjuv_to_init units="oC">0.0</tt_endjuv_to_init>
       <photoperiod_crit1 units="hours">12.5</photoperiod_crit1>
       <photoperiod_crit2 units="hours">24.0</photoperiod_crit2>
-      <photoperiod_slope units="oC/hour">18.0</photoperiod_slope>
+      <photoperiod_slope units="oC/hour">0</photoperiod_slope>
       <tt_flower_to_maturity description="660 in CM-KEN (oC)">850 </tt_flower_to_maturity>
       <tt_flag_to_flower units="oC">10</tt_flag_to_flower>
       <tt_flower_to_start_grain description="70 !  170 (oC)">120 </tt_flower_to_start_grain>
@@ -693,7 +693,7 @@
       <tt_endjuv_to_init units="oC">0.0</tt_endjuv_to_init>
       <photoperiod_crit1 units="hours">12.5</photoperiod_crit1>
       <photoperiod_crit2 units="hours">24.0</photoperiod_crit2>
-      <photoperiod_slope units="oC/hour">18.0</photoperiod_slope>
+      <photoperiod_slope units="oC/hour">0</photoperiod_slope>
       <tt_flower_to_maturity description="660 in CM-KEN (oC)">850 </tt_flower_to_maturity>
       <tt_flag_to_flower units="oC">10</tt_flag_to_flower>
       <tt_flower_to_start_grain description="70 !  170 (oC)">120 </tt_flower_to_start_grain>
@@ -721,7 +721,7 @@
       <tt_endjuv_to_init units="oC">0.0</tt_endjuv_to_init>
       <photoperiod_crit1 units="hours">12.5</photoperiod_crit1>
       <photoperiod_crit2 units="hours">24.0</photoperiod_crit2>
-      <photoperiod_slope units="oC/hour">18.0</photoperiod_slope>
+      <photoperiod_slope units="oC/hour">0</photoperiod_slope>
       <tt_flower_to_maturity description="660 in CM-KEN (oC)">895 </tt_flower_to_maturity>
       <tt_flag_to_flower units="oC">10</tt_flag_to_flower>
       <tt_flower_to_start_grain description="70 !  170 (oC)">120 </tt_flower_to_start_grain>
@@ -749,7 +749,7 @@
       <tt_endjuv_to_init units="oC">0.0</tt_endjuv_to_init>
       <photoperiod_crit1 units="hours">12.5</photoperiod_crit1>
       <photoperiod_crit2 units="hours">24.0</photoperiod_crit2>
-      <photoperiod_slope units="oC/hour">18.0</photoperiod_slope>
+      <photoperiod_slope units="oC/hour">0</photoperiod_slope>
       <tt_flower_to_maturity description="660 in CM-KEN (oC)">940 </tt_flower_to_maturity>
       <tt_flag_to_flower units="oC">10</tt_flag_to_flower>
       <tt_flower_to_start_grain description="70 !  170 (oC)">120 </tt_flower_to_start_grain>
@@ -777,7 +777,7 @@
       <tt_endjuv_to_init units="oC">0.0</tt_endjuv_to_init>
       <photoperiod_crit1 units="hours">12.5</photoperiod_crit1>
       <photoperiod_crit2 units="hours">24.0</photoperiod_crit2>
-      <photoperiod_slope units="oC/hour">18.0</photoperiod_slope>
+      <photoperiod_slope units="oC/hour">0</photoperiod_slope>
       <tt_flower_to_maturity description="660 in CM-KEN (oC)">680 </tt_flower_to_maturity>
       <tt_flag_to_flower units="oC">10</tt_flag_to_flower>
       <tt_flower_to_start_grain description="70 !  170 (oC)">120 </tt_flower_to_start_grain>
@@ -805,7 +805,7 @@
       <tt_endjuv_to_init units="oC">0.0</tt_endjuv_to_init>
       <photoperiod_crit1 units="hours">12.5</photoperiod_crit1>
       <photoperiod_crit2 units="hours">24.0</photoperiod_crit2>
-      <photoperiod_slope units="oC/hour">18.0</photoperiod_slope>
+      <photoperiod_slope units="oC/hour">0</photoperiod_slope>
       <tt_flower_to_maturity description="660 in CM-KEN (oC)">730 </tt_flower_to_maturity>
       <tt_flag_to_flower units="oC">10</tt_flag_to_flower>
       <tt_flower_to_start_grain description="70 !  170 (oC)">120 </tt_flower_to_start_grain>
@@ -833,7 +833,7 @@
       <tt_endjuv_to_init units="oC">0.0</tt_endjuv_to_init>
       <photoperiod_crit1 units="hours">12.5</photoperiod_crit1>
       <photoperiod_crit2 units="hours">24.0</photoperiod_crit2>
-      <photoperiod_slope units="oC/hour">18.0</photoperiod_slope>
+      <photoperiod_slope units="oC/hour">0</photoperiod_slope>
       <tt_flower_to_maturity description="660 in CM-KEN (oC)">780 </tt_flower_to_maturity>
       <tt_flag_to_flower units="oC">10</tt_flag_to_flower>
       <tt_flower_to_start_grain description="70 !  170 (oC)">120 </tt_flower_to_start_grain>
@@ -861,7 +861,7 @@
       <tt_endjuv_to_init units="oC">0.0</tt_endjuv_to_init>
       <photoperiod_crit1 units="hours">12.5</photoperiod_crit1>
       <photoperiod_crit2 units="hours">24.0</photoperiod_crit2>
-      <photoperiod_slope units="oC/hour">18.0</photoperiod_slope>
+      <photoperiod_slope units="oC/hour">0</photoperiod_slope>
       <tt_flower_to_maturity description="660 in CM-KEN (oC)">850 </tt_flower_to_maturity>
       <tt_flag_to_flower units="oC">10</tt_flag_to_flower>
       <tt_flower_to_start_grain description="70 !  170 (oC)">120 </tt_flower_to_start_grain>
@@ -889,7 +889,7 @@
       <tt_endjuv_to_init units="oC">0.0</tt_endjuv_to_init>
       <photoperiod_crit1 units="hours">12.5</photoperiod_crit1>
       <photoperiod_crit2 units="hours">24.0</photoperiod_crit2>
-      <photoperiod_slope units="oC/hour">18.0</photoperiod_slope>
+      <photoperiod_slope units="oC/hour">0</photoperiod_slope>
       <tt_flower_to_maturity description="660 in CM-KEN (oC)">850 </tt_flower_to_maturity>
       <tt_flag_to_flower units="oC">10</tt_flag_to_flower>
       <tt_flower_to_start_grain description="70 !  170 (oC)">120 </tt_flower_to_start_grain>
@@ -917,7 +917,7 @@
       <tt_endjuv_to_init units="oC">0.0</tt_endjuv_to_init>
       <photoperiod_crit1 units="hours">12.5</photoperiod_crit1>
       <photoperiod_crit2 units="hours">24.0</photoperiod_crit2>
-      <photoperiod_slope units="oC/hour">18.0</photoperiod_slope>
+      <photoperiod_slope units="oC/hour">0</photoperiod_slope>
       <tt_flower_to_maturity description="660 in CM-KEN (oC)">850 </tt_flower_to_maturity>
       <tt_flag_to_flower units="oC">10</tt_flag_to_flower>
       <tt_flower_to_start_grain description="70 !  170 (oC)">120 </tt_flower_to_start_grain>
@@ -945,7 +945,7 @@
       <tt_endjuv_to_init units="oC">0.0</tt_endjuv_to_init>
       <photoperiod_crit1 units="hours">12.5</photoperiod_crit1>
       <photoperiod_crit2 units="hours">24.0</photoperiod_crit2>
-      <photoperiod_slope units="oC/hour">18.0</photoperiod_slope>
+      <photoperiod_slope units="oC/hour">0</photoperiod_slope>
       <tt_flower_to_maturity description="660 in CM-KEN (oC)">850 </tt_flower_to_maturity>
       <tt_flag_to_flower units="oC">10</tt_flag_to_flower>
       <tt_flower_to_start_grain description="70 !  170 (oC)">120 </tt_flower_to_start_grain>
@@ -973,7 +973,7 @@
       <tt_endjuv_to_init units="oC">0.0</tt_endjuv_to_init>
       <photoperiod_crit1 units="hours">12.5</photoperiod_crit1>
       <photoperiod_crit2 units="hours">24.0</photoperiod_crit2>
-      <photoperiod_slope units="oC/hour">18.0</photoperiod_slope>
+      <photoperiod_slope units="oC/hour">0</photoperiod_slope>
       <tt_flower_to_maturity description="660 in CM-KEN (oC)">895 </tt_flower_to_maturity>
       <tt_flag_to_flower units="oC">10</tt_flag_to_flower>
       <tt_flower_to_start_grain description="70 !  170 (oC)">120 </tt_flower_to_start_grain>
@@ -1001,7 +1001,7 @@
       <tt_endjuv_to_init units="oC">0.0</tt_endjuv_to_init>
       <photoperiod_crit1 units="hours">12.5</photoperiod_crit1>
       <photoperiod_crit2 units="hours">24.0</photoperiod_crit2>
-      <photoperiod_slope units="oC/hour">18.0</photoperiod_slope>
+      <photoperiod_slope units="oC/hour">0</photoperiod_slope>
       <tt_flower_to_maturity description="660 in CM-KEN (oC)">940 </tt_flower_to_maturity>
       <tt_flag_to_flower units="oC">10</tt_flag_to_flower>
       <tt_flower_to_start_grain description="70 !  170 (oC)">120 </tt_flower_to_start_grain>

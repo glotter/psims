@@ -1,5 +1,5 @@
 model            dssat45
-scenarios        /project/joshuaelliott/data/isi-mip-input/scenarios/rcp8p5_whe
+campaign        /project/joshuaelliott/data/isi-mip-input/scenarios/rcp8p5_whe
 weather          /project/joshuaelliott/data/isi-mip-input/wth/HadGEM2-ES/rcp8p5
 refdata          /project/joshuaelliott/psims/models/pdssa45t/inp/common/isimip
 bindata          /project/joshuaelliott/psims/bin

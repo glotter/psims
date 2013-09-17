@@ -3,11 +3,11 @@ campaign         /project/joshuaelliott/psims/campaigns/pdssat/nrw
 soils            /project/joshuaelliott/psims/data/soils/nrw
 weather          /project/joshuaelliott/psims/data/clim/nrw
 refdata          /project/joshuaelliott/psims/campaigns/pdssat/common.isimip
-bintransfer      $PWD/bin/DSCSM045.EXE,$PWD/tapps/pdssat/psims2WTH.py,$PWD/tapps/pdssat/OUT2psims.py,$PWD/bin/camp2json.py,$PWD/tapps/pdssat/jsons2dssat.py
-tappwth          psims2WTH.py:-o:GENERIC1.WTH:-v:tasmin,tasmax,rsds,pr,wind
-tappcamp         camp2json.py:-c:Campaign.nc4:-e:exp_template.json:-o:experiment.json
+bintransfer      $PWD/bin/DSCSM045.EXE,$PWD/tapps/pdssat/psims2WTH.py,$PWD/tapps/pdssat/OUT2psims.py,$PWD/tapps/pdssat/jsons2dssat.py,$PWD/tapps/echo.sh
+tappwth          psims2WTH.py:-o:GENERIC1.WTH:-v:tmin,tmax,solar,precip,wind
+tappcamp         echo.sh
 tappinp          jsons2dssat.py:-x:X1234567.WHX:-s:soil.json:-e:experiment.json:-S:SOIL.SOL
 executable       DSCSM045.EXE:A:X1234567.WHX
 outtypes         .WTH,.WHX,.SOL,.OUT,.json
-postprocess      ./OUT2psims.py:-i:Summary.OUT:-v:PDAT,ADAT,MDAT,CWAM,HWAM,IRCM,PRCM,ETCM:--delta:30:-s:4:-y:31:--ref_year:1980
-NCconcat         ../bin/append.sh:PDAT,ADAT,MDAT,CWAM,HWAM,IRCM,PRCM,ETCM:"PlantDate,AnthesisDate,MaturityDate,TotalBiomass,Yield,IrrigationApplied,GrowingSeasonPrecip,GrowingSeasonET":"DOY,DOY,DOY,kg/ha,kg/ha,mm,mm,mm":720:360:30:31:4:1980:./parts:out.psims.dssat45.agmerra.wheat.nc4
+postprocess      ./OUT2psims.py:-i:Summary.OUT:-v:PDAT,ADAT,MDAT,CWAM,HWAM,IRCM,PRCM,ETCM,SRADA,LAIX:--delta:30:-s:2:-y:30:--ref_year:1982
+NCconcat         ../bin/append.sh:PDAT,ADAT,MDAT,CWAM,HWAM,IRCM,PRCM,ETCM,SRADA,LAIX:"PlantDate,AnthesisDate,MaturityDate,TotalBiomass,Yield,IrrigationApplied,GrowingSeasonPrecip,GrowingSeasonET,GrowingSeasonAvgSolar,MaxLeafAreaIndex":"DOY,Days,Days,kg/ha,kg/ha,mm,mm,mm,MJ/m2/day,frac":720:360:30:30:2:1982:./parts:out.psims.dssat45.nrw.wheat.nc4

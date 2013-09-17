@@ -45,19 +45,19 @@ and where they will run.
 Usage: swiftopt.sh [-s sitename] [-p paramfile] [-g gridfile]
 
 The sitename option determines where a run will take place. Currently, the 
-three valid options are "osg", "uc3", and "local".
+valid options are "osg", "uc3", "midway", and "local".
 
 The paramfile and gridfile determine which run will get done. These files are typically stored 
-in psims/params/ psims/gridList/
+in psims/campaigns/[model]/[experiment] psims/campaigns/[model]/[experiment]
 
 Here are a few examples:
 
 To run CenW on midway with a small grid file you might do something like:
 -----
-./swiftopt.sh -s midway -p ./params/pcenw.default.a1b -g ./gridLists/nzsmalltest323
+./swiftopt.sh -s midway -p ./campaigns/pcenw/default.a1b/params -g ./campaigns/pcenw/default.a1b/nzsmalltest323
 -----
 
-To run DSSAT scenario US0007 on OSG
+To run DSSAT scenario US0007 on OSG [[this scenario is not currently available]]
 -----
 ./swiftopt.sh -s osg -p ./params/US0007 -g ./gridList/US0007
 -----
