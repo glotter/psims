@@ -9,21 +9,27 @@
 
 usage="$0 [-s sitename] [-p paramfile] [-g gridlist]"
 site=$2
+
 # Function to run Swift
 runswift() {
+   script=$1
    export SWIFT_HEAP_MAX=$ram
-   command="swift -tc.file tc.data -sites.file $site.xml -config cf RunpSIMS.swift "
+   command="swift -tc.file tc.data -sites.file $site.xml -config cf "
+
+   # Set command line options based on param file   
+   command="$command $script "
    for param in $( awk '{print $1}' paramfile )
    do
       command="$command -$param=${!param}"
    done
+
+   echo "Running Swift command $command" >> ABOUT
    $command 2>&1 | tee swift.out
 }
 
 # Default settings
 execsite=local
 paramfile=local
-#ram=4096M
 ram=5120M
 
 # Process command line arguments
@@ -38,7 +44,7 @@ while [ $# -gt 0 ]; do
 done
 
 # Create next unique run id and run directory
-rundir=$( echo run??? | sed -e 's/^.*run//' | awk '{ printf("run%03d\n", $1+1)}' )
+export rundir=$( echo run??? | sed -e 's/^.*run//' | awk '{ printf("run%03d\n", $1+1)}' )
 
 # Exit if rundir already exits. Something is funky
 if [ -d $rundir ];
@@ -66,14 +72,14 @@ if [ ! -f "conf/$execsite.xml" ] && [ ! -f "conf/$execsite.conf" ]; then
    exit 1
 fi
 
-# Use start-coaster-service if site is a .conf file
-if [ -f "conf/$execsite.conf" ]; then
-   USE_SCS=1
-fi
-
 # Check for missing .cf files
 if [ -f "conf/$execsite.xml" ] && [ ! -f "conf/$execsite.cf" ]; then
    echo Missing configuration file $execsite.cf
+fi
+
+# Copy CDM files
+if [ -f "conf/$execsite.fs" ]; then
+   cp conf/$execsite.fs $rundir
 fi
 
 cp $gridlist $rundir/gridList.txt
@@ -104,29 +110,14 @@ export WORK=$PWD/swiftwork
 export SWIFT_USERHOME=$PWD
 mkdir -p $PWD/swiftwork/workers
 
-# Use start-coaster-service if the site uses a .conf file
-if [ "$USE_SCS" == "1" ]; then
-   cp ../conf/$execsite.conf coaster-service.conf
-   cp ../conf/$execsite.cf cf
-   sed -i -e "s@_RUNDIR_@$rundir@" coaster-service.conf
-   start-coaster-service
-fi
-
-# Run gensites
-if [ ! "$USE_SCS" == 1 ]; then
-   cp ../conf/$execsite.cf cf
-   gensites -p ../conf/$execsite.cf ../conf/$execsite.xml > $execsite.xml
-fi
+cp ../conf/$execsite.cf cf
+gensites -p ../conf/$execsite.cf ../conf/$execsite.xml > $execsite.xml
 
 echo "Running with paramter file $paramfile" >> ABOUT
 echo "Running on site $execsite" >> ABOUT
+echo "Running with gridlist $gridlist" >> ABOUT 
 
-if [ "$USE_SCS" == "1" ]; then
-   runswift "sites.xml"
-   stop-coaster-service
-else
-   runswift "$execsite.xml"
-fi
+runswift "RunpSIMS.swift"
 
 # Post Post processing
 echo

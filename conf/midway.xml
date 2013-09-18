@@ -10,7 +10,7 @@
     <profile namespace="globus" key="slots">20</profile>              <!-- Maximum number of Slurm jobs -->
     <!-- <profile namespace="globus" key="nodeGranularity">1</profile> -->     <!-- Request nodes in blocks of nodeGranularity -->
     <!-- <profile namespace="globus" key="maxNodes">1</profile> -->            <!-- Maximum number of nodes per Slurm job -->
-    <profile namespace="karajan" key="jobThrottle">10</profile>        <!-- Multiply this number by 100 to get the total number of active jobs before Swift starts throttling -->
+    <profile namespace="karajan" key="jobThrottle">30</profile>       <!-- Multiply this number by 100 to get the total number of active jobs before Swift starts throttling -->
     <profile namespace="globus" key="slurm.exclusive">false</profile> <!-- When set to false, it's easier to get nodes, but things may run slower -->
     <profile namespace="karajan" key="initialScore">10000</profile>
     <filesystem provider="local"/>

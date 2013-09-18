@@ -1,4 +1,4 @@
-*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         SEP 10, 2013; 21:56:57
+*DSSAT Cropping System Model Ver. 4.5.1.023 -Stub         SEP 17, 2013; 20:31:00
 
  Unit  Filename
   101  OPCLR
@@ -9,11 +9,18 @@
    22  DTACDE
   103  RUNLST
    11  FILEW
-   69  OUTO
-   10  FILEC
-  104  OUTS
+   92  WORK.OUT
+  104  READS.OUT
+  105  FNAMETMP
+   23  FILETMP
+  106  OUTS
    65  SEVAL
-  105  FILECO2
+  107  FILECO2
+   69  OUTO
    13  FILESS
-    8  FILEA
+   39  PlantGro.OUT
+   40  PlantN.OUT
+  108  PlantGr2.OUT
+  109  PlantGrf.OUT
+   10  FINPUT
    88  OUTINFO

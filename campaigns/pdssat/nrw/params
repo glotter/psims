@@ -3,8 +3,8 @@ campaign         /project/joshuaelliott/psims/campaigns/pdssat/nrw
 soils            /project/joshuaelliott/psims/data/soils/nrw
 weather          /project/joshuaelliott/psims/data/clim/nrw
 refdata          /project/joshuaelliott/psims/campaigns/pdssat/common.isimip
-bintransfer      $PWD/bin/DSCSM045.EXE,$PWD/tapps/pdssat/psims2WTH.py,$PWD/tapps/pdssat/OUT2psims.py,$PWD/tapps/pdssat/jsons2dssat.py,$PWD/tapps/echo.sh
-tappwth          psims2WTH.py:-o:GENERIC1.WTH:-v:tmin,tmax,solar,precip,wind
+bintransfer      $PWD/bin/DSCSM045.EXE,$PWD/tapps/pdssat/psims2WTH-nrw.py,$PWD/tapps/pdssat/OUT2psims.py,$PWD/tapps/pdssat/jsons2dssat.py,$PWD/tapps/echo.sh
+tappwth          psims2WTH-nrw.py:-o:GENERIC1.WTH:-v:tmin,tmax,solar,precip,wind
 tappcamp         echo.sh
 tappinp          jsons2dssat.py:-x:X1234567.WHX:-s:soil.json:-e:experiment.json:-S:SOIL.SOL
 executable       DSCSM045.EXE:A:X1234567.WHX

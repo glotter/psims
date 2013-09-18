@@ -1,11 +1,11 @@
 use.wrapper.staging=false
 wrapperlog.always.transfer=false
-sitedir.keep=false
+sitedir.keep=true
 execution.retries=0
 lazy.errors=true
 status.mode=provider
 use.provider.staging=false
 provider.staging.pin.swiftfiles=false
-foreach.max.threads=2000
+foreach.max.threads=3000
 
 #app bash=/bin/bash

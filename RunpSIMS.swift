@@ -2,7 +2,7 @@ type file;
 
 app (file tar_out, file part_out, file outlog, file errlog) RunpSIMS (file scenario_in[], file weather_in[], file soils_in[], file common_in[], file binary_in[], file wrapper_file, string grid1, string grid2)
 {
-   bash "-c" @strcat("chmod +x ./RunpSIMS.sh ; ./RunpSIMS.sh ", @tar_out, " ",
+   bash "-c" @strcat("chmod +x ./", @wrapper_file, " ; ./", @wrapper_file, " ", @tar_out, " ",
                      @arg("executable"), " ", @arg("outtypes"), " ", @arg("postprocess"), " ", 
                      @arg("tappwth"), " ", @arg("tappinp"), " ", @arg("tappcamp"), " ", 
                      grid1, " ", grid2, " ", @arg("model"), " ", 
@@ -14,7 +14,7 @@ string gridLists[] = readData("gridList.txt");
 
 foreach g,i in gridLists {
 
-string gridNames[] = @strsplit(g, "/");
+   string gridNames[] = @strsplit(g, "/");
 
    // Input files
    file scenario_input[] <filesys_mapper; location=@arg("campaign"), pattern="*">;
