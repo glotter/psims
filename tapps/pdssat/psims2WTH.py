@@ -35,11 +35,11 @@ else:
 var_lists = od([('SRAD', ['solar', 'rad', 'rsds', 'srad']), \
                 ('TMAX', ['tmax', 'tasmax']), \
                 ('TMIN', ['tmin', 'tasmin']), \
-                ('RAIN', ['precip', 'pr', 'rain']), \
+                ('RAIN', ['precip', 'pr', 'rain', 'pr_gpcc', 'pr_cru']), \
                 ('WIND', ['wind', 'windspeed']), \
                 ('DEWP', ['dew', 'dewp', 'dewpoint', 'tdew']), \
                 ('SUNH', ['sun', 'sunh']), \
-                ('RHUM', ['rhum']), \
+                ('RHUM', ['rhum', 'hur']), \
                 ('VAPR', ['vap', 'vapr'])])
 var_names = array(var_lists.keys())
 nt = len(time)

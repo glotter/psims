@@ -3,8 +3,8 @@
 # import modules
 from netCDF4 import Dataset as nc
 from optparse import OptionParser
-from numpy import nan, isnan, double
 import re, json, copy, datetime as dt
+from numpy import nan, isnan, double, resize
 
 # UTILITY FUNCTIONS
 def list_replace(arr, var, val, occ = nan, cnt = 1):
@@ -103,6 +103,18 @@ for var in variables:
             var_array = v[:]
         else:
             raise Exception('Univariate data must have scenario as dimension')
+    elif v.ndim == 2:
+        if not 'lat' in dim:
+            raise Exception('Latitude dimension is missing')
+        if not 'lon' in dim:
+            raise Exception('Longitude dimension is missing')
+                
+        if dim.index('lat') == 0:
+            var_array = v[grid1, grid2]
+        else:
+            var_array = v[grid2, grid1]
+        
+        var_array = resize(var_array, (num_scenarios,)) # duplicate for all scenarios
     elif v.ndim == 3:
         if not 'scen' in dim:
             raise Exception('Scenario dimension is missing')

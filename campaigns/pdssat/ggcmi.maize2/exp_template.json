@@ -147,6 +147,8 @@
       {
         "fedep": "15",
         "feamn": "100",
+        "feamp": "0",
+        "feamk": "0",
         "feacd": "AP002",
         "fe_name": "high",
         "fecd": "FE001",
