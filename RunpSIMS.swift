@@ -1,5 +1,3 @@
-type file;
-
 app (file tar_out, file part_out, file outlog, file errlog) RunpSIMS (file scenario_in[], file weather_in[], file soils_in[], file common_in[], file binary_in[], file wrapper_file, string grid1, string grid2)
 {
    bash "-c" @strcat("chmod +x ./", @wrapper_file, " ; ./", @wrapper_file, " ", @tar_out, " ",
