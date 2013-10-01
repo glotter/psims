@@ -132,6 +132,7 @@ fi
 echo
 echo Running extractions.. please wait
 NCconcat=$( echo $NCconcat | sed s/:/' '/g )
-time ./$NCconcat
+NCconcattorun="$NCconcat "
+time ./$NCconcattorun
 
 exit

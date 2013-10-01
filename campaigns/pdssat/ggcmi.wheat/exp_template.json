@@ -3,14 +3,14 @@
   "person_notes": "Joshua Elliott",
   "local_name": "GenericName",
   "wst_id": "GENERIC1",
-  "exname": "X1234568MZ_1",
+  "exname": "X1234567WH_1",
   "institution": "Computation Institute, University of Chicago",
   "fl_name": "GenericField1",
   "site_name": "GenericLatitude, GenericLongitude",
   "trno": "1",
   "trt_name": "GenericTreatment1",
   "id_field": "GENERIC",
-  "exname_o": "X1234567MZ",
+  "exname_o": "X1234567WH",
   "dssat_sequence": {
     "data": [
       {
@@ -29,16 +29,33 @@
     "data": [
       {
         "sm": "1",
+        "general": {
+          "sdyer": "80",
+          "sname": "Generic",
+          "nyers": "31",
+          "rseed": "2150",
+          "start": "S",
+          "nreps": "1",
+          "sdday": "001",
+          "smodel": "WHCER"
+        },
         "planting": {
-          "ph2od": "30",
-          "pfday": "113",
-          "ph2ol": "40",
           "pfyer": "80",
-          "plday": "173",
           "plyer": "80",
+          "ph2od": "30",
+          "pfday": "274",
+          "ph2ol": "40",
+          "plday": "294",
           "ph2ou": "100",
           "pstmx": "40",
           "pstmn": "10"
+        },
+        "harvests": {
+          "hfrst": "0",
+          "hlday": "365",
+          "hlyer": "81",
+          "hpcnr": "0",
+          "hpcnp": "100"
         },
         "irrigation": {
           "ithru": "100",
@@ -50,7 +67,7 @@
           "ithrl": "75"
         },
         "management": {
-          "irrig": "A",
+          "irrig": "N",
           "plant": "A",
           "ferti": "D",
           "resid": "A",
@@ -84,27 +101,10 @@
           "vbose": "N",
           "miout": "N"
         },
-        "harvests": {
-          "hfrst": "0",
-          "hlyer": "81",
-          "hpcnr": "0",
-          "hpcnp": "100",
-          "hlday": "365"
-        },
         "residues": {
           "rtime": "1",
           "ripcn": "100",
           "ridep": "20"
-        },
-        "general": {
-          "sname": "Irrigated",
-          "nyers": "31",
-          "rseed": "2150",
-          "start": "S",
-          "nreps": "1",
-          "sdday": "001",
-          "sdyer": "80",
-          "smodel": "MZCER"
         },
         "nitrogen": {
           "ncode": "FE001",
@@ -130,25 +130,25 @@
   "management": {
     "events": [
       {
-        "pldp": "50.0",
-        "plrs": "75",
-        "cul_id": "HY0001",
+        "pldp": "4.0",
+        "plrs": "17",
+        "cul_id": "990001",
         "plds": "R",
-        "crid": "MZ",
-        "plpoe": "5.0",
-        "cul_name": "HY01",
+        "crid": "WH",
+        "plpoe": "400.0",
+        "cul_name": "Generic",
         "plma": "S",
         "seqid": "1",
         "date": "19800101",
-        "pl_name": "1979I",
-        "plpop": "5.0",
+        "pl_name": "Generic",
+        "plpop": "400.0",
         "event": "planting"
       },
       {
         "fedep": "15",
-        "feamn": "100",
+        "feamn": "0",
         "feacd": "AP002",
-        "fe_name": "high",
+        "fe_name": "event",
         "fecd": "FE001",
         "seqid": "1",
         "date": "1",
@@ -156,9 +156,9 @@
       },
       {
         "fedep": "15",
-        "feamn": "100",
+        "feamn": "0",
         "feacd": "AP002",
-        "fe_name": "high",
+        "fe_name": "event",
         "fecd": "FE001",
         "seqid": "1",
         "date": "45",
@@ -172,7 +172,7 @@
         "irthr": "75",
         "seqid": "1",
         "ireff": "1.00",
-        "date": "20110101",
+        "date": "19990101",
         "iamt": "10",
         "irval": "79.0",
         "event": "irrigation",
@@ -180,8 +180,8 @@
       },
       {
         "seqid": "1",
-        "ha_name": "Maize",
-        "date": "",
+        "ha_name": "wheat",
+        "date": "19990101",
         "event": "harvest"
       }
     ]
@@ -214,10 +214,10 @@
       }
     ],
     "sa": "1",
-    "sadat": "19800410"
+    "sadat": "19800101"
   },
   "initial_conditions": {
-    "icpcr": "MZ",
+    "icpcr": "WH",
     "icrp": "0",
     "icrze": "1",
     "icdat": "19800101",
@@ -230,24 +230,22 @@
     "soilLayer": [
       {
         "icno3": ".1",
-        "icbl": "10",
-        "icnh4": ".1"
-      },
-      {
-        "icno3": ".1",
-        "icbl": "40",
-        "icnh4": ".1"
+        "icbl": "30",
+        "icnh4": ".1",
+        "ich2o": ".18"
       },
       {
         "icno3": ".1",
         "icbl": "100",
-        "icnh4": ".1"
+        "icnh4": ".1",
+        "ich2o": ".18"
       },
       {
         "icno3": ".1",
         "icbl": "200",
-        "icnh4": ".1"
+        "icnh4": ".1",
+        "ich2o": ".18"
       }
     ]
-  }
+   }
 }

@@ -34,25 +34,69 @@ DFAULT DEFAULT              . DFAULT     5    75   450    30    35   1.0    60
 
 !!!!!!!! Generic pSIMS ME cultivars !!!!!!!!!!!!
 !!!Spring!!!
-ME1XXX ME1-generic          . IB0001    20    94   564    22    39  1.00   120
-ME2AXX ME2A-generic         . IB0001    20    94   564    22    40  1.00   120
-ME2BXX ME2B-generic         . IB0001    20    94   564    22    40  1.00   120
-ME3XXX ME3-generic          . IB0001    20    94   564    22    40  1.00   120
-ME4AXX ME4A-generic         . IB0001    20    94   564    24    37  1.00   120
-ME4BXX ME4B-generic         . IB0001    20    97   564    24    40  1.00   120
-ME4CXX ME4C-generic         . IB0001    20    94   564    24    37  1.00   120
-ME5AXX ME5A-generic         . IB0001    25    94   564    22    37  1.50   100
-ME5BXX ME5B-generic         . IB0001    25    95   564    22    40  1.50   100
-ME6XXX ME6-generic          . IB0001    30   110   564    22    40  1.50   120
+ME1XXX ME1-generic          . JE0001    20    94   564    22    39  1.00   120
+ME2AXX ME2A-generic         . JE0001    20    94   564    22    40  1.00   120
+ME2BXX ME2B-generic         . JE0001    20    94   564    22    40  1.00   120
+ME3XXX ME3-generic          . JE0001    20    94   564    22    40  1.00   120
+ME4AXX ME4A-generic         . JE0001    20    94   564    24    37  1.00   120
+ME4BXX ME4B-generic         . JE0001    20    97   564    24    40  1.00   120
+ME4CXX ME4C-generic         . JE0001    20    94   564    24    37  1.00   120
+ME5AXX ME5A-generic         . JE0001    25    94   564    22    37  1.50   100
+ME5BXX ME5B-generic         . JE0001    25    95   564    22    40  1.50   100
+ME6XXX ME6-generic          . JE0001    30   110   564    22    40  1.50   120
 !!!Facultative!!!
-ME7XXX ME7-generic          . IB0001    40    94   564    22    40  0.50   120
-ME8AXX ME8A-generic         . IB0001    40   100   600    22    40  0.50   120
-ME8BXX ME8B-generic         . IB0001    40    94   564    22    40  0.50   120
-ME9XXX ME9-generic          . IB0001    20    94   564    24    37  0.50   120
+ME7XXX ME7-generic          . JE0001    40    94   564    22    40  0.50   120
+ME8AXX ME8A-generic         . JE0001    40   100   600    22    40  0.50   120
+ME8BXX ME8B-generic         . JE0001    40    94   564    22    40  0.50   120
+ME9XXX ME9-generic          . JE0001    20    94   564    24    37  0.50   120
 !!!Winter wheat!!!
-ME10XX ME10-generic         . IB0001    60   110   600    22    40  0.50   135
-ME11XX ME11-generic         . IB0001    60   130   600    22    40  0.50   135
-ME12XX ME12-generic         . IB0001    60   110   600    22    40  0.50   135
+ME10XX ME10-generic         . JE0001    60   110   600    22    40  0.50   135
+ME11XX ME11-generic         . JE0001    60   130   600    22    40  0.50   135
+ME12XX ME12-generic         . JE0001    60   110   600    22    40  0.50   135
+
+!!!!Longer season 2 version for GGCMI maturity date harmonization attempt
+!!!Spring!!!
+ME1XX2 ME1-generic          . JE0003    20    94   564    22    39  1.00   120
+ME2AX2 ME2A-generic         . JE0003    20    94   564    22    40  1.00   120
+ME2BX2 ME2B-generic         . JE0003    20    94   564    22    40  1.00   120
+ME3XX2 ME3-generic          . JE0003    20    94   564    22    40  1.00   120
+ME4AX2 ME4A-generic         . JE0003    20    94   564    24    37  1.00   120
+ME4BX2 ME4B-generic         . JE0003    20    97   564    24    40  1.00   120
+ME4CX2 ME4C-generic         . JE0003    20    94   564    24    37  1.00   120
+ME5AX2 ME5A-generic         . JE0003    25    94   564    22    37  1.50   100
+ME5BX2 ME5B-generic         . JE0003    25    95   564    22    40  1.50   100
+ME6XX2 ME6-generic          . JE0003    30   110   564    22    40  1.50   120
+!!!Facultative!!!
+ME7XX2 ME7-generic          . JE0003    40    94   564    22    40  0.50   120
+ME8AX2 ME8A-generic         . JE0003    40   100   600    22    40  0.50   120
+ME8BX2 ME8B-generic         . JE0003    40    94   564    22    40  0.50   120
+ME9XX2 ME9-generic          . JE0003    20    94   564    24    37  0.50   120
+!!!Winter wheat!!!
+ME10X2 ME10-generic         . JE0003    60   110   600    22    40  0.50   135
+ME11X2 ME11-generic         . JE0003    60   130   600    22    40  0.50   135
+ME12X2 ME12-generic         . JE0003    60   110   600    22    40  0.50   135
+
+!!!!Longer season 3 version for GGCMI maturity date harmonization attempt
+!!!Spring!!!
+ME1XX3 ME1-generic          . JE0005    20    94   564    22    39  1.00   120
+ME2AX3 ME2A-generic         . JE0005    20    94   564    22    40  1.00   120
+ME2BX3 ME2B-generic         . JE0005    20    94   564    22    40  1.00   120
+ME3XX3 ME3-generic          . JE0005    20    94   564    22    40  1.00   120
+ME4AX3 ME4A-generic         . JE0005    20    94   564    24    37  1.00   120
+ME4BX3 ME4B-generic         . JE0005    20    97   564    24    40  1.00   120
+ME4CX3 ME4C-generic         . JE0005    20    94   564    24    37  1.00   120
+ME5AX3 ME5A-generic         . JE0005    25    94   564    22    37  1.50   100
+ME5BX3 ME5B-generic         . JE0005    25    95   564    22    40  1.50   100
+ME6XX3 ME6-generic          . JE0005    30   110   564    22    40  1.50   120
+!!!Facultative!!!
+ME7XX3 ME7-generic          . JE0005    40    94   564    22    40  0.50   120
+ME8AX3 ME8A-generic         . JE0005    40   100   600    22    40  0.50   120
+ME8BX3 ME8B-generic         . JE0005    40    94   564    22    40  0.50   120
+ME9XX3 ME9-generic          . JE0005    20    94   564    24    37  0.50   120
+!!!Winter wheat!!!
+ME10X3 ME10-generic         . JE0005    60   110   600    22    40  0.50   135
+ME11X3 ME11-generic         . JE0005    60   130   600    22    40  0.50   135
+ME12X3 ME12-generic         . JE0005    60   110   600    22    40  0.50   135
 
 
 !!!!!!!!! MEGA ENVIRONMENT 1 !!!!!

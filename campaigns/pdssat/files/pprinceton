@@ -1,0 +1,13 @@
+model            dssat45
+campaign         /project/joshuaelliott/psims/campaigns/pdssat/ggcmi.maize2
+soils            /project/joshuaelliott/psims/data/soils/hwsd200.wrld.30min
+weather          /project/joshuaelliott/psims/data/clim/princeton
+refdata          /project/joshuaelliott/psims/campaigns/pdssat/common.isimip
+bintransfer      $PWD/bin/DSCSM045.EXE,$PWD/tapps/pdssat/psims2WTH.py,$PWD/tapps/pdssat/OUT2psims.py,$PWD/bin/camp2json.py,$PWD/tapps/pdssat/jsons2dssat.py
+tappwth          psims2WTH.py:-v:tasmin,tasmax,rsds,pr,wind:-o:GENERIC1.WTH
+tappcamp         camp2json.py:-c:Campaign.nc4:-e:exp_template.json:-o:experiment.json
+tappinp          jsons2dssat.py:-s:soil.json:-e:experiment.json:-S:SOIL.SOL:-x:X1234567.MZX
+executable       DSCSM045.EXE:A:X1234567.MZX
+outtypes         .WTH,.MZX,.SOL,.OUT,.json
+postprocess      ./OUT2psims.py:-i:Summary.OUT:-v:PDAT,ADAT,MDAT,CWAM,HWAM,IRCM,PRCP,ETCP,SRADA,LAIX,NUCM,TMAXA,TMINA:--delta:30:-s:4:-y:61:--ref_year:1948
+NCconcat         ../bin/append.sh:PDAT,ADAT,MDAT,CWAM,HWAM,IRCM,PRCP,ETCP,SRADA,LAIX,NUCM,TMAXA,TMINA:"PlantDate,AnthesisDate,MaturityDate,TotalBiomass,Yield,IrrigationApplied,GrowingSeasonPrecip,GrowingSeasonET,GrowingSeasonSolarAvg,MaxLeafAreaIndex,NitrogenUptake,GrowingSeasonMaxTempAvg,GrowingSeasonMinTempAvg":"DOY,Days,Days,kg/ha,kg/ha,mm,mm,mm,MJ/m2/day,frac,kg[N]/ha,C,C":720:360:30:61:4:1948:./parts:out.psims.dssat45.princeton.maize.nc4

@@ -25,12 +25,35 @@ $CULTIVARS:WHCER045
 999992 MAXIMA               . 999992    60   200   999    50    80   8.0   150
 DFAULT DEFAULT              . DFAULT     5    75   450    30    35   1.0    60
 !!!Below generics added by jwe for psdssat v0.5!!!
-990002 Winter-US            . IB0001    40    94   564    30    40  1.00   120
-990003 Winter-EU            . IB0001    60    94   564    30    40  1.00   120
-990004 Winter-Ukraine       . IB0001    50    94   564    30    40  1.00   120
+990002 Winter-Default       . IB0001    60    94   564    30    40  1.00   120
+990003 Winter-Default       . IB0001    60    94   564    30    40  1.00   120
+990004 Winter-Default       . IB0001    60    94   564    30    40  1.00   120
 990005 FACULTATIVE          . IB0001    30    94   564    22    40  1.00   120
 990001 SPRING-HIGH LAT      . IB0001    20    94   564    22    40  1.01   120
 990006 SPRING-LOW LAT       . IB0001     5    94   564    22    40  1.01   120
+
+!!!!!!!! Generic pSIMS ME cultivars !!!!!!!!!!!!
+!!!Spring!!!
+ME1XXX ME1-generic          . IB0001    20    94   564    22    39  1.00   120
+ME2AXX ME2A-generic         . IB0001    20    94   564    22    40  1.00   120
+ME2BXX ME2B-generic         . IB0001    20    94   564    22    40  1.00   120
+ME3XXX ME3-generic          . IB0001    20    94   564    22    40  1.00   120
+ME4AXX ME4A-generic         . IB0001    20    94   564    24    37  1.00   120
+ME4BXX ME4B-generic         . IB0001    20    97   564    24    40  1.00   120
+ME4CXX ME4C-generic         . IB0001    20    94   564    24    37  1.00   120
+ME5AXX ME5A-generic         . IB0001    25    94   564    22    37  1.50   100
+ME5BXX ME5B-generic         . IB0001    25    95   564    22    40  1.50   100
+ME6XXX ME6-generic          . IB0001    30   110   564    22    40  1.50   120
+!!!Facultative!!!
+ME7XXX ME7-generic          . IB0001    40    94   564    22    40  0.50   120
+ME8AXX ME8A-generic         . IB0001    40   100   600    22    40  0.50   120
+ME8BXX ME8B-generic         . IB0001    40    94   564    22    40  0.50   120
+ME9XXX ME9-generic          . IB0001    20    94   564    24    37  0.50   120
+!!!Winter wheat!!!
+ME10XX ME10-generic         . IB0001    60   110   600    22    40  0.50   135
+ME11XX ME11-generic         . IB0001    60   130   600    22    40  0.50   135
+ME12XX ME12-generic         . IB0001    60   110   600    22    40  0.50   135
+
 
 !!!!!!!!! MEGA ENVIRONMENT 1 !!!!!
 ! Seri 82 Base Cultivar

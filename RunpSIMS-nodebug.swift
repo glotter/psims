@@ -5,8 +5,11 @@ app (file tar_out, file part_out) RunpSIMS (file scenario_in[], file weather_in[
    bash "-c" @strcat("chmod +x ./RunpSIMS.sh ; ./RunpSIMS.sh ", @tar_out, " ",
                      @arg("executable"), " ", @arg("outtypes"), " ", @arg("postprocess"), " ", 
                      @arg("tappwth"), " ", @arg("tappinp"), " ", @arg("tappcamp"), " ", 
-                     grid1, " ", grid2, " ", @arg("model"), " ", @arg("ref_year"), " ", 
-                     @arg("delta"), " ",
+                     latidx, " ", lonidx, " ", @arg("model"), " ", @arg("ref_year"), " ", 
+                     @arg("delta"), " ", @arg("num_years"), " ", @arg("scens"), " ", 
+                     @arg("variables"), " ", @arg("long_names"), " ", @arg("var_units"), " ", 
+                     @arg("num_lats"), " ", @arg("num_lons"), " ",
+                     @arg("lat_zero"), " ", @arg("lon_zero"), " ", @arg("out_file"), " ",
                      @scenario_in, " ", @weather_in, " ", @soils_in, " ", @common_in, " ", @binary_in);
 }
 
