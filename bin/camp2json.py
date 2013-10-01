@@ -48,6 +48,8 @@ parser.add_option("--lonidx", dest = "lonidx", default = 1, type = "string",
                   help = "Longitude coordinate")
 parser.add_option("-d", "--delta", dest = "delta", default = 1, type = "float",
                   help = "Distance between each grid cell in arcminutes")
+parser.add_option("-r", "--ref_year", dest = "ref_year", default = 1958, type = "int",
+                  help = "Reference year from which to record times")
 parser.add_option("-o", "--output", dest = "outputfile", default = "expout.json", type = "string",
                   help = "output experiment JSON file", metavar = "FILE")
 (options, args) = parser.parse_args()
@@ -203,6 +205,32 @@ for var in variables:
             edate = (dt.date(1900, 1, 1) + dt.timedelta(eday - 1)).strftime('%e-%b')
             print 'Replacing variable edate with', edate, 'for occurrence =', occ
             dict_replace(exp['experiments'][j], 'edate', str(edate), occ = occ)
+
+# change pfyer, plyer, hlyer, sdyer, odyer
+ref_year = options.ref_year
+yer = ref_year % 100
+list_replace(exp['experiments'], 'pfyer', str(yer))
+list_replace(exp['experiments'], 'plyer', str(yer))
+list_replace(exp['experiments'], 'hlyer', str(yer + 1))
+list_replace(exp['experiments'], 'sdyer', str(yer))
+list_replace(exp['experiments'], 'odyer', str(yer))
+for e in exp['experiments']:
+    man = get_obj(e, 'management', {})
+    if man != {}:
+        pdate = man['events'][0]['date']
+        dict_replace(e, 'date', str(ref_year) + pdate[4 :], occ = 1) # planting date
+        idate = man['events'][3]['date']
+        dict_replace(e, 'date', str(ref_year) + idate[4 :], occ = 4) # irrigation date
+        hdate = man['events'][4]['date']
+        dict_replace(e, 'date', str(ref_year) + hdate[4 :], occ = 5) # harvest date
+    soil = get_obj(e, 'soil', {})
+    if soil != {}:
+        sdate = soil['sadat']
+        dict_replace(e, 'sadat', str(ref_year) + sdate[4 :])
+    ic = get_obj(e, 'initial_conditions', {})
+    if ic != {}:
+        icdate = ic['icdat']
+        dict_replace(e, 'icdat', str(ref_year) + icdate[4 :])
 
 # correct plyer, if available and necessary
 for e in exp['experiments']:
