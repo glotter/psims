@@ -1,11 +1,12 @@
 type file;
 
-app (file tar_out, file part_out) RunpSIMS (file scenario_in[], file weather_in[], file soils_in[], file common_in[], file binary_in[], file wrapper_file, string grid1, string grid2)
+app (file tar_out, file part_out) RunpSIMS (file scenario_in[], file weather_in[], file soils_in[], file common_in[], file binary_in[], file wrapper_file, string latidx, string lonidx)
 {
    bash "-c" @strcat("chmod +x ./RunpSIMS.sh ; ./RunpSIMS.sh ", @tar_out, " ",
                      @arg("executable"), " ", @arg("outtypes"), " ", @arg("postprocess"), " ", 
                      @arg("tappwth"), " ", @arg("tappinp"), " ", @arg("tappcamp"), " ", 
-                     grid1, " ", grid2, " ", @arg("model"), " ", 
+                     grid1, " ", grid2, " ", @arg("model"), " ", @arg("ref_year"), " ", 
+                     @arg("delta"), " ",
                      @scenario_in, " ", @weather_in, " ", @soils_in, " ", @common_in, " ", @binary_in);
 }
 
