@@ -4,7 +4,7 @@
 from netCDF4 import Dataset as nc
 from optparse import OptionParser
 import re, json, copy, datetime as dt
-from numpy import nan, isnan, double, resize
+from numpy import nan, isnan, double, resize, where
 
 # UTILITY FUNCTIONS
 def list_replace(arr, var, val, occ = nan, cnt = 1):
@@ -45,7 +45,9 @@ parser.add_option("-e", "--exp_file", dest = "expfile", default = "expin.json", 
 parser.add_option("--latidx", dest = "latidx", default = 1, type = "string",
                   help = "Latitude coordinate")
 parser.add_option("--lonidx", dest = "lonidx", default = 1, type = "string",
-                  help = "Longitude coordinate")   
+                  help = "Longitude coordinate")
+parser.add_option("-d", "--delta", dest = "delta", default = 1, type = "float",
+                  help = "Distance between each grid cell in arcminutes")
 parser.add_option("-o", "--output", dest = "outputfile", default = "expout.json", type = "string",
                   help = "output experiment JSON file", metavar = "FILE")
 (options, args) = parser.parse_args()
@@ -56,13 +58,20 @@ campaign = nc(options.campaignfile, 'r',  format = 'NETCDF4')
 # open experiment json file
 template = json.load(open(options.expfile, 'r'))
 
-# grid point
-latidx = int(options.latidx) - 1 # zero-based index
-lonidx = int(options.lonidx) - 1
+# determine gridpoint with nearest latitude and longitude
+delta = options.delta / 60. # convert from arcminutes to degrees
+lat = campaign.variables['lat'][:]
+lon = campaign.variables['lon'][:]
+latd = resize(lat, (len(lon), len(lat))).T - 90. + delta * (int(options.latidx) - 0.5)
+lond = resize(lon, (len(lat), len(lon))) + 180. - delta * (int(options.lonidx) - 0.5)
+totd = latd**2 + lond**2
+idx = where(totd == totd.min())
+latidx = idx[0][0]
+lonidx = idx[1][0]
 
 # latitude and longitude
-lat = campaign.variables['lat'][latidx]
-lon = campaign.variables['lon'][lonidx]
+lat = lat[latidx]
+lon = lon[lonidx]
 
 # perform global replace
 for attr in campaign.ncattrs():
