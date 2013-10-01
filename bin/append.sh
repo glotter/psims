@@ -18,11 +18,13 @@ delta: Distance between grid points in arcminutes
 num_years: Number of years in netcdf files
 num_scenarios: Number of scenarios in netcdf files
 ref_year: Reference year for times in netcdf files
+lat0: Latitude of grid origin
+lon0: Longitude of grid origin
 file_dir: Directory from which to search for netcdf files, up to depth of two
 out_file: Name of output file
 
 Example:
-  ./append.sh PDAT "Planting date" YrDoy 2 2 30 44 6 1958 . out.psims.nc4
+  ./append.sh PDAT "Planting date" YrDoy 2 2 30 44 6 1958 90 -180 . out.psims.nc4
 
 NOTE:
   The final dimensions of the output file are: latitude, scenario, longitude, time, in that order. To make "time" the lead dimension perform the following operation on the output file:
@@ -218,18 +220,24 @@ delta=$6
 num_years=$7
 num_scenarios=$8
 ref_year=$9
-file_dir=${10}
-out_file=${11}
+lat0=${10}
+lon0=${11}
+file_dir=${12}
+out_file=${13}
 
 # longitude
 for ((i = 1; i <= $num_lons; i++)); do
-  lon[$(($i-1))]=$(echo "scale=2;-180+$delta/60*($i-0.5)" | bc)
+  lon[$(($i-1))]=$(echo "scale=15;$lon0+$delta/60*($i-0.5)" | bc)
 done
 
 # latitude
 for ((i = 1; i <= $num_lats; i++)); do
-  lat[$(($i-1))]=$(echo "scale=2;90-$delta/60*($i-0.5)" | bc)
+  lat[$(($i-1))]=$(echo "scale=15;$lat0-$delta/60*($i-0.5)" | bc)
 done
+
+# calculate lat0 and lon0 offsets of grid into global grid
+lat0_off=`printf "%.0f" $(echo "scale=15;60*(90-$lat0)/$delta+1" | bc)`
+lon0_off=`printf "%.0f" $(echo "scale=15;60*($lon0+180)/$delta+1" | bc)`
 
 # find all directories
 dcts=(`ls -d $file_dir/*/ | grep '[0-9]'`)
@@ -237,9 +245,9 @@ dcts=(`ls -d $file_dir/*/ | grep '[0-9]'`)
 # iterate over directories, filling in gaps
 for ((i = 0; i < ${#dcts[@]}; i++)); do
   # get latitude index
-  grid1=(`echo ${dcts[$i]} | egrep -o [0-9]+`)
-  grid1=`echo $grid1 | sed 's/^0*//'` # remove leading zeros
-  lat_idx=$(($grid1-1))
+  grid1_orig=(`echo ${dcts[$i]} | egrep -o [0-9]+`)
+  grid1=`echo $grid1_orig | sed 's/^0*//'` # remove leading zeros
+  lat_idx=$(($grid1-$lat0_off))
 
   # temporary file
   sum_lon_file=$grid1.nc
@@ -247,15 +255,14 @@ for ((i = 0; i < ${#dcts[@]}; i++)); do
   echo "Processing latitude band "$grid1" . . ."
 
   # find all files in directory
-  g1=`printf "%0*d" 3 $grid1`
-  files=(`find $file_dir/$g1 -name \*.psims.nc | grep '[0-9]/[0-9]' | sort`)
+  files=(`find $file_dir/$grid1_orig -name \*.psims.nc | grep '[0-9]/[0-9]' | sort`)
 
   # iterate over files, filling in gaps
   for ((j = 0; j < ${#files[@]}; j++)); do
     # get longitude index
     grid2=(`echo ${files[$j]} | egrep -o [0-9]+`)
     grid2=`echo ${grid2[1]} | sed 's/^0*//'` # remove leading zeros
-    lon_idx=$(($grid2-1))
+    lon_idx=$(($grid2-$lon0_off))
 
     # temporary file
     lat_lon_file=$grid1"_"$grid2.nc
