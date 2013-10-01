@@ -206,7 +206,7 @@ for var in variables:
             print 'Replacing variable edate with', edate, 'for occurrence =', occ
             dict_replace(exp['experiments'][j], 'edate', str(edate), occ = occ)
 
-# change pfyer, plyer, hlyer, sdyer, odyer
+# change dates based on reference year
 ref_year = options.ref_year
 yer = ref_year % 100
 list_replace(exp['experiments'], 'pfyer', str(yer))
@@ -228,10 +228,15 @@ for e in exp['experiments']:
         sdate = soil['sadat']
         dict_replace(e, 'sadat', str(ref_year) + sdate[4 :])
     ic = get_obj(e, 'initial_conditions', {})
+    if ic == {}:
+        ic = get_obj(e, 'initial_condition', {})
     if ic != {}:
         icdate = ic['icdat']
         dict_replace(e, 'icdat', str(ref_year) + icdate[4 :])
-
+    start_date = get_obj(e, 'start_date', '')
+    if start_date != '':
+        dict_replace(e, 'start_date', start_date[: 6] + str(ref_year))
+    
 # correct plyer, if available and necessary
 for e in exp['experiments']:
     plt_dic = get_obj(e, 'dssat_simulation_control', {}) # only applies for DSSAT!
