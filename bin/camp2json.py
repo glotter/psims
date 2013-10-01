@@ -42,9 +42,9 @@ parser.add_option("-c", "--campaign_file", dest = "campaignfile", default = "cam
                   help = "campaign netcdf4 file", metavar = "FILE")
 parser.add_option("-e", "--exp_file", dest = "expfile", default = "expin.json", type = "string", 
                   help = "input experiment JSON file", metavar = "FILE")
-parser.add_option("--grid1", dest = "grid1", default = 1, type = "string",
+parser.add_option("--latidx", dest = "latidx", default = 1, type = "string",
                   help = "Latitude coordinate")
-parser.add_option("--grid2", dest = "grid2", default = 1, type = "string",
+parser.add_option("--lonidx", dest = "lonidx", default = 1, type = "string",
                   help = "Longitude coordinate")   
 parser.add_option("-o", "--output", dest = "outputfile", default = "expout.json", type = "string",
                   help = "output experiment JSON file", metavar = "FILE")
@@ -57,12 +57,12 @@ campaign = nc(options.campaignfile, 'r',  format = 'NETCDF4')
 template = json.load(open(options.expfile, 'r'))
 
 # grid point
-grid1 = int(options.grid1) - 1 # zero-based index
-grid2 = int(options.grid2) - 1
+latidx = int(options.latidx) - 1 # zero-based index
+lonidx = int(options.lonidx) - 1
 
 # latitude and longitude
-lat = campaign.variables['lat'][grid1]
-lon = campaign.variables['lon'][grid2]
+lat = campaign.variables['lat'][latidx]
+lon = campaign.variables['lon'][lonidx]
 
 # perform global replace
 for attr in campaign.ncattrs():
@@ -110,9 +110,9 @@ for var in variables:
             raise Exception('Longitude dimension is missing')
                 
         if dim.index('lat') == 0:
-            var_array = v[grid1, grid2]
+            var_array = v[latidx, lonidx]
         else:
-            var_array = v[grid2, grid1]
+            var_array = v[lonidx, latidx]
         
         var_array = resize(var_array, (num_scenarios,)) # duplicate for all scenarios
     elif v.ndim == 3:
@@ -129,19 +129,19 @@ for var in variables:
         
         if scen_idx == 0:
             if lat_idx == 1:
-                var_array = v[:, grid1, grid2] 
+                var_array = v[:, latidx, lonidx] 
             else:
-                var_array = v[:, grid2, grid1]
+                var_array = v[:, lonidx, latidx]
         elif scen_idx == 1:
             if lat_idx == 0:
-                var_array = v[grid1, :, grid2]
+                var_array = v[latidx, :, lonidx]
             else:
-                var_array = v[grid2, :, grid1]
+                var_array = v[lonidx, :, latidx]
         else: # scen_idx == 2
             if lat_idx == 0:
-                var_array = v[grid1, grid2]
+                var_array = v[latidx, lonidx]
             else:
-                var_array = v[grid2, grid1]
+                var_array = v[lonidx, latidx]
     else:
          raise Exception('Data contain variables with improper dimensions')    
 
