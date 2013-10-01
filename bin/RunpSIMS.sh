@@ -7,10 +7,12 @@ postprocess=$4
 tappwth=$5
 tappinp=$6
 tappcamp=$7
-grid1=$8
-grid2=$9
+latidx=$8
+lonidx=$9
 model=${10}
-shift 10
+ref_year=${11}
+delta=${12}
+shift 12
 
 # All other arguments beyond this are lists of input files
 #mkdir -p data
@@ -30,7 +32,7 @@ chmod +x *.py *.pl *.sh *.EXE *.exe
 # This file is a single netcdf file that contains arbitary number of variables 
 # that must be changed spatially in the experiment files. The experiment 
 # file is model agnostic and always called experiment.json. 
-tappcamp="$( echo $tappcamp | sed s/:/' '/g ) --grid1 $grid1 --grid2 $grid2 " 
+tappcamp="$( echo $tappcamp | sed s/:/' '/g ) --latidx $latidx --lonidx $lonidx --ref_year $ref_year " 
 echo Campaign translator command: $tappcamp
 ls -l experiment.json 1>&2
 #strace -o strace.log 
