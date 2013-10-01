@@ -4,8 +4,7 @@
 This script aggregates multiple single-gridpoint netcdf files into one big spatial
 raster netcdf file. The usage is:
 
-  ./append.sh [var_names] [long_names] [units] [num_lons] [num_lats] [delta] [num_years]
-              [num_scenarios] [ref_year] [file_dir] [out_file]
+  ./append.sh [var_names] [long_names] [units] [num_lons] [num_lats] [delta] [num_years] [num_scenarios] [ref_year] [lat0] [lon0] [file_dir] [out_file]
 
 where the input arguments are as follows:
 
