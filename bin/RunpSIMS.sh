@@ -60,7 +60,7 @@ for sf in $suff ; do ls -l *$sf 1>&2 ; done
 
 ###############################################################################
 # Run tappwth application to generate the weather file from the .psims file
-# input files usually of form grid1_grid2.psims.nc and outputs files with 
+# input files usually of form latidx_lonidx.psims.nc and outputs files with 
 # generic names like GENERIC.WTH (for DSSAT) and Generic.met (for APSIM). 
 if [ "$model" == "dssat45" ] ; then suff=".WTH" ; fi
 if [ "$model" == "apsim75" ] ; then suff=".met" ; fi
@@ -150,8 +150,8 @@ tar czf $out output
 if [ _$postprocess != __ ]; then
  postprocess=$( echo $postprocess | sed s/:/' '/g )
  mkdir -p parts
- mkdir -p parts/$grid1
- postprocessToRun="$postprocess --grid1 $grid1 --grid2 $grid2 --output parts/$grid1/$grid2.psims.nc"
+ mkdir -p parts/$latidx
+ postprocessToRun="$postprocess --latidx $latidx --lonidx $lonidx --ref_year $ref_year --delta $delta --output parts/$latidx/$lonidx.psims.nc"
  ./$postprocessToRun
  exit_status=$?
 fi
