@@ -4,7 +4,7 @@
 import os, datetime
 from netCDF4 import Dataset as nc
 from optparse import OptionParser
-from numpy import array, empty, asarray, double
+from numpy import array, empty, asarray, double, nan
 
 # parse inputs
 parser = OptionParser()
@@ -19,7 +19,7 @@ parser.add_option("-y", "--num_years", dest = "num_years", default = 1, type = "
 parser.add_option("-v", "--variables", dest = "variables", default = "", type = "string",
                   help = "Comma-separated list (with no spaces) of variables to process")
 parser.add_option("-d", "--delta", dest = "delta", default = 1, type = "float",
-                  help = "Distance between each grid cell in arcminutes")
+                  help = "Distance between each   grid cell in arcminutes")
 parser.add_option("-r", "--ref_year", dest = "ref_year", default = 1958, type = "int",
                   help = "Reference year from which to record times")                          
 parser.add_option("--latidx", dest = "latidx", default = 1, type = "string",
@@ -103,15 +103,29 @@ for i in range(num_scenarios):
             raise Exception('Variable {:s} not in out file {:d}'.format(v, i + 1))
         else:
             variable_idx.append(all_variables.index(v))
-        
+   
     # remove header, select variables, and convert to numpy array of doubles
+    prev_year = nan; prev_idx = nan
     date_idx = all_variables.index('Date')
     for j in range(num_data):
-        date = int(data[4 + j][date_idx].split('/')[2])
-        idx = dates.index(date)
+        split_date = data[4 + j][date_idx].split('/')
+        year = int(split_date[2])
+        month = int(split_date[1])
+        if not j:
+            idx = 0 if year == ref_year + 1 and month <= 2 else dates.index(year)
+        else:
+            dy = year - prev_year
+            if dy <= 1:
+                # same year but different month OR next year => next growing season
+                idx = prev_idx + 1
+            else:
+                # more than one year has elapsed
+                idx = prev_idx + dy - (month <= 2)
         array_data = asarray(data[4 + j])[:, variable_idx]
         array_data[array_data == '?'] = '-99' # replace '?' with '-99'
         var_data[idx, i, :] = array_data.astype(double)
+        prev_year = year # save previous year and index
+        prev_idx = idx
 
     all_units = array([v.strip('()') for v in data[3]]) # remove parentheses
     if not i:
