@@ -3,6 +3,7 @@
 # import modules
 import os
 import datetime
+from os.path import isfile
 from netCDF4 import Dataset
 from optparse import OptionParser
 from collections import OrderedDict as od
@@ -125,7 +126,9 @@ parser.add_option("--lonidx", dest = "lonidx", default = 1, type = "string",
 (options, args) = parser.parse_args()
 
 # open summary file
-data = open(options.inputfile).readlines()
+file_exists = isfile(options.inputfile)
+if file_exists:
+    data = open(options.inputfile).readlines()
 
 # get variables
 num_scenarios = options.num_scenarios
@@ -170,7 +173,7 @@ ref_date = datetime.datetime(options.ref_year, 1, 1)
 # parse data body
 nrows = num_years * num_scenarios
 ncols = len(variable_idx)
-if len(data) < 5:
+if not file_exists or len(data) < 5:
     trim_data = -99 * ones((nrows, ncols))
 else:
     trim_data = empty((nrows, ncols), dtype = '|S20')
