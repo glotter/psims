@@ -18,6 +18,8 @@ parser.add_option("-y", "--num_years", dest = "num_years", default = 1, type = "
                   help = "Number of years")                  
 parser.add_option("-v", "--variables", dest = "variables", default = "", type = "string",
                   help = "Comma-separated list (with no spaces) of variables to process")
+parser.add_option("-u", "--units", dest = "units", default = "", type = "string",
+                  help = "Comma-separated list (with no spaces) of units for the variables")
 parser.add_option("-d", "--delta", dest = "delta", default = 1, type = "float",
                   help = "Distance between each   grid cell in arcminutes")
 parser.add_option("-r", "--ref_year", dest = "ref_year", default = 1958, type = "int",
@@ -43,6 +45,11 @@ delta = options.delta / 60. # convert from arcminutes to degrees
 
 # get number of variables
 num_vars = len(variables)
+
+# get units
+units = options.units.split(',')
+if len(units) != num_vars:
+    raise Exception('Number of units must be same as number of variables')
 
 # compute latitude and longitude
 lat = 90. - delta * (latidx - 0.5)
@@ -91,7 +98,7 @@ var_data = empty((num_years, num_scenarios, num_vars))
 var_data.fill(-99) # fill data
 for i in range(num_scenarios):
     data = [l.split() for l in tuple(open(outfiles[i]))]
-    if data == []:
+    if len(data) < 5:
         continue # no data, move to next file
     num_data = len(data[4 :])
     
@@ -108,6 +115,8 @@ for i in range(num_scenarios):
     prev_year = nan; prev_idx = nan
     date_idx = all_variables.index('Date')
     for j in range(num_data):
+        if data[4 + j] == []:
+            continue # blank data
         split_date = data[4 + j][date_idx].split('/')
         year = int(split_date[2])
         month = int(split_date[1])
@@ -126,11 +135,6 @@ for i in range(num_scenarios):
         var_data[idx, i, :] = array_data.astype(double)
         prev_year = year # save previous year and index
         prev_idx = idx
-
-    all_units = array([v.strip('()') for v in data[3]]) # remove parentheses
-    if not i:
-        # pull units from first out file
-        units = all_units[variable_idx]
 
 # add data
 for i in range(num_vars):
