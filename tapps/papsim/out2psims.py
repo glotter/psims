@@ -96,7 +96,11 @@ scenario_var.long_name = 'scenario'
 # iterate through scenarios
 var_data = -99 * ones((num_years, num_scenarios, num_vars))
 for i in range(num_scenarios):
-    data = [l.split() for l in tuple(open(outfiles[i]))]
+    try:
+        data = [l.split() for l in tuple(open(outfiles[i]))]
+    except IOError:
+        print 'Out file', i + 1, 'does not exist'
+        continue
     if len(data) < 5:
         continue # no data, move to next file
     num_data = len(data[4 :])
