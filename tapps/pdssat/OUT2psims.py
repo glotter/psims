@@ -6,7 +6,7 @@ import datetime
 from netCDF4 import Dataset
 from optparse import OptionParser
 from collections import OrderedDict as od
-from numpy import empty, zeros, double, array, resize, vectorize
+from numpy import empty, zeros, ones, double, array, resize, vectorize
 
 # dictionaries of variable descriptions and units
 var_names = {'SDAT': 'Simulation start date', 'PDAT': 'Planting date', \
@@ -24,7 +24,7 @@ var_names = {'SDAT': 'Simulation start date', 'PDAT': 'Planting date', \
              'DRCM': 'Season water drainage', 'SWXM': 'Extractable water at maturity', \
              'NI#M': 'N applications', 'NICM': 'Inorganic N applied', \
              'NFXM': 'N fixed during season (kg/ha)', 'NUCM': 'N uptake during season', \
-             'NLCM': 'N leached during season', 'NIAM': 'Inorganic N at maturity', \
+             'NLCM': 'N leacehd during season', 'NIAM': 'Inorganic N at maturity', \
              'CNAM': 'Tops N at maturity', 'GNAM': 'Grain N at maturity', \
              'PI#M': 'Number of P applications', 'PICM': 'Inorganic P applied', \
              'PUPC': 'Seasonal cumulative P uptake', 'SPAM': 'Soil P at maturity', \
@@ -43,9 +43,9 @@ var_names = {'SDAT': 'Simulation start date', 'PDAT': 'Planting date', \
              'TMINA': 'Avg minimum air temperature', 'SRADA': 'Average solar radiation, planting - harvest', \
              'DAYLA': 'Average daylength, planting - harvest', 'CO2A': 'Average atmospheric CO2, planting - harvest', \
              'PRCP': 'Total season precipitation, planting - harvest', 'ETCP': 'Total evapotransportation, planting - harvest'}
-var_units = {'SDAT': 'YrDoy', 'PDAT': 'Doy', \
-             'EDAT': 'YrDoy', 'ADAT': 'Days since planting', \
-             'MDAT': 'Days since planting', 'HDAT': 'YrDoy', \
+var_units = {'SDAT': 'YrDoy', 'PDAT': 'YrDoy', \
+             'EDAT': 'YrDoy', 'ADAT': 'YrDoy', \
+             'MDAT': 'YrDoy', 'HDAT': 'YrDoy', \
              'DWAP': 'kg [dm]/ha', 'CWAM': 'kg [dm]/ha', \
              'HWAM': 'kg [dm]/ha', 'HWAH': 'kg [dm]/ha', \
              'BWAH': 'kg [dm]/ha', 'PWAM': 'kg [dm]/ha', \
@@ -112,6 +112,8 @@ parser.add_option("-y", "--num_years", dest = "num_years", default = 1, type = "
                   help = "Number of years in input file")
 parser.add_option("-v", "--variables", dest = "variables", default = "", type = "string",
                   help = "String of comma-separated list (with no spaces) of variables to process")
+parser.add_option("-u", "--units", dest = "units", default = "", type = "string",
+                  help = "Comma-separated list (with no spaces) of units for the variables")
 parser.add_option("-d", "--delta", dest = "delta", default = 1, type = "float",
                   help = "Distance between each grid cell in arcminutes")
 parser.add_option("-r", "--ref_year", dest = "ref_year", default = 1958, type = "int",
@@ -133,12 +135,17 @@ latidx = int(options.latidx)
 lonidx = int(options.lonidx)
 delta = options.delta / 60. # convert from arcminutes to degrees
 
+# get units
+units = options.units.split(',')
+if len(units) != len(variables):
+    raise Exception('Number of units must be same as number of variables')
+
 # get all variables
 all_variables = start_idx.keys()
 
 # search for variables within list of all variables
 prohibited_variables = ['C#', 'CR', 'MODEL', 'TNAM', 'FNAM', 'WSTA', 'SOIL_ID']
-variable_idx = zeros((len(variables),))
+variable_idx = zeros((len(variables),), dtype = int)
 for i in range(len(variables)):
     v = variables[i]
     if not v in all_variables:
@@ -161,39 +168,23 @@ lon = -180. + delta * (lonidx - 0.5)
 ref_date = datetime.datetime(options.ref_year, 1, 1)
 
 # parse data body
-nrows = len(data) - 4
-ncols = len(all_variables)
-trim_data = empty((nrows, ncols), dtype = '|S20')
-for i in range(nrows):
-    for j in range(ncols):
-        sidx = start_idx.values()[j]
-        eidx = len(data[3]) - 1 if j == ncols - 1 else start_idx.values()[j + 1]
-        trim_data[i, j] = data[i + 4][sidx : eidx].strip() # remove spaces
-if len(trim_data) % num_years:
-    raise Exception('Size of data not divisible by number of years')
-if len(trim_data) < num_years * num_scenarios:
-    raise Exception('Exceeded size of data')
-
-# select variables and convert to double
-trim_data = trim_data[:, list(variable_idx)]
-
-# change values with * to -99
-func = vectorize(lambda x: '*' in x)
-trim_data[func(trim_data)] = '-99'
-
-# convert to double
-trim_data = trim_data.astype(double)
-
-# convert units on the date variables
-# [[je: james should probably fix this to make sure its smart enough to handle
-#       cases where the user doesn't ask for ADAT or PDAT or whatever]]
-from numpy import nan;
-trim_data[trim_data == -99] = nan
-trim_data[:, variables == 'PDAT'] =   trim_data[:, variables == 'PDAT'] % 1000
-trim_data[:, variables == 'ADAT'] = ((trim_data[:, variables == 'ADAT'] % 1000) - trim_data[:, variables == 'PDAT']) % 365
-trim_data[:, variables == 'MDAT'] = ((trim_data[:, variables == 'MDAT'] % 1000) - trim_data[:, variables == 'PDAT']) % 365
-from numpy import isnan; 
-trim_data[isnan(trim_data)] = -99
+nrows = num_years * num_scenarios
+ncols = len(variable_idx)
+if len(data) < 5:
+    trim_data = -99 * ones((nrows, ncols))
+else:
+    trim_data = empty((nrows, ncols), dtype = '|S20')
+    for i in range(nrows):
+        if data[i + 4] == []:
+            continue # blank line
+        for j in range(ncols):
+            vidx = variable_idx[j]
+            sidx = start_idx.values()[vidx]
+            eidx = len(data[3]) - 1 if vidx == ncols - 1 else start_idx.values()[vidx + 1]
+            trim_data[i, j] = data[i + 4][sidx : eidx].strip() # remove spaces
+    func = vectorize(lambda x: '*' in x) # change values with * to -99
+    trim_data[func(trim_data)] = '-99'
+    trim_data = trim_data.astype(double) # convert to double
 
 # create pSIMS NetCDF4 file
 dirname = os.path.dirname(options.outputfile)
@@ -229,8 +220,8 @@ scenario_var.long_name = 'scenario'
 # add selected variables
 for i in range(len(variables)):
     var = root_grp.createVariable(variables[i], 'f4', ('time', 'scenario', 'latitude', 'longitude',))
-    var[:] = resize(trim_data[: num_years * num_scenarios, i], (num_scenarios, num_years)).T
-    var.units = var_units[variables[i]]
+    var[:] = resize(trim_data[:, i], (num_scenarios, num_years)).T
+    var.units = units
     var.long_name = var_names[variables[i]]
 
 # close file

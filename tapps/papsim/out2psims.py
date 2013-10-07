@@ -4,7 +4,7 @@
 import os, datetime
 from netCDF4 import Dataset as nc
 from optparse import OptionParser
-from numpy import array, empty, asarray, double, nan
+from numpy import array, ones, asarray, double, nan
 
 # parse inputs
 parser = OptionParser()
@@ -94,8 +94,7 @@ scenario_var.units = 'no'
 scenario_var.long_name = 'scenario'
 
 # iterate through scenarios
-var_data = empty((num_years, num_scenarios, num_vars))
-var_data.fill(-99) # fill data
+var_data = -99 * ones((num_years, num_scenarios, num_vars))
 for i in range(num_scenarios):
     data = [l.split() for l in tuple(open(outfiles[i]))]
     if len(data) < 5:
@@ -116,7 +115,7 @@ for i in range(num_scenarios):
     date_idx = all_variables.index('Date')
     for j in range(num_data):
         if data[4 + j] == []:
-            continue # blank data
+            continue # blank line
         split_date = data[4 + j][date_idx].split('/')
         year = int(split_date[2])
         month = int(split_date[1])
