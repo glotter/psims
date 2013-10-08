@@ -3,24 +3,32 @@
       "start_date": "01/01/1980",
       "end_date": "31/12/2010",
       "log": "",  
-      "reporting_frequency": "yearly",
+      "reporting_frequency": "harvesting",
       "output_variables": [
         {"name": "dd/mm/yyyy as Date"},
-        ("name": "planting_date"},
+        {"name": "planting_date"},
         {"name": "biomass"},
         {"name": "yield"},
-        {"name": "grain_protein"},
-        {"name": "grain_size"},
-        {"name": "esw"},
-        {"name": "lai"},
-        {"name": "rain"},
-        {"name": "es"},
-        {"name": "runoff"},
-        {"name": "drain"},
-        {"name": "no3()"},
-        {"name": "dlt_n_min()"},
-        {"name": "surfaceom_wt"},
-        {"name": "surfaceom_cover"}
+        {"name": "lai_max"},
+        {"name": "DaysAfterSowing"},
+        {"name": "flowering_das"},
+        {"name": "maturity_das"},
+        {"name": "Rain_year"},
+        {"name": "RainIn"},
+        {"name": "Temp_year"},
+        {"name": "TempIn"},
+        {"name": "Radiation_year"},
+        {"name": "RadiationIn"},
+        {"name": "IrrigationIn"},
+        {"name": "WaterUse"},
+        {"name": "actual_ET"},
+        {"name": "N_uptake"},
+        {"name": "FertiliserIn"},
+        {"name": "NO3_leaching"},
+        {"name": "N2Oemission_year"},
+        {"name": "N2OemissionIn"},
+        {"name": "CO2emission_year"},
+        {"name": "CO2emissionIn"}
       ],
       "initial_condition": {
         "icrn": ".5",
@@ -32,30 +40,28 @@
         "icrze": "1",
         "icrag": "500",
         "icrdp": "30",
-        "icdat": "19820616",
+        "icdat": "19800101",
         "standing_fraction": "0",
+        "water_fraction_full": "0.75",
         "soilLayer": [
-          {"ich2o": ".18","icno3": "1.8","icbl": "22","icnh4": "2.5"},
-          {"ich2o": ".195","icno3": "4.5","icbl": "52","icnh4": "3"},
-          {"ich2o": ".21","icno3": "5","icbl": "82","icnh4": "3.5"},
-          {"ich2o": ".2","icno3": "2","icbl": "112","icnh4": "2"},
-          {"ich2o": ".2","icno3": ".7","icbl": "127","icnh4": "1"},
-          {"ich2o": ".2","icno3": ".6","icbl": "156","icnh4": "1"}
+          {"ich2o": ".18" ,"icno3": "1.8","icbl": "22" ,"icnh4": "2.5"},
+          {"ich2o": ".195","icno3": "4.5","icbl": "52" ,"icnh4": "3"},
+          {"ich2o": ".21" ,"icno3": "5"  ,"icbl": "82" ,"icnh4": "3.5"},
+          {"ich2o": ".2"  ,"icno3": "2"  ,"icbl": "112","icnh4": "2"},
+          {"ich2o": ".2"  ,"icno3": ".7" ,"icbl": "127","icnh4": "1"},
+          {"ich2o": ".2"  ,"icno3": ".6" ,"icbl": "156","icnh4": "1"}
         ]
       },
       "weather": {
         "file": "Generic"
       },
       "planting": {
-        "sow_start_window": "1-mar",
-        "sow_end_window": "1-dec",
+        "pdate": "1-mar",
+        "edate": "1-dec",
         "cultivar": "me1",
         "row_spacing": "0.9",
         "depth": "30",
-        "sowing_density": "4.4",
-        "amount_rainfall": "30",
-        "num_days_rainfall": "7",
-        "min_allowable_soil_water": "50"
+        "sowing_density": "4.4"
       },
       "fertilizer": {
         "initial_amount": "100",
@@ -74,5 +80,11 @@
         "default_no3_conc": "0.0",
         "default_nh4_conc": "0.0",
         "default_cl_conc": "0.0"
+      },
+      "reset": {
+        "date": "1-jan",
+        "water": "yes",
+        "nitrogen": "yes",
+        "surfaceOM": "yes"
       }
 }
