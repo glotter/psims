@@ -237,7 +237,7 @@ scenario_var.long_name = 'scenario'
 for i in range(len(variables)):
     var = root_grp.createVariable(variables[i], 'f4', ('time', 'scenario', 'latitude', 'longitude',))
     var[:] = resize(trim_data[: num_years * num_scenarios, i], (num_scenarios, num_years)).T
-    var.units = units
+    var.units = units[i]
     var.long_name = var_names[variables[i]]
 
 # close file
