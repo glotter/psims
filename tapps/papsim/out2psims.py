@@ -6,6 +6,16 @@ from netCDF4 import Dataset as nc
 from optparse import OptionParser
 from numpy import array, ones, asarray, double, nan
 
+def compute_next_idx(year, month, prev_idx, prev_year):
+    dy = year - prev_year
+    if dy <= 1:
+        # same year but different month OR next year => next growing season
+        idx = prev_idx + 1
+    else:
+        # more than one year has elapsed
+        idx = prev_idx + dy - (month <= 2)
+    return idx
+
 # parse inputs
 parser = OptionParser()
 parser.add_option("-i", "--input", dest = "inputfile", default = "data/Generic.out", type = "string",
@@ -21,7 +31,7 @@ parser.add_option("-v", "--variables", dest = "variables", default = "", type = 
 parser.add_option("-u", "--units", dest = "units", default = "", type = "string",
                   help = "Comma-separated list (with no spaces) of units for the variables")
 parser.add_option("-d", "--delta", dest = "delta", default = 1, type = "float",
-                  help = "Distance between each   grid cell in arcminutes")
+                  help = "Distance between each grid cell in arcminutes")
 parser.add_option("-r", "--ref_year", dest = "ref_year", default = 1958, type = "int",
                   help = "Reference year from which to record times")                          
 parser.add_option("--latidx", dest = "latidx", default = 1, type = "string",
@@ -61,6 +71,52 @@ ref_date = datetime.datetime(options.ref_year, 1, 1)
 num_years = options.num_years
 dates = range(ref_year, ref_year + num_years)
 
+# iterate through scenarios
+var_data = -99 * ones((num_years, num_scenarios, num_vars))
+for i in range(num_scenarios):
+    try:
+        data = [l.split() for l in tuple(open(outfiles[i]))]
+    except IOError:
+        print 'Out file', i + 1, 'does not exist'
+        continue
+    if len(data) < 5:
+        continue # no data, move to next file
+    num_data = len(data[4 :])
+    
+    # search for variables within list of all variables
+    all_variables = data[2]
+    variable_idx = []
+    for v in variables:
+        if not v in all_variables:
+            raise Exception('Variable {:s} not in out file {:d}'.format(v, i + 1))
+        else:
+            variable_idx.append(all_variables.index(v))
+   
+    # remove header, select variables, and convert to numpy array of doubles
+    prev_year = nan; prev_idx = nan
+    date_idx = all_variables.index('Date')
+    pdate_idx = all_variables.index('planting_date')
+    for j in range(num_data):
+        if data[4 + j] == []:
+            continue # blank line
+        if num_data == num_years: # number of dates in file exactly matches number of years
+            idx = j
+        else:
+            pyear = data[4 + j][pdate_idx].split('_')[2]
+            idx = dates.index(pyear)
+            # split_date = data[4 + j][date_idx].split('/')
+            # year = int(split_date[2])
+            # month = int(split_date[1])
+            # if not j:
+            #     idx = 0 if year == ref_year + 1 and month <= 2 else dates.index(year)
+            # else:
+            #     idx = compute_next_idx(year, month, prev_idx, prev_year)
+            # prev_year = year # save previous year and index
+            # prev_idx = idx
+        array_data = asarray(data[4 + j])[:, variable_idx]
+        array_data[array_data == '?'] = '-99' # replace '?' with '-99'
+        var_data[idx, i, :] = array_data.astype(double)
+
 # create pSIMS NetCDF3 file
 dirname = os.path.dirname(options.outputfile)
 if dirname and not os.path.exists(dirname):
@@ -92,52 +148,6 @@ scenario_var = root_grp.createVariable('scenario', 'i4', 'scenario')
 scenario_var[:] = range(1, num_scenarios + 1)
 scenario_var.units = 'no'
 scenario_var.long_name = 'scenario'
-
-# iterate through scenarios
-var_data = -99 * ones((num_years, num_scenarios, num_vars))
-for i in range(num_scenarios):
-    try:
-        data = [l.split() for l in tuple(open(outfiles[i]))]
-    except IOError:
-        print 'Out file', i + 1, 'does not exist'
-        continue
-    if len(data) < 5:
-        continue # no data, move to next file
-    num_data = len(data[4 :])
-    
-    # search for variables within list of all variables
-    all_variables = data[2]
-    variable_idx = []
-    for v in variables:
-        if not v in all_variables:
-            raise Exception('Variable {:s} not in out file {:d}'.format(v, i + 1))
-        else:
-            variable_idx.append(all_variables.index(v))
-   
-    # remove header, select variables, and convert to numpy array of doubles
-    prev_year = nan; prev_idx = nan
-    date_idx = all_variables.index('Date')
-    for j in range(num_data):
-        if data[4 + j] == []:
-            continue # blank line
-        split_date = data[4 + j][date_idx].split('/')
-        year = int(split_date[2])
-        month = int(split_date[1])
-        if not j:
-            idx = 0 if year == ref_year + 1 and month <= 2 else dates.index(year)
-        else:
-            dy = year - prev_year
-            if dy <= 1:
-                # same year but different month OR next year => next growing season
-                idx = prev_idx + 1
-            else:
-                # more than one year has elapsed
-                idx = prev_idx + dy - (month <= 2)
-        array_data = asarray(data[4 + j])[:, variable_idx]
-        array_data[array_data == '?'] = '-99' # replace '?' with '-99'
-        var_data[idx, i, :] = array_data.astype(double)
-        prev_year = year # save previous year and index
-        prev_idx = idx
 
 # add data
 for i in range(num_vars):

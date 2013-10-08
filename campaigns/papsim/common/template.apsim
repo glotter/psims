@@ -221,6 +221,7 @@
           <script>
             <text>
         if (today = date('[date]') then
+              planting_date=dd_mmm_yyyy
               [crop] sow plants =[density], sowing_depth = [depth], cultivar = [cultivar], row_spacing = [row_spacing], crop_class = [class]
          endif
                </text>

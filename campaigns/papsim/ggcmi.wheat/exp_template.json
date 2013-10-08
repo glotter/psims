@@ -6,6 +6,7 @@
       "reporting_frequency": "yearly",
       "output_variables": [
         {"name": "dd/mm/yyyy as Date"},
+        ("name": "planting_date"},
         {"name": "biomass"},
         {"name": "yield"},
         {"name": "grain_protein"},

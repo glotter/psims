@@ -6,6 +6,7 @@
       "reporting_frequency": "harvesting",
       "output_variables": [
         {"name": "dd/mm/yyyy as Date"},
+        {"name": "planting_date"},
         {"name": "biomass"},
         {"name": "yield"},
         {"name": "lai_max"},
