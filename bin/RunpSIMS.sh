@@ -161,7 +161,7 @@ if [ _$postprocess != __ ]; then
  postprocess=$( echo $postprocess | sed s/:/' '/g )
  mkdir -p parts
  mkdir -p parts/$latidx
- postprocessToRun="$postprocess --latidx $latidx --lonidx $lonidx --ref_year $ref_year --delta $delta -y $num_years -s $scens -v $variables --output parts/$latidx/$lonidx.psims.nc"
+ postprocessToRun="$postprocess --latidx $latidx --lonidx $lonidx --ref_year $ref_year --delta $delta -y $num_years -s $scens -v $variables -u $var_units --output parts/$latidx/$lonidx.psims.nc"
  ./$postprocessToRun
  exit_status=$?
 fi
