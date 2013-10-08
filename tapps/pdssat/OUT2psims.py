@@ -3,11 +3,10 @@
 # import modules
 import os
 import datetime
-from os.path import isfile
 from netCDF4 import Dataset
 from optparse import OptionParser
 from collections import OrderedDict as od
-from numpy import empty, zeros, ones, double, array, resize, vectorize
+from numpy import empty, zeros, double, array, resize, vectorize
 
 # dictionaries of variable descriptions and units
 var_names = {'SDAT': 'Simulation start date', 'PDAT': 'Planting date', \
@@ -25,7 +24,7 @@ var_names = {'SDAT': 'Simulation start date', 'PDAT': 'Planting date', \
              'DRCM': 'Season water drainage', 'SWXM': 'Extractable water at maturity', \
              'NI#M': 'N applications', 'NICM': 'Inorganic N applied', \
              'NFXM': 'N fixed during season (kg/ha)', 'NUCM': 'N uptake during season', \
-             'NLCM': 'N leacehd during season', 'NIAM': 'Inorganic N at maturity', \
+             'NLCM': 'N leached during season', 'NIAM': 'Inorganic N at maturity', \
              'CNAM': 'Tops N at maturity', 'GNAM': 'Grain N at maturity', \
              'PI#M': 'Number of P applications', 'PICM': 'Inorganic P applied', \
              'PUPC': 'Seasonal cumulative P uptake', 'SPAM': 'Soil P at maturity', \
@@ -44,9 +43,9 @@ var_names = {'SDAT': 'Simulation start date', 'PDAT': 'Planting date', \
              'TMINA': 'Avg minimum air temperature', 'SRADA': 'Average solar radiation, planting - harvest', \
              'DAYLA': 'Average daylength, planting - harvest', 'CO2A': 'Average atmospheric CO2, planting - harvest', \
              'PRCP': 'Total season precipitation, planting - harvest', 'ETCP': 'Total evapotransportation, planting - harvest'}
-var_units = {'SDAT': 'YrDoy', 'PDAT': 'YrDoy', \
-             'EDAT': 'YrDoy', 'ADAT': 'YrDoy', \
-             'MDAT': 'YrDoy', 'HDAT': 'YrDoy', \
+var_units = {'SDAT': 'YrDoy', 'PDAT': 'Doy', \
+             'EDAT': 'YrDoy', 'ADAT': 'Days since planting', \
+             'MDAT': 'Days since planting', 'HDAT': 'YrDoy', \
              'DWAP': 'kg [dm]/ha', 'CWAM': 'kg [dm]/ha', \
              'HWAM': 'kg [dm]/ha', 'HWAH': 'kg [dm]/ha', \
              'BWAH': 'kg [dm]/ha', 'PWAM': 'kg [dm]/ha', \
@@ -126,9 +125,7 @@ parser.add_option("--lonidx", dest = "lonidx", default = 1, type = "string",
 (options, args) = parser.parse_args()
 
 # open summary file
-file_exists = isfile(options.inputfile)
-if file_exists:
-    data = open(options.inputfile).readlines()
+data = open(options.inputfile).readlines()
 
 # get variables
 num_scenarios = options.num_scenarios
@@ -148,7 +145,7 @@ all_variables = start_idx.keys()
 
 # search for variables within list of all variables
 prohibited_variables = ['C#', 'CR', 'MODEL', 'TNAM', 'FNAM', 'WSTA', 'SOIL_ID']
-variable_idx = zeros((len(variables),), dtype = int)
+variable_idx = zeros((len(variables),))
 for i in range(len(variables)):
     v = variables[i]
     if not v in all_variables:
@@ -171,23 +168,39 @@ lon = -180. + delta * (lonidx - 0.5)
 ref_date = datetime.datetime(options.ref_year, 1, 1)
 
 # parse data body
-nrows = num_years * num_scenarios
-ncols = len(variable_idx)
-if not file_exists or len(data) < 5:
-    trim_data = -99 * ones((nrows, ncols))
-else:
-    trim_data = empty((nrows, ncols), dtype = '|S20')
-    for i in range(nrows):
-        if data[i + 4] == []:
-            continue # blank line
-        for j in range(ncols):
-            vidx = variable_idx[j]
-            sidx = start_idx.values()[vidx]
-            eidx = len(data[3]) - 1 if vidx == ncols - 1 else start_idx.values()[vidx + 1]
-            trim_data[i, j] = data[i + 4][sidx : eidx].strip() # remove spaces
-    func = vectorize(lambda x: '*' in x) # change values with * to -99
-    trim_data[func(trim_data)] = '-99'
-    trim_data = trim_data.astype(double) # convert to double
+nrows = len(data) - 4
+ncols = len(all_variables)
+trim_data = empty((nrows, ncols), dtype = '|S20')
+for i in range(nrows):
+    for j in range(ncols):
+        sidx = start_idx.values()[j]
+        eidx = len(data[3]) - 1 if j == ncols - 1 else start_idx.values()[j + 1]
+        trim_data[i, j] = data[i + 4][sidx : eidx].strip() # remove spaces
+if len(trim_data) % num_years:
+    raise Exception('Size of data not divisible by number of years')
+if len(trim_data) < num_years * num_scenarios:
+    raise Exception('Exceeded size of data')
+
+# select variables and convert to double
+trim_data = trim_data[:, list(variable_idx)]
+
+# change values with * to -99
+func = vectorize(lambda x: '*' in x)
+trim_data[func(trim_data)] = '-99'
+
+# convert to double
+trim_data = trim_data.astype(double)
+
+# convert units on the date variables
+# [[je: james should probably fix this to make sure its smart enough to handle
+#       cases where the user doesn't ask for ADAT or PDAT or whatever]]
+from numpy import nan;
+trim_data[trim_data == -99] = nan
+trim_data[:, variables == 'PDAT'] =   trim_data[:, variables == 'PDAT'] % 1000
+trim_data[:, variables == 'ADAT'] = ((trim_data[:, variables == 'ADAT'] % 1000) - trim_data[:, variables == 'PDAT']) % 365
+trim_data[:, variables == 'MDAT'] = ((trim_data[:, variables == 'MDAT'] % 1000) - trim_data[:, variables == 'PDAT']) % 365
+from numpy import isnan; 
+trim_data[isnan(trim_data)] = -99
 
 # create pSIMS NetCDF4 file
 dirname = os.path.dirname(options.outputfile)
@@ -223,7 +236,7 @@ scenario_var.long_name = 'scenario'
 # add selected variables
 for i in range(len(variables)):
     var = root_grp.createVariable(variables[i], 'f4', ('time', 'scenario', 'latitude', 'longitude',))
-    var[:] = resize(trim_data[:, i], (num_scenarios, num_years)).T
+    var[:] = resize(trim_data[: num_years * num_scenarios, i], (num_scenarios, num_years)).T
     var.units = units
     var.long_name = var_names[variables[i]]
 
