@@ -6,7 +6,7 @@ import datetime
 from netCDF4 import Dataset
 from optparse import OptionParser
 from collections import OrderedDict as od
-from numpy import empty, zeros, double, array, resize, vectorize
+from numpy import nan, isnan, empty, zeros, double, array, resize, vectorize
 
 # dictionaries of variable descriptions and units
 var_names = {'SDAT': 'Simulation start date', 'PDAT': 'Planting date', \
@@ -184,22 +184,20 @@ if len(trim_data) < num_years * num_scenarios:
 # select variables and convert to double
 trim_data = trim_data[:, list(variable_idx)]
 
-# change values with * to -99
-func = vectorize(lambda x: '*' in x)
+# change values with *, -99.9, -99.90, and 9999999 to -99
+func = vectorize(lambda x: '*' in x or '-99.9' == x or '-99.90' == x or '9999999' == x)
 trim_data[func(trim_data)] = '-99'
 
 # convert to double
 trim_data = trim_data.astype(double)
 
 # convert units on the date variables
-# [[je: james should probably fix this to make sure its smart enough to handle
+# [[JE: James should probably fix this to make sure its smart enough to handle
 #       cases where the user doesn't ask for ADAT or PDAT or whatever]]
-from numpy import nan;
 trim_data[trim_data == -99] = nan
 trim_data[:, variables == 'PDAT'] =   trim_data[:, variables == 'PDAT'] % 1000
 trim_data[:, variables == 'ADAT'] = ((trim_data[:, variables == 'ADAT'] % 1000) - trim_data[:, variables == 'PDAT']) % 365
 trim_data[:, variables == 'MDAT'] = ((trim_data[:, variables == 'MDAT'] % 1000) - trim_data[:, variables == 'PDAT']) % 365
-from numpy import isnan; 
 trim_data[isnan(trim_data)] = -99
 
 # create pSIMS NetCDF4 file
