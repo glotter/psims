@@ -102,7 +102,7 @@ for i in range(num_scenarios):
         if num_data == num_years: # number of dates in file exactly matches number of years
             idx = j
         else:
-            pyear = data[4 + j][pdate_idx].split('_')[2]
+            pyear = int(data[4 + j][pdate_idx].split('_')[2])
             idx = dates.index(pyear)
             # split_date = data[4 + j][date_idx].split('/')
             # year = int(split_date[2])
