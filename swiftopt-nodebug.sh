@@ -132,7 +132,7 @@ fi
 echo
 echo Running extractions.. please wait
 NCconcat=$( echo $NCconcat | sed s/:/' '/g )
-NCconcattorun="$NCconcat "
+NCconcattorun="$NCconcat $variables $long_names $var_units $num_lons $num_lats $delta $num_years $scens $ref_year $lat_zero $lon_zero ./parts $out_file"
 time ./$NCconcattorun
 
 exit
