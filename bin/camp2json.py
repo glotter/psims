@@ -222,7 +222,7 @@ for e in exp['experiments']:
         idate = man['events'][3]['date']
         dict_replace(e, 'date', str(ref_year) + idate[4 :], occ = 4) # irrigation date
         hdate = man['events'][4]['date']
-        dict_replace(e, 'date', str(ref_year) + hdate[4 :], occ = 5) # harvest date
+        dict_replace(e, 'date', str(ref_year + 1) + '1231', occ = 5) # harvest date
     soil = get_obj(e, 'soil', {})
     if soil != {}:
         sdate = soil['sadat']
