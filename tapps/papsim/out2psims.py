@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 
 # import modules
+import calendar
 import os, datetime
 from netCDF4 import Dataset as nc
 from optparse import OptionParser
-from numpy import array, ones, asarray, double, nan
+from numpy import array, ones, asarray, double, nan, where
 
 def compute_next_idx(year, month, prev_idx, prev_year):
     dy = year - prev_year
@@ -71,6 +72,12 @@ ref_date = datetime.datetime(options.ref_year, 1, 1)
 num_years = options.num_years
 dates = range(ref_year, ref_year + num_years)
 
+# whether or not planting_date is among reported variables
+has_pdate = 'planting_date' in variables
+if has_pdate:
+    pdate_idx = where(variables == 'planting_date')[0][0]
+    mth2num = {v: k for k, v in enumerate(calendar.month_abbr)}
+
 # iterate through scenarios
 var_data = -99 * ones((num_years, num_scenarios, num_vars))
 for i in range(num_scenarios):
@@ -95,26 +102,22 @@ for i in range(num_scenarios):
     # remove header, select variables, and convert to numpy array of doubles
     prev_year = nan; prev_idx = nan
     date_idx = all_variables.index('Date')
-    pdate_idx = all_variables.index('planting_date')
+    pdate_idx2 = all_variables.index('planting_date')
     for j in range(num_data):
         if data[4 + j] == []:
             continue # blank line
         if num_data == num_years: # number of dates in file exactly matches number of years
             idx = j
         else:
-            pyear = int(data[4 + j][pdate_idx].split('_')[2])
+            pyear = int(data[4 + j][pdate_idx2].split('_')[2])
             idx = dates.index(pyear)
-            # split_date = data[4 + j][date_idx].split('/')
-            # year = int(split_date[2])
-            # month = int(split_date[1])
-            # if not j:
-            #     idx = 0 if year == ref_year + 1 and month <= 2 else dates.index(year)
-            # else:
-            #     idx = compute_next_idx(year, month, prev_idx, prev_year)
-            # prev_year = year # save previous year and index
-            # prev_idx = idx
         array_data = asarray(data[4 + j])[:, variable_idx]
         array_data[array_data == '?'] = '-99' # replace '?' with '-99'
+        if has_pdate:
+            # convert pdate from dd_mmm_yyyy to Julian day
+            pdate = array_data[pdate_idx].split('_')
+            pdate = datetime.date(int(pdate[2]), mth2num[pdate[1]], int(pdate[0]))
+            array_data[pdate_idx] = pdate.strftime('%j')
         var_data[idx, i, :] = array_data.astype(double)
 
 # create pSIMS NetCDF3 file
