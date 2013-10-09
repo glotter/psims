@@ -22,4 +22,4 @@ variables        PDAT,ADAT,MDAT,CWAM,HWAM,IRCM,PRCP,ETCP,SRADA,LAIX,NUCM,TMAXA,T
 var_units        "DOY,Days,Days,kg/ha,kg/ha,mm,mm,mm,MJ/m2/day,frac,kg[N]/ha,C,C"
 long_names       "PlantDate,AnthesisDate,MaturityDate,TotalBiomass,Yield,IrrigationApplied,GrowingSeasonPrecip,GrowingSeasonET,GrowingSeasonSolarAvg,MaxLeafAreaIndex,NitrogenUptake,GrowingSeasonMaxTempAvg,GrowingSeasonMinTempAvg"
 postprocess      ./OUT2psims.py:-i:Summary.OUT
-NCconcat         ../bin/append.sh:PDAT,ADAT,MDAT,CWAM,HWAM,IRCM,PRCP,ETCP,SRADA,LAIX,NUCM,TMAXA,TMINA:"PlantDate,AnthesisDate,MaturityDate,TotalBiomass,Yield,IrrigationApplied,GrowingSeasonPrecip,GrowingSeasonET,GrowingSeasonSolarAvg,MaxLeafAreaIndex,NitrogenUptake,GrowingSeasonMaxTempAvg,GrowingSeasonMinTempAvg":"DOY,Days,Days,kg/ha,kg/ha,mm,mm,mm,MJ/m2/day,frac,kg[N]/ha,C,C":720:360:30:31:30:1980:90:-180:./parts:out.psims.dssat45.agmerra.wheat.nc4
+NCconcat         ../bin/parallel.sbatch

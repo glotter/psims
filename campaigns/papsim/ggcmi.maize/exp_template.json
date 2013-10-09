@@ -42,14 +42,13 @@
         "icrdp": "30",
         "icdat": "19800101",
         "standing_fraction": "0",
-        "water_fraction_full": "0.75",
+        "water_fraction_full": "0.5",
         "soilLayer": [
-          {"ich2o": ".18" ,"icno3": "1.8","icbl": "22" ,"icnh4": "2.5"},
-          {"ich2o": ".195","icno3": "4.5","icbl": "52" ,"icnh4": "3"},
-          {"ich2o": ".21" ,"icno3": "5"  ,"icbl": "82" ,"icnh4": "3.5"},
-          {"ich2o": ".2"  ,"icno3": "2"  ,"icbl": "112","icnh4": "2"},
-          {"ich2o": ".2"  ,"icno3": ".7" ,"icbl": "127","icnh4": "1"},
-          {"ich2o": ".2"  ,"icno3": ".6" ,"icbl": "156","icnh4": "1"}
+          {"icno3": ".1"  ,"icbl": "5"  ,"icnh4": ".1"},
+          {"icno3": ".1"  ,"icbl": "15" ,"icnh4": ".1"},
+          {"icno3": ".1"  ,"icbl": "30" ,"icnh4": ".1"},
+          {"icno3": ".1"  ,"icbl": "100","icnh4": ".1"},
+          {"icno3": ".1" ,"icbl": "200","icnh4": ".1"}
         ]
       },
       "weather": {

@@ -1,11 +1,11 @@
 model            dssat45
-out_file         out.psims.dssat45.wfdei_gpcc.maize.nc4
+out_file         out.psims.dssat45.erai.maize.nc4
 campaign         /project/joshuaelliott/psims/campaigns/pdssat/ggcmi.maize3
 soils            /project/joshuaelliott/psims/data/soils/hwsd200.wrld.30min
 weather          /project/joshuaelliott/psims/data/clim/wfdei
 refdata          /project/joshuaelliott/psims/campaigns/pdssat/common.isimip
 bintransfer      $PWD/bin/DSCSM045.EXE,$PWD/tapps/pdssat/psims2WTH.py,$PWD/tapps/pdssat/OUT2psims.py,$PWD/bin/camp2json.py,$PWD/tapps/pdssat/jsons2dssat.py
-tappwth          psims2WTH.py:-o:GENERIC1.WTH:-v:tasmin,tasmax,rsds,pr_gpcc,wind
+tappwth          psims2WTH.py:-o:GENERIC1.WTH:-v:tasmin,tasmax,rsds,pr,wind
 tappcamp         camp2json.py:-c:Campaign.nc4:-e:exp_template.json:-o:experiment.json
 tappinp          jsons2dssat.py:-x:X1234567.MZX:-s:soil.json:-e:experiment.json:-S:SOIL.SOL
 executable       DSCSM045.EXE:A:X1234567.MZX
@@ -22,4 +22,4 @@ variables        PDAT,ADAT,MDAT,CWAM,HWAM,IRCM,PRCP,ETCP,SRADA,LAIX,NUCM,TMAXA,T
 var_units        "DOY,Days,Days,kg/ha,kg/ha,mm,mm,mm,MJ/m2/day,frac,kg[N]/ha,C,C"
 long_names       "PlantDate,AnthesisDate,MaturityDate,TotalBiomass,Yield,IrrigationApplied,GrowingSeasonPrecip,GrowingSeasonET,GrowingSeasonSolarAvg,MaxLeafAreaIndex,NitrogenUptake,GrowingSeasonMaxTempAvg,GrowingSeasonMinTempAvg"
 postprocess      ./OUT2psims.py:-i:Summary.OUT
-NCconcat         ../bin/append.sh:PDAT,ADAT,MDAT,CWAM,HWAM,IRCM,PRCP,ETCP,SRADA,LAIX,NUCM,TMAXA,TMINA:"PlantDate,AnthesisDate,MaturityDate,TotalBiomass,Yield,IrrigationApplied,GrowingSeasonPrecip,GrowingSeasonET,GrowingSeasonSolarAvg,MaxLeafAreaIndex,NitrogenUptake,GrowingSeasonMaxTempAvg,GrowingSeasonMinTempAvg":"DOY,Days,Days,kg/ha,kg/ha,mm,mm,mm,MJ/m2/day,frac,kg[N]/ha,C,C":720:360:30:31:12:1979:./parts:out.psims.dssat45.wfdei_gpcc.maize.nc4
+NCconcat         ../bin/append.sh

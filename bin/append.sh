@@ -275,6 +275,7 @@ for ((i = 0; i < ${#dcts[@]}; i++)); do
         # insert missing longitudes at beginning
         insert_missing $lat_idx $lat_idx 0 $lon_idx "longitude,scenario,latitude,time" "create" $sum_lon_file
         # append
+        # echo $grid2", "$lon_idx
         append_file $sum_lon_file $lat_lon_file
       else
         # copy file
@@ -287,6 +288,7 @@ for ((i = 0; i < ${#dcts[@]}; i++)); do
         insert_missing $lat_idx $lat_idx $next_lon_idx $lon_idx "longitude,scenario,latitude,time" "append" $sum_lon_file
       fi
       # append
+      # echo $grid2", "$lon_idx
       append_file $sum_lon_file $lat_lon_file
     fi
 

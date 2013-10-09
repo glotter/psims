@@ -1,4 +1,5 @@
 model            apsim75
+out_file         out.psims.apsim75.agmerra.maize.nc4
 campaign         /project/joshuaelliott/psims/campaigns/papsim/ggcmi.maize
 soils            /project/joshuaelliott/psims/data/soils/hwsd200.wrld.30min
 weather          /project/joshuaelliott/psims/data/clim/agmerra
@@ -9,5 +10,16 @@ tappcamp         camp2json.py:-c:Campaign.nc4:-e:exp_template.json:-o:experiment
 tappinp          jsons2apsim.py:-o:Generic.apsim:-t:template.apsim:-s:soil.json:-e:experiment.json
 executable       mono:./Model/Apsim.exe
 outtypes         .met,.apsim,.out,.sum,.json
-postprocess      ./out2psims.py:-i:Generic.out:-s:4:-y:31:-v:biomass,yield,lai_max,DaysAfterSowing,flowering_das,maturity_das,Rain_year,RainIn,Temp_year,TempIn,Radiation_year,RadiationIn,IrrigationIn,WaterUse,actual_ET,N_uptake,FertiliserIn,NO3_leaching,N2Oemission_year,N2OemissionIn,CO2emission_year,CO2emissionIn:-d:30:-r:1980
-NCconcat         ../bin/append.sh:biomass,yield,lai_max,DaysAfterSowing,flowering_das,maturity_das,Rain_year,RainIn,Temp_year,TempIn,Radiation_year,RadiationIn,IrrigationIn,WaterUse,actual_ET,N_uptake,FertiliserIn,NO3_leaching,N2Oemission_year,N2OemissionIn,CO2emission_year,CO2emissionIn:"biomass,yield,lai_max,DaysAfterSowing,flowering_das,maturity_das,Rain_year,RainIn,Temp_year,TempIn,Radiation_year,RadiationIn,IrrigationIn,WaterUse,actual_ET,N_uptake,FertiliserIn,NO3_leaching,N2Oemission_year,N2OemissionIn,CO2emission_year,CO2emissionIn":"kg/ha,kg/ha,m2/m2,days,days,days,mm,mm,oC,oC,MJ/m2,MJ/m2,mm,mm,mm,kgN/ha,kg/ha,kgN/ha,kgN2O/ha,kgN2O/ha,kg,kgC/ha,kgC/ha":720:360:30:31:4:1980:./parts:out.psims.apsim75.agmerra.maize.nc4
+ref_year         1980
+num_years        31
+delta            30
+num_lats         360
+num_lons         720
+lat_zero         90
+lon_zero         -180
+scens            4
+variables        biomass,yield,planting_date,lai_max,DaysAfterSowing,flowering_das,maturity_das,Rain_year,RainIn,Temp_year,TempIn,Radiation_year,RadiationIn,IrrigationIn,WaterUse,actual_ET,N_uptake,FertiliserIn,NO3_leaching,N2Oemission_year,N2OemissionIn,CO2emission_year,CO2emissionIn
+var_units        "kg/ha,kg/ha,dd_mm_yyyy,m2/m2,days,days,days,mm,mm,oC,oC,MJ/m2,MJ/m2,mm,mm,mm,kgN/ha,kg/ha,kgN/ha,kgN2O/ha,kgN2O/ha,kgC/ha,kgC/ha"
+long_names       "biomass,yield,DateOfPlanting,lai_max,DaysAfterSowing,flowering_das,maturity_das,Rain_year,RainIn,Temp_year,TempIn,Radiation_year,RadiationIn,IrrigationIn,WaterUse,actual_ET,N_uptake,FertiliserIn,NO3_leaching,N2Oemission_year,N2OemissionIn,CO2emission_year,CO2emissionIn"
+postprocess      ./out2psims.py:-i:Generic.out
+NCconcat         ../bin/append.sh

@@ -1,0 +1,214 @@
+{
+  "experiments": [
+  {
+      "crop_name": "Wheat",
+      "start_date": "01/01/1982",
+      "end_date": "31/12/2011",
+      "log": "",  
+      "reporting_frequency": "harvesting",
+      "output_variables": [
+        {"name": "dd/mm/yyyy as Date"},
+        {"name": "planting_date"},
+        {"name": "biomass"},
+        {"name": "yield"},
+        {"name": "DaysAfterSowing"},
+        {"name": "flowering_das"},
+        {"name": "maturity_das"},
+        {"name": "RainIn"},
+        {"name": "Temp_year"},
+        {"name": "TempIn"},
+        {"name": "RadiationIn"},
+        {"name": "IrrigationIn"},
+        {"name": "WaterUse"},
+        {"name": "actual_ET"},
+        {"name": "FertiliserIn"},
+        {"name": "NO3_leaching"},
+        {"name": "N2Oemission_year"},
+        {"name": "N2OemissionIn"},
+        {"name": "CO2emission_year"},
+        {"name": "CO2emissionIn"}
+      ],
+      "initial_condition": {
+        "icrn": "1",
+        "icrip": "100",
+        "icnd": "0",
+        "icrp": "0",
+        "icrt": "300",
+        "icrz#": "1",
+        "icrze": "1",
+        "icrag": "1000",
+        "icrdp": "10",
+        "icdat": "19820101",
+        "standing_fraction": "0",
+        "water_fraction_full": "0.5",
+    "soilLayer": [
+      {
+        "icno3": ".1",
+        "icbl": "5",
+        "icnh4": ".1"
+      },
+      {
+        "icno3": ".1",
+        "icbl": "15",
+        "icnh4": ".1"
+      },
+      {
+        "icno3": ".1",
+        "icbl": "30",
+        "icnh4": ".1"
+      },
+      {
+        "icno3": ".1",
+        "icbl": "100",
+        "icnh4": ".1"
+      },
+      {
+        "icno3": ".1",
+        "icbl": "200",
+        "icnh4": ".1"
+      }
+    ]
+      },
+      "weather": {
+        "file": "Generic"
+      },
+      "planting": {
+        "pdate": "1-oct",
+        "edate": "1-sep",
+        "cultivar": "me11",
+        "row_spacing": "170",
+        "depth": "30",
+        "sowing_density": "400"
+      },
+      "fertilizer": {
+        "initial_amount": "100",
+        "type": "NH4NO3",
+        "days_after_sowing": "45",
+        "subsequent_amount": "100",
+        "depth": "40"
+      },
+      "irrigation": {
+        "automatic_irrigation": "off",
+        "asw_depth": "600",
+        "crit_fr_asw": "0.75",
+        "efficiency": "1",
+        "allocation_limits": "off",
+        "allocation": "10",
+        "default_no3_conc": "0.0",
+        "default_nh4_conc": "0.0",
+        "default_cl_conc": "0.0"
+      },
+      "reset": {
+        "date": "1-sep",
+        "water": "yes",
+        "nitrogen": "no",
+        "surfaceOM": "yes"
+      }
+},
+  {
+      "crop_name": "Wheat",
+      "start_date": "01/01/1982",
+      "end_date": "31/12/2011",
+      "log": "",  
+      "reporting_frequency": "harvesting",
+      "output_variables": [
+        {"name": "dd/mm/yyyy as Date"},
+        {"name": "planting_date"},
+        {"name": "biomass"},
+        {"name": "yield"},
+        {"name": "DaysAfterSowing"},
+        {"name": "flowering_das"},
+        {"name": "maturity_das"},
+        {"name": "RainIn"},
+        {"name": "Temp_year"},
+        {"name": "TempIn"},
+        {"name": "RadiationIn"},
+        {"name": "IrrigationIn"},
+        {"name": "WaterUse"},
+        {"name": "actual_ET"},
+        {"name": "FertiliserIn"},
+        {"name": "NO3_leaching"},
+        {"name": "N2Oemission_year"},
+        {"name": "N2OemissionIn"},
+        {"name": "CO2emission_year"},
+        {"name": "CO2emissionIn"}
+      ],
+      "initial_condition": {
+        "icrn": "1",
+        "icrip": "100",
+        "icnd": "0",
+        "icrp": "0",
+        "icrt": "300",
+        "icrz#": "1",
+        "icrze": "1",
+        "icrag": "1000",
+        "icrdp": "10",
+        "icdat": "19820101",
+        "standing_fraction": "0",
+        "water_fraction_full": "0.5",
+    "soilLayer": [
+      {
+        "icno3": ".1",
+        "icbl": "5",
+        "icnh4": ".1"
+      },
+      {
+        "icno3": ".1",
+        "icbl": "15",
+        "icnh4": ".1"
+      },
+      {
+        "icno3": ".1",
+        "icbl": "30",
+        "icnh4": ".1"
+      },
+      {
+        "icno3": ".1",
+        "icbl": "100",
+        "icnh4": ".1"
+      },
+      {
+        "icno3": ".1",
+        "icbl": "200",
+        "icnh4": ".1"
+      }
+    ]
+      },
+      "weather": {
+        "file": "Generic"
+      },
+      "planting": {
+        "pdate": "1-oct",
+        "edate": "1-sep",
+        "cultivar": "me11",
+        "row_spacing": "170",
+        "depth": "30",
+        "sowing_density": "400"
+      },
+      "fertilizer": {
+        "initial_amount": "100",
+        "type": "NH4NO3",
+        "days_after_sowing": "45",
+        "subsequent_amount": "100",
+        "depth": "40"
+      },
+      "irrigation": {
+        "automatic_irrigation": "on",
+        "asw_depth": "600",
+        "crit_fr_asw": "0.75",
+        "efficiency": "1",
+        "allocation_limits": "off",
+        "allocation": "10",
+        "default_no3_conc": "0.0",
+        "default_nh4_conc": "0.0",
+        "default_cl_conc": "0.0"
+      },
+      "reset": {
+        "date": "1-sep",
+        "water": "yes",
+        "nitrogen": "no",
+        "surfaceOM": "yes"
+      }
+    }
+  ]
+}
