@@ -710,7 +710,7 @@ class DSSATXFileOutput:
         sdate = '{:5s}'.format(sdate)
         
         if self.__get_obj(tr_data, 'hadat_valid', '').strip() != '':
-            har_opt = 'R'
+            har_opt = 'M'   #modified by JWE to avoid the annoying problem where harvest gets reset to R which we never want. 
         
         # GENERAL
         sb = '@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL\n'

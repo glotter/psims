@@ -33,9 +33,9 @@
           "ph2od": "30",
           "pfday": "113",
           "ph2ol": "40",
-          "pfyer": "80",
+          "pfyer": "79",
           "plday": "173",
-          "plyer": "80",
+          "plyer": "79",
           "ph2ou": "100",
           "pstmx": "40",
           "pstmn": "10"
@@ -86,7 +86,7 @@
         },
         "harvests": {
           "hfrst": "0",
-          "hlyer": "81",
+          "hlyer": "80",
           "hpcnr": "0",
           "hpcnp": "100",
           "hlday": "365"
@@ -103,7 +103,7 @@
           "start": "S",
           "nreps": "1",
           "sdday": "001",
-          "sdyer": "80",
+          "sdyer": "79",
           "smodel": "MZCER"
         },
         "nitrogen": {
@@ -139,7 +139,7 @@
         "cul_name": "HY01",
         "plma": "S",
         "seqid": "1",
-        "date": "19800101",
+        "date": "19790101",
         "pl_name": "1979I",
         "plpop": "5.0",
         "event": "planting"
@@ -181,7 +181,7 @@
       {
         "seqid": "1",
         "ha_name": "Maize",
-        "date": "",
+        "date": "19811231",
         "event": "harvest"
       }
     ]
@@ -200,7 +200,7 @@
           "eday": "A   0",
           "eco2": "R 320",
           "envnam": "EnvMod",
-          "odyer": "80",
+          "odyer": "79",
           "edew": "A   0"
         }
       }
@@ -214,13 +214,13 @@
       }
     ],
     "sa": "1",
-    "sadat": "19800410"
+    "sadat": "19790410"
   },
   "initial_conditions": {
     "icpcr": "MZ",
     "icrp": "0",
     "icrze": "1",
-    "icdat": "19800101",
+    "icdat": "19790101",
     "icrip": "100",
     "icrn": "1",
     "ic_name": "1000kg Residue",

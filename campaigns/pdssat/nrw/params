@@ -1,5 +1,5 @@
 model            dssat45
-out_file         out.psims.dssat45.nrw.wheat.nc4
+out_file         out.psims.dssat45.nrw.wheat
 campaign         /project/joshuaelliott/psims/campaigns/pdssat/nrw
 soils            /project/joshuaelliott/psims/data/soils/nrw
 weather          /project/joshuaelliott/psims/data/clim/nrw
@@ -9,7 +9,7 @@ tappwth          psims2WTH.py:-o:GENERIC1.WTH:-v:tmin,tmax,solar,precip,wind
 tappcamp         echo.sh
 tappinp          jsons2dssat.py:-x:X1234567.WHX:-s:soil.json:-e:experiment.json:-S:SOIL.SOL
 executable       DSCSM045.EXE:A:X1234567.WHX
-outtypes         .WTH,.WHX,.SOL,.OUT,.json
+outtypes         .WTH,.WHX,.SOL,.OUT,.json,.txt
 ref_year         1982
 num_years        30
 delta            0.5
@@ -22,4 +22,3 @@ variables        PDAT,ADAT,MDAT,CWAM,HWAM,IRCM,PRCP,ETCP,SRADA,LAIX,NUCM,TMAXA,T
 var_units        "DOY,Days,Days,kg/ha,kg/ha,mm,mm,mm,MJ/m2/day,frac,kg[N]/ha,C,C"
 long_names       "PlantDate,AnthesisDate,MaturityDate,TotalBiomass,Yield,IrrigationApplied,GrowingSeasonPrecip,GrowingSeasonET,GrowingSeasonSolarAvg,MaxLeafAreaIndex,NitrogenUptake,GrowingSeasonMaxTempAvg,GrowingSeasonMinTempAvg"
 postprocess      ./OUT2psims.py:-i:Summary.OUT
-NCconcat         ../bin/append.sh

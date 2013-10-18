@@ -108,6 +108,7 @@ if [ "$model" == "apsim75" ] ; then
  mv *.xml Model/               # If user adds custom [crop].xml file, overwrites the default
  mv ./Model/Apsim.xml ./
  ./paths.sh                    # Sets boost and mono and ld_lib paths for the worker node
+ export MONO_THREADS_PER_CPU=1 # This restricts mono to 1 thread per CPU to avoid thread limit
  mono ./Model/ApsimToSim.exe Generic.apsim        # converts .apsim file into N .sim files
  for file in $( ls *.sim ) ; do
   commandToRun="$executable $file"

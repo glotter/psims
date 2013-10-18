@@ -3,8 +3,8 @@
 #SBATCH --time=05:00:00
 #SBATCH --ntasks=1
 #SBATCH --exclusive
-#SBATCH --mem-per-cpu=16384
-#SBATCH --partition=westmere
+#SBATCH --mem-per-cpu=51200
+#SBATCH --partition=bigmem
 
 module load parallel
 

@@ -43,29 +43,29 @@
         "water_fraction_full": "0.5",
     "soilLayer": [
       {
-        "icno3": ".1",
+        "icno3": ".5",
         "icbl": "5",
-        "icnh4": ".1"
+        "icnh4": ".5"
       },
       {
-        "icno3": ".1",
+        "icno3": ".5",
         "icbl": "15",
-        "icnh4": ".1"
+        "icnh4": ".5"
       },
       {
-        "icno3": ".1",
+        "icno3": ".5",
         "icbl": "30",
-        "icnh4": ".1"
+        "icnh4": ".5"
       },
       {
-        "icno3": ".1",
+        "icno3": ".5",
         "icbl": "100",
-        "icnh4": ".1"
+        "icnh4": ".5"
       },
       {
-        "icno3": ".1",
+        "icno3": ".5",
         "icbl": "200",
-        "icnh4": ".1"
+        "icnh4": ".5"
       }
     ]
       },
@@ -81,10 +81,10 @@
         "sowing_density": "400"
       },
       "fertilizer": {
-        "initial_amount": "100",
+        "initial_amount": "250",
         "type": "NH4NO3",
-        "days_after_sowing": "45",
-        "subsequent_amount": "100",
+        "days_after_sowing": "100",
+        "subsequent_amount": "250",
         "depth": "40"
       },
       "irrigation": {
@@ -101,7 +101,7 @@
       "reset": {
         "date": "1-sep",
         "water": "yes",
-        "nitrogen": "no",
+        "nitrogen": "yes",
         "surfaceOM": "yes"
       }
 },
@@ -148,29 +148,29 @@
         "water_fraction_full": "0.5",
     "soilLayer": [
       {
-        "icno3": ".1",
+        "icno3": ".5",
         "icbl": "5",
-        "icnh4": ".1"
+        "icnh4": ".5"
       },
       {
-        "icno3": ".1",
+        "icno3": ".5",
         "icbl": "15",
-        "icnh4": ".1"
+        "icnh4": ".5"
       },
       {
-        "icno3": ".1",
+        "icno3": ".5",
         "icbl": "30",
-        "icnh4": ".1"
+        "icnh4": ".5"
       },
       {
-        "icno3": ".1",
+        "icno3": ".5",
         "icbl": "100",
-        "icnh4": ".1"
+        "icnh4": ".5"
       },
       {
-        "icno3": ".1",
+        "icno3": ".5",
         "icbl": "200",
-        "icnh4": ".1"
+        "icnh4": ".5"
       }
     ]
       },
@@ -186,10 +186,10 @@
         "sowing_density": "400"
       },
       "fertilizer": {
-        "initial_amount": "100",
+        "initial_amount": "250",
         "type": "NH4NO3",
-        "days_after_sowing": "45",
-        "subsequent_amount": "100",
+        "days_after_sowing": "100",
+        "subsequent_amount": "250",
         "depth": "40"
       },
       "irrigation": {
@@ -206,7 +206,7 @@
       "reset": {
         "date": "1-sep",
         "water": "yes",
-        "nitrogen": "no",
+        "nitrogen": "yes",
         "surfaceOM": "yes"
       }
     }

@@ -747,7 +747,7 @@
       <vern_sens>1.7</vern_sens>
       <photop_sens>2.4</photop_sens>
       <startgf_to_mat>564</startgf_to_mat>
-      <grains_per_gram_stem>22.0</grains_per_gram_stem>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
       <potential_grain_filling_rate>0.00195  </potential_grain_filling_rate>
       <dm_tiller_max>1.0</dm_tiller_max>
       <phyllochron>120.0</phyllochron>
@@ -757,7 +757,7 @@
       <vern_sens>1.7</vern_sens>
       <photop_sens>2.4</photop_sens>
       <startgf_to_mat>564</startgf_to_mat>
-      <grains_per_gram_stem>22.0</grains_per_gram_stem>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
       <potential_grain_filling_rate>0.0020  </potential_grain_filling_rate>
       <dm_tiller_max>1.0</dm_tiller_max>
       <phyllochron>120.0</phyllochron>
@@ -767,7 +767,7 @@
       <vern_sens>1.7</vern_sens>
       <photop_sens>2.4</photop_sens>
       <startgf_to_mat>564</startgf_to_mat>
-      <grains_per_gram_stem>22.0</grains_per_gram_stem>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
       <potential_grain_filling_rate>0.0020  </potential_grain_filling_rate>
       <dm_tiller_max>1.0</dm_tiller_max>
       <phyllochron>120.0</phyllochron>
@@ -777,7 +777,7 @@
       <vern_sens>1.7</vern_sens>
       <photop_sens>2.4</photop_sens>
       <startgf_to_mat>564</startgf_to_mat>
-      <grains_per_gram_stem>22.0</grains_per_gram_stem>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
       <potential_grain_filling_rate>0.0020  </potential_grain_filling_rate>
       <dm_tiller_max>1.0</dm_tiller_max>
       <phyllochron>120.0</phyllochron>
@@ -787,7 +787,7 @@
       <vern_sens>1.7</vern_sens>
       <photop_sens>2.4</photop_sens>
       <startgf_to_mat>564</startgf_to_mat>
-      <grains_per_gram_stem>24.0</grains_per_gram_stem>
+      <grains_per_gram_stem>38.0</grains_per_gram_stem>
       <potential_grain_filling_rate>0.00185  </potential_grain_filling_rate>
       <dm_tiller_max>1.0</dm_tiller_max>
       <phyllochron>120.0</phyllochron>
@@ -797,7 +797,7 @@
       <vern_sens>1.7</vern_sens>
       <photop_sens>2.4</photop_sens>
       <startgf_to_mat>564</startgf_to_mat>
-      <grains_per_gram_stem>24.0</grains_per_gram_stem>
+      <grains_per_gram_stem>38.0</grains_per_gram_stem>
       <potential_grain_filling_rate>0.0020  </potential_grain_filling_rate>
       <dm_tiller_max>1.0</dm_tiller_max>
       <phyllochron>120.0</phyllochron>
@@ -807,7 +807,7 @@
       <vern_sens>1.7</vern_sens>
       <photop_sens>2.4</photop_sens>
       <startgf_to_mat>564</startgf_to_mat>
-      <grains_per_gram_stem>24.0</grains_per_gram_stem>
+      <grains_per_gram_stem>38.0</grains_per_gram_stem>
       <potential_grain_filling_rate>0.00185  </potential_grain_filling_rate>
       <dm_tiller_max>1.0</dm_tiller_max>
       <phyllochron>120.0</phyllochron>
@@ -817,7 +817,7 @@
       <vern_sens>2.1</vern_sens>
       <photop_sens>2.4</photop_sens>
       <startgf_to_mat>564</startgf_to_mat>
-      <grains_per_gram_stem>22.0</grains_per_gram_stem>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
       <potential_grain_filling_rate>0.00185  </potential_grain_filling_rate>
       <dm_tiller_max>1.5</dm_tiller_max>
       <phyllochron>100.0</phyllochron>
@@ -827,7 +827,7 @@
       <vern_sens>2.1</vern_sens>
       <photop_sens>2.4</photop_sens>
       <startgf_to_mat>564</startgf_to_mat>
-      <grains_per_gram_stem>22.0</grains_per_gram_stem>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
       <potential_grain_filling_rate>0.0020  </potential_grain_filling_rate>
       <dm_tiller_max>1.5</dm_tiller_max>
       <phyllochron>100.0</phyllochron>
@@ -837,7 +837,7 @@
       <vern_sens>2.5</vern_sens>
       <photop_sens>2.8</photop_sens>
       <startgf_to_mat>564</startgf_to_mat>
-      <grains_per_gram_stem>22.0</grains_per_gram_stem>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
       <potential_grain_filling_rate>0.0020  </potential_grain_filling_rate>
       <dm_tiller_max>1.5</dm_tiller_max>
       <phyllochron>120.0</phyllochron>
@@ -847,7 +847,7 @@
       <vern_sens>3.3</vern_sens>
       <photop_sens>2.4</photop_sens>
       <startgf_to_mat>564</startgf_to_mat>
-      <grains_per_gram_stem>22.0</grains_per_gram_stem>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
       <potential_grain_filling_rate>0.0020  </potential_grain_filling_rate>
       <dm_tiller_max>0.5</dm_tiller_max>
       <phyllochron>120.0</phyllochron>
@@ -857,7 +857,7 @@
       <vern_sens>3.3</vern_sens>
       <photop_sens>2.5</photop_sens>
       <startgf_to_mat>600</startgf_to_mat>
-      <grains_per_gram_stem>22.0</grains_per_gram_stem>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
       <potential_grain_filling_rate>0.0020  </potential_grain_filling_rate>
       <dm_tiller_max>0.5</dm_tiller_max>
       <phyllochron>120.0</phyllochron>
@@ -867,7 +867,7 @@
       <vern_sens>3.3</vern_sens>
       <photop_sens>2.4</photop_sens>
       <startgf_to_mat>564</startgf_to_mat>
-      <grains_per_gram_stem>22.0</grains_per_gram_stem>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
       <potential_grain_filling_rate>0.0020  </potential_grain_filling_rate>
       <dm_tiller_max>0.5</dm_tiller_max>
       <phyllochron>120.0</phyllochron>
@@ -887,7 +887,7 @@
       <vern_sens>5.0</vern_sens>
       <photop_sens>2.8</photop_sens>
       <startgf_to_mat>600</startgf_to_mat>
-      <grains_per_gram_stem>22.0</grains_per_gram_stem>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
       <potential_grain_filling_rate>0.0020  </potential_grain_filling_rate>
       <dm_tiller_max>0.5</dm_tiller_max>
       <phyllochron>135.0</phyllochron>
@@ -897,7 +897,7 @@
       <vern_sens>5.0</vern_sens>
       <photop_sens>3.3</photop_sens>
       <startgf_to_mat>600</startgf_to_mat>
-      <grains_per_gram_stem>22.0</grains_per_gram_stem>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
       <potential_grain_filling_rate>0.0020  </potential_grain_filling_rate>
       <dm_tiller_max>0.5</dm_tiller_max>
       <phyllochron>135.0</phyllochron>
@@ -907,7 +907,7 @@
       <vern_sens>5.0</vern_sens>
       <photop_sens>2.8</photop_sens>
       <startgf_to_mat>600</startgf_to_mat>
-      <grains_per_gram_stem>22.0</grains_per_gram_stem>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
       <potential_grain_filling_rate>0.0020  </potential_grain_filling_rate>
       <dm_tiller_max>0.5</dm_tiller_max>
       <phyllochron>135.0</phyllochron>
