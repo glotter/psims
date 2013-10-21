@@ -27,7 +27,7 @@ file_dir: Directory from which to search for netcdf files, up to depth of two
 out_file: Name of output file
 
 Example:
-  ./merge_ascii.sh 1 PDAT "Planting date" YrDoy 2 2 30 44 6 1958 90 -180 1000000000 . out.psims.nc4
+  ./merge_ascii.sh 1 PDAT "Planting date" YrDoy 2 2 30 44 6 1958 90 -180 1 . out.psims.nc4
 '
 
 # ================
