@@ -222,7 +222,7 @@ for var in ${sub_vars[@]}; do
   next_lat=1
   for f in ${files[@]}; do
     # get latitude index
-    grid1=(`echo $f | egrep -o [0-9]+`)
+    grid1=`echo $f | sed "s/.*_\(.*\).txt/\1/"`
     grid1=`echo $grid1 | sed 's/^0*//'` # remove leading zeros
     grid1=$(($grid1-$lat0_off))
 
