@@ -81,6 +81,10 @@
         "sowing_density": "400"
       },
       "fertilizer": {
+        "automatic_fertilizer": "on",
+        "fert_criteria": "100",
+        "fert_critical": "90",
+        "type_auto": "NO3_N",
         "initial_amount": "250",
         "type": "NH4NO3",
         "days_after_sowing": "100",
@@ -186,6 +190,10 @@
         "sowing_density": "400"
       },
       "fertilizer": {
+        "automatic_fertilizer": "on",
+        "fert_criteria": "100",
+        "fert_critical": "90",
+        "type_auto": "NO3_N",
         "initial_amount": "250",
         "type": "NH4NO3",
         "days_after_sowing": "100",

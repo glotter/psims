@@ -32,11 +32,11 @@ else:
     raise Exception('Missing variable time')
 
 # get all data
-var_lists = od([('SRAD', ['solar', 'rad', 'rsds', 'srad', 'rsds_USagcfsr', 'rsds_UScfsr', 'rsds_USsrb']), \
-                ('TMAX', ['tmax', 'tasmax', 'tasmax_USagcfsr', 'tasmax_UScfsr']), \
-                ('TMIN', ['tmin', 'tasmin', 'tasmin_USagcfsr', 'tasmin_UScfsr']), \
-                ('RAIN', ['precip', 'pr', 'rain', 'pr_gpcc', 'pr_cru', 'pr_USagcfsr', 'pr_UScfsr', 'pr_UScpc']), \
-                ('WIND', ['wind', 'windspeed', 'wind_USagcfsr', 'wind_UScfsr']), \
+var_lists = od([('SRAD', ['solar', 'rad', 'rsds', 'srad', 'rsds_USagcfsr', 'rsds_agcfsr', 'rsds_UScfsr', 'rsds_USsrb']), \
+                ('TMAX', ['tmax', 'tasmax', 'tasmax_USagcfsr', 'tasmax_agcfsr', 'tasmax_UScfsr']), \
+                ('TMIN', ['tmin', 'tasmin', 'tasmin_USagcfsr', 'tasmin_agcfsr', 'tasmin_UScfsr']), \
+                ('RAIN', ['precip', 'pr', 'rain', 'pr_gpcc', 'pr_cru', 'pr_USagcfsr', 'pr_agcfsr', 'pr_UScfsr', 'pr_UScpc']), \
+                ('WIND', ['wind', 'windspeed', 'wind_USagcfsr', 'wind_agcfsr', 'wind_UScfsr']), \
                 ('DEWP', ['dew', 'dewp', 'dewpoint', 'tdew']), \
                 ('SUNH', ['sun', 'sunh']), \
                 ('RHUM', ['rhum', 'hur']), \

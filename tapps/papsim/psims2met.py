@@ -32,14 +32,15 @@ else:
     raise Exception('Missing variable time')
 
 # get all data
-var_lists = od([('maxt', ['tmax', 'tasmax']), \
-                ('mint', ['tmin', 'tasmin']), \
-                ('rain', ['precip', 'pr', 'rain']), \
-                ('radn', ['solar', 'rad', 'rsds', 'srad']), \
-                ('wind', ['wind', 'windspeed']), \
-                ('rhmax', ['rhmax', 'hurtmin']), \
+var_lists = od([('radn', ['solar', 'rad', 'rsds', 'srad', 'rsds_USagcfsr', 'rsds_agcfsr', 'rsds_UScfsr', 'rsds_USsrb']), \
+                ('maxt', ['tmax', 'tasmax', 'tasmax_USagcfsr', 'tasmax_agcfsr', 'tasmax_UScfsr']), \
+                ('mint', ['tmin', 'tasmin', 'tasmin_USagcfsr', 'tasmin_agcfsr', 'tasmin_UScfsr']), \
+                ('rain', ['precip', 'pr', 'rain', 'pr_gpcc', 'pr_cru', 'pr_USagcfsr', 'pr_agcfsr', 'pr_UScfsr', 'pr_UScpc']), \
+                ('wind', ['wind', 'windspeed', 'wind_USagcfsr', 'wind_agcfsr', 'wind_UScfsr']), \
+                ('rhmax', ['rhmax', 'hurtmax']), \
                 ('rhmin', ['rhmin', 'hurtmax']), \
                 ('vp', ['vap', 'vapr'])])
+
 var_names = array(var_lists.keys())
 unit_names = array(['oC', 'oC', 'mm', 'MJ/m^2', 'm/s', '%', '%', 'Pa'])
 nt = len(time)

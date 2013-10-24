@@ -157,9 +157,8 @@ cat << END > parallel_append.sbatch
 #!/bin/sh
 #SBATCH --time=01:00:00
 #SBATCH --ntasks=128
-#SBATCH --exclusive
 #SBATCH --mem-per-cpu=2048
-#SBATCH --partition=westmere
+#SBATCH --partition=sandyb
 module load parallel
 srun="srun -N1 -n1"
 parallel="parallel -j \$SLURM_NTASKS --joblog runtask_append.log --resume"
@@ -197,13 +196,17 @@ END
 chmod +x runtask_merge
 
 # write parallel_merge in run directory
+num_procs=$num_vars
+if [ $num_procs -gt 10 ]; then
+   num_procs=10
+fi
 cat << END > parallel_merge.sbatch
 #!/bin/sh
 #SBATCH --time=01:00:00
-#SBATCH --ntasks=$num_vars
+#SBATCH --ntasks=$num_procs
 #SBATCH --exclusive
 #SBATCH --mem-per-cpu=20480
-#SBATCH --partition=westmere
+#SBATCH --partition=sandyb
 module load parallel
 srun="srun -N1 -n1"
 parallel="parallel -j \$SLURM_NTASKS --joblog runtask_merge.log --resume"
