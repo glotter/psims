@@ -228,6 +228,32 @@
             <event>start_of_day</event>
           </script>
         </manager>
+#if( $simulation.fertilizer.automatic_fertilizer == "on" )
+        <manager name="Fertilise for potential yield">
+          <ui>
+            <category type="category" description="When should fertiliser be applied" />
+            <modulename type="modulename" description="In which crop is fertiliser being applied : ">$simulation.cropName</modulename>
+            <fert_criteria type="text" description="Maximum Amount of NO3 required in top 3 layers (kg/ha) : ">$simulation.fertilizer.fert_criteria</fert_criteria>
+            <fert_critical type="text" description="Critical Amount of NO3 in top 3 layers (kg/ha) : ">$simulation.fertilizer.fert_critical</fert_critical>
+            <category type="category" description="Fertiliser application details" />
+            <fertmodule type="modulename" description="Module used to apply the fertiliser : ">fertiliser</fertmodule>
+            <fert_depth type="text" description="fert_depth">$simulation.fertilizer.depth</fert_depth>
+            <fert_type type="list" listvalues="NO3_N, NH4_N, NH4NO3, urea_N, urea_no3, urea, nh4so4_n, rock_p, banded_p, broadcast_p" description="Fertiliser type : ">$simulation.fertilizer.type_auto</fert_type>
+          </ui>
+          <script>
+            <text>
+         if ([modulename].plant_status = 'alive') then
+            NO3_available = no3(1) + no3(2) + no3(3)
+            if (NO3_available &lt;= [fert_critical]) then
+               N_deficit = [fert_criteria] - NO3_available
+               '[fertmodule]' apply amount = N_deficit (kg/ha), depth = [fert_depth] (mm), type = [fert_type] ()
+            endif
+         endif
+  </text>
+            <event>start_of_day</event>
+          </script>
+        </manager>
+#else
         <manager name="Fertilise N at sowing">
           <ui>
             <category type="category" description="When should fertiliser be applied" />
@@ -265,6 +291,7 @@
             <event>start_of_day</event>
           </script>
         </manager>
+#end
         <manager name="Harvesting rule">
           <ui>
             <category type="category" description="Harvesting criteria" />
@@ -328,6 +355,7 @@ soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
         <variable>sum of rain on end_of_day from sowing to harvesting as RainIn</variable>
         <variable>sum of rain on end_of_day from reported to now as Rain_year</variable>
         <variable>sum of radn on end_of_day from reported to now as Radiation_year</variable>
+        <variable>average of nfact_photo on end_of_day from sowing to harvesting as N_stress_photo</variable>
       </tracker>
 			<outputfile>
 				<filename output="yes">Generic.out</filename>
