@@ -55,7 +55,7 @@ parser.add_option("-o", "--output", dest = "outputfile", default = "expout.json"
 (options, args) = parser.parse_args()
 
 # open campaign netcdf4 file
-campaign = nc(options.campaignfile, 'r',  format = 'NETCDF4')
+campaign = nc(options.campaignfile, 'r', format = 'NETCDF4')
 
 # open experiment json file
 template = json.load(open(options.expfile, 'r'))
@@ -197,14 +197,21 @@ for var in variables:
         dict_replace(exp['experiments'][j], var, str(val), occ = occ) # make sure val is str!
 
         # SPECIAL CASE FOR APSIM!
-        # CHANGE EDATE TO PDATE - 60 days
+        # CHANGE EDATE TO PDATE - 30 days
+        # CHANGE RESET DATE TO PDATE - 60 days
         if var == 'pdate':
-            eday = int(round(val_old)) - 60
+            eday = int(round(val_old)) - 30
             if eday < 1:
                 eday = 365 + eday # non-leap year
+            rday = int(round(val_old)) - 60
+            if rday < 1:
+                rday = 365 + rday # non-leap year
             edate = (dt.date(1900, 1, 1) + dt.timedelta(eday - 1)).strftime('%e-%b')
+            rdate = (dt.date(1900, 1, 1) + dt.timedelta(rday - 1)).strftime('%e-%b')
             print 'Replacing variable edate with', edate, 'for occurrence =', occ
             dict_replace(exp['experiments'][j], 'edate', str(edate), occ = occ)
+            print 'Replacing variable date with', rdate, 'for occurrence =', occ
+            dict_replace(exp['experiments'][j], 'date', str(rdate), occ = occ)
 
 # change dates based on reference year
 ref_year = options.ref_year
