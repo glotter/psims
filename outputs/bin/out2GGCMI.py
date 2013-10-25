@@ -74,11 +74,6 @@ var_file_names = prefix + '_{:s}_{:s}_' + crop + '_' + suffix + '.nc4'
 for i in range(len(var_names)):
     v = var_names[i]
     
-    if v in ['initr', 'leach', 'sco2', 'sn2o']:
-        # skip variable
-        print 'Skipping', v, '. . .'
-        continue
-    
     if 'dssat' in prefix:
         # map dssat variables, converting units as needed
         if v == 'yield':
@@ -123,8 +118,34 @@ for i in range(len(var_names)):
             var = f.variables['TMINA']
             var_arr = 0.5 * (var[:] + f.variables['TMAXA'][:]) # average temperatures
             units = 'deg C-days yr-1'
+        elif v in ['initr', 'leach', 'sco2', 'sn2o']:
+            # skip variable
+            print 'Skipping', v, '. . .'
+            continue
         else:
             raise Exception('Variable unrecognized. Exiting . . .')
+    elif 'apsim' in prefix:
+        if v == 'yield':       var_apsim = 'yield';         units = 't ha-1 yr-1'
+        elif v == 'pirrww':    var_apsim = 'IrrigationIn';  units = 'mm yr-1'
+        elif v == 'biomass':   var_apsim = 'biomass';       units = 't ha-1 yr-1'
+        elif v == 'aet':       var_apsim = 'actual_ET';     units = 'mm yr-1'
+        elif v == 'plant-day': var_apsim = 'planting_date'; units = 'day of year'
+        elif v == 'anth-day':  var_apsim = 'flowering_das'; units = 'days from planting'
+        elif v == 'maty-day':  var_apsim = 'maturity_das';  units = 'days after planting'
+        elif v == 'initr':     var_apsim = 'FertiliserIn';  units = 'kg ha-1 yr-1'
+        elif v == 'leach':     var_apsim = 'NO3_leaching';  units = 'kg ha-1 yr-1'
+        elif v == 'sco2':      var_apsim = 'CO2emissionIn'; units = 'kg C ha-1'
+        elif v == 'sn2o':      var_apsim = 'N2OemissionIn'; units = 'kg N2O-N ha-1'
+        elif v == 'gsprcp':    var_apsim = 'RainIn';        units = 'mm ha-1 yr-1'
+        elif v == 'gsrsds':    var_apsim = 'RadiationIn';   units = 'w m-2 yr-1'
+        elif v == 'sumt':      var_apsim = 'TempIn';        units = 'deg C-days yr-1'
+        else: raise Exception('Variable unrecognized. Exiting . . .')
+        var = f.variables[var_apsim]
+        var_arr = var[:]
+        if v in ['yield', 'biomass']:
+            if 'units' in var.ncattrs() and var.units == 'kg/ha': var_arr *= 0.001
+    else:
+        raise Exception('Model unrecognized. Exiting . . .')
 
     # get chunk sizes, long name, dimensions, and scenario index
     chunksizes = var.chunking()
