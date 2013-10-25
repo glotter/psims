@@ -166,12 +166,12 @@ fi
 
 # calculate longitudes
 for ((i = 1; i <= $num_lons; i++)); do
-  lon[$(($i-1))]=$(echo "scale=2;$lon0+$delta/60*($i-0.5)" | bc)
+  lon[$(($i-1))]=$(echo "scale=15;$lon0+$delta/60*($i-0.5)" | bc)
 done
 
 # calculate latitudes
 for ((i = 1; i <= $num_lats; i++)); do
-  lat[$(($i-1))]=$(echo "scale=2;$lat0-$delta/60*($i-0.5)" | bc)
+  lat[$(($i-1))]=$(echo "scale=15;$lat0-$delta/60*($i-0.5)" | bc)
 done
 
 # calculate lat0 offset of grid into global grid
