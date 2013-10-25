@@ -26,8 +26,7 @@
         {"name": "N2Oemission_year"},
         {"name": "N2OemissionIn"},
         {"name": "CO2emission_year"},
-        {"name": "CO2emissionIn"},
-        {"name": "N_stress_photo"}
+        {"name": "CO2emissionIn"}
       ],
       "initial_condition": {
         "icrn": ".5",

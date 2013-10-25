@@ -19,6 +19,6 @@ lat_zero         90
 lon_zero         -180
 scens            4
 variables        biomass,yield,planting_date,DaysAfterSowing,flowering_das,maturity_das,RainIn,Temp_year,TempIn,RadiationIn,IrrigationIn,WaterUse,actual_ET,N_uptake,FertiliserIn,NO3_leaching,N2Oemission_year,N2OemissionIn,CO2emission_year,CO2emissionIn
-var_units        "kg/ha,kg/ha,dd_mm_yyyy,days,days,days,mm,oC,oC,MJ/m2,mm,mm,mm,kgN/ha,kg/ha,kgN/ha,kgN2O/ha,kgN2O/ha,kgC/ha,kgC/ha"
+var_units        "kg/ha,kg/ha,day,days,days,days,mm,oC,oC,MJ/m2,mm,mm,mm,kgN/ha,kg/ha,kgN/ha,kgN2O/ha,kgN2O/ha,kgC/ha,kgC/ha"
 long_names       "biomass,yield,DateOfPlanting,DaysAfterSowing,flowering_das,maturity_das,RainIn,Temp_year,TempIn,RadiationIn,IrrigationIn,WaterUse,actual_ET,N_uptake,FertiliserIn,NO3_leaching,N2Oemission_year,N2OemissionIn,CO2emission_year,CO2emissionIn"
 postprocess      ./out2psims.py:-i:Generic.out
