@@ -10,14 +10,14 @@ def createnc(filename, lat, lon, time, time_units):
     # create file
     f = nc(filename, 'w', format = 'NETCDF4_CLASSIC')
     # create latitude
-    f.createDimension('latitude', None)
-    lat_var = f.createVariable('latitude', 'f8', ('latitude',), zlib = True, shuffle = False, complevel = 9, chunksizes = [1])
+    f.createDimension('lat', None)
+    lat_var = f.createVariable('lat', 'f8', ('lat',), zlib = True, shuffle = False, complevel = 9, chunksizes = [1])
     lat_var[:] = lat
     lat_var.units = 'degrees_north'
     lat_var.long_name = 'latitude'
     # create longitude
-    f.createDimension('longitude', len(lon))
-    lon_var = f.createVariable('longitude', 'f4', ('longitude',), zlib = True, shuffle = False, complevel = 9, chunksizes = [len(lon)])
+    f.createDimension('lon', len(lon))
+    lon_var = f.createVariable('lon', 'f4', ('lon',), zlib = True, shuffle = False, complevel = 9, chunksizes = [len(lon)])
     lon_var[:] = lon
     lon_var.units = 'degrees_east'
     lon_var.long_name = 'longitude'
@@ -140,6 +140,10 @@ for i in range(len(var_names)):
     chunksizes.pop(scen_idx)
     dims = list(dims)
     dims.remove(sn)
+    if 'latitude' in dims: # change name from latitude -> lat
+        dims[dims.index('latitude')] = 'lat'
+    if 'longitude' in dims: # change name from longitude -> lon
+        dims[dims.index('longitude')] = 'lon'
     dims = tuple(dims)
 
     # iterate over scenarios
