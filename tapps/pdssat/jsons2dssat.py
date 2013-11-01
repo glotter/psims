@@ -686,6 +686,7 @@ class DSSATXFileOutput:
         year = int(date_str[: 4])
         month = int(date_str[4 : 6])
         day = int(date_str[6 : 8])
+        year += (year < 1900) * 100 # needed because strftime doesn't work for year < 1900
         return datetime.date(year, month, day).strftime('%y%j')
         
     def __create_SMMA_str(self, smid, tr_data):

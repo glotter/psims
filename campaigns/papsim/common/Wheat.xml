@@ -744,6 +744,7 @@
       -->
     <me1 cultivar="yes">
       <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
       <vern_sens>1.7</vern_sens>
       <photop_sens>2.4</photop_sens>
       <startgf_to_mat>564</startgf_to_mat>
@@ -754,6 +755,7 @@
     </me1>
     <me2a cultivar="yes">
       <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
       <vern_sens>1.7</vern_sens>
       <photop_sens>2.4</photop_sens>
       <startgf_to_mat>564</startgf_to_mat>
@@ -764,6 +766,7 @@
     </me2a>
     <me2b cultivar="yes">
       <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
       <vern_sens>1.7</vern_sens>
       <photop_sens>2.4</photop_sens>
       <startgf_to_mat>564</startgf_to_mat>
@@ -774,6 +777,7 @@
     </me2b>
     <me3 cultivar="yes">
       <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
       <vern_sens>1.7</vern_sens>
       <photop_sens>2.4</photop_sens>
       <startgf_to_mat>564</startgf_to_mat>
@@ -784,6 +788,7 @@
     </me3>
     <me4a cultivar="yes">
       <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
       <vern_sens>1.7</vern_sens>
       <photop_sens>2.4</photop_sens>
       <startgf_to_mat>564</startgf_to_mat>
@@ -794,6 +799,7 @@
     </me4a>
     <me4b cultivar="yes">
       <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
       <vern_sens>1.7</vern_sens>
       <photop_sens>2.4</photop_sens>
       <startgf_to_mat>564</startgf_to_mat>
@@ -804,6 +810,7 @@
     </me4b>
     <me4c cultivar="yes">
       <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
       <vern_sens>1.7</vern_sens>
       <photop_sens>2.4</photop_sens>
       <startgf_to_mat>564</startgf_to_mat>
@@ -814,6 +821,7 @@
     </me4c>
     <me5a cultivar="yes">
       <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
       <vern_sens>2.1</vern_sens>
       <photop_sens>2.4</photop_sens>
       <startgf_to_mat>564</startgf_to_mat>
@@ -824,6 +832,7 @@
     </me5a>
     <me5b cultivar="yes">
       <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
       <vern_sens>2.1</vern_sens>
       <photop_sens>2.4</photop_sens>
       <startgf_to_mat>564</startgf_to_mat>
@@ -834,6 +843,7 @@
     </me5b>
     <me6 cultivar="yes">
       <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
       <vern_sens>2.5</vern_sens>
       <photop_sens>2.8</photop_sens>
       <startgf_to_mat>564</startgf_to_mat>
@@ -844,6 +854,7 @@
     </me6>
     <me7 cultivar="yes">
       <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
       <vern_sens>3.3</vern_sens>
       <photop_sens>2.4</photop_sens>
       <startgf_to_mat>564</startgf_to_mat>
@@ -854,6 +865,7 @@
     </me7>
     <me8a cultivar="yes">
       <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
       <vern_sens>3.3</vern_sens>
       <photop_sens>2.5</photop_sens>
       <startgf_to_mat>600</startgf_to_mat>
@@ -864,6 +876,7 @@
     </me8a>
     <me8b cultivar="yes">
       <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
       <vern_sens>3.3</vern_sens>
       <photop_sens>2.4</photop_sens>
       <startgf_to_mat>564</startgf_to_mat>
@@ -874,16 +887,18 @@
     </me8b>
     <me9 cultivar="yes">
       <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
       <vern_sens>1.7</vern_sens>
       <photop_sens>2.4</photop_sens>
       <startgf_to_mat>564</startgf_to_mat>
-      <grains_per_gram_stem>24.0</grains_per_gram_stem>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
       <potential_grain_filling_rate>0.00185  </potential_grain_filling_rate>
       <dm_tiller_max>0.5</dm_tiller_max>
       <phyllochron>120.0</phyllochron>
     </me9>
     <me10 cultivar="yes">
       <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
       <vern_sens>5.0</vern_sens>
       <photop_sens>2.8</photop_sens>
       <startgf_to_mat>600</startgf_to_mat>
@@ -894,6 +909,7 @@
     </me10>
     <me11 cultivar="yes">
       <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
       <vern_sens>5.0</vern_sens>
       <photop_sens>3.3</photop_sens>
       <startgf_to_mat>600</startgf_to_mat>
@@ -904,6 +920,7 @@
     </me11>
     <me12 cultivar="yes">
       <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
       <vern_sens>5.0</vern_sens>
       <photop_sens>2.8</photop_sens>
       <startgf_to_mat>600</startgf_to_mat>

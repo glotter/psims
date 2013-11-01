@@ -1,5 +1,5 @@
 model            apsim75
-out_file         out.psims.apsim75.agcfsr.africa.maize
+out_file         out.psims.apsim75.agcfsr.wrld.maize
 weather          /project/joshuaelliott/psims/data/clim/agcfsr
 tappwth          psims2met.py:-o:Generic.met:-v:tasmin,tasmax,rsds,pr,wind
 campaign         /project/joshuaelliott/psims/campaigns/papsim/ggcmi.maize

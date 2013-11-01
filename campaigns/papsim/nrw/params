@@ -18,7 +18,7 @@ num_lons         260
 lat_zero         52.525
 lon_zero         5.86666666666
 scens            2
-variables        biomass,yield,DaysAfterSowing,lai_max,flowering_das,maturity_das,RainIn,Temp_year,TempIn,RadiationIn,IrrigationIn,WaterUse,actual_ET,FertiliserIn,NO3_leaching,N2Oemission_year,N2OemissionIn,CO2emission_year,CO2emissionIn
-var_units        "kg/ha,kg/ha,days,m2/m2,days,days,mm,oC,oC,MJ/m2,mm,mm,mm,kg/ha,kgN/ha,kgN2O/ha,kgN2O/ha,kgC/ha,kgC/ha"
-long_names       "biomass,yield,DaysAfterSowing,lai_max,flowering_das,maturity_das,RainIn,Temp_year,TempIn,RadiationIn,IrrigationIn,WaterUse,actual_ET,FertiliserIn,NO3_leaching,N2Oemission_year,N2OemissionIn,CO2emission_year,CO2emissionIn"
+variables        biomass,yield,DaysAfterSowing,flowering_das,maturity_das,RainIn,Temp_year,TempIn,RadiationIn,IrrigationIn,WaterUse,actual_ET,FertiliserIn,NO3_leaching,N2Oemission_year,N2OemissionIn,CO2emission_year,CO2emissionIn
+var_units        "kg/ha,kg/ha,days,days,days,mm,oC,oC,MJ/m2,mm,mm,mm,kg/ha,kgN/ha,kgN2O/ha,kgN2O/ha,kgC/ha,kgC/ha"
+long_names       "biomass,yield,DaysAfterSowing,flowering_das,maturity_das,RainIn,Temp_year,TempIn,RadiationIn,IrrigationIn,WaterUse,actual_ET,FertiliserIn,NO3_leaching,N2Oemission_year,N2OemissionIn,CO2emission_year,CO2emissionIn"
 postprocess      ./out2psims.py:-i:Generic.out

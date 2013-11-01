@@ -32,10 +32,10 @@ else:
     raise Exception('Missing variable time')
 
 # get all data
-var_lists = od([('SRAD', ['solar', 'rad', 'rsds', 'srad', 'rsds_USagcfsr', 'rsds_agcfsr', 'rsds_UScfsr', 'rsds_USsrb']), \
-                ('TMAX', ['tmax', 'tasmax', 'tasmax_USagcfsr', 'tasmax_agcfsr', 'tasmax_UScfsr']), \
-                ('TMIN', ['tmin', 'tasmin', 'tasmin_USagcfsr', 'tasmin_agcfsr', 'tasmin_UScfsr']), \
-                ('RAIN', ['precip', 'pr', 'rain', 'pr_gpcc', 'pr_cru', 'pr_USagcfsr', 'pr_agcfsr', 'pr_UScfsr', 'pr_UScpc']), \
+var_lists = od([('SRAD', ['solar', 'rad', 'rsds', 'srad', 'rsds_USagcfsr', 'rsds_agcfsr', 'rsds_UScfsr', 'rsds_USsrb','rsds_1']), \
+                ('TMAX', ['tmax', 'tasmax', 'tasmax_USagcfsr', 'tasmax_agcfsr', 'tasmax_UScfsr', 'tasmax_1']), \
+                ('TMIN', ['tmin', 'tasmin', 'tasmin_USagcfsr', 'tasmin_agcfsr', 'tasmin_UScfsr', 'tasmin_1']), \
+                ('RAIN', ['precip', 'pr', 'rain', 'pr_gpcc', 'pr_cru', 'pr_USagcfsr', 'pr_agcfsr', 'pr_UScfsr', 'pr_UScpc', 'pr_1']), \
                 ('WIND', ['wind', 'windspeed', 'wind_USagcfsr', 'wind_agcfsr', 'wind_UScfsr']), \
                 ('DEWP', ['dew', 'dewp', 'dewpoint', 'tdew']), \
                 ('SUNH', ['sun', 'sunh']), \
@@ -90,8 +90,12 @@ var_names = var_names[not_missing]
 alldata = reshape(alldata[:, not_missing], (nt, nv))
 
 # compute day, month, year for every entry
-yr0, mth0, day0 = time_units.split('days since ')[1].split(' ')[0].split('-')[0 : 3]
-hr0, min0, sec0 = time_units.split('days since ')[1].split(' ')[1].split(':')[0 : 3]
+ts = time_units.split('days since ')[1].split(' ')
+yr0, mth0, day0 = ts[0].split('-')[0 : 3]
+if len(ts) > 1:
+    hr0, min0, sec0 = ts[1].split(':')[0 : 3]
+else:
+    hr0 = 0; min0 = 0; sec0 = 0
 ref = datetime.datetime(int(yr0), int(mth0), int(day0), int(hr0), int(min0), int(sec0))
 datear = array([ref + datetime.timedelta(int(t)) for t in time])
 days = array([d.timetuple().tm_yday for d in datear]) # convert to numpy array
