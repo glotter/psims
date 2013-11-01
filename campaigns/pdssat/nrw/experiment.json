@@ -56,7 +56,7 @@
           "plant": "R",
           "ferti": "N",
           "resid": "A",
-          "harvs": "M"
+          "harvs": "R"
         },
         "methods": {
           "evapo": "F",
@@ -303,7 +303,7 @@
           "plant": "R",
           "ferti": "N",
           "resid": "A",
-          "harvs": "M"
+          "harvs": "R"
         },
         "methods": {
           "evapo": "F",

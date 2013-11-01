@@ -1,11 +1,18 @@
 #!/usr/bin/env python
 
 # import modules
-import os, stat, datetime
+import os, re, stat, datetime
 from netCDF4 import Dataset as nc
 from optparse import OptionParser
 from collections import OrderedDict as od
 from numpy import empty, array, where, reshape, concatenate, savetxt
+
+# search for patterns in variable list
+def isin(var, varlist):
+    vararr = array(varlist)
+    patt = re.compile(var + '_*')
+    matches = array([bool(patt.match(v)) for v in vararr])
+    return list(vararr[matches])
 
 # parse inputs
 parser = OptionParser()
@@ -32,11 +39,11 @@ else:
     raise Exception('Missing variable time')
 
 # get all data
-var_lists = od([('SRAD', ['solar', 'rad', 'rsds', 'srad', 'rsds_USagcfsr', 'rsds_agcfsr', 'rsds_UScfsr', 'rsds_USsrb','rsds_1']), \
-                ('TMAX', ['tmax', 'tasmax', 'tasmax_USagcfsr', 'tasmax_agcfsr', 'tasmax_UScfsr', 'tasmax_1']), \
-                ('TMIN', ['tmin', 'tasmin', 'tasmin_USagcfsr', 'tasmin_agcfsr', 'tasmin_UScfsr', 'tasmin_1']), \
-                ('RAIN', ['precip', 'pr', 'rain', 'pr_gpcc', 'pr_cru', 'pr_USagcfsr', 'pr_agcfsr', 'pr_UScfsr', 'pr_UScpc', 'pr_1']), \
-                ('WIND', ['wind', 'windspeed', 'wind_USagcfsr', 'wind_agcfsr', 'wind_UScfsr']), \
+var_lists = od([('SRAD', ['solar', 'rad', 'rsds', 'srad']), \
+                ('TMAX', ['tmax', 'tasmax']), \
+                ('TMIN', ['tmin', 'tasmin']), \
+                ('RAIN', ['precip', 'pr', 'rain']), \
+                ('WIND', ['wind', 'windspeed']), \
                 ('DEWP', ['dew', 'dewp', 'dewpoint', 'tdew']), \
                 ('SUNH', ['sun', 'sunh']), \
                 ('RHUM', ['rhum', 'hur']), \
@@ -51,11 +58,16 @@ for i in range(nv):
     found_var = False
     
     for v in var_list:
-        if v in variables and v in vlist:
-            alldata[:, i] = infile.variables[v][:].squeeze()
-            
-            if 'units' in infile.variables[v].ncattrs(): 
-                units = infile.variables[v].units
+        matchvar = isin(v, variables)
+        if matchvar != []:
+            matchvar = matchvar[0] # take first match
+            print matchvar
+            if matchvar in vlist:
+                alldata[:, i] = infile.variables[matchvar][:].squeeze()
+           
+                units = '' 
+                if 'units' in infile.variables[matchvar].ncattrs():
+                    units = infile.variables[matchvar].units
                 
                 # convert units, if necessary
                 if var_name == 'SRAD' and units == 'W m-2': # solar
@@ -74,8 +86,8 @@ for i in range(nv):
                 elif var_name == 'SUNH' and units == 'h': # sunh
                     alldata[:, i] *= 100. / 24
             
-            found_var = True
-            break
+                found_var = True
+                break
 
     if not found_var:
         if var_name == 'SRAD' or var_name == 'TMAX' or var_name == 'TMIN' or var_name == 'RAIN':

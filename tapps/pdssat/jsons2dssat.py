@@ -711,7 +711,7 @@ class DSSATXFileOutput:
         sdate = '{:5s}'.format(sdate)
         
         if self.__get_obj(tr_data, 'hadat_valid', '').strip() != '':
-            har_opt = 'M'   #modified by JWE to avoid the annoying problem where harvest gets reset to R which we never want. 
+            har_opt = 'R'   
         
         # GENERAL
         sb = '@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL\n'
@@ -779,7 +779,6 @@ class DSSATXFileOutput:
         sb += '@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS\n'
         sm_str = self.__get_obj(tr_data, 'management', {})
         if sm_str != {}:
-            sm_str['harvs'] = har_opt
             sb += for_str(sm, 0, 'c', 2) + \
                   for_str('MA', 1, 'c', 11, jtfy = 'l') + \
                   for_field(sm_str, 'plant', dC, 5, 'c', 1) + \
