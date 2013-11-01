@@ -173,15 +173,17 @@ mkdir var_files
 echo "Creating variable files . . ."
 sbatch parallel_append.sbatch
 
-tot_files=$(($num_vars*$num_lat_bands))
+prevdirsize=0
 while true; do
    sleep 60 # wait 60 seconds
-   num_files=$(ls var_files | wc -l) # number of files in var_files directory
-   if [ $num_files -eq $tot_files ]; then
-      # all files created
+   dirsize=(`du var_files`)
+   dirsize=${dirsize[0]}
+   if [ $dirsize -eq $prevdirsize ]; then
+      # directory size has stabilized
       sleep 60 # wait 60 seconds before proceeding
       break
    fi
+   prevdirsize=$dirsize
 done
 
 # clean up after run
