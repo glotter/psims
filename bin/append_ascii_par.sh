@@ -76,7 +76,7 @@ dcts=(`ls -d $file_dir/*/ | grep '[0-9]'`)
 num_lats=${#dcts[@]}
 
 # find out start and end indices for batch
-bz=$(printf %.0f $(echo "scale=2;$num_lats/$num_batches" | bc)) # batch size
+bz=$(echo "($num_lats + $num_batches - 1)/$num_batches" | bc) # batch size (use ceiling)
 si=$(echo "$bz*($batch-1)" | bc)
 if [ $batch -eq $num_batches ]; then
   ei=$num_lats
