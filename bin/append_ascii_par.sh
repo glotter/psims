@@ -12,7 +12,7 @@ batch: Batch number to run
 num_batches: Number of total batches
 var_names: List of variable names extracted from netcdf files
 num_lons: Number of longitude points in spatial raster
-delta: Distance between grid points in arcminutes
+delta: Distance(s) between each latitude/longitude grid cell in arcminutes
 num_years: Number of years in netcdf files
 num_scenarios: Number of scenarios in netcdf files
 lon0: Longitude of grid origin
@@ -56,6 +56,7 @@ file_dir=$9
 OLD_IFS=$IFS
 IFS=',' # change file separator
 var_names_arr=($var_names)
+delta_arr=($delta)
 IFS=$OLD_IFS # reset file separator
 
 # blank point
@@ -94,7 +95,15 @@ if [ $si -ge $num_lats ]; then
 fi
 
 # calculate lon0 offset of grid into global grid
-lon0_off=$(echo "60*($lon0+180)/$delta" | bc)
+if [ ${#delta_arr[@]} -eq 1 ]; then
+  londelta=${delta_arr[0]}
+elif [ ${#delta_arr[@]} -eq 2 ]; then
+  londelta=${delta_arr[1]}
+else
+  echo "Wrong number of delta values. Exiting . . ."
+  exit 0
+fi
+lon0_off=$(echo "60*($lon0+180)/$londelta" | bc)
 
 # iterate over directories, filling in gaps
 for ((i = $si; i < $ei; i++)); do

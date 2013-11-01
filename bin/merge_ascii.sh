@@ -16,7 +16,7 @@ long_names: List of long descriptive names corresponding to var_names
 units: List of units corresponding to var_names
 num_lons: Number of longitude points in spatial raster
 num_lats: Number of latitude points in spatial raster
-delta: Distance between grid points in arcminutes
+delta: Distance(s) between each latitude/longitude grid cell in arcminutes
 num_years: Number of years in netcdf files
 num_scenarios: Number of scenarios in netcdf files
 ref_year: Reference year for times in netcdf files
@@ -136,6 +136,7 @@ out_file=${15}
 OLD_IFS=$IFS
 IFS=',' # change file separator
 var_names_arr=($var_names)
+delta_arr=($delta)
 long_names_arr=($long_names)
 units_arr=($units)
 num_vars=${#var_names_arr[@]}
@@ -164,18 +165,30 @@ if [ $si -ge $num_vars ]; then
   exit 0
 fi
 
+# get latitude and longitude deltas
+if [[ ${#delta_arr[@]} -lt 1 || ${#delta_arr[@]} -gt 2 ]]; then
+  echo "Wrong number of delta values. Exiting . . ."
+  exit 0
+fi
+latdelta=${delta_arr[0]}
+if [ ${#delta_arr[@]} -eq 1 ]; then
+  londelta=$latdelta
+else
+  londelta=${delta_arr[1]}
+fi
+
 # calculate longitudes
 for ((i = 1; i <= $num_lons; i++)); do
-  lon[$(($i-1))]=$(echo "scale=15;$lon0+$delta/60*($i-0.5)" | bc)
+  lon[$(($i-1))]=$(echo "scale=15;$lon0+$londelta/60*($i-0.5)" | bc)
 done
 
 # calculate latitudes
 for ((i = 1; i <= $num_lats; i++)); do
-  lat[$(($i-1))]=$(echo "scale=15;$lat0-$delta/60*($i-0.5)" | bc)
+  lat[$(($i-1))]=$(echo "scale=15;$lat0-$latdelta/60*($i-0.5)" | bc)
 done
 
 # calculate lat0 offset of grid into global grid
-lat0_off=$(echo "60*(90-$lat0)/$delta" | bc)
+lat0_off=$(echo "60*(90-$lat0)/$latdelta" | bc)
 
 # create blank point (time, scenario) grid
 blank_pt=""

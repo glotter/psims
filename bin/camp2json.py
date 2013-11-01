@@ -46,8 +46,8 @@ parser.add_option("--latidx", dest = "latidx", default = 1, type = "string",
                   help = "Latitude coordinate")
 parser.add_option("--lonidx", dest = "lonidx", default = 1, type = "string",
                   help = "Longitude coordinate")
-parser.add_option("-d", "--delta", dest = "delta", default = 1, type = "float",
-                  help = "Distance between each grid cell in arcminutes")
+parser.add_option("-d", "--delta", dest = "delta", default = 30, type = "string",
+                  help = "Distance(s) between each latitude/longitude grid cell in arcminutes")
 parser.add_option("-r", "--ref_year", dest = "ref_year", default = 1958, type = "int",
                   help = "Reference year from which to record times")
 parser.add_option("-o", "--output", dest = "outputfile", default = "expout.json", type = "string",
@@ -61,11 +61,14 @@ campaign = nc(options.campaignfile, 'r', format = 'NETCDF4')
 template = json.load(open(options.expfile, 'r'))
 
 # determine gridpoint with nearest latitude and longitude
-delta = options.delta / 60. # convert from arcminutes to degrees
+delta = options.delta.split(',')
+if len(delta) < 1 or len(delta) > 2: raise Exception('Wrong number of delta values')
+latdelta = double(delta[0]) / 60. # convert from arcminutes to degrees
+londelta = latdelta if len(delta) == 1 else double(delta[1]) / 60.
 lat = campaign.variables['lat'][:]
 lon = campaign.variables['lon'][:]
-latd = resize(lat, (len(lon), len(lat))).T - 90. + delta * (int(options.latidx) - 0.5)
-lond = resize(lon, (len(lat), len(lon))) + 180. - delta * (int(options.lonidx) - 0.5)
+latd = resize(lat, (len(lon), len(lat))).T - 90. + latdelta * (int(options.latidx) - 0.5)
+lond = resize(lon, (len(lat), len(lon))) + 180. - londelta * (int(options.lonidx) - 0.5)
 totd = latd**2 + lond**2
 idx = where(totd == totd.min())
 latidx = idx[0][0]

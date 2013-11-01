@@ -31,8 +31,8 @@ parser.add_option("-v", "--variables", dest = "variables", default = "", type = 
                   help = "Comma-separated list (with no spaces) of variables to process")
 parser.add_option("-u", "--units", dest = "units", default = "", type = "string",
                   help = "Comma-separated list (with no spaces) of units for the variables")
-parser.add_option("-d", "--delta", dest = "delta", default = 1, type = "float",
-                  help = "Distance between each grid cell in arcminutes")
+parser.add_option("-d", "--delta", dest = "delta", default = 30, type = "string",
+                  help = "Distance(s) between each latitude/longitude grid cell in arcminutes")
 parser.add_option("-r", "--ref_year", dest = "ref_year", default = 1958, type = "int",
                   help = "Reference year from which to record times")                          
 parser.add_option("--latidx", dest = "latidx", default = 1, type = "string",
@@ -52,7 +52,10 @@ for i in range(num_scenarios):
 variables = array(options.variables.split(',')) # split variable names
 latidx = int(options.latidx)
 lonidx = int(options.lonidx)
-delta = options.delta / 60. # convert from arcminutes to degrees
+delta = options.delta.split(',')
+if len(delta) < 1 or len(delta) > 2: raise Exception('Wrong number of delta values')
+latdelta = double(delta[0]) / 60. # convert from arcminutes to degrees
+londelta = latdelta if len(delta) == 1 else double(delta[1]) / 60.
 
 # get number of variables
 num_vars = len(variables)
@@ -63,8 +66,8 @@ if len(units) != num_vars:
     raise Exception('Number of units must be same as number of variables')
 
 # compute latitude and longitude
-lat = 90. - delta * (latidx - 0.5)
-lon = -180. + delta * (lonidx - 0.5)
+lat = 90. - latdelta * (latidx - 0.5)
+lon = -180. + londelta * (lonidx - 0.5)
 
 # get reference time, number of years, and dates
 ref_year = options.ref_year
