@@ -1,11 +1,18 @@
 #!/usr/bin/env python
 
 # import modules
-import os, stat, datetime
+import os, re, stat, datetime
 from netCDF4 import Dataset as nc
 from optparse import OptionParser
 from collections import OrderedDict as od
 from numpy import empty, array, where, reshape, concatenate, savetxt
+
+# search for patterns in variable list
+def isin(var, varlist):
+    vararr = array(varlist)
+    patt = re.compile(var + '_*')
+    matches = array([bool(patt.match(v)) for v in vararr])
+    return list(vararr[matches])
 
 # parse inputs
 parser = OptionParser()
@@ -32,11 +39,11 @@ else:
     raise Exception('Missing variable time')
 
 # get all data
-var_lists = od([('radn', ['solar', 'rad', 'rsds', 'srad', 'rsds_USagcfsr', 'rsds_agcfsr', 'rsds_UScfsr', 'rsds_USsrb']), \
-                ('maxt', ['tmax', 'tasmax', 'tasmax_USagcfsr', 'tasmax_agcfsr', 'tasmax_UScfsr']), \
-                ('mint', ['tmin', 'tasmin', 'tasmin_USagcfsr', 'tasmin_agcfsr', 'tasmin_UScfsr']), \
-                ('rain', ['precip', 'pr', 'rain', 'pr_gpcc', 'pr_cru', 'pr_USagcfsr', 'pr_agcfsr', 'pr_UScfsr', 'pr_UScpc']), \
-                ('wind', ['wind', 'windspeed', 'wind_USagcfsr', 'wind_agcfsr', 'wind_UScfsr']), \
+var_lists = od([('radn', ['solar', 'rad', 'rsds', 'srad']), \
+                ('maxt', ['tmax', 'tasmax']), \
+                ('mint', ['tmin', 'tasmin']), \
+                ('rain', ['precip', 'pr', 'rain']), \
+                ('wind', ['wind', 'windspeed']), \
                 ('rhmax', ['rhmax', 'hurtmax']), \
                 ('rhmin', ['rhmin', 'hurtmax']), \
                 ('vp', ['vap', 'vapr'])])
@@ -52,11 +59,15 @@ for i in range(nv):
     found_var = False
     
     for v in var_list:
-        if v in variables and v in vlist:
-            alldata[:, i] = infile.variables[v][:].squeeze()
+        matchvar = isin(v, variables)
+        if matchvar != []:
+            matchvar = matchvar[0] # take first match
+            if matchvar in vlist:
+                alldata[:, i] = infile.variables[matchvar][:].squeeze()
             
-            if 'units' in infile.variables[v].ncattrs(): 
-                units = infile.variables[v].units
+                units = ''
+                if 'units' in infile.variables[matchvar].ncattrs(): 
+                    units = infile.variables[matchvar].units
                 
                 # convert units, if necessary
                 if var_name == 'radn' and units == 'W m-2': # solar
@@ -75,8 +86,8 @@ for i in range(nv):
                 elif var_name == 'vp' and (units == 'hPa' or units == 'mbar'): # vapor pressure
                         alldata[:, i] *= 100.
             
-            found_var = True
-            break
+                found_var = True
+                break
 
     if not found_var:
         if var_name == 'maxt' or var_name == 'mint' or var_name == 'rain' or var_name == 'radn':
@@ -92,8 +103,12 @@ unit_names = unit_names[not_missing]
 alldata = reshape(alldata[:, not_missing], (nt, nv))
 
 # compute day, month, year for every entry
-yr0, mth0, day0 = time_units.split('days since ')[1].split(' ')[0].split('-')[0 : 3]
-hr0, min0, sec0 = time_units.split('days since ')[1].split(' ')[1].split(':')[0 : 3]
+ts = time_units.split('days since ')[1].split(' ')
+yr0, mth0, day0 = ts[0].split('-')[0 : 3]
+if len(ts) > 1:
+    hr0, min0, sec0 = ts[1].split(':')[0 : 3]
+else:
+    hr0 = 0; min0 = 0; sec0 = 0
 ref = datetime.datetime(int(yr0), int(mth0), int(day0), int(hr0), int(min0), int(sec0))
 datear = array([ref + datetime.timedelta(i) for i in [int(j) for j in time]])
 days = array([d.timetuple().tm_yday for d in datear]).reshape((nt, 1)) # convert to numpy array

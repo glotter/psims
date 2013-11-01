@@ -61,7 +61,6 @@ for i in range(nv):
         matchvar = isin(v, variables)
         if matchvar != []:
             matchvar = matchvar[0] # take first match
-            print matchvar
             if matchvar in vlist:
                 alldata[:, i] = infile.variables[matchvar][:].squeeze()
            
