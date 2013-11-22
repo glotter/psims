@@ -84,7 +84,9 @@ for i in range(nv):
                         alldata[:, i] *= 38.624256
                 elif var_name == 'SUNH' and units == 'h': # sunh
                     alldata[:, i] *= 100. / 24
-            
+                elif var_name == 'VAPR' and units == 'Pa': # vapor pressure
+                    alldata[:, i] /= 1000.       
+ 
                 found_var = True
                 break
 
