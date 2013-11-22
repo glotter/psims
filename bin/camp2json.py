@@ -50,6 +50,10 @@ parser.add_option("-d", "--delta", dest = "delta", default = 30, type = "string"
                   help = "Distance(s) between each latitude/longitude grid cell in arcminutes")
 parser.add_option("-r", "--ref_year", dest = "ref_year", default = 1958, type = "int",
                   help = "Reference year from which to record times")
+parser.add_option("-n", "--nyers", dest = "nyers", default = 31, type = "int",
+                  help = "Number of years in simulation")
+parser.add_option("-s", "--nscens", dest = "nscens", default = 12, type = "int",
+                  help = "Number of scenarios")
 parser.add_option("-o", "--output", dest = "outputfile", default = "expout.json", type = "string",
                   help = "output experiment JSON file", metavar = "FILE")
 (options, args) = parser.parse_args()
@@ -85,6 +89,7 @@ dict_replace(template, 'site_name', str(lat) + ', ' + str(lon))
 
 # scenarios
 scenarios = campaign.variables['scen'][:].astype(int)
+scenarios = scenarios[: options.nscens] # limit to nscens
 num_scenarios = len(scenarios)
 
 # duplicate experiment for each scenario
@@ -102,6 +107,10 @@ variables.remove('scen')
 for i in range(num_scenarios): 
     dict_replace(exp['experiments'][i], 'trno', str(i + 1))
 
+# replace nyers globally
+nyers = options.nyers
+list_replace(exp['experiments'], 'nyers', str(nyers))
+
 # iterate through variables
 for var in variables:
     # get netCDF4 variable 
@@ -114,7 +123,7 @@ for var in variables:
     # get variable array
     if v.ndim == 1:
         if dim[0] == 'scen':
-            var_array = v[:]
+            var_array = v[: num_scenarios]
         else:
             raise Exception('Univariate data must have scenario as dimension')
     elif v.ndim == 2:
@@ -143,19 +152,19 @@ for var in variables:
         
         if scen_idx == 0:
             if lat_idx == 1:
-                var_array = v[:, latidx, lonidx] 
+                var_array = v[: num_scenarios, latidx, lonidx]
             else:
-                var_array = v[:, lonidx, latidx]
+                var_array = v[: num_scenarios, lonidx, latidx]
         elif scen_idx == 1:
             if lat_idx == 0:
-                var_array = v[latidx, :, lonidx]
+                var_array = v[latidx, : num_scenarios, lonidx]
             else:
-                var_array = v[lonidx, :, latidx]
-        else: # scen_idx == 2
+                var_array = v[lonidx, : num_scenarios, latidx]
+        else:
             if lat_idx == 0:
-                var_array = v[latidx, lonidx]
+                var_array = v[latidx, lonidx, : num_scenarios]
             else:
-                var_array = v[lonidx, latidx]
+                var_array = v[lonidx, latidx, : num_scenarios]
     else:
          raise Exception('Data contain variables with improper dimensions')    
 
@@ -216,7 +225,7 @@ for var in variables:
             print 'Replacing variable date with', rdate, 'for occurrence =', occ
             dict_replace(exp['experiments'][j], 'date', str(rdate), occ = occ)
 
-# change dates based on reference year
+# change dates based on reference year and number of years
 ref_year = options.ref_year
 yer = ref_year % 100
 list_replace(exp['experiments'], 'pfyer', str(yer))
@@ -245,7 +254,10 @@ for e in exp['experiments']:
         dict_replace(e, 'icdat', str(ref_year) + icdate[4 :])
     start_date = get_obj(e, 'start_date', '')
     if start_date != '':
-        dict_replace(e, 'start_date', start_date[: 6] + str(ref_year))
+        dict_replace(e, 'start_date', '01/01/' + str(ref_year)) # always January 1st
+    end_date = get_obj(e, 'end_date', '')
+    if end_date != '':
+        dict_replace(e, 'end_date', '31/12/' + str(ref_year + nyers - 1)) # always December 31st
     
 # correct plyer, if available and necessary
 for e in exp['experiments']:

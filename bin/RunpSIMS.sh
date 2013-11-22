@@ -42,7 +42,7 @@ chmod +x *.py *.pl *.sh *.EXE *.exe
 # This file is a single netcdf file that contains arbitary number of variables 
 # that must be changed spatially in the experiment files. The experiment 
 # file is model agnostic and always called experiment.json. 
-tappcamp="$( echo $tappcamp | sed s/:/' '/g ) --latidx $latidx --lonidx $lonidx --ref_year $ref_year --delta $delta " 
+tappcamp="$( echo $tappcamp | sed s/:/' '/g ) --latidx $latidx --lonidx $lonidx --ref_year $ref_year --delta $delta --nyers $num_years --nscens $scens" 
 echo Campaign translator command: $tappcamp
 ls -l experiment.json 1>&2
 #strace -o strace.log 
