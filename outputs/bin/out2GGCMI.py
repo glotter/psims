@@ -127,7 +127,7 @@ for i in range(len(var_names)):
     elif 'apsim' in prefix:
         if v == 'yield':       var_apsim = 'yield';         units = 't ha-1 yr-1'
         elif v == 'pirrww':    var_apsim = 'IrrigationIn';  units = 'mm yr-1'
-        elif v == 'biomass':   var_apsim = 'biomass';       units = 't ha-1 yr-1'
+        elif v == 'biom':      var_apsim = 'biomass';       units = 't ha-1 yr-1'
         elif v == 'aet':       var_apsim = 'actual_ET';     units = 'mm yr-1'
         elif v == 'plant-day': var_apsim = 'planting_date'; units = 'day of year'
         elif v == 'anth-day':  var_apsim = 'flowering_das'; units = 'days from planting'
