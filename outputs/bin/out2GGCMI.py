@@ -3,6 +3,7 @@
 # import modules
 from os import remove
 from shutil import copy
+from numpy import logical_or
 from optparse import OptionParser
 from netCDF4 import Dataset as nc
 
@@ -104,12 +105,12 @@ for i in range(len(var_names)):
         elif v == 'anth-day':
             var = f.variables['ADAT']
             var_arr = var[:]
-            var_arr[var_arr <= 1] = 1e20 # change 0, 1 to 1e20 (same for MDAT)
+            var_arr[logical_or(var_arr == 0, var_arr == 1)] = 1e20 # change 0, 1 to 1e20 (same for MDAT)
             units = 'days from planting'
         elif v == 'maty-day':
             var = f.variables['MDAT']
             var_arr = var[:]
-            var_arr[var_arr <= 1] = 1e20
+            var_arr[logical_or(var_arr == 0, var_arr == 1)] = 1e20
             units = 'days from planting'
         elif v == 'gsprcp':
             var = f.variables['PRCP']
@@ -151,7 +152,7 @@ for i in range(len(var_names)):
             if 'units' in var.ncattrs() and var.units == 'kg/ha':
                 var_arr[var_arr != -99] *= 0.001
         elif v in ['maty-day', 'anth-day']:
-            var_arr[var_arr <= 1] = 1e20
+            var_arr[var_arr == 0] = 1e20 # indicates crop died prematurely
         elif v == 'plant-day':
             var_arr[var_arr > 366] = 1e20
     else:
