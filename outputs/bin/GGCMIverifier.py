@@ -287,16 +287,14 @@ for d in dirs:
                             errors += sim2 + 'NEGATIVE: ' + pneg + '% of values are negative\n'
                     
                     # check range
-                    nlower = (v < vranges[varidx][0]).sum()
-                    if nlower:
-                        nlower = 100. * nlower / npts
-                        nlower = '{:.2f}'.format(nlower)
-                        errors += sim2 + 'RANGE: ' + nlower + '% of values < ' + str(vranges[varidx][0]) + '\n'
-                    nhigher = logical_and(v > vranges[varidx][1], v != 1e20).sum()
-                    if nhigher:
-                        nhigher = 100. * nhigher / npts
-                        nhigher = '{:.2f}'.format(nhigher)
-                        errors += sim2 + 'RANGE: ' + nhigher + '% of values > ' + str(vranges[varidx][1]) + '\n'
+                    plower = 100. * (v < vranges[varidx][0]).sum() / npts
+                    if plower > 0.1:
+                        plower = '{:.2f}'.format(plower)
+                        errors += sim2 + 'RANGE: ' + plower + '% of values < ' + str(vranges[varidx][0]) + '\n'
+                    phigher = 100. * logical_and(v > vranges[varidx][1], v != 1e20).sum() / npts
+                    if phigher > 0.1:
+                        phigher = '{:.2f}'.format(phigher)
+                        errors += sim2 + 'RANGE: ' + phigher + '% of values > ' + str(vranges[varidx][1]) + '\n'
                     
                 ncf.close()
 
@@ -349,8 +347,8 @@ sumfile.write('ERRORS\n\n')
 sumfile.write(header + '\n')
 sumfile.write('=' * len(header) + '\n')
 if errors != '':
-    sumfile.write(errors + '\n')
+    sumfile.write(errors[: -1])
 else:
-    sumfile.write('None\n\n')
+    sumfile.write('None')
 
 sumfile.close()

@@ -75,7 +75,7 @@ for i in range(len(var_names)):
     v = var_names[i]
     
     if 'dssat' in prefix:
-        # map dssat variables, converting units as needed
+        # map dssat variables, converting units and making other variable-specific adjustments as needed
         if v == 'yield':
             var = f.variables['HWAM']
             var_arr = var[:]
@@ -99,14 +99,17 @@ for i in range(len(var_names)):
         elif v == 'plant-day':
             var = f.variables['PDAT']
             var_arr = var[:]
+            var_arr[var_arr > 366] = 1e20
             units = 'day of year'
         elif v == 'anth-day':
             var = f.variables['ADAT']
             var_arr = var[:]
+            var_arr[var_arr <= 1] = 1e20 # change 0, 1 to 1e20 (same for MDAT)
             units = 'days from planting'
         elif v == 'maty-day':
             var = f.variables['MDAT']
             var_arr = var[:]
+            var_arr[var_arr <= 1] = 1e20
             units = 'days from planting'
         elif v == 'gsprcp':
             var = f.variables['PRCP']
@@ -144,9 +147,13 @@ for i in range(len(var_names)):
         else: raise Exception('Variable unrecognized. Exiting . . .')
         var = f.variables[var_apsim]
         var_arr = var[:]
-        if v in ['yield', 'biomass']:
+        if v in ['yield', 'biom']: # make variable-specific adjustments
             if 'units' in var.ncattrs() and var.units == 'kg/ha':
                 var_arr[var_arr != -99] *= 0.001
+        elif v in ['maty-day', 'anth-day']:
+            var_arr[var_arr <= 1] = 1e20
+        elif v == 'plant-day':
+            var_arr[var_arr > 366] = 1e20
     else:
         raise Exception('Model unrecognized. Exiting . . .')
         
