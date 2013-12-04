@@ -48,20 +48,26 @@ function climcapitalized {
   echo $climcap
 }
 
-# constants
+# read from command line
+ggcmidir=$1
+outdir=$2
+overwrite=$3
+
+# translator
 tapp=/project/joshuaelliott/psims/outputs/bin/out2GGCMI.py
 
-ggcmidir=/project/joshuaelliott/psims/outputs/ggcmi
+# output directories
+pdssatpmdir=$outdir/pDSSAT.pm
+pdssatptdir=$outdir/pDSSAT.pt
+papsimdir=$outdir/pAPSIM
 
-pdssatpmdir=/project/joshuaelliott/psims/outputs/pDSSAT.pm
-pdssatptdir=/project/joshuaelliott/psims/outputs/pDSSAT.pt
-papsimdir=/project/joshuaelliott/psims/outputs/pAPSIM
-
+# variable names
 pdssatvars=yield,pirrww,biom,aet,plant-day,anth-day,maty-day,gsprcp,gsrsds,sumt
 numdssatvars=10
 papsimvars=yield,pirrww,biom,aet,plant-day,anth-day,maty-day,initr,leach,sco2,sn2o,gsprcp,gsrsds,sumt
 numapsimvars=14
 
+# scenario names
 pdssatpmscens=fullharm_noirr,fullharm_firr,default_noirr,default_firr,harmnon_noirr,harmnon_firr
 pdssatptscens=fullharm_noirr,fullharm_firr
 papsimscens=default_noirr,default_firr,fullharm_noirr,fullharm_firr,harmnon_noirr,harmnon_firr
@@ -125,7 +131,7 @@ for d in `ls $ggcmidir | egrep 'dssat|apsim'`; do
     ptdir=$ptdir/$cropfull
     if [[ ! -d $ptdir ]]; then mkdir $ptdir; fi
     # create GGCMI files if directory is incomplete
-    if [[ `ls $pmdir | wc -l` -ne $(($numdssatvars*6)) ]]; then
+    if [[ $overwrite == "True" ]] || [[ `ls $pmdir | wc -l` -ne $(($numdssatvars*6)) ]]; then
       echo "   Processing pDSSAT.pm for directory "$d
       prefix="pdssat.pm_"$clim"_hist"
       `$tapp -i $outfile -v "$pdssatvars" -p $prefix -s $suffix -c $crop --scens 1,2,3,4,5,6 --scen_names "$pdssatpmscens"`
@@ -133,7 +139,7 @@ for d in `ls $ggcmidir | egrep 'dssat|apsim'`; do
     else
       echo "   pDSSAT.pm already processed for "$d
     fi
-    if [[ `ls $ptdir | wc -l` -ne $(($numdssatvars*2)) ]]; then
+    if [[ $overwrite == "True" ]] || [[ `ls $ptdir | wc -l` -ne $(($numdssatvars*2)) ]]; then
       echo "Processing pDSSAT.pt for directory "$d
       prefix="pdssat.pt_"$clim"_hist"
       `$tapp -i $outfile -v "$pdssatvars" -p $prefix -s $suffix -c $crop --scens 7,8 --scen_names "$pdssatptscens"`
@@ -148,7 +154,7 @@ for d in `ls $ggcmidir | egrep 'dssat|apsim'`; do
     apsimdir=$apsimdir/$cropfull
     if [[ ! -d $apsimdir ]]; then mkdir $apsimdir; fi
     # create GGCMI files if directory is incomplete
-    if [[ `ls $apsimdir | wc -l` -ne $(($numapsimvars*6)) ]]; then
+    if [[ $overwrite == "True" ]] || [[ `ls $apsimdir | wc -l` -ne $(($numapsimvars*6)) ]]; then
       echo "   Processing pAPSIM for directory "$d
       prefix="papsim_"$clim"_hist"
       `$tapp -i $outfile -v "$papsimvars" -p $prefix -s $suffix -c $crop --scens 1,2,3,4,5,6 --scen_names "$papsimscens"`

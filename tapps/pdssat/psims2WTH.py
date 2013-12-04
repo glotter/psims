@@ -71,7 +71,7 @@ for i in range(nv):
                 # convert units, if necessary
                 if var_name == 'SRAD' and units == 'W m-2': # solar
                     alldata[:, i] *= 0.0864
-                elif (var_name == 'TMAX' or var_name == 'TMIN') and units == 'K': # temperature
+                elif (var_name == 'TMAX' or var_name == 'TMIN') and (units == 'K' or units == 'Degrees (K)'): # temperature
                     alldata[:, i] -= 273.15
                 elif var_name == 'RAIN' and units == 'kg m-2 s-1': # precip
                     alldata[:, i] *= 86400

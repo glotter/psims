@@ -72,7 +72,7 @@ for i in range(nv):
                 # convert units, if necessary
                 if var_name == 'radn' and units == 'W m-2': # solar
                     alldata[:, i] *= 0.0864
-                elif (var_name == 'maxt' or var_name == 'mint') and units == 'K': # temperature
+                elif (var_name == 'maxt' or var_name == 'mint') and (units == 'K' or units == 'Degrees (K)'): # temperature
                     alldata[:, i] -= 273.15
                 elif var_name == 'rain' and units == 'kg m-2 s-1': # precip
                     alldata[:, i] *= 86400

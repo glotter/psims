@@ -79,7 +79,8 @@ for i in range(len(var_names)):
         if v == 'yield':
             var = f.variables['HWAM']
             var_arr = var[:]
-            if 'units' in var.ncattrs() and var.units == 'kg/ha': var_arr *= 0.001
+            if 'units' in var.ncattrs() and var.units == 'kg/ha':
+                var_arr[var_arr != -99] *= 0.001 # do not convert invalid data
             units = 't ha-1 yr-1'
         elif v == 'pirrww':
             var = f.variables['IRCM']
@@ -88,7 +89,8 @@ for i in range(len(var_names)):
         elif v == 'biom':
             var = f.variables['CWAM']
             var_arr = var[:]
-            if 'units' in var.ncattrs() and var.units == 'kg/ha': var_arr *= 0.001
+            if 'units' in var.ncattrs() and var.units == 'kg/ha':
+                var_arr[var_arr != -99] *= 0.001
             units = 't ha-1 yr-1'
         elif v == 'aet':
             var = f.variables['ETCP']
@@ -131,7 +133,7 @@ for i in range(len(var_names)):
         elif v == 'aet':       var_apsim = 'actual_ET';     units = 'mm yr-1'
         elif v == 'plant-day': var_apsim = 'planting_date'; units = 'day of year'
         elif v == 'anth-day':  var_apsim = 'flowering_das'; units = 'days from planting'
-        elif v == 'maty-day':  var_apsim = 'maturity_das';  units = 'days after planting'
+        elif v == 'maty-day':  var_apsim = 'maturity_das';  units = 'days from planting'
         elif v == 'initr':     var_apsim = 'FertiliserIn';  units = 'kg ha-1 yr-1'
         elif v == 'leach':     var_apsim = 'NO3_leaching';  units = 'kg ha-1 yr-1'
         elif v == 'sco2':      var_apsim = 'CO2emissionIn'; units = 'kg C ha-1'
@@ -143,9 +145,13 @@ for i in range(len(var_names)):
         var = f.variables[var_apsim]
         var_arr = var[:]
         if v in ['yield', 'biomass']:
-            if 'units' in var.ncattrs() and var.units == 'kg/ha': var_arr *= 0.001
+            if 'units' in var.ncattrs() and var.units == 'kg/ha':
+                var_arr[var_arr != -99] *= 0.001
     else:
         raise Exception('Model unrecognized. Exiting . . .')
+        
+    # change -99 to 1e20
+    var_arr[var_arr == -99] = 1e20
 
     # get chunk sizes, long name, dimensions, and scenario index
     chunksizes = var.chunking()

@@ -63,6 +63,8 @@ echo Run directory $rundir: site=$execsite paramfile=$paramfile
 # Copy the Campaign.nc4 file in the rundir so we can append it to the data
 cp $campaign/*.nc4 $rundir/
 
+chmod a+rw $rundir/Campaign.nc4
+
 # Report an error if configuration files are missing
 if [ ! -f "conf/$execsite.xml" ] && [ ! -f "conf/$execsite.conf" ]; then
    echo Unable to find requested configuration file for site $execsite
