@@ -49,7 +49,7 @@ var_lists = od([('radn', ['solar', 'rad', 'rsds', 'srad']), \
                 ('vp', ['vap', 'vapr'])])
 
 var_names = array(var_lists.keys())
-unit_names = array(['oC', 'oC', 'mm', 'MJ/m^2', 'm/s', '%', '%', 'Pa'])
+unit_names = array(['MJ/m^2', 'oC', 'oC', 'mm', 'm/s', '%', '%', 'Pa'])
 nt = len(time)
 nv = len(var_names)
 alldata = empty((nt, nv)) # includes time
