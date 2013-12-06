@@ -38,8 +38,8 @@ lat1 = box[0]; lat2 = box[1]
 lon1 = box[2]; lon2 = box[3]
 delta = options.delta / 60.
 
-latidx1 = floor((90. - lat1) / delta + 0.5)
-latidx2 = floor((90. - lat2) / delta + 0.5)
+latidx1 = floor((90. - lat2) / delta + 0.5) # greater latitude has lower index!
+latidx2 = floor((90. - lat1) / delta + 0.5)
 lonidx1 = floor((lon1 + 180.) / delta + 0.5)
 lonidx2 = floor((lon2 + 180.) / delta + 0.5)
 
