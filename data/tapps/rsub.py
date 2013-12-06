@@ -46,6 +46,7 @@ lonidx2 = floor((lon2 + 180.) / delta + 0.5)
 grid_list = []
 for lat in within_limits(listdir(wd), latidx1, latidx2):
     for lon in within_limits(listdir(wd + sep + lat), lonidx1, lonidx2):
+        print lat,lon
         if not use_sd or (use_sd and isdir(sd + sep + lat + sep + lon)):
             grid_list.append(lat + lon)
 
