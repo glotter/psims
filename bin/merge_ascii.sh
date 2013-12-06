@@ -229,7 +229,7 @@ for var in ${sub_vars[@]}; do
   echo -n " "$var" = " >> $temp_cdl_file
 
   # find all files belonging to variable
-  files=(`ls $file_dir/$var*`)
+  files=(`ls $file_dir/* | egrep "$var"_[0-9]`) # match variable followed by _number
 
   # iterate over files, filling in gaps
   next_lat=1
