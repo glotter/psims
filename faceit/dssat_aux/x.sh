@@ -1,0 +1,10 @@
+cp /home/galaxy/face-it/psims/models/pdssat45/test45/DSCSM045.EXE .
+cp /home/galaxy/face-it/psims/models/pdssat45/test45/MODEL.ERR .
+cp /home/galaxy/face-it/psims/models/pdssat45/test45/DSSATPRO.L45 .
+cp /home/galaxy/face-it/psims/models/pdssat45/test45/SIMULATION.CDE .
+cp /home/galaxy/face-it/psims/models/pdssat45/test45/DETAIL.CDE .
+cp /home/galaxy/face-it/psims/models/pdssat45/test45/MZCER045.* .
+cp /home/galaxy/face-it/psims/models/pdssat45/test45/DETAIL.CDE .
+cp /home/galaxy/face-it/psims/models/pdssat45/test45/DATA.CDE .
+cp /home/galaxy/face-it/psims/models/pdssat45/test45/CO2045.WDA .
+cp /home/galaxy/face-it/psims/models/pdssat45/test45/SOMFX045.SDA .
