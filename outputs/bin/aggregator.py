@@ -86,9 +86,9 @@ dirs = []
 for md in models:
     for cm in climates:
         for cp in crops:
-            d = sep.join(md, cm, cp)
+            d = sep.join([md, cm, cp])
             if exists(rootdir + sep + d) and len(listdir(rootdir + sep + d)):
-                dirs.append(md + sep + cm + sep + cp)
+                dirs.append(d)
 ndirs = len(dirs)
 
 # find out start and end indices for batch
@@ -123,12 +123,16 @@ ncrops = len(uqcrops)
 landmasksir = [0] * ncrops
 landuseir = nc(options.landuseir) # land use IR mask
 for i in range(ncrops):
-    landmasksir[i] = landuseir.variables[uqcrops[i]][:]
+    irvars = landuseir.variables.keys()
+    varidx = [uqcrops[i] in v for v in irvars].index(True)
+    landmasksir[i] = landuseir.variables[irvars[varidx]][:]
 landuseir.close()
 landmasksrf = [0] * ncrops
 landuserf = nc(options.landuserf) # land use RF mask
 for i in range(ncrops):
-    landmasksrf[i] = landuserf.variables[uqcrops[i]][:]
+    rfvars = landuserf.variables.keys()
+    varidx = [uqcrops[i] in v for v in rfvars].index(True)
+    landmasksrf[i] = landuserf.variables[rfvars[varidx]][:]
 landuserf.close()
 
 # load aggregration masks
@@ -157,8 +161,12 @@ nlats, nlons = fpu.shape
 area = 100 * (111.2 / 2)**2 * cos(pi * lat / 360)
 area = resize(area, (nlons, nlats)).T
 
+print 'START INDEX = ' + str(si) + ', END IDX = ' + str(ei) + ' . . .'
 for i in range(si, ei):
     # iterate over subdirectories
+    print 'PROCESSING INDEX = ' + str(i) + ': DIRECTORY ' + str(rootdir + sep + dirs[i])
+    
+    # get files 
     files = listdir(rootdir + sep + dirs[i])
         
     # variables and scenarios
@@ -177,10 +185,10 @@ for i in range(si, ei):
         scens_full = apsim_scens_full
     
     # crop
-    cidx = crops.index(dirs[i].split(sep)[2])
+    cidx = uqcrops.index(dirs[i].split(sep)[2].title())
     
     # use first file to get time and units    
-    f = sep.join([rootdir, dirs[i], sep, files[0]])
+    f = sep.join([rootdir, dirs[i], files[0]])
     ncf = nc(f)
     time = ncf.variables['time'][:]
     tunits = ncf.variables['time'].units
@@ -254,7 +262,7 @@ for i in range(si, ei):
         vtmpfpu = zeros((nfpu, nlats, nlons)) # for storing temporary variable
         vtmpbasin = zeros((nbasin, nlats, nlons))
         vtmpregion = zeros((nregion, nlats, nlons))
-        for k in range(len(vars)):
+        for k in range(nv):
             # iterate over variables
             t0 = tm.time()
             
