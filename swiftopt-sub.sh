@@ -180,7 +180,7 @@ while true; do
    sleep 60 # wait 60 seconds
    dirsize=(`du var_files`)
    dirsize=${dirsize[0]}
-   if [ $dirsize -eq $prevdirsize ]; then
+   if [ $dirsize -eq $prevdirsize ] && [ $dirsize -gt 32 ]; then # 32 is size of empty directory
       # directory size has stabilized
       sleep 60 # wait 60 seconds before proceeding
       break
