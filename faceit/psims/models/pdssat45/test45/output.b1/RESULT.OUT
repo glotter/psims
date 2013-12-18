@@ -1,0 +1,544 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+RUN    TRT FLO MAT TOPWT HARWT  RAIN  TIRR   CET  PESW  TNUP  TNLF   TSON TSOC
+           dap dap kg/ha kg/ha    mm    mm    mm    mm kg/ha kg/ha  kg/ha t/ha
+  1 MZ   1  82 141 25449 15727   763   676   816     0   330    10  12424  125
+  2 MZ   1  92 152 24401 16602   805   630   781     0   327     9  12416  124
+  3 MZ   1  85 138 24411 14158   597   624   759     0   325    13  12417  124
+  4 MZ   1  87 150 24966 15877   853   670   775     0   319    11  12424  124
+  5 MZ   1  82 149 25070 15662  1512   595   798     0   329     8  12425  125
+  6 MZ   1  82 140 24201 15308   410   602   759     0   325    11  12417  124
+  7 MZ   1  84 150 25833 16976   369   692   764     0   335     9  12416  124
+  8 MZ   1  84 136 24130 13706  1108   633   746     0   321    15  12417  124
+  9 MZ   1  74 132 25298 15228   569   697   753     0   325    11  12420  124
+ 10 MZ   1  90 138 23608 12930   422   612   719     0   330    17  12411  124
+ 11 MZ   1  93 161 27208 16590   637   624   786     0   334    10  12420  124
+ 12 MZ   1  88 149 24857 15683   606   629   762     0   316    17  12415  124
+ 13 MZ   1  92 148 25702 15848   606   635   763     0   329     9  12415  124
+ 14 MZ   1  78 132 24541 13933   711   592   801     0   325    14  12417  124
+ 15 MZ   1  93 156 25965 16206   970   598   833     0   322    13  12422  125
+ 16 MZ   1  82 142 24778 15932   502   630   781     0   329    14  12412  124
+ 17 MZ   1  88 151 25955 17054  1525   546   795     0   320    10  12418  124
+ 18 MZ   1  85 137 23180 14631  1039   607   787     0   322    13  12417  124
+ 19 MZ   1  80 142 25383 15813   637   568   772     0   333    12  12418  124
+ 20 MZ   1  94 145 23537 13186  1516   572   799     0   320    12  12424  124
+RUN    TRT FLO MAT TOPWT HARWT  RAIN  TIRR   CET  PESW  TNUP  TNLF   TSON TSOC
+           dap dap kg/ha kg/ha    mm    mm    mm    mm kg/ha kg/ha  kg/ha t/ha
+ 21 MZ   1  83 147 27107 16168   894   663   787     0   323    10  12419  124
+ 22 MZ   1  82 142 25968 15447   850   608   766     0   327    11  12419  124
+ 23 MZ   1  75 129 25726 13753   557   672   769     0   327    11  12421  124
+ 24 MZ   1  83 132 22677 11446   452   666   766     0   310    29  12418  124
+ 25 MZ   1  72 127 24446 15607   711   629   837     0   324     9  12417  124
+ 26 MZ   1  78 130 24393 13970   577   644   738     0   328    13  12417  124
+ 27 MZ   1  87 144 23492 15188   857   509   779     0   308    18  12416  124
+ 28 MZ   1  71 124 23493 12562   975   578   719     0   306    16  12425  124
+ 29 MZ   1  79 136 26257 14628   438   656   779     0   334    11  12415  124
+ 30 MZ   1  74 127 22585 14957   585   627   697     0   321    13  12420  124
+ 31 MZ   1  84 138 24370 14709   523   656   789     0   325    16  12414  124
+ 32 MZ   1  90 155 26505 17033  1018   577   875     0   325    10  12416  124
+ 33 MZ   1 103 159 25836 14680   742   593   816     0   326    11  12420  124
+ 34 MZ   1  82 136 24421 13959   632   679   802     0   321    14  12419  124
+  Crop mature on JD 219 due to slowed grain filling
+ 35 MZ   2  82 101  3011     0   760     0   361     0   100   184  12465  125
+  Crop mature on JD 236 due to slowed grain filling
+ 36 MZ   2  92 122  4381   674   805     0   367     0    88   200  12457  125
+  Crop mature on JD 227 due to slowed grain filling
+ 37 MZ   2  85 116  4743   326   597     0   357     0   120   172  12455  125
+  Crop mature on JD 219 due to slowed grain filling
+ 38 MZ   2  87 108  4269     0   828     0   328     0    88   186  12468  125
+  Crop mature on JD 232 due to slowed grain filling
+ 39 MZ   2  82 103  2868     0  1471     0   380     0    93   186  12465  125
+  Crop mature on JD 225 due to slowed grain filling
+ 40 MZ   2  82 113  4418   543   409     0   366     0    99   191  12458  125
+  Crop mature on JD 214 due to slowed grain filling
+RUN    TRT FLO MAT TOPWT HARWT  RAIN  TIRR   CET  PESW  TNUP  TNLF   TSON TSOC
+           dap dap kg/ha kg/ha    mm    mm    mm    mm kg/ha kg/ha  kg/ha t/ha
+ 41 MZ   2  84 102  3904     0   329     0   279     0    89   198  12460  125
+  Crop mature on JD 216 due to slowed grain filling
+ 42 MZ   2  84 105  3834     0  1108     0   335     0    98   191  12456  125
+  Crop mature on JD 207 due to slowed grain filling
+ 43 MZ   2  74  96  4153     0   569     0   297     0    93   192  12462  125
+  Crop mature on JD 228 due to slowed grain filling
+ 44 MZ   2  90 112  3165   197   422     0   326     0   102   197  12451  125
+  Crop mature on JD 227 due to slowed grain filling
+ 45 MZ   2  93 116  3127     0   573     0   353     0    91   195  12461  125
+  Crop mature on JD 227 due to slowed grain filling
+ 46 MZ   2  88 116  4950   354   605     0   351     0   134   153  12455  125
+  Crop mature on JD 222 due to slowed grain filling
+ 47 MZ   2  92 111  3615     0   606     0   350     0    97   189  12456  125
+  Crop mature on JD 212 due to slowed grain filling
+ 48 MZ   2  78 101  5728   367   710     0   421     0   157   134  12455  125
+  Crop mature on JD 239 due to slowed grain filling
+ 49 MZ   2  93 122  4117   253   970     0   441     0   133   153  12458  125
+  Crop mature on JD 227 due to slowed grain filling
+ 50 MZ   2  82 116  4441   611   502     0   373     0   106   189  12454  125
+  Crop mature on JD 259 due to slowed grain filling
+ 51 MZ   2  88 148  6597  1870  1525     0   455     0   121   168  12451  125
+  Crop mature on JD 230 due to slowed grain filling
+ 52 MZ   2  85 113  4191   321  1039     0   394     0   110   176  12458  125
+  Crop mature on JD 226 due to slowed grain filling
+ 53 MZ   2  80 110  4171   340   598     0   386     0   135   162  12453  125
+  Crop mature on JD 240 due to slowed grain filling
+ 54 MZ   2  94 129  4447   578  1514     0   432     0   116   171  12461  125
+  Crop mature on JD 232 due to slowed grain filling
+ 55 MZ   2  83 121  4933   663   893     0   347     0   103   178  12464  125
+  Crop mature on JD 216 due to slowed grain filling
+ 56 MZ   2  82 104  4098     0   842     0   362     0   104   185  12458  125
+  Crop mature on JD 209 due to slowed grain filling
+ 57 MZ   2  75  97  3464     0   557     0   324     0   131   154  12461  125
+  Crop mature on JD 217 due to slowed grain filling
+ 58 MZ   2  83 106  3684   206   452     0   336     0    99   194  12458  125
+  Crop mature on JD 228 due to slowed grain filling
+ 59 MZ   2  72  99  3640   189   707     0   415     0   108   174  12456  125
+  Crop mature on JD 213 due to slowed grain filling
+ 60 MZ   2  78  99  3962   159   577     0   310     0    97   193  12458  125
+RUN    TRT FLO MAT TOPWT HARWT  RAIN  TIRR   CET  PESW  TNUP  TNLF   TSON TSOC
+           dap dap kg/ha kg/ha    mm    mm    mm    mm kg/ha kg/ha  kg/ha t/ha
+ 61 MZ   2  87 144  7905  2367   857     0   476     0   135   156  12446  125
+  Crop mature on JD 208 due to slowed grain filling
+ 62 MZ   2  71  97  5402   520   975     0   346     0    85   189  12468  125
+  Crop mature on JD 217 due to slowed grain filling
+ 63 MZ   2  79 102  3773     0   438     0   344     0   129   164  12456  125
+  Crop mature on JD 211 due to slowed grain filling
+ 64 MZ   2  74 100  4892   728   585     0   286     0    84   201  12463  125
+  Crop mature on JD 213 due to slowed grain filling
+ 65 MZ   2  84 102  3621     0   522     0   357     0   109   179  12456  125
+  Crop mature on JD 246 due to slowed grain filling
+ 66 MZ   2  90 133  4959   811  1008     0   490     0   120   169  12453  125
+  Crop mature on JD 248 due to slowed grain filling
+ 67 MZ   2 103 137  3652   340   740     0   432     0   124   163  12456  125
+  Crop mature on JD 214 due to slowed grain filling
+ 68 MZ   2  82 103  3856     0   632     0   361     0    94   189  12460  125
+ 69 MZ   3  77 133 23458 15066   763   630   776     0   322    11  12426  125
+ 70 MZ   3  87 142 20316 13759   805   605   748     0   297    36  12415  124
+ 71 MZ   3  77 127 21940 12305   597   567   719     0   303    33  12415  124
+ 72 MZ   3  76 133 22206 14016   829   634   730     0   305    18  12425  124
+ 73 MZ   3  79 138 24032 14700  1506   553   767     0   321    10  12427  125
+ 74 MZ   3  74 129 21834 13883   410   567   729     0   317    16  12419  124
+ 75 MZ   3  79 141 24662 15991   369   672   754     0   330    11  12415  124
+ 76 MZ   3  75 125 22862 12597  1108   610   723     0   305    27  12417  124
+ 77 MZ   3  63 121 22202 13700   569   616   695     0   302    32  12418  124
+ 78 MZ   3  84 129 21838 12435   422   565   684     0   315    26  12414  124
+ 79 MZ   3  83 145 26311 15639   616   596   756     0   328    10  12422  124
+ 80 MZ   3  80 135 22582 14316   606   577   720     0   308    21  12414  124
+RUN    TRT FLO MAT TOPWT HARWT  RAIN  TIRR   CET  PESW  TNUP  TNLF   TSON TSOC
+           dap dap kg/ha kg/ha    mm    mm    mm    mm kg/ha kg/ha  kg/ha t/ha
+ 81 MZ   3  81 134 23273 14695   606   605   733     0   320    13  12416  124
+ 82 MZ   3  74 124 23502 12451   710   563   781     0   318    21  12415  124
+ 83 MZ   3  86 147 24408 15935   970   545   795     0   317    13  12422  124
+ 84 MZ   3  72 126 20999 13278   502   559   731     0   296    43  12413  124
+ 85 MZ   3  72 132 22145 14070  1525   515   771     0   301    27  12416  124
+ 86 MZ   3  81 128 22015 12796  1039   559   750     0   312    17  12419  124
+ 87 MZ   3  73 128 23660 14676   615   522   731     0   324    14  12420  124
+ 88 MZ   3  88 137 22165 12075  1516   549   776     0   308    24  12421  124
+ 89 MZ   3  75 135 24199 14452   894   631   757     0   314    15  12421  124
+ 90 MZ   3  74 130 23832 13570   850   579   739     0   317    17  12419  124
+ 91 MZ   3  67 119 24440 12641   557   631   733     0   317    17  12420  124
+ 92 MZ   3  74 120 21104 10724   452   612   730     0   284    52  12420  124
+ 93 MZ   3  72 123 23147 14321   711   609   816     0   320    10  12418  124
+ 94 MZ   3  75 124 23098 12859   577   618   708     0   320    19  12415  124
+ 95 MZ   3  78 128 18499 11542   857   437   730     0   256    67  12417  124
+ 96 MZ   3  67 115 20375 11515   975   564   695     0   274    46  12425  124
+ 97 MZ   3  74 129 24918 13516   438   634   751     0   326    15  12414  124
+ 98 MZ   3  67 116 19688 12859   585   607   680     0   286    45  12421  124
+ 99 MZ   3  75 123 22834 13227   523   584   743     0   319    17  12416  124
+100 MZ   3  78 138 24459 15559  1018   557   847     0   319    13  12414  124
+RUN    TRT FLO MAT TOPWT HARWT  RAIN  TIRR   CET  PESW  TNUP  TNLF   TSON TSOC
+           dap dap kg/ha kg/ha    mm    mm    mm    mm kg/ha kg/ha  kg/ha t/ha
+101 MZ   3  94 147 24680 13222   740   569   792     0   319    14  12420  124
+102 MZ   3  76 127 22823 12106   632   628   772     0   306    27  12416  124
+  Crop mature on JD 213 due to slowed grain filling
+103 MZ   4  77  95  3620     0   760     0   361     0   105   178  12464  125
+  Crop mature on JD 250 due to slowed grain filling
+104 MZ   4  87 132  5181  1545   805     0   367     0    85   207  12455  125
+  Crop mature on JD 234 due to slowed grain filling
+105 MZ   4  77 116  5352   906   597     0   357     0   116   179  12451  125
+  Crop mature on JD 229 due to slowed grain filling
+106 MZ   4  76 111  6208  1300   828     0   328     0    80   197  12466  125
+  Crop mature on JD 229 due to slowed grain filling
+107 MZ   4  79 100  3334     0  1461     0   375     0    86   191  12465  125
+  Crop mature on JD 223 due to slowed grain filling
+108 MZ   4  74 105  5092   828   409     0   366     0   102   188  12458  125
+  Crop mature on JD 220 due to slowed grain filling
+109 MZ   4  79 102  4152   325   329     0   280     0    88   201  12458  125
+  Crop mature on JD 215 due to slowed grain filling
+110 MZ   4  75  97  4360     0  1108     0   334     0   100   189  12455  125
+  Crop mature on JD 228 due to slowed grain filling
+111 MZ   4  63 110  6522  2227   569     0   298     0    86   205  12458  125
+  Crop mature on JD 235 due to slowed grain filling
+112 MZ   4  84 117  3716   544   422     0   326     0   104   196  12449  125
+  Crop mature on JD 225 due to slowed grain filling
+113 MZ   4  83 107  3699     0   573     0   353     0    97   189  12460  125
+  Crop mature on JD 238 due to slowed grain filling
+114 MZ   4  80 120  6073  1376   606     0   351     0   127   163  12450  125
+  Crop mature on JD 218 due to slowed grain filling
+115 MZ   4  81 100  4433   229   606     0   350     0   100   186  12456  125
+  Crop mature on JD 234 due to slowed grain filling
+116 MZ   4  74 116  6167  1180   710     0   423     0   157   141  12448  125
+  Crop mature on JD 240 due to slowed grain filling
+117 MZ   4  86 122  5016   676   970     0   442     0   128   158  12458  125
+  Crop mature on JD 233 due to slowed grain filling
+118 MZ   4  72 114  5831  1692   502     0   373     0   102   196  12450  125
+119 MZ   4  72 132  7777  2943  1525     0   453     0   106   186  12452  125
+  Crop mature on JD 231 due to slowed grain filling
+120 MZ   4  81 113  4698   557  1039     0   394     0   114   173  12455  125
+  Crop mature on JD 220 due to slowed grain filling
+RUN    TRT FLO MAT TOPWT HARWT  RAIN  TIRR   CET  PESW  TNUP  TNLF   TSON TSOC
+           dap dap kg/ha kg/ha    mm    mm    mm    mm kg/ha kg/ha  kg/ha t/ha
+121 MZ   4  73 102  4869   497   598     0   385     0   126   169  12455  125
+  Crop mature on JD 249 due to slowed grain filling
+122 MZ   4  88 131  4614   821  1516     0   432     0   113   178  12456  125
+  Crop mature on JD 239 due to slowed grain filling
+123 MZ   4  75 121  6095  1661   893     0   348     0   102   181  12462  125
+  Crop mature on JD 214 due to slowed grain filling
+124 MZ   4  74  96  4632     0   842     0   362     0   102   187  12458  125
+  Crop mature on JD 217 due to slowed grain filling
+125 MZ   4  67  99  4451   454   557     0   324     0   129   159  12458  125
+  Crop mature on JD 219 due to slowed grain filling
+126 MZ   4  74 101  4131   391   452     0   336     0   102   192  12456  125
+  Crop mature on JD 228 due to slowed grain filling
+127 MZ   4  72  99  3701   205   707     0   415     0   105   177  12456  125
+  Crop mature on JD 219 due to slowed grain filling
+128 MZ   4  75 101  4556   351   577     0   310     0   100   194  12455  125
+129 MZ   4  78 128  8634  3318   857     0   475     0   113   178  12448  125
+  Crop mature on JD 215 due to slowed grain filling
+130 MZ   4  67  97  6163  1187   975     0   347     0    84   194  12464  125
+  Crop mature on JD 220 due to slowed grain filling
+131 MZ   4  74 102  4381   331   438     0   344     0   125   169  12454  125
+  Crop mature on JD 223 due to slowed grain filling
+132 MZ   4  67 105  5798  1799   585     0   287     0    84   205  12460  125
+  Crop mature on JD 219 due to slowed grain filling
+133 MZ   4  75 101  3898   264   523     0   358     0   111   179  12454  125
+  Crop mature on JD 247 due to slowed grain filling
+134 MZ   4  78 125  6496  1910  1008     0   494     0   112   179  12451  125
+  Crop mature on JD 252 due to slowed grain filling
+135 MZ   4  94 134  3880   526   740     0   432     0   123   166  12454  125
+  Crop mature on JD 219 due to slowed grain filling
+136 MZ   4  76 101  4219   279   632     0   361     0    94   191  12457  125
+137 MZ   5  69 125 24364 15662   763   628   775     0   327    10  12421  124
+138 MZ   5  84 142 23172 15158   805   628   768     0   321    15  12413  124
+139 MZ   5  71 121 21727 12676   597   571   720     0   305    32  12414  124
+140 MZ   5  77 134 23167 14014   848   630   736     0   312    16  12422  124
+RUN    TRT FLO MAT TOPWT HARWT  RAIN  TIRR   CET  PESW  TNUP  TNLF   TSON TSOC
+           dap dap kg/ha kg/ha    mm    mm    mm    mm kg/ha kg/ha  kg/ha t/ha
+141 MZ   5  79 138 24032 14700  1506   553   767     0   321    10  12427  125
+142 MZ   5  67 122 20100 12668   410   564   728     0   287    46  12417  124
+143 MZ   5  76 139 25748 16307   369   653   733     0   336     9  12414  124
+144 MZ   5  68 117 22719 12597  1108   609   722     0   308    27  12416  124
+145 MZ   5  71 127 25239 12310   569   673   741     0   322    21  12414  124
+146 MZ   5  80 124 21541 12034   422   568   681     0   311    32  12413  124
+147 MZ   5  80 143 26147 15981   617   560   748     0   330    11  12417  124
+148 MZ   5  80 138 24413 15657   606   601   733     0   320    16  12409  124
+149 MZ   5  79 132 23922 14736   606   588   734     0   324    12  12414  124
+150 MZ   5  75 127 24722 13169   711   581   788     0   328    17  12411  124
+151 MZ   5  87 146 25497 15714   970   572   805     0   320    14  12422  124
+152 MZ   5  69 127 24933 15445   502   609   761     0   331    14  12408  124
+153 MZ   5  72 132 22145 14070  1525   515   771     0   301    27  12416  124
+154 MZ   5  77 126 21257 12455  1039   549   751     0   310    23  12416  124
+155 MZ   5  69 125 23975 14676   616   529   736     0   325    15  12417  124
+156 MZ   5  82 130 21940 12075  1516   547   770     0   305    27  12420  124
+157 MZ   5  70 131 24474 14216   894   650   762     0   313    17  12419  124
+158 MZ   5  68 124 23640 13570   850   575   738     0   315    19  12418  124
+159 MZ   5  65 116 24239 12641   557   620   730     0   320    18  12418  124
+160 MZ   5  70 116 21031 10724   452   616   737     0   279    58  12417  124
+RUN    TRT FLO MAT TOPWT HARWT  RAIN  TIRR   CET  PESW  TNUP  TNLF   TSON TSOC
+           dap dap kg/ha kg/ha    mm    mm    mm    mm kg/ha kg/ha  kg/ha t/ha
+161 MZ   5  72 123 23147 14321   711   609   816     0   320    10  12418  124
+162 MZ   5  70 119 22525 12859   577   617   712     0   312    28  12413  124
+163 MZ   5  68 121 20038 12279   857   450   747     0   269    59  12412  124
+164 MZ   5  68 115 21137 12493   975   598   723     0   300    24  12423  124
+165 MZ   5  66 120 22903 12757   438   593   722     0   309    32  12413  124
+166 MZ   5  64 114 20220 12828   585   612   688     0   288    46  12419  124
+167 MZ   5  63 111 22032 13227   523   588   731     0   315    22  12412  124
+168 MZ   5  77 138 24530 15576  1018   559   855     0   320    13  12414  124
+169 MZ   5  91 144 24214 13222   742   589   804     0   320    15  12418  124
+170 MZ   5  70 121 22397 12477   632   609   761     0   303    31  12414  124
+  Crop mature on JD 218 due to slowed grain filling
+171 MZ   6  69  88  3830     0   760     0   360     0   101   186  12461  125
+  Crop mature on JD 248 due to slowed grain filling
+172 MZ   6  84 124  4929  1142   805     0   367     0    86   207  12453  125
+  Crop mature on JD 227 due to slowed grain filling
+173 MZ   6  71 103  5541   609   597     0   358     0   114   181  12453  125
+  Crop mature on JD 223 due to slowed grain filling
+174 MZ   6  77  99  4688     0   828     0   327     0    80   198  12464  125
+  Crop mature on JD 229 due to slowed grain filling
+175 MZ   6  79 100  3334     0  1461     0   375     0    86   191  12465  125
+  Crop mature on JD 236 due to slowed grain filling
+176 MZ   6  67 111  5901  1768   409     0   366     0   100   193  12455  125
+  Crop mature on JD 219 due to slowed grain filling
+177 MZ   6  76  95  3895     0   329     0   279     0    90   200  12457  125
+  Crop mature on JD 217 due to slowed grain filling
+178 MZ   6  68  89  4384     0  1108     0   334     0   103   187  12454  125
+  Crop mature on JD 221 due to slowed grain filling
+179 MZ   6  71  97  3728     0   569     0   298     0    89   202  12455  125
+  Crop mature on JD 234 due to slowed grain filling
+180 MZ   6  80 110  3551   432   422     0   326     0   102   198  12449  125
+  Crop mature on JD 227 due to slowed grain filling
+RUN    TRT FLO MAT TOPWT HARWT  RAIN  TIRR   CET  PESW  TNUP  TNLF   TSON TSOC
+           dap dap kg/ha kg/ha    mm    mm    mm    mm kg/ha kg/ha  kg/ha t/ha
+181 MZ   6  80 103  4011     0   573     0   353     0    98   191  12458  125
+  Crop mature on JD 236 due to slowed grain filling
+182 MZ   6  80 112  5946   837   606     0   351     0   129   164  12448  125
+  Crop mature on JD 223 due to slowed grain filling
+183 MZ   6  79  99  4289   253   606     0   350     0   100   188  12454  125
+  Crop mature on JD 223 due to slowed grain filling
+184 MZ   6  75  99  5663   352   710     0   422     0   157   142  12448  125
+  Crop mature on JD 246 due to slowed grain filling
+185 MZ   6  87 122  4380   372   970     0   442     0   131   157  12456  125
+  Crop mature on JD 236 due to slowed grain filling
+186 MZ   6  69 107  4875   816   502     0   373     0   104   196  12447  125
+187 MZ   6  72 132  7777  2943  1525     0   453     0   106   186  12452  125
+  Crop mature on JD 239 due to slowed grain filling
+188 MZ   6  77 115  4923   788  1039     0   398     0   117   174  12453  125
+  Crop mature on JD 220 due to slowed grain filling
+189 MZ   6  69  96  4728   398   598     0   385     0   126   171  12453  125
+190 MZ   6  82 130  5029   978  1516     0   433     0   116   177  12453  125
+  Crop mature on JD 239 due to slowed grain filling
+191 MZ   6  70 115  6202  1595   893     0   348     0   104   180  12461  125
+  Crop mature on JD 214 due to slowed grain filling
+192 MZ   6  68  90  4921     0   842     0   362     0   101   188  12456  125
+  Crop mature on JD 236 due to slowed grain filling
+193 MZ   6  65 112  4745   918   557     0   325     0   129   165  12452  125
+  Crop mature on JD 222 due to slowed grain filling
+194 MZ   6  70  98  4377   427   452     0   336     0   102   193  12454  125
+  Crop mature on JD 228 due to slowed grain filling
+195 MZ   6  72  99  3701   205   707     0   415     0   105   177  12456  125
+  Crop mature on JD 220 due to slowed grain filling
+196 MZ   6  70  96  5039   459   577     0   310     0   104   192  12452  125
+197 MZ   6  68 121  8549  2822   857     0   476     0   113   182  12443  125
+  Crop mature on JD 210 due to slowed grain filling
+198 MZ   6  68  86  4693     0   975     0   346     0    83   196  12462  125
+  Crop mature on JD 221 due to slowed grain filling
+199 MZ   6  66  96  5509   653   438     0   344     0   127   169  12452  125
+  Crop mature on JD 225 due to slowed grain filling
+200 MZ   6  64 101  5394  1451   585     0   287     0    87   204  12459  125
+  Crop mature on JD 220 due to slowed grain filling
+RUN    TRT FLO MAT TOPWT HARWT  RAIN  TIRR   CET  PESW  TNUP  TNLF   TSON TSOC
+           dap dap kg/ha kg/ha    mm    mm    mm    mm kg/ha kg/ha  kg/ha t/ha
+201 MZ   6  63  91  5061   627   523     0   358     0   105   187  12451  125
+  Crop mature on JD 248 due to slowed grain filling
+202 MZ   6  77 124  6001  1608  1008     0   494     0   112   179  12451  125
+  Crop mature on JD 245 due to slowed grain filling
+203 MZ   6  91 121  3519   312   740     0   431     0   115   174  12453  125
+  Crop mature on JD 223 due to slowed grain filling
+204 MZ   6  70  98  4725   470   632     0   361     0    97   191  12455  125
+205 MZ   7  69 125 24364 15662   763   628   775     0   327    10  12421  124
+206 MZ   7  77 135 21235 14054   805   579   739     0   294    43  12411  124
+207 MZ   7  67 117 21104 12538   597   568   725     0   295    43  12412  124
+208 MZ   7  77 138 24892 15317   853   653   765     0   322    11  12421  124
+209 MZ   7  79 139 23972 14663  1506   553   772     0   323     9  12426  125
+210 MZ   7  64 119 20007 12330   410   556   712     0   277    58  12415  124
+211 MZ   7  73 136 26545 16301   369   676   749     0   337     9  12413  124
+212 MZ   7  70 117 22410 12224  1108   601   731     0   313    23  12416  124
+213 MZ   7  74 128 24717 13451   569   715   766     0   330    16  12411  124
+214 MZ   7  75 120 22108 11819   422   561   685     0   307    37  12411  124
+215 MZ   7  76 139 25322 15609   618   555   735     0   330    12  12414  124
+216 MZ   7  79 138 24697 16439   619   567   730     0   327    14  12407  124
+217 MZ   7  72 126 23821 14736   606   585   726     0   323    13  12412  124
+218 MZ   7  72 123 24633 13540   711   579   788     0   328    18  12408  124
+219 MZ   7  82 142 25703 15757   970   569   809     0   321    14  12418  124
+220 MZ   7  67 125 24402 15191   502   607   755     0   328    16  12407  124
+RUN    TRT FLO MAT TOPWT HARWT  RAIN  TIRR   CET  PESW  TNUP  TNLF   TSON TSOC
+           dap dap kg/ha kg/ha    mm    mm    mm    mm kg/ha kg/ha  kg/ha t/ha
+221 MZ   7  69 129 22287 14507  1525   522   768     0   307    22  12415  124
+222 MZ   7  72 120 21348 12651  1039   542   746     0   309    24  12415  124
+223 MZ   7  69 126 23955 15047   635   534   740     0   329    15  12413  124
+224 MZ   7  77 126 21707 12075  1516   546   773     0   297    35  12419  124
+225 MZ   7  71 129 25088 13748   894   660   777     0   320    14  12419  124
+226 MZ   7  61 117 21565 12561   850   561   726     0   287    47  12416  124
+227 MZ   7  61 111 23174 12660   557   601   714     0   309    29  12414  124
+228 MZ   7  66 112 20546 10728   452   593   715     0   279    59  12414  124
+229 MZ   7  70 122 22818 13674   711   609   816     0   319    12  12417  124
+230 MZ   7  65 113 20820 12257   577   612   698     0   293    48  12412  124
+231 MZ   7  68 121 20038 12279   857   450   747     0   269    59  12412  124
+232 MZ   7  64 111 19678 12025   975   582   722     0   280    45  12420  124
+233 MZ   7  63 117 22995 12842   438   596   721     0   309    34  12411  124
+234 MZ   7  64 114 23253 12516   585   657   717     0   307    30  12415  124
+235 MZ   7  62 109 21312 12856   523   565   725     0   304    32  12412  124
+236 MZ   7  72 135 25426 16190  1018   569   866     0   324    11  12412  124
+237 MZ   7  85 138 23508 12852   742   573   792     0   316    19  12416  124
+238 MZ   7  69 119 22426 12477   632   616   756     0   307    28  12412  124
+  Crop mature on JD 218 due to slowed grain filling
+239 MZ   8  69  88  3830     0   760     0   360     0   101   186  12461  125
+  Crop mature on JD 257 due to slowed grain filling
+240 MZ   8  77 126  5675  1717   805     0   367     0    88   207  12451  125
+  Crop mature on JD 230 due to slowed grain filling
+RUN    TRT FLO MAT TOPWT HARWT  RAIN  TIRR   CET  PESW  TNUP  TNLF   TSON TSOC
+           dap dap kg/ha kg/ha    mm    mm    mm    mm kg/ha kg/ha  kg/ha t/ha
+241 MZ   8  67 100  5794  1030   597     0   358     0   110   186  12450  125
+  Crop mature on JD 229 due to slowed grain filling
+242 MZ   8  77  99  3861     0   828     0   328     0    77   203  12463  125
+  Crop mature on JD 230 due to slowed grain filling
+243 MZ   8  79 100  3085     0  1468     0   376     0    79   199  12465  125
+  Crop mature on JD 237 due to slowed grain filling
+244 MZ   8  64 107  6036  1808   409     0   366     0   101   194  12452  125
+  Crop mature on JD 223 due to slowed grain filling
+245 MZ   8  73  93  3646     0   329     0   280     0    91   201  12456  125
+  Crop mature on JD 220 due to slowed grain filling
+246 MZ   8  70  90  3977     0  1108     0   334     0   102   189  12453  125
+  Crop mature on JD 225 due to slowed grain filling
+247 MZ   8  74  95  3686     0   569     0   297     0    89   206  12451  125
+  Crop mature on JD 238 due to slowed grain filling
+248 MZ   8  75 108  3620   480   422     0   326     0   105   198  12447  125
+  Crop mature on JD 229 due to slowed grain filling
+249 MZ   8  76  99  4279     0   573     0   353     0    98   192  12456  125
+  Crop mature on JD 243 due to slowed grain filling
+250 MZ   8  79 113  5372   698   606     0   360     0   131   164  12445  125
+  Crop mature on JD 225 due to slowed grain filling
+251 MZ   8  72  95  4690   373   606     0   350     0   100   189  12453  125
+  Crop mature on JD 230 due to slowed grain filling
+252 MZ   8  72 100  5977   562   710     0   422     0   153   149  12444  125
+  Crop mature on JD 249 due to slowed grain filling
+253 MZ   8  82 119  4403   402   970     0   444     0   130   159  12454  125
+  Crop mature on JD 233 due to slowed grain filling
+254 MZ   8  67 103  5122   875   502     0   373     0   105   195  12447  125
+255 MZ   8  69 129  7880  2753  1525     0   453     0   106   187  12451  125
+  Crop mature on JD 246 due to slowed grain filling
+256 MZ   8  72 116  5238  1091  1039     0   399     0   117   176  12450  125
+  Crop mature on JD 231 due to slowed grain filling
+257 MZ   8  69 101  4675   502   615     0   390     0   124   176  12449  125
+258 MZ   8  77 126  5089  1047  1516     0   433     0   114   180  12452  125
+  Crop mature on JD 232 due to slowed grain filling
+259 MZ   8  71 102  4200   315   893     0   347     0   105   178  12461  125
+  Crop mature on JD 242 due to slowed grain filling
+260 MZ   8  61 112  5821  1904   843     0   364     0    96   199  12453  125
+RUN    TRT FLO MAT TOPWT HARWT  RAIN  TIRR   CET  PESW  TNUP  TNLF   TSON TSOC
+           dap dap kg/ha kg/ha    mm    mm    mm    mm kg/ha kg/ha  kg/ha t/ha
+261 MZ   8  61 111  5256  1188   557     0   325     0   120   177  12449  125
+  Crop mature on JD 222 due to slowed grain filling
+262 MZ   8  66  92  4482   444   452     0   336     0    97   198  12453  125
+  Crop mature on JD 228 due to slowed grain filling
+263 MZ   8  70  98  3751   218   707     0   415     0   104   178  12456  125
+  Crop mature on JD 229 due to slowed grain filling
+264 MZ   8  65  99  5482   965   577     0   310     0   104   195  12450  125
+265 MZ   8  68 121  8549  2822   857     0   476     0   113   182  12443  125
+  Crop mature on JD 223 due to slowed grain filling
+266 MZ   8  64  93  5401  1013   975     0   347     0    84   199  12458  125
+  Crop mature on JD 227 due to slowed grain filling
+267 MZ   8  63  97  5709   866   438     0   344     0   130   169  12449  125
+  Crop mature on JD 226 due to slowed grain filling
+268 MZ   8  64  96  4628   583   585     0   286     0    92   201  12456  125
+  Crop mature on JD 221 due to slowed grain filling
+269 MZ   8  62  91  5071   712   523     0   358     0   102   190  12451  125
+  Crop mature on JD 249 due to slowed grain filling
+270 MZ   8  72 117  5553  1099  1008     0   494     0   111   181  12449  125
+  Crop mature on JD 252 due to slowed grain filling
+271 MZ   8  85 122  3689   497   740     0   432     0   114   178  12451  125
+  Crop mature on JD 222 due to slowed grain filling
+272 MZ   8  69  92  4779   322   632     0   360     0    99   190  12453  125
+273 MZ   9  58 112 20362 12853   763   556   711     0   280    56  12413  124
+274 MZ   9  71 126 22172 13521   805   611   754     0   295    43  12409  124
+275 MZ   9  61 106 20291 10199   597   541   706     0   266    72  12411  124
+276 MZ   9  72 131 23313 13489   853   626   747     0   315    19  12416  124
+277 MZ   9  69 125 20016 11952  1506   492   725     0   280    49  12419  124
+278 MZ   9  57 110 23196 12568   410   537   708     0   290    47  12412  124
+279 MZ   9  62 122 24315 14703   369   614   710     0   330    15  12410  124
+280 MZ   9  58 103 18739 10227  1108   565   688     0   253    82  12413  124
+RUN    TRT FLO MAT TOPWT HARWT  RAIN  TIRR   CET  PESW  TNUP  TNLF   TSON TSOC
+           dap dap kg/ha kg/ha    mm    mm    mm    mm kg/ha kg/ha  kg/ha t/ha
+281 MZ   9  61 108 19563 10139   569   613   694     0   257    85  12409  124
+282 MZ   9  65 107 19727 10179   422   569   685     0   263    81  12409  124
+283 MZ   9  65 122 22090 12511   616   532   708     0   294    45  12414  124
+284 MZ   9  54 108 20865 13787   606   496   660     0   295    45  12405  124
+285 MZ   9  59 108 18413 11316   606   536   678     0   254    79  12411  124
+286 MZ   9  56 103 17468  9547   711   494   716     0   227   115  12405  124
+287 MZ   9  70 126 22741 12887   970   518   775     0   308    26  12416  124
+288 MZ   9  55 106 18481 11072   502   536   710     0   243    97  12408  124
+289 MZ   9  72 129 24118 13190  1525   545   786     0   319    17  12412  124
+290 MZ   9  58 101 16624  9421  1039   497   695     0   232    98  12413  124
+291 MZ   9  63 120 23085 14056   637   470   711     0   323    24  12407  124
+292 MZ   9  64 109 18543  9684  1516   499   729     0   245    84  12419  124
+293 MZ   9  65 117 22670 11184   894   618   750     0   285    48  12418  124
+294 MZ   9  66 117 22361 12941   850   603   763     0   323    18  12414  124
+295 MZ   9  58 103 19874 10939   557   579   697     0   268    72  12409  124
+296 MZ   9  56  98 18083  9095   452   568   690     0   236   100  12414  124
+297 MZ   9  55 102 16731  9717   709   546   756     0   240    85  12416  124
+298 MZ   9  61 106 20729 11069   577   606   699     0   282    62  12408  124
+299 MZ   9  61 110 18299 10447   857   429   729     0   236    92  12411  124
+300 MZ   9  60 105 20901 11172   975   608   731     0   278    51  12416  124
+RUN    TRT FLO MAT TOPWT HARWT  RAIN  TIRR   CET  PESW  TNUP  TNLF   TSON TSOC
+           dap dap kg/ha kg/ha    mm    mm    mm    mm kg/ha kg/ha  kg/ha t/ha
+301 MZ   9  63 110 21798 11689   438   572   712     0   299    47  12407  124
+302 MZ   9  59 105 20970 10397   585   607   677     0   265    75  12411  124
+303 MZ   9  55 101 18525 10899   523   535   699     0   252    87  12405  124
+304 MZ   9  61 118 22470 12897  1018   537   834     0   292    40  12412  124
+305 MZ   9  70 120 20629 11175   740   486   731     0   270    61  12416  124
+306 MZ   9  66 112 20740 10709   632   585   743     0   277    63  12407  124
+  Crop mature on JD 243 due to slowed grain filling
+307 MZ  10  58 101  6594  2061   763     0   362     0   100   196  12452  125
+  Crop mature on JD 261 due to slowed grain filling
+308 MZ  10  71 119  5638  1615   805     0   368     0    89   210  12446  125
+  Crop mature on JD 232 due to slowed grain filling
+309 MZ  10  61  90  4977   459   597     0   358     0   108   190  12447  125
+  Crop mature on JD 236 due to slowed grain filling
+310 MZ  10  72  94  4352     0   828     0   328     0    86   199  12457  125
+311 MZ  10  69 125  6902  2298  1506     0   422     0   121   170  12454  125
+312 MZ  10  57 110  5956  1631   410     0   367     0   102   198  12446  125
+  Crop mature on JD 230 due to slowed grain filling
+313 MZ  10  62  88  4336   357   329     0   280     0    87   209  12452  125
+  Crop mature on JD 235 due to slowed grain filling
+314 MZ  10  58  93  4724   842  1108     0   335     0    89   208  12448  125
+  Crop mature on JD 226 due to slowed grain filling
+315 MZ  10  61  84  5001   376   569     0   297     0    88   210  12447  125
+  Crop mature on JD 248 due to slowed grain filling
+316 MZ  10  65 106  3868   798   422     0   327     0    94   213  12442  125
+  Crop mature on JD 234 due to slowed grain filling
+317 MZ  10  65  92  5013   403   574     0   353     0    94   200  12453  125
+318 MZ  10  54 108  7405  2240   606     0   361     0   105   199  12439  125
+319 MZ  10  59 108  6334  2073   606     0   352     0    88   209  12447  125
+320 MZ  10  56 103  9113  3119   711     0   420     0   113   197  12435  125
+  Crop mature on JD 248 due to slowed grain filling
+RUN    TRT FLO MAT TOPWT HARWT  RAIN  TIRR   CET  PESW  TNUP  TNLF   TSON TSOC
+           dap dap kg/ha kg/ha    mm    mm    mm    mm kg/ha kg/ha  kg/ha t/ha
+321 MZ  10  70 106  5501   755   970     0   452     0   122   171  12451  125
+322 MZ  10  55 106  6987  2472   502     0   372     0    94   212  12440  125
+  Crop mature on JD 251 due to slowed grain filling
+323 MZ  10  72 109  5025   654  1525     0   453     0   124   170  12447  125
+324 MZ  10  58 101  7041  2086  1039     0   398     0   104   192  12446  125
+  Crop mature on JD 247 due to slowed grain filling
+325 MZ  10  63 105  5649  1085   615     0   401     0   122   186  12440  125
+326 MZ  10  64 109  6470  1868  1516     0   432     0   110   184  12451  125
+  Crop mature on JD 232 due to slowed grain filling
+327 MZ  10  65  90  4474     0   893     0   347     0   114   172  12457  125
+  Crop mature on JD 226 due to slowed grain filling
+328 MZ  10  66  84  3711     0   842     0   362     0    94   202  12450  125
+  Crop mature on JD 240 due to slowed grain filling
+329 MZ  10  58  98  5132  1016   557     0   325     0   105   198  12443  125
+330 MZ  10  56  98  5004  1012   452     0   337     0    94   209  12446  125
+  Crop mature on JD 234 due to slowed grain filling
+331 MZ  10  55  92  6194  2095   707     0   415     0   100   187  12451  125
+  Crop mature on JD 229 due to slowed grain filling
+332 MZ  10  61  87  4699   443   577     0   310     0    94   207  12446  125
+333 MZ  10  61 110  8819  2789   857     0   475     0   103   193  12440  125
+  Crop mature on JD 231 due to slowed grain filling
+334 MZ  10  60  89  4389   521   975     0   347     0    81   207  12454  125
+  Crop mature on JD 234 due to slowed grain filling
+335 MZ  10  63  92  5104   555   438     0   345     0   125   179  12444  125
+  Crop mature on JD 229 due to slowed grain filling
+336 MZ  10  59  87  4736   480   585     0   286     0    89   210  12450  125
+337 MZ  10  55 101  6400  1987   523     0   359     0    96   207  12440  125
+  Crop mature on JD 248 due to slowed grain filling
+338 MZ  10  61 105  6409  1599  1008     0   494     0   108   186  12448  125
+  Crop mature on JD 252 due to slowed grain filling
+339 MZ  10  70 110  4592   854   740     0   432     0   107   187  12449  125
+  Crop mature on JD 231 due to slowed grain filling
+340 MZ  10  66  89  4491   276   632     0   361     0    97   198  12446  125

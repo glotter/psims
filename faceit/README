@@ -1,0 +1,7 @@
+
+Needs: java 1.7.0_07+
+
+To run, untar the current bundle (you probably already have) and run the following from the current dir:
+
+./pipeline
+

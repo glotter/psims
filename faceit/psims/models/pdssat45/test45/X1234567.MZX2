@@ -1,0 +1,153 @@
+*EXP.DETAILS:  Global pDSSAT maize WATCH 1958-2001
+
+*GENERAL
+@PEOPLE
+Joshua Elliott
+@ADDRESS
+Computation Institute, University of Chicago
+@SITE
+50.2500, -120.250
+
+@ PAREA  PRNO  PLEN  PLDR  PLSP  PLAY HAREA  HRNO  HLEN  HARM.........
+    -99   -99   -99   -99   -99   -99   -99   -99   -99   -99
+
+! C2 is either the OP cultivar or the 2nd mostly likely HY cultivar 
+! depending on the continent.
+*TREATMENTS                        -------------FACTOR LEVELS------------
+@N R O C TNAME.................... CU FL SA IC MP MI MF MR MC MT ME MH SM
+ 0 1 0 0 320p_HY1(Irri-High)        1  1  0  1  1  0  1  0  0  0  1  0  1
+ 1 1 0 0 320p_HY1(Irri-Mid)         1  1  0  1  1  0  3  0  0  0  1  0  1
+ 2 1 0 0 320p_HY1(rain-High)        1  1  0  1  1  0  1  0  0  0  1  0  2
+ 3 1 0 0 320p_HY1(rain-mid)         1  1  0  1  1  0  3  0  0  0  1  0  2
+ 4 1 0 0 320p_HY1(rain-None)        1  1  0  1  1  0  4  0  0  0  1  0  2
+ 5 1 0 0 320p_HY2(Irri-High)        2  1  0  1  1  0  1  0  0  0  1  0  1
+ 6 1 0 0 320p_HY2(Irri-Mid)         2  1  0  1  1  0  3  0  0  0  1  0  1
+ 7 1 0 0 320p_HY2(rain-High)        2  1  0  1  1  0  1  0  0  0  1  0  2
+ 8 1 0 0 320p_HY2(rain-mid)         2  1  0  1  1  0  3  0  0  0  1  0  2
+ 9 1 0 0 320p_HY2(rain-None)        2  1  0  1  1  0  4  0  0  0  1  0  2
+
+*CULTIVARS
+@C CR INGENO CNAME
+ 1 MZ HY0001 HY1
+ 2 MZ HY0002 HY2
+ 3 MZ HY0003 HY3
+ 4 MZ HY0004 HY4
+ 5 MZ HY0005 HY5
+ 6 MZ HY0006 HY6
+ 7 MZ HY0007 HY7
+ 8 MZ HY0008 HY8
+ 9 MZ HY0009 HY9
+10 MZ OP0001 OP1
+11 MZ OP0002 OP2
+12 MZ OP0003 OP3
+13 MZ OP0004 OP4
+14 MZ OP0005 OP5
+15 MZ OP0006 OP6
+16 MZ OP0007 OP7
+17 MZ OP0008 OP8
+18 MZ OP0009 OP9
+
+*FIELDS
+@L ID_FIELD WSTA....  FLSA  FLOB  FLDT  FLDD  FLDS  FLST SLTX  SLDP  ID_SOIL    FLNAME
+ 1 GENERIC  GENERIC1   -99   -99   -99   -99   -99   -99 -99    -99  XY01234567 Weather 1963-2001
+@L ...........XCRD ...........YCRD .....ELEV .............AREA .SLEN .FLWR .SLAS FLHST FHDUR
+ 1             -99             -99       -99               -99   -99   -99   -99   -99   -99
+
+*SOIL ANALYSIS
+@A SADAT  SMHB  SMPX  SMKE  SANAME
+ 1 63100   -99   -99   -99  TEST
+@A  SABL  SADM  SAOC  SANI SAPHW SAPHB  SAPX  SAKE  SASC
+ 1    15   -99   -99   -99   -99   -99   -99   -99   -99
+
+*INITIAL CONDITIONS
+@C   PCR ICDAT  ICRT  ICND  ICRN  ICRE  ICWD ICRES ICREN ICREP ICRIP ICRID ICNAME
+ 1    MZ 63001   -99   -99     1     1   -99  1000     1     0   100    10 1000kg Residue
+@C  ICBL  SH2O  SNH4  SNO3
+ 1     5  .198    .1    .7
+ 1    15  .198    .1    .7
+ 1    25  .198    .1    .7
+ 1    34  .226    .1    .7
+ 1    43  .226    .1    .7
+ 1    53   .25    .1    .7
+ 1    64   .25    .1    .7
+ 1   102  .200    .1    .7
+ 1   145  .291    .1    .7
+ 1   175  .272    .1    .7
+ 1   203  .263    .1    .7
+
+*PLANTING DETAILS
+@P PDATE EDATE  PPOP  PPOE  PLME  PLDS  PLRS  PLRD  PLDP  PLWT  PAGE  PENV  PLPH  SPRL                        PLNAME
+ 1   -99   -99   6.5   -99     S     R    91   -99     5   -99   -99   -99   -99   -99                        -99
+
+*IRRIGATION AND WATER MANAGEMENT
+@I  EFIR  IDEP  ITHR  IEPT  IOFF  IAME  IAMT IRNAME
+ 1  1.00    30    50   100 GS000 IR001    10 -99
+@I IDATE  IROP IRVAL
+ 1   -99 IR001  79.0
+
+*FERTILIZERS (INORGANIC)
+@F FDATE  FMCD  FACD  FDEP  FAMN  FAMP  FAMK  FAMC  FAMO  FOCD FERNAME
+ 1     1 FE001 AP002    15    50   -99   -99   -99   -99   -99 high
+ 1    40 FE001 AP002    15    50   -99   -99   -99   -99   -99 high
+ 1    80 FE001 AP002    15    50   -99   -99   -99   -99   -99 high
+ 2     1 FE001 AP002    15    50   -99   -99   -99   -99   -99 med
+ 2    40 FE001 AP002    15    50   -99   -99   -99   -99   -99 med
+ 3     1 FE001 AP002    15    38   -99   -99   -99   -99   -99 mid
+ 3    40 FE001 AP002    15    37   -99   -99   -99   -99   -99 mid
+ 4     1 FE001 AP002    15     0   -99   -99   -99   -99   -99 none
+
+*ENVIRONMENT MODIFICATIONS
+@E ODATE EDAY  ERAD  EMAX  EMIN  ERAIN ECO2  EDEW  EWIND ENVNAME  
+ 1 63001 A   0 A   0 A   0 A   0 A 0.0 R 320 A   0 A   0 320 ppm 
+
+*HARVEST DETAILS
+@H HDATE  HSTG  HCOM HSIZE   HPC  HBPC HNAME
+ 1   -99   -99   -99   -99   -99   -99 Maize
+
+*SIMULATION CONTROLS
+!!!!!!!!!!!!!1963-2001
+@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL
+ 1 GE             44     1     S 63001  2150 Irrigated                 MZCER
+@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2
+ 1 OP              Y     Y     Y     N     N     N     N     N     M
+@N METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT MESOM MESEV MESOL
+ 1 ME              M     M     E     F     S     L     R     1     G     S     2
+@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+ 1 MA              A     A     D     R     M
+@N OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT VBOSE CHOUT OPOUT
+ 1 OU              N     Y     Y    14     N     N     N     N     N     N     N     N     N
+
+@  AUTOMATIC MANAGEMENT
+@N PLANTING    PFRST PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+ 1 PL          63105 63156    40   100    30    40    10
+@N IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+ 1 IR             40    80   100 GS000 IR001    10  1.00
+@N NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+ 1 NI             30    10    50 FE001 GS000
+@N RESIDUES    RIPCN RTIME RIDEP
+ 1 RE            100     1    20
+@N HARVEST     HFRST HLAST HPCNP HPCNR
+ 1 HA              0 64365   100     0
+
+@N GENERAL     NYERS NREPS START SDATE RSEED SNAME.................... SMODEL
+ 2 GE             44     1     S 63001  2150 Rainfed                   MZCER
+@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2
+ 2 OP              Y     Y     Y     N     N     N     N     N     M
+@N METHODS     WTHER INCON LIGHT EVAPO INFIL PHOTO HYDRO NSWIT MESOM MESEV MESOL
+ 2 ME              M     M     E     F     S     L     R     1     G     S     2
+@N MANAGEMENT  PLANT IRRIG FERTI RESID HARVS
+ 2 MA              A     N     D     R     M
+@N OUTPUTS     FNAME OVVEW SUMRY FROPT GROUT CAOUT WAOUT NIOUT MIOUT DIOUT VBOSE CHOUT OPOUT
+ 2 OU              N     Y     Y    14     N     N     N     N     N     N     N     N     N
+
+@  AUTOMATIC MANAGEMENT
+@N PLANTING    PFRST PLAST PH2OL PH2OU PH2OD PSTMX PSTMN
+ 2 PL          63105 63156    40   100    30    40    10
+@N IRRIGATION  IMDEP ITHRL ITHRU IROFF IMETH IRAMT IREFF
+ 2 IR             40    80   100 GS000 IR001    10  1.00
+@N NITROGEN    NMDEP NMTHR NAMNT NCODE NAOFF
+ 2 NI             30    10    50 FE001 GS000
+@N RESIDUES    RIPCN RTIME RIDEP
+ 2 RE            100     1    20
+@N HARVEST     HFRST HLAST HPCNP HPCNR
+ 2 HA              0 64365   100     0
