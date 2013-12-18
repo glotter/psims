@@ -7,7 +7,7 @@ from os.path import sep, exists
 from optparse import OptionParser
 from netCDF4 import Dataset as nc
 from numpy.ma import unique, masked_where
-from numpy import pi, zeros, ones, cos, resize, where
+from numpy import pi, zeros, ones, cos, resize, where, ceil, double
 
 def createnc(filename, time, tunits, scens, fpuidxs, basinidxs, regionidxs):
     f = nc(filename, 'w', format = 'NETCDF3_CLASSIC') # create file
@@ -86,13 +86,15 @@ dirs = []
 for md in models:
     for cm in climates:
         for cp in crops:
-            dirs.append(md + sep + cm + sep + cp)
+            d = sep.join(md, cm, cp)
+            if exists(rootdir + sep + d) and len(listdir(rootdir + sep + d)):
+                dirs.append(md + sep + cm + sep + cp)
 ndirs = len(dirs)
 
 # find out start and end indices for batch
 batch = options.batch
 numbatches = options.num_batches
-bz = ndirs / numbatches
+bz = int(ceil(double(ndirs) / numbatches))
 si = bz * (batch - 1)
 ei = ndirs if batch == numbatches else min(si + bz, ndirs)
 
@@ -157,16 +159,7 @@ area = resize(area, (nlons, nlats)).T
 
 for i in range(si, ei):
     # iterate over subdirectories
-    subdir = rootdir + sep + dirs[i]
-    if not exists(subdir):
-        print 'WARNING: Directory ' + subdir + ' does not exist. Skipping . . .'
-        continue
-        
-    # get files in directory
     files = listdir(rootdir + sep + dirs[i])
-    if not len(files):
-        print 'WARNING: No files in directory ' + subdir + '. Skipping . . .'
-        continue
         
     # variables and scenarios
     mod = dirs[i].split(sep)[0]
