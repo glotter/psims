@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 # import modules
+import itertools, sys, re, time as tm
 from os import listdir
-import sys, re, time as tm
 from os.path import sep, exists
 from optparse import OptionParser
 from netCDF4 import Dataset as nc
@@ -10,7 +10,7 @@ from numpy.ma import unique, masked_where
 from numpy import pi, zeros, ones, cos, resize, where, ceil, double
 
 def createnc(filename, time, tunits, scens, fpuidxs, basinidxs, regionidxs):
-    f = nc(filename, 'w', format = 'NETCDF3_CLASSIC') # create file
+    f = nc(filename, 'w', format = 'NETCDF4_CLASSIC') # create file
     f.createDimension('time', len(time)) # time
     timevar = f.createVariable('time', 'i4', ('time',))
     timevar[:] = time
@@ -83,12 +83,10 @@ crops = options.crop.split(',')
 
 # directories
 dirs = []
-for md in models:
-    for cm in climates:
-        for cp in crops:
-            d = sep.join([md, cm, cp])
-            if exists(rootdir + sep + d) and len(listdir(rootdir + sep + d)):
-                dirs.append(d)
+for i in itertools.product(models, climates, crops):
+    d = sep.join(i)
+    if exists(rootdir + sep + d) and len(listdir(rootdir + sep + d)):
+        dirs.append(d)
 ndirs = len(dirs)
 
 # find out start and end indices for batch
@@ -164,7 +162,7 @@ area = resize(area, (nlons, nlats)).T
 print 'START INDEX = ' + str(si) + ', END IDX = ' + str(ei) + ' . . .'
 for i in range(si, ei):
     # iterate over subdirectories
-    print 'PROCESSING INDEX = ' + str(i) + ': DIRECTORY ' + str(rootdir + sep + dirs[i])
+    print 'PROCESSING INDEX = ' + str(i) + ': DIRECTORY ' + str(rootdir + sep + dirs[i]) + ' . . .'
     
     # get files 
     files = listdir(rootdir + sep + dirs[i])
@@ -274,7 +272,7 @@ for i in range(si, ei):
             print 'Processing', varfile, '. . .'
             
             # load file
-            vf = nc(sep.join([rootdir, dirs[i], sep, varfile]))
+            vf = nc(sep.join([rootdir, dirs[i], varfile]))
             
             # get variable and units
             fvars = vf.variables.keys()
@@ -312,31 +310,33 @@ for i in range(si, ei):
 
     # append variables
     # areas
-    f = nc(filename, 'a', format = 'NETCDF3_CLASSIC')
-    afpuvar = f.createVariable('area_fpu', 'f4', ('fpu_index', 'time', 'scen', 'irr',)) # fpu
+    f = nc(filename, 'a', format = 'NETCDF4_CLASSIC')
+    afpuvar = f.createVariable('area_fpu', 'f4', ('fpu_index', 'time', 'scen', 'irr',), zlib = True, complevel = 9) # fpu
     afpuvar[:] = areafpu
     afpuvar.units = 'hectares'
     afpuvar.long_name = 'fpu harvested area'
-    abasinvar = f.createVariable('area_basin', 'f4', ('basin_index', 'time', 'scen', 'irr',)) # basin
+    abasinvar = f.createVariable('area_basin', 'f4', ('basin_index', 'time', 'scen', 'irr',), zlib = True, complevel = 9) # basin
     abasinvar[:] = areabasin
     abasinvar.units = 'hectares'
     abasinvar.long_name = 'basin harvested area'
-    aregionvar = f.createVariable('area_region', 'f4', ('region_index', 'time', 'scen', 'irr',)) # region
+    aregionvar = f.createVariable('area_region', 'f4', ('region_index', 'time', 'scen', 'irr',), zlib = True, complevel = 9) # region
     aregionvar[:] = arearegion
     aregionvar.units = 'hectares'
     aregionvar.long_name = 'region harvested area'
     # averages
     for j in range(nv):
-        v1 = f.createVariable(vars[j] + '_fpu', 'f4', ('fpu_index', 'time', 'scen', 'irr',), fill_value = fillv) # fpu
+        v1 = f.createVariable(vars[j] + '_fpu', 'f4', ('fpu_index', 'time', 'scen', 'irr',), fill_value = fillv, zlib = True, complevel = 9) # fpu
         v1[:] = varfpu[j]
         v1.units = vunits[j]
         v1.long_name = 'average fpu ' + vars[j]
-        v2 = f.createVariable(vars[j] + '_basin', 'f4', ('basin_index', 'time', 'scen', 'irr',), fill_value = fillv) # basin
+        v2 = f.createVariable(vars[j] + '_basin', 'f4', ('basin_index', 'time', 'scen', 'irr',), fill_value = fillv, zlib = True, complevel = 9) # basin
         v2[:] = varbasin[j]
         v2.units = vunits[j]
         v2.long_name = 'average basin ' + vars[j]
-        v3 = f.createVariable(vars[j] + '_region', 'f4', ('region_index', 'time', 'scen', 'irr',), fill_value = fillv) # region
+        v3 = f.createVariable(vars[j] + '_region', 'f4', ('region_index', 'time', 'scen', 'irr',), fill_value = fillv, zlib = True, complevel = 9) # region
         v3[:] = varregion[j]
         v3.units = vunits[j]
         v3.long_name = 'average region ' + vars[j]
     f.close()
+
+print 'DONE!'
