@@ -1,7 +1,7 @@
 #!/bin/sh
 #SBATCH --time=02:00:00
 #SBATCH --ntasks=128
-#SBATCH --mem-per-cpu=10240
+#SBATCH --mem-per-cpu=6144
 #SBATCH --partition=sandyb
 module load parallel
 srun="srun -N1 -n1"
