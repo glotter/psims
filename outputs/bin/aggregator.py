@@ -6,10 +6,11 @@ from os import listdir
 from os.path import sep, exists
 from optparse import OptionParser
 from netCDF4 import Dataset as nc
-from numpy.ma import unique, masked_where
+from numpy.ma import masked_array, unique, masked_where
 from numpy import pi, zeros, ones, cos, resize, where, ceil, double
 
-def createnc(filename, time, tunits, scens, fpuidxs, basinidxs, regionidxs):
+# HELPER FUNCTION
+def createnc(filename, time, tunits, scens, rdata, rnames, runits, rlongnames):
     f = nc(filename, 'w', format = 'NETCDF4_CLASSIC') # create file
     f.createDimension('time', len(time)) # time
     timevar = f.createVariable('time', 'i4', ('time',))
@@ -26,22 +27,47 @@ def createnc(filename, time, tunits, scens, fpuidxs, basinidxs, regionidxs):
     irrvar[:] = range(1, 3)
     irrvar.units = 'mapping'
     irrvar.long_name = 'ir, rf'
-    f.createDimension('fpu_index', len(fpuidxs)) # fpu_index 
-    fpuvar = f.createVariable('fpu_index', 'i4', ('fpu_index',))
-    fpuvar[:] = fpuidxs
-    fpuvar.units = 'FPU index'
-    fpuvar.long_name = '309 food producing Units'
-    f.createDimension('basin_index', len(basinidxs)) # basin_index 
-    bsnvar = f.createVariable('basin_index', 'i4', ('basin_index',))
-    bsnvar[:] = basinidxs
-    bsnvar.units = 'Basin index'
-    bsnvar.long_name = '129 major river basins' 
-    f.createDimension('region_index', len(regionidxs)) # region_index 
-    rgnvar = f.createVariable('region_index', 'i4', ('region_index',))
-    rgnvar[:] = regionidxs
-    rgnvar.units = 'Region index'
-    rgnvar.long_name = '13 regions'       
+    for i in range(len(rnames)): # index variables
+        rname = rnames[i] + '_index'
+        f.createDimension(rname, len(rdata[i]))
+        rvar = f.createVariable(rname, 'i4', (rname,))
+        rvar[:] = rdata[i]
+        rvar.units = runits[i]
+        rvar.long_name = rlongnames[i]
     f.close() # close file
+
+class AggMask(object):
+    def __init__(self, filename):
+        f = nc(filename)
+        varnames = f.variables.keys()
+        varnames = [v for v in varnames if not v in ['lat', 'lon']] # remove lat, lon
+        self.dat = {'names': [], 'units': [], 'longnames': [], 'data': []}
+        for v in varnames:
+            var = f.variables[v]
+            self.dat['names'].append(v)
+            self.dat['units'].append(var.units if 'units' in var.ncattrs() else '')
+            self.dat['longnames'].append(var.long_name if 'long_name' in var.ncattrs() else '')
+            self.dat['data'].append(var[:])
+        self.lat = f.variables['lat'][:] # load latitude and longitude
+        self.lon = f.variables['lon'][:]
+        nlats = self.lat.size
+        nlons = self.lon.size
+        self.dat['names'].append('global') # add global mask as a trick
+        self.dat['units'].append('')
+        self.dat['longnames'].append('')
+        self.dat['data'].append(masked_array(zeros((nlats, nlons)), mask = ones((nlats, nlons))))
+        f.close()
+    def names(self):     return self.dat['names']
+    def units(self):     return self.dat['units']
+    def longnames(self): return self.dat['longnames']
+    def data(self):      return self.dat['data']
+    def udata(self): # unique data values
+        ud = []
+        for i in range(len(self.dat['names'])):
+            udi = unique(self.dat['data'][i])
+            udi = udi[~udi.mask] # remove fill value from list
+            ud.append(udi)
+        return ud
 
 # parse inputs
 parser = OptionParser()
@@ -57,68 +83,67 @@ parser.add_option("-w", "--weath", dest = "weath", default = "AgCFSR,AgMERRA,CFS
                   help = "Comma-separated list of weather datasets")
 parser.add_option("-c", "--crop", dest = "crop", default = "maize", type = "string",
                   help = "Comma-separated list of crops")
-parser.add_option("-l", "--landuseir", dest = "landuseir", default = "", type = "string",
+parser.add_option("-i", "--landuseir", dest = "landuseir", default = "", type = "string",
                   help = "Landuse (weight) mask file for irrigation", metavar = "FILE")
 parser.add_option("-r", "--landuserf", dest = "landuserf", default = "", type = "string",
                   help = "Landuse (weight) mask file for rainfed", metavar = "FILE")
-parser.add_option("-a", "--aggr", dest = "aggr", default = "", type = "string",
-                  help = "Aggregration mask file", metavar = "FILE")
+parser.add_option("-a", "--agg", dest = "agg", default = "", type = "string",
+                  help = "Comma-separated list of aggregation mask files")
 parser.add_option("-o", "--outdir", dest = "outdir", default = "", type = "string",
-                  help = "Output directory to save results")
+                  help = "Comma-separated list of output directories to save results for different aggregation masks")
 options, args = parser.parse_args()
 
-# constants
+# CONSTANTS
+# =========
 fillv = 1e20
 yieldthr1 = 0.1 # t/ha
 yieldthr2 = 50
 
-# root directory
-rootdir = options.dir
-if rootdir[-1] == sep: rootdir = rootdir[: -1] # remove final separator
-
-# names
-models = options.mod.split(',')
-climates = options.weath.split(',')
-crops = options.crop.split(',')
-
-# directories
-dirs = []
-for i in itertools.product(models, climates, crops):
-    d = sep.join(i)
-    if exists(rootdir + sep + d) and len(listdir(rootdir + sep + d)):
-        dirs.append(d)
-ndirs = len(dirs)
-
-# find out start and end indices for batch
-batch = options.batch
-numbatches = options.num_batches
-bz = int(ceil(double(ndirs) / numbatches))
-si = bz * (batch - 1)
-ei = ndirs if batch == numbatches else min(si + bz, ndirs)
-
-# no work for processor to do
-if si >= ndirs:
-    print 'No jobs for processor to perform. Exiting . . .'
-    sys.exit()
-
-# scenarios
-dssat_pm_scens = ['fullharm', 'default', 'harmnon']
+dssat_pm_scens = ['fullharm', 'default', 'harmnon'] # scenarios
 dssat_pt_scens = ['fullharm']
 apsim_scens = dssat_pm_scens
 dssat_pm_scens_full = ['fullharm_noirr', 'fullharm_firr', 'default_noirr', 'default_firr', 'harmnon_noirr', 'harmnon_firr']
 dssat_pt_scens_full = ['fullharm_noirr', 'fullharm_firr']
 apsim_scens_full = dssat_pm_scens_full
 
-# variables
-dssatvars = ['yield', 'pirrww', 'plant-day', 'maty-day', 'aet', 'gsprcp', 'anth-day', 'biom', 'gsrsds', 'sumt']
+dssatvars = ['yield', 'pirrww', 'plant-day', 'maty-day', 'aet', 'gsprcp', 'anth-day', 'biom', 'gsrsds', 'sumt'] # variables
 apsimvars = ['yield', 'pirrww', 'plant-day', 'maty-day', 'aet', 'gsprcp', 'anth-day', 'biom', 'gsrsds', 'sumt', 'initr', 'leach', 'sco2', 'sn2o']
+# =========
 
-# find unique crops
-uqcrops = list(set([d.split(sep)[2].title() for d in dirs])) # capitalize first letters
+rootdir = options.dir # root directory
+if rootdir[-1] == sep: rootdir = rootdir[: -1] # remove final separator
+
+models = options.mod.split(',') # model, climate, and crop names
+climates = options.weath.split(',')
+crops = options.crop.split(',')
+aggmasks = options.agg.split(',') # aggregration masks and output directories
+aggmaskdirs = options.outdir.split(',')
+
+totfiles = [] # total files to create
+for i in itertools.product(models, climates, crops):
+    d = sep.join(i)
+    if exists(rootdir + sep + d) and len(listdir(rootdir + sep + d)):
+        for j in range(len(aggmasks)):
+            totfiles.append([d, aggmasks[j], aggmaskdirs[j]])
+nfiles = len(totfiles)
+
+batch = options.batch # find out start and end indices for batch
+numbatches = options.num_batches
+bz = int(ceil(double(nfiles) / numbatches))
+si = bz * (batch - 1)
+ei = nfiles if batch == numbatches else min(si + bz, nfiles)
+
+if si >= nfiles: # no work for processor to do
+    print 'No jobs for processor to perform. Exiting . . .'
+    sys.exit()
+
+totfiles = totfiles[si : ei] # select files for batch
+nfiles = len(totfiles)
+
+uqcrops = list(set([f[0].split(sep)[2].title() for f in totfiles])) # find unique crops (capitalize first letters)
 ncrops = len(uqcrops)
 
-# load weight masks
-landmasksir = [0] * ncrops
+landmasksir = [0] * ncrops # load weight masks
 landuseir = nc(options.landuseir) # land use IR mask
 for i in range(ncrops):
     irvars = landuseir.variables.keys()
@@ -133,42 +158,38 @@ for i in range(ncrops):
     landmasksrf[i] = landuserf.variables[rfvars[varidx]][:]
 landuserf.close()
 
-# load aggregration masks
-aggr = nc(options.aggr)
-fpu = aggr.variables['fpu'][:]
-basin = aggr.variables['basin'][:]
-region = aggr.variables['region'][:]
-lat = aggr.variables['lat'][:] # latitude
-aggr.close()
+uqaggmasks = list(set([f[1] for f in totfiles])) # find unique aggregration masks
+naggmasks = len(uqaggmasks)
 
-# find unique aggregration indices
-fpuidxs = unique(fpu)
-fpuidxs = fpuidxs[~fpuidxs.mask] # remove fill value from list 
-nfpu = len(fpuidxs)
-basinidxs = unique(basin)
-basinidxs = basinidxs[~basinidxs.mask]
-nbasin = len(basinidxs)
-regionidxs = unique(region)
-regionidxs = regionidxs[~regionidxs.mask]
-nregion = len(regionidxs)
+aggmaskobjs = [] # load aggregration masks
+for i in range(naggmasks): aggmaskobjs.append(AggMask(uqaggmasks[i]))
 
-# number of latitudes and longitudes
-nlats, nlons = fpu.shape
+nlats = len(aggmaskobjs[0].lat) # number of latitudes and longitudes
+nlons = len(aggmaskobjs[0].lon)
 
-# compute area as function of latitude
+lat = aggmaskobjs[0].lat # compute area as function of latitude
 area = 100 * (111.2 / 2)**2 * cos(pi * lat / 360)
 area = resize(area, (nlons, nlats)).T
 
 print 'START INDEX = ' + str(si) + ', END IDX = ' + str(ei) + ' . . .'
-for i in range(si, ei):
-    # iterate over subdirectories
-    print 'PROCESSING INDEX = ' + str(i) + ': DIRECTORY ' + str(rootdir + sep + dirs[i]) + ' . . .'
+for i in range(nfiles): # iterate over subdirectories
+    dir = totfiles[i][0]
+    aggmask = totfiles[i][1]
+    outdir = totfiles[i][2]
+    print 'PROCESSING INDEX = ' + str(si + i) + ': DIRECTORY ' + str(rootdir + sep + dir) + ' . . .'
     
-    # get files 
-    files = listdir(rootdir + sep + dirs[i])
-        
-    # variables and scenarios
-    mod = dirs[i].split(sep)[0]
+    cidx = uqcrops.index(dir.split(sep)[2].title()) # crop
+    
+    aidx = uqaggmasks.index(aggmask) # aggregration mask
+    amask = aggmaskobjs[aidx]
+    anames = amask.names()
+    aunits = amask.units()
+    alongnames = amask.longnames()
+    adata = amask.data()
+    audata = amask.udata()
+    nmasks = len(anames)
+
+    mod = dir.split(sep)[0] # variables and scenarios
     if mod == 'pDSSAT.pm':
         vars = dssatvars
         scens = dssat_pm_scens
@@ -181,54 +202,47 @@ for i in range(si, ei):
         vars = apsimvars
         scens = apsim_scens
         scens_full = apsim_scens_full
-    
-    # crop
-    cidx = uqcrops.index(dirs[i].split(sep)[2].title())
-    
-    # use first file to get time and units    
-    f = sep.join([rootdir, dirs[i], files[0]])
+
+    files = listdir(rootdir + sep + dir) # get files
+
+    f = sep.join([rootdir, dir, files[0]]) # use first file to get time and units
     ncf = nc(f)
     time = ncf.variables['time'][:]
     tunits = ncf.variables['time'].units
     ncf.close()
-    
-    # use first file to get filename
-    filename = files[0].split('_')
-    filename.remove(filename[3])
-    filename.remove(filename[3])
-    filename.remove(filename[3])
-    filename = options.outdir + sep + '_'.join(filename) # save in output directory
-    
-    # create nc file
-    createnc(filename, time, tunits, scens, fpuidxs, basinidxs, regionidxs)
-    
+
     nv = len(vars)  # number of variables
     nt = len(time)  # number of times
-    ns = len(scens) # number of scenarios
+    ns = len(scens) # number of scenarios    
 
-    fput = resize(fpu, (nt, nlats, nlons)) # resize maps
-    basint = resize(basin, (nt, nlats, nlons))
-    regiont = resize(region, (nt, nlats, nlons))
+    filename = files[0].split('_') # use first file to get filename
+    filename.remove(filename[3])
+    filename.remove(filename[3])
+    filename.remove(filename[3])
+    filename = outdir + sep + '_'.join(filename) # save in output directory
 
-    varfpu = fillv * ones((nv, nfpu, nt, ns, 2)) # preallocate averages and areas
-    varbasin = fillv * ones((nv, nbasin, nt, ns, 2))
-    varregion = fillv * ones((nv, nregion, nt, ns, 2))
-    areafpu = zeros((nfpu, nt, ns, 2))
-    areabasin = zeros((nbasin, nt, ns, 2))
-    arearegion = zeros((nregion, nt, ns, 2))
+    createnc(filename, time, tunits, scens, audata[: -1], anames[: -1], aunits[: -1], alongnames[: -1]) # create nc file
+
+    averages = [0] * nmasks; areas = [0] * nmasks # final averages and areas
+    adataresize = [0] * nmasks
+    for j in range(nmasks):
+        sz = audata[j].size
+        adataresize[j] = resize(adata[j], (nt, nlats, nlons)) # resize maps
+        averages[j] = fillv * ones((nv, sz, nt, ns, 2)) # preallocate
+        areas[j] = zeros((sz, nt, ns, 2))
+
     vunits = [''] * nv
-    for j in range(len(scens_full)):
-        # iterate over scenarios
+    for j in range(len(scens_full)): # iterate over scenarios
         scen_irr = scens_full[j]
         
-        # find scenario and irr
-        scen_irr_split = scen_irr.split('_')
+        scen_irr_split = scen_irr.split('_') # find scenario and irr
         sidx = scens.index(scen_irr_split[0])
         iidx = int(scen_irr_split[1] != 'firr')
 
-        # pull mask from yield variable for corresponding scenario
-        yieldfile = [f for f in files if re.search(scen_irr + '_yield', f)][0]
-        yf = nc(sep.join([rootdir, dirs[i], yieldfile]))
+        weight = landmasksir[cidx] if not iidx else landmasksrf[cidx] # weights
+
+        yieldfile = [f for f in files if re.search(scen_irr + '_yield', f)][0] # pull yield mask
+        yf = nc(sep.join([rootdir, dir, yieldfile]))
         yvars = yf.variables.keys()
         yidx = ['yield' in v for v in yvars].index(True)
         yieldvar = yf.variables[yvars[yidx]][:]
@@ -238,105 +252,61 @@ for i in range(si, ei):
         yieldmask = yieldvar.mask
         yf.close()
 
-        fpucommon = masked_where(yieldmask, fput) # common masks
-        basincommon = masked_where(yieldmask, basint)
-        regioncommon = masked_where(yieldmask, regiont)
+        aselect = [0] * nmasks; vartmp = [0] * nmasks
+        for k in range(nmasks):
+            sz = audata[k].size
+            acommon = masked_where(yieldmask, adataresize[k]) # mask
+            vartmp[k] = zeros((sz, nlats, nlons)) # for storing temporary variable
+            aselect[k] = zeros((sz, nt, nlats, nlons), dtype = bool)
+            for m in range(sz):
+                aselect[k][m] = acommon == audata[k][m]
+                areas[k][m, :, sidx, iidx] = (weight * area * aselect[k][m]).sum(axis = 2).sum(axis = 1)
 
-        weight = landmasksir[cidx] if not iidx else landmasksrf[cidx] # weights
-        
-        fpus = zeros((nfpu, nt, nlats, nlons), dtype = bool) # fpu
-        basins = zeros((nbasin, nt, nlats, nlons), dtype = bool) # basin
-        regions = zeros((nregion, nt, nlats, nlons), dtype = bool) # region       
-        for k in range(nfpu):
-            fpus[k] = fpucommon == fpuidxs[k]
-            areafpu[k, :, sidx, iidx] = (weight * area * fpus[k]).sum(axis = 2).sum(axis = 1)
-        for k in range(nbasin):
-            basins[k] = basincommon == basinidxs[k]
-            areabasin[k, :, sidx, iidx] = (weight * area * basins[k]).sum(axis = 2).sum(axis = 1)
-        for k in range(nregion):
-            regions[k] = regioncommon == regionidxs[k]
-            arearegion[k, :, sidx, iidx] = (weight * area * regions[k]).sum(axis = 2).sum(axis = 1)
-        
-        vtmpfpu = zeros((nfpu, nlats, nlons)) # for storing temporary variable
-        vtmpbasin = zeros((nbasin, nlats, nlons))
-        vtmpregion = zeros((nregion, nlats, nlons))
-        for k in range(nv):
-            # iterate over variables
+        for k in range(nv): # iterate over variables
             t0 = tm.time()
             
             varfile = [f for f in files if re.search(scen_irr + '_' + vars[k], f)]
-            if not len(varfile):
-                continue
-            else:
-                varfile = varfile[0]
+            if not len(varfile): continue
+            varfile = varfile[0]
             print 'Processing', varfile, '. . .'
-            
-            # load file
-            vf = nc(sep.join([rootdir, dirs[i], varfile]))
-            
-            # get variable and units
-            fvars = vf.variables.keys()
+
+            vf = nc(sep.join([rootdir, dir, varfile])) # load file
+
+            fvars = vf.variables.keys() # get variable and units
             vidx = [vars[k] in v for v in fvars].index(True)
             var = vf.variables[fvars[vidx]]
             if not j: vunits[k] = var.units if 'units' in var.ncattrs() else ''
             var = var[:].transpose((2, 0, 1))
             vf.close()
-            
+                       
             print '  Processing aggregration masks . . .'
-            for t in range(nt): 
-                ridxfpu = areafpu[:, t, sidx, iidx] > 0. # fpu
-                if ridxfpu.sum():
-                    vtmpfpu[:] = 0.
-                    idx1, idx2, idx3 = where(fpus[:, t, :, :])
-                    vtmpfpu[idx1, idx2, idx3] = var[t, idx2, idx3] * weight[idx2, idx3] * area[idx2, idx3] * fpus[idx1, t, idx2, idx3]        
-                    vsum = vtmpfpu.sum(axis = 2).sum(axis = 1)
-                    varfpu[k, ridxfpu, t, sidx, iidx] = vsum[ridxfpu] / areafpu[ridxfpu, t, sidx, iidx]                        
-                ridxbasin = areabasin[:, t, sidx, iidx] > 0. # basin
-                if ridxbasin.sum():
-                    vtmpbasin[:] = 0.
-                    idx1, idx2, idx3 = where(basins[:, t, :, :])
-                    vtmpbasin[idx1, idx2, idx3] = var[t, idx2, idx3] * weight[idx2, idx3] * area[idx2, idx3] * basins[idx1, t, idx2, idx3]        
-                    vsum = vtmpbasin.sum(axis = 2).sum(axis = 1)
-                    varbasin[k, ridxbasin, t, sidx, iidx] = vsum[ridxbasin] / areabasin[ridxbasin, t, sidx, iidx]                        
-                ridxregion = arearegion[:, t, sidx, iidx] > 0. # region
-                if ridxregion.sum():
-                    vtmpregion[:] = 0.
-                    idx1, idx2, idx3 = where(regions[:, t, :, :])
-                    vtmpregion[idx1, idx2, idx3] = var[t, idx2, idx3] * weight[idx2, idx3] * area[idx2, idx3] * regions[idx1, t, idx2, idx3]        
-                    vsum = vtmpregion.sum(axis = 2).sum(axis = 1)
-                    varregion[k, ridxregion, t, sidx, iidx] = vsum[ridxregion] / arearegion[ridxregion, t, sidx, iidx]                                    
-                                    
+            for m in range(nmasks):
+                print '    ' + anames[m] + ' . . .'
+                for t in range(nt):
+                    ridx = areas[m][:, t, sidx, iidx] > 0.
+                    if ridx.sum():
+                        vartmp[m][:] = 0.
+                        idx1, idx2, idx3 = where(aselect[m][:, t, :, :])
+                        vartmp[m][idx1, idx2, idx3] = var[t, idx2, idx3] * weight[idx2, idx3] * area[idx2, idx3] * aselect[m][idx1, t, idx2, idx3]        
+                        vsum = vartmp[m].sum(axis = 2).sum(axis = 1)
+                        averages[m][k, ridx, t, sidx, iidx] = vsum[ridx] / areas[m][ridx, t, sidx, iidx]
+
             print '  Time to process =', tm.time() - t0, 'seconds . . .'
 
-    # append variables
-    # areas
-    f = nc(filename, 'a', format = 'NETCDF4_CLASSIC')
-    afpuvar = f.createVariable('area_fpu', 'f4', ('fpu_index', 'time', 'scen', 'irr',), zlib = True, complevel = 9) # fpu
-    afpuvar[:] = areafpu
-    afpuvar.units = 'hectares'
-    afpuvar.long_name = 'fpu harvested area'
-    abasinvar = f.createVariable('area_basin', 'f4', ('basin_index', 'time', 'scen', 'irr',), zlib = True, complevel = 9) # basin
-    abasinvar[:] = areabasin
-    abasinvar.units = 'hectares'
-    abasinvar.long_name = 'basin harvested area'
-    aregionvar = f.createVariable('area_region', 'f4', ('region_index', 'time', 'scen', 'irr',), zlib = True, complevel = 9) # region
-    aregionvar[:] = arearegion
-    aregionvar.units = 'hectares'
-    aregionvar.long_name = 'region harvested area'
-    # averages
-    for j in range(nv):
-        v1 = f.createVariable(vars[j] + '_fpu', 'f4', ('fpu_index', 'time', 'scen', 'irr',), fill_value = fillv, zlib = True, complevel = 9) # fpu
-        v1[:] = varfpu[j]
-        v1.units = vunits[j]
-        v1.long_name = 'average fpu ' + vars[j]
-        v2 = f.createVariable(vars[j] + '_basin', 'f4', ('basin_index', 'time', 'scen', 'irr',), fill_value = fillv, zlib = True, complevel = 9) # basin
-        v2[:] = varbasin[j]
-        v2.units = vunits[j]
-        v2.long_name = 'average basin ' + vars[j]
-        v3 = f.createVariable(vars[j] + '_region', 'f4', ('region_index', 'time', 'scen', 'irr',), fill_value = fillv, zlib = True, complevel = 9) # region
-        v3[:] = varregion[j]
-        v3.units = vunits[j]
-        v3.long_name = 'average region ' + vars[j]
+    f = nc(filename, 'a', format = 'NETCDF4_CLASSIC') # append variables
+    for j in range(nmasks):
+        name = anames[j]
+        dims = ('time', 'scen', 'irr')
+        if name != 'global': dims = (name + '_index',) + dims
+        areav = f.createVariable('area_' + name, 'f4', dims, zlib = True, complevel = 9)
+        areav[:] = areas[j].squeeze()
+        areav.units = 'hectares'
+        areav.long_name = name + ' harvested area'
+        for k in range(nv):
+            avev = f.createVariable(vars[k] + '_' + name, 'f4', dims, fill_value = fillv, zlib = True, complevel = 9)
+            avev[:] = averages[j][k].squeeze()
+            avev.units = vunits[k]
+            avev.long_name = 'average ' + name + ' ' + vars[k]
     f.close()
 
 print 'DONE!'
