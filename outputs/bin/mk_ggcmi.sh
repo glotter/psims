@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function cropfullname {
-  crop=$1
+  local crop=$1
   if [[ $crop == "mai" ]]; then
     cropfull="maize" 
   elif [[ $crop == "whe" ]]; then
@@ -11,11 +11,11 @@ function cropfullname {
   elif [[ $crop == "ric" ]]; then
     cropfull="rice"
   elif [[ $crop == "sor" ]]; then
-    cropful="sorghum"
+    cropfull="sorghum"
   elif [[ $crop == "mil" ]]; then
-    cropful="millet"
+    cropfull="millet"
   elif [[ $crop == "mgr" ]]; then
-    cropful="managed_grass"
+    cropfull="managed_grass"
   else
     cropfull=""
   fi
@@ -23,7 +23,7 @@ function cropfullname {
 }
 
 function climcapitalized {
-  clim=$1
+  local clim=$1
   if [[ $clim == "agcfsr" ]]; then
     climcap="AgCFSR 1980 2010"
   elif [[ $clim == "agmerra" ]]; then
@@ -70,7 +70,7 @@ numapsimvars=14
 # scenario names
 pdssatpmscens=fullharm_noirr,fullharm_firr,default_noirr,default_firr,harmnon_noirr,harmnon_firr
 pdssatptscens=fullharm_noirr,fullharm_firr
-papsimscens=default_noirr,default_firr,fullharm_noirr,fullharm_firr,harmnon_noirr,harmnon_firr
+papsimscens=$pdssatpmscens
 
 # process all DSSAT and APSIM directories
 for d in `ls $ggcmidir | egrep 'dssat|apsim'`; do
