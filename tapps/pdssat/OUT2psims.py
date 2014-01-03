@@ -175,6 +175,7 @@ nrows = len(data) - 4
 ncols = len(all_variables)
 trim_data = empty((nrows, ncols), dtype = '|S20')
 for i in range(nrows):
+    data[i + 4] = data[i + 4].replace(' ***** ', ' ******* ') # fix error
     for j in range(ncols):
         sidx = start_idx.values()[j]
         eidx = len(data[3]) - 1 if j == ncols - 1 else start_idx.values()[j + 1]
