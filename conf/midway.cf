@@ -1,6 +1,6 @@
 use.wrapper.staging=false
 wrapperlog.always.transfer=false
-sitedir.keep=true
+sitedir.keep=false
 execution.retries=5
 lazy.errors=true
 status.mode=provider

@@ -12,7 +12,7 @@ site=$2
 # Function to run Swift
 runswift() {
    export SWIFT_HEAP_MAX=$ram
-   command="swift -tc.file tc.data -sites.file $site.xml -config cf RunpSIMS-nodebug.swift "
+   command="swift -tc.file tc.data -sites.file $site.xml -config cf RunpSIMS.swift "
    for param in $( awk '{print $1}' paramfile )
    do
       command="$command -$param=${!param}"
@@ -82,7 +82,7 @@ if [ -f "conf/$execsite.xml" ] && [ ! -f "conf/$execsite.cf" ]; then
 fi
 
 cp $gridlist $rundir/gridList.txt
-cp RunpSIMS-nodebug.swift $rundir
+cp RunpSIMS.swift $rundir
 cp bin/RunpSIMS.sh $rundir
 
 cat << END > $rundir/restart.sh
