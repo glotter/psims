@@ -34,13 +34,13 @@
         "planting": {
           "ph2od": "30",
           "pfday": "274",
-          "ph2ol": "40",
+          "ph2ol": "20",
           "pfyer": "82",
           "plday": "294",
           "plyer": "82",
           "ph2ou": "100",
           "pstmx": "40",
-          "pstmn": "10"
+          "pstmn": "2"
         },
         "irrigation": {
           "ithru": "100",
@@ -56,7 +56,7 @@
           "plant": "R",
           "ferti": "N",
           "resid": "A",
-          "harvs": "R"
+          "harvs": "M"
         },
         "methods": {
           "evapo": "F",
@@ -91,7 +91,7 @@
           "hlyer": "83",
           "hpcnr": "0",
           "hpcnp": "100",
-          "hlday": "365"
+          "hlday": "259"
         },
         "residues": {
           "rtime": "1",
@@ -134,7 +134,7 @@
       {
         "pldp": "4.0",
         "plrs": "17",
-        "cul_id": "ME11XX",
+        "cul_id": "ME11X1",
         "plds": "R",
         "crid": "WH",
         "plpoe": "400.0",
@@ -281,13 +281,13 @@
         "planting": {
           "ph2od": "30",
           "pfday": "274",
-          "ph2ol": "40",
+          "ph2ol": "20",
           "pfyer": "82",
           "plday": "294",
           "plyer": "82",
           "ph2ou": "100",
           "pstmx": "40",
-          "pstmn": "10"
+          "pstmn": "2"
         },
         "irrigation": {
           "ithru": "100",
@@ -303,7 +303,7 @@
           "plant": "R",
           "ferti": "N",
           "resid": "A",
-          "harvs": "R"
+          "harvs": "M"
         },
         "methods": {
           "evapo": "F",
@@ -338,7 +338,7 @@
           "hlyer": "83",
           "hpcnr": "0",
           "hpcnp": "100",
-          "hlday": "365"
+          "hlday": "269"
         },
         "residues": {
           "rtime": "1",
@@ -381,7 +381,7 @@
       {
         "pldp": "4.0",
         "plrs": "17",
-        "cul_id": "ME11XX",
+        "cul_id": "ME11X1",
         "plds": "R",
         "crid": "WH",
         "plpoe": "400.0",

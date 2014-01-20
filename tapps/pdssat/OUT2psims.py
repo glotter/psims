@@ -175,11 +175,16 @@ nrows = len(data) - 4
 ncols = len(all_variables)
 trim_data = empty((nrows, ncols), dtype = '|S20')
 for i in range(nrows):
-    data[i + 4] = data[i + 4].replace(' ***** ', ' ******* ') # fix error
+    offs = 0 # offset to handle anomalous parsing
     for j in range(ncols):
         sidx = start_idx.values()[j]
         eidx = len(data[3]) - 1 if j == ncols - 1 else start_idx.values()[j + 1]
-        trim_data[i, j] = data[i + 4][sidx : eidx].strip() # remove spaces
+        dstr = data[i + 4][sidx + offs : eidx + offs]
+        if '*' in dstr and not dstr.endswith('*'): # '*' not in last position
+            offset = dstr.rfind('*') - len(dstr) + 1
+            dstr = dstr[: offset]
+            offs += offset
+        trim_data[i, j] = dstr.strip() # remove spaces
 if len(trim_data) % num_years:
     raise Exception('Size of data not divisible by number of years')
 if len(trim_data) < num_years * num_scenarios:

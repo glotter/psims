@@ -196,7 +196,7 @@
       <!-- __________________________________________________________________________________________________________-
          PHOTOPERIOD AND TWILIGHT
          -->
-      <twilight description="-2.2 (o)   ! Twilight is defined as the interval between sunrise or sunset and the time when the true">-6.0 </twilight>
+      <twilight description="-2.2 (o)   ! Twilight is defined as the interval between sunrise or sunset and the time when the true">0 </twilight>
       <!--  centre of the sun is 2.2 degrees below the horizon. Sunrise or sunset is defined as when
          the true centre of the sun is 50' below the horizon.
          __________________________________________________________________________________________________________-
@@ -742,6 +742,1268 @@
     </base_cultivar>
     <!--  ===================== Generic pSIMS ME cultivars  ==================
       -->
+
+<ME1XX0 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>0.9</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">300.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">380.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">507.6</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00195</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME1XX0>
+    <ME2AX0 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>0.9</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">300.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">380.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">507.6</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME2AX0>
+    <ME2BX0 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>0.9</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">300.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">380.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">507.6</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME2BX0>
+    <ME3XX0 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>0.9</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">300.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">380.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">507.6</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME3XX0>
+    <ME4AX0 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>0.9</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">300.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">380.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">507.6</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>38.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00185</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME4AX0>
+    <ME4CX0 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>0.9</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">300.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">380.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">507.6</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>38.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00185</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME4CX0>
+    <ME5AX0 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.3</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">300.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">380.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">507.6</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00185</potential_grain_filling_rate>
+      <dm_tiller_max>1.5</dm_tiller_max>
+      <phyllochron>100.0</phyllochron>
+    </ME5AX0>
+    <ME6XX0 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.8</photop_sens>
+      <tt_end_of_juvenile units="oCd">300.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">380.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">507.6</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>1.5</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME6XX0>
+    <ME7XX0 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>2.5</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">300.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">380.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">507.6</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME7XX0>
+    <ME8AX0 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>2.5</vern_sens>
+      <photop_sens>2.5</photop_sens>
+      <tt_end_of_juvenile units="oCd">300.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">380.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">540.0</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME8AX0>
+    <ME9XX0 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>0.9</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">300.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">380.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">507.6</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>38.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00185</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME9XX0>
+    <ME10X0 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>4.2</vern_sens>
+      <photop_sens>2.8</photop_sens>
+      <tt_end_of_juvenile units="oCd">300.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">380.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">540.0</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>135.0</phyllochron>
+    </ME10X0>
+    <ME11X0 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>4.2</vern_sens>
+      <photop_sens>3.3</photop_sens>
+      <tt_end_of_juvenile units="oCd">300.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">380.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">540.0</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>135.0</phyllochron>
+    </ME11X0>
+    <ME12X0 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>4.2</vern_sens>
+      <photop_sens>2.8</photop_sens>
+      <tt_end_of_juvenile units="oCd">300.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">380.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">540.0</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>135.0</phyllochron>
+    </ME12X0>
+    <ME1XX1 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.3</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">340.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">435.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">530.2</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00195</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME1XX1>
+    <ME2AX1 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.3</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">340.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">435.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">530.2</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME2AX1>
+    <ME2BX1 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.3</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">340.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">435.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">530.2</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME2BX1>
+    <ME3XX1 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.3</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">340.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">435.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">530.2</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME3XX1>
+    <ME4AX1 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.3</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">340.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">435.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">530.2</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>38.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00185</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME4AX1>
+    <ME4CX1 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.3</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">340.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">435.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">530.2</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>38.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00185</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME4CX1>
+    <ME5AX1 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">340.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">435.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">530.2</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00185</potential_grain_filling_rate>
+      <dm_tiller_max>1.5</dm_tiller_max>
+      <phyllochron>100.0</phyllochron>
+    </ME5AX1>
+    <ME6XX1 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>2.1</vern_sens>
+      <photop_sens>2.8</photop_sens>
+      <tt_end_of_juvenile units="oCd">340.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">435.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">530.2</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>1.5</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME6XX1>
+    <ME7XX1 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>2.9</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">340.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">435.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">530.2</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME7XX1>
+    <ME8AX1 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>2.9</vern_sens>
+      <photop_sens>2.5</photop_sens>
+      <tt_end_of_juvenile units="oCd">340.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">435.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">564.0</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME8AX1>
+    <ME9XX1 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.3</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">340.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">435.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">530.2</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>38.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00185</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME9XX1>
+    <ME10X1 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>4.6</vern_sens>
+      <photop_sens>2.8</photop_sens>
+      <tt_end_of_juvenile units="oCd">340.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">435.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">564.0</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>135.0</phyllochron>
+    </ME10X1>
+    <ME11X1 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>4.6</vern_sens>
+      <photop_sens>3.3</photop_sens>
+      <tt_end_of_juvenile units="oCd">340.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">435.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">564.0</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>135.0</phyllochron>
+    </ME11X1>
+    <ME12X1 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>4.6</vern_sens>
+      <photop_sens>2.8</photop_sens>
+      <tt_end_of_juvenile units="oCd">340.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">435.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">564.0</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>135.0</phyllochron>
+    </ME12X1>
+    <ME1XX2 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">380.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">490.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">552.7</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00195</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME1XX2>
+    <ME2AX2 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">380.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">490.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">552.7</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME2AX2>
+    <ME2BX2 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">380.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">490.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">552.7</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME2BX2>
+    <ME3XX2 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">380.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">490.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">552.7</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME3XX2>
+    <ME4AX2 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">380.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">490.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">552.7</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>38.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00185</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME4AX2>
+    <ME4CX2 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">380.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">490.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">552.7</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>38.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00185</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME4CX2>
+    <ME5AX2 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>2.1</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">380.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">490.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">552.7</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00185</potential_grain_filling_rate>
+      <dm_tiller_max>1.5</dm_tiller_max>
+      <phyllochron>100.0</phyllochron>
+    </ME5AX2>
+    <ME6XX2 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>2.5</vern_sens>
+      <photop_sens>2.8</photop_sens>
+      <tt_end_of_juvenile units="oCd">380.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">490.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">552.7</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>1.5</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME6XX2>
+    <ME7XX2 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>3.3</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">380.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">490.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">552.7</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME7XX2>
+    <ME8AX2 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>3.3</vern_sens>
+      <photop_sens>2.5</photop_sens>
+      <tt_end_of_juvenile units="oCd">380.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">490.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">588.0</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME8AX2>
+    <ME9XX2 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">380.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">490.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">552.7</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>38.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00185</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME9XX2>
+    <ME10X2 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>5.0</vern_sens>
+      <photop_sens>2.8</photop_sens>
+      <tt_end_of_juvenile units="oCd">380.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">490.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">588.0</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>135.0</phyllochron>
+    </ME10X2>
+    <ME11X2 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>5.0</vern_sens>
+      <photop_sens>3.3</photop_sens>
+      <tt_end_of_juvenile units="oCd">380.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">490.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">588.0</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>135.0</phyllochron>
+    </ME11X2>
+    <ME12X2 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>5.0</vern_sens>
+      <photop_sens>2.8</photop_sens>
+      <tt_end_of_juvenile units="oCd">380.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">490.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">588.0</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>135.0</phyllochron>
+    </ME12X2>
+    <ME1XX3 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">420.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">545.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">575.3</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00195</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME1XX3>
+    <ME2AX3 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">420.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">545.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">575.3</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME2AX3>
+    <ME2BX3 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">420.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">545.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">575.3</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME2BX3>
+    <ME3XX3 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">420.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">545.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">575.3</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME3XX3>
+    <ME4AX3 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">420.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">545.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">575.3</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>38.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00185</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME4AX3>
+    <ME4CX3 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">420.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">545.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">575.3</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>38.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00185</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME4CX3>
+    <ME5AX3 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>2.1</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">420.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">545.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">575.3</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00185</potential_grain_filling_rate>
+      <dm_tiller_max>1.5</dm_tiller_max>
+      <phyllochron>100.0</phyllochron>
+    </ME5AX3>
+    <ME6XX3 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>2.5</vern_sens>
+      <photop_sens>2.8</photop_sens>
+      <tt_end_of_juvenile units="oCd">420.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">545.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">575.3</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>1.5</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME6XX3>
+    <ME7XX3 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>3.3</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">420.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">545.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">575.3</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME7XX3>
+    <ME8AX3 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>3.3</vern_sens>
+      <photop_sens>2.5</photop_sens>
+      <tt_end_of_juvenile units="oCd">420.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">545.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">612.0</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME8AX3>
+    <ME9XX3 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">420.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">545.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">575.3</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>38.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00185</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME9XX3>
+    <ME10X3 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>5.0</vern_sens>
+      <photop_sens>2.8</photop_sens>
+      <tt_end_of_juvenile units="oCd">420.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">545.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">612.0</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>135.0</phyllochron>
+    </ME10X3>
+    <ME11X3 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>5.0</vern_sens>
+      <photop_sens>3.3</photop_sens>
+      <tt_end_of_juvenile units="oCd">420.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">545.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">612.0</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>135.0</phyllochron>
+    </ME11X3>
+    <ME12X3 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>5.0</vern_sens>
+      <photop_sens>2.8</photop_sens>
+      <tt_end_of_juvenile units="oCd">420.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">545.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">612.0</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>135.0</phyllochron>
+    </ME12X3>
+    <ME1XX4 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">460.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">600.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">597.8</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00195</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME1XX4>
+    <ME2AX4 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">460.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">600.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">597.8</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME2AX4>
+    <ME2BX4 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">460.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">600.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">597.8</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME2BX4>
+    <ME3XX4 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">460.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">600.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">597.8</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME3XX4>
+    <ME4AX4 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">460.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">600.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">597.8</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>38.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00185</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME4AX4>
+    <ME4CX4 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">460.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">600.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">597.8</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>38.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00185</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME4CX4>
+    <ME5AX4 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>2.1</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">460.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">600.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">597.8</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00185</potential_grain_filling_rate>
+      <dm_tiller_max>1.5</dm_tiller_max>
+      <phyllochron>100.0</phyllochron>
+    </ME5AX4>
+    <ME6XX4 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>2.5</vern_sens>
+      <photop_sens>2.8</photop_sens>
+      <tt_end_of_juvenile units="oCd">460.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">600.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">597.8</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>1.5</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME6XX4>
+    <ME7XX4 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>3.3</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">460.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">600.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">597.8</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME7XX4>
+    <ME8AX4 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>3.3</vern_sens>
+      <photop_sens>2.5</photop_sens>
+      <tt_end_of_juvenile units="oCd">460.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">600.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">636.0</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME8AX4>
+    <ME9XX4 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">460.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">600.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">597.8</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>38.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00185</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME9XX4>
+    <ME10X4 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>5.0</vern_sens>
+      <photop_sens>2.8</photop_sens>
+      <tt_end_of_juvenile units="oCd">460.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">600.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">636.0</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>135.0</phyllochron>
+    </ME10X4>
+    <ME11X4 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>5.0</vern_sens>
+      <photop_sens>3.3</photop_sens>
+      <tt_end_of_juvenile units="oCd">460.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">600.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">636.0</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>135.0</phyllochron>
+    </ME11X4>
+    <ME12X4 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>5.0</vern_sens>
+      <photop_sens>2.8</photop_sens>
+      <tt_end_of_juvenile units="oCd">460.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">600.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">636.0</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>135.0</phyllochron>
+    </ME12X4>
+    <ME1XX5 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">500.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">655.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">620.4</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00195</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME1XX5>
+    <ME2AX5 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">500.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">655.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">620.4</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME2AX5>
+    <ME2BX5 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">500.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">655.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">620.4</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME2BX5>
+    <ME3XX5 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">500.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">655.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">620.4</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME3XX5>
+    <ME4AX5 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">500.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">655.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">620.4</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>38.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00185</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME4AX5>
+    <ME4CX5 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">500.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">655.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">620.4</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>38.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00185</potential_grain_filling_rate>
+      <dm_tiller_max>1.0</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME4CX5>
+    <ME5AX5 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>2.1</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">500.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">655.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">620.4</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00185</potential_grain_filling_rate>
+      <dm_tiller_max>1.5</dm_tiller_max>
+      <phyllochron>100.0</phyllochron>
+    </ME5AX5>
+    <ME6XX5 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>2.5</vern_sens>
+      <photop_sens>2.8</photop_sens>
+      <tt_end_of_juvenile units="oCd">500.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">655.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">620.4</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>1.5</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME6XX5>
+    <ME7XX5 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>3.3</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">500.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">655.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">620.4</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME7XX5>
+    <ME8AX5 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>3.3</vern_sens>
+      <photop_sens>2.5</photop_sens>
+      <tt_end_of_juvenile units="oCd">500.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">655.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">660.0</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME8AX5>
+    <ME9XX5 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>1.7</vern_sens>
+      <photop_sens>2.4</photop_sens>
+      <tt_end_of_juvenile units="oCd">500.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">655.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">620.4</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>38.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.00185</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>120.0</phyllochron>
+    </ME9XX5>
+    <ME10X5 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>5.0</vern_sens>
+      <photop_sens>2.8</photop_sens>
+      <tt_end_of_juvenile units="oCd">500.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">655.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">660.0</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>135.0</phyllochron>
+    </ME10X5>
+    <ME11X5 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>5.0</vern_sens>
+      <photop_sens>3.3</photop_sens>
+      <tt_end_of_juvenile units="oCd">500.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">655.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">660.0</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>135.0</phyllochron>
+    </ME11X5>
+    <ME12X5 cultivar="yes">
+      <derived_from>base_cultivar</derived_from>
+      <max_grain_size>0.055</max_grain_size>
+      <vern_sens>5.0</vern_sens>
+      <photop_sens>2.8</photop_sens>
+      <tt_end_of_juvenile units="oCd">500.0</tt_end_of_juvenile>
+      <tt_floral_initiation units="oCd">655.0</tt_floral_initiation>
+      <tt_flowering units="oCd">120.0</tt_flowering>
+      <tt_start_grain_fill units="oCd">660.0</tt_start_grain_fill>
+      <startgf_to_mat>564</startgf_to_mat>
+      <grains_per_gram_stem>35.0</grains_per_gram_stem>
+      <potential_grain_filling_rate>0.002</potential_grain_filling_rate>
+      <dm_tiller_max>0.5</dm_tiller_max>
+      <phyllochron>135.0</phyllochron>
+    </ME12X5>
+
     <me1 cultivar="yes">
       <derived_from>base_cultivar</derived_from>
       <max_grain_size>0.055</max_grain_size>

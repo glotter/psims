@@ -3,11 +3,11 @@
     <execution provider="coaster" jobmanager="local:slurm"/>
     <profile namespace="globus" key="jobsPerNode">16</profile>        <!-- Maximum number of RunpSIMS.sh tasks per node -->
     <profile namespace="globus" key="maxTime">43200</profile>         <!-- Maximum time, in seconds of a coaster block -->
-    <profile namespace="globus" key="maxwalltime">00:04:00</profile>   <!-- Maximum time, in hh:mm:ss of any one RunpSIMS.sh app call -->
+    <profile namespace="globus" key="maxwalltime">00:10:00</profile>   <!-- Maximum time, in hh:mm:ss of any one RunpSIMS.sh app call -->
     <profile namespace="globus" key="lowOverallocation">100</profile> <!-- Don't worry too much about these, they should both always be set to 100 -->
     <profile namespace="globus" key="highOverallocation">100</profile>
     <profile namespace="globus" key="queue">sandyb</profile>        <!-- Slurm partition to use -->
-    <profile namespace="globus" key="slots">20</profile>              <!-- Maximum number of Slurm jobs -->
+    <profile namespace="globus" key="slots">5</profile>              <!-- Maximum number of Slurm jobs -->
     <profile namespace="globus" key="nodeGranularity">2</profile>     <!-- Request nodes in blocks of nodeGranularity -->
     <profile namespace="globus" key="maxNodes">2</profile>            <!-- Maximum number of nodes per Slurm job -->
     <profile namespace="karajan" key="jobThrottle">30</profile>       <!-- Multiply this number by 100 to get the total number of active jobs before Swift starts throttling -->

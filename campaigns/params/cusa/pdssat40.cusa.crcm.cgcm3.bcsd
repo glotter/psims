@@ -1,9 +1,0 @@
-model            dssat40
-scenarios        /project/joshuaelliott/data/cusa_input/grid_hwsd
-weather          /project/joshuaelliott/data/cusa_input/grid/grid_narccap_CRCM_cgcm3_bcsd
-refdata          /project/joshuaelliott/psims/models/pdssat40/DSSAT/campaigns/common/RCM
-bindata          /project/joshuaelliott/psims/bin
-bintransfer      $PWD/bin/DSSAT040.EXE,$PWD/bin/MINPT040.EXE,$PWD/bin/gen_part_dssat.pl
-executable       DSSAT040.EXE:A:R1234567.MZX
-outtypes         .OUT,.MZX
-postprocess      ./gen_part_dssat.pl:--num_scenarios:8:--years:56:--variables:PDAT,ADAT,MDAT,CWAM,HWAM,IRCM,PRCM,ETCM:--crop:mai

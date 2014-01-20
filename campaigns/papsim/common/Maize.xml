@@ -755,6 +755,34 @@
       <tt_flower_to_start_grain description="70 !  170 (oC)">120 </tt_flower_to_start_grain>
       <tt_maturity_to_ripe units="oC">1</tt_maturity_to_ripe>
     </HY0009>
+    <HY0010 cultivar="yes">
+      <!-- ________________________________________________________________________________________________________
+         GRAIN GROWTH
+         ________________________________________________________________________________________________________
+         -->
+      <head_grain_no_max description="450 in CM-KEN ()">900 </head_grain_no_max>
+      <grain_gth_rate units="mg/grain/day" description="10.5 in CM-KEN">9.5</grain_gth_rate>
+      <!-- ________________________________________________________________________________________________________
+         CANOPY HEIGHT - function of stem biomass per plant (need to adjust this for density effects)
+         ________________________________________________________________________________________________________
+         -->
+      <x_stem_wt units="g/stem" description="look up table for canopy height">0    80</x_stem_wt>
+      <y_height units="mm" description="plant canopy height">0  2000</y_height>
+      <!-- ________________________________________________________________________________________________________
+         PHENOLOGY
+         ________________________________________________________________________________________________________
+         -->
+      <tt_emerg_to_endjuv description="135 ! 125 in CM-KEN (oC)">350 </tt_emerg_to_endjuv>
+      <est_days_endjuv_to_init>20</est_days_endjuv_to_init>
+      <tt_endjuv_to_init units="oC">0.0</tt_endjuv_to_init>
+      <photoperiod_crit1 units="hours">12.5</photoperiod_crit1>
+      <photoperiod_crit2 units="hours">24.0</photoperiod_crit2>
+      <photoperiod_slope units="oC/hour">0</photoperiod_slope>
+      <tt_flower_to_maturity description="660 in CM-KEN (oC)">980 </tt_flower_to_maturity>
+      <tt_flag_to_flower units="oC">10</tt_flag_to_flower>
+      <tt_flower_to_start_grain description="70 !  170 (oC)">120 </tt_flower_to_start_grain>
+      <tt_maturity_to_ripe units="oC">1</tt_maturity_to_ripe>
+    </HY0010>
     <OP0001 cultivar="yes">
       <!-- ________________________________________________________________________________________________________
          GRAIN GROWTH
@@ -1007,6 +1035,34 @@
       <tt_flower_to_start_grain description="70 !  170 (oC)">120 </tt_flower_to_start_grain>
       <tt_maturity_to_ripe units="oC">1</tt_maturity_to_ripe>
     </OP0009>
+    <OP0010 cultivar="yes">
+      <!-- ________________________________________________________________________________________________________
+         GRAIN GROWTH
+         ________________________________________________________________________________________________________
+         -->
+      <head_grain_no_max description="450 in CM-KEN ()">570 </head_grain_no_max>
+      <grain_gth_rate units="mg/grain/day" description="10.5 in CM-KEN">8.6</grain_gth_rate>
+      <!-- ________________________________________________________________________________________________________
+         CANOPY HEIGHT - function of stem biomass per plant (need to adjust this for density effects)
+         ________________________________________________________________________________________________________
+         -->
+      <x_stem_wt units="g/stem" description="look up table for canopy height">0    80</x_stem_wt>
+      <y_height units="mm" description="plant canopy height">0  2000</y_height>
+      <!-- ________________________________________________________________________________________________________
+         PHENOLOGY
+         ________________________________________________________________________________________________________
+         -->
+      <tt_emerg_to_endjuv description="135 ! 125 in CM-KEN (oC)">350 </tt_emerg_to_endjuv>
+      <est_days_endjuv_to_init>20</est_days_endjuv_to_init>
+      <tt_endjuv_to_init units="oC">0.0</tt_endjuv_to_init>
+      <photoperiod_crit1 units="hours">12.5</photoperiod_crit1>
+      <photoperiod_crit2 units="hours">24.0</photoperiod_crit2>
+      <photoperiod_slope units="oC/hour">0</photoperiod_slope>
+      <tt_flower_to_maturity description="660 in CM-KEN (oC)">980 </tt_flower_to_maturity>
+      <tt_flag_to_flower units="oC">10</tt_flag_to_flower>
+      <tt_flower_to_start_grain description="70 !  170 (oC)">120 </tt_flower_to_start_grain>
+      <tt_maturity_to_ripe units="oC">1</tt_maturity_to_ripe>
+    </OP0010>
       <!-- ________________________________________________________________________________________________________
          Start standard cultivars
          ________________________________________________________________________________________________________

@@ -260,16 +260,26 @@ for e in exp['experiments']:
         dict_replace(e, 'end_date', '31/12/' + str(ref_year + nyers - 1)) # always December 31st
     
 # correct plyer, if available and necessary
+# correct hlday and hlyer (ADDED 12/17/13 to handle vernalization problem in DSSAT)
 for e in exp['experiments']:
     plt_dic = get_obj(e, 'dssat_simulation_control', {}) # only applies for DSSAT!
     if plt_dic != {}:
         planting = plt_dic['data'][0]['planting']
-        pfday = planting['pfday']
-        plday = planting['plday']
-        if double(pfday) > double(plday):
+        pfday = double(planting['pfday'])
+        plday = double(planting['plday'])
+        if pfday > plday:
             plyer = str(double(planting['pfyer']) + 1)
             print 'Setting plyer to', plyer
             dict_replace(e, 'plyer', plyer)
+        if pfday <= 15:
+            hlyer = planting['pfyer']
+        else:
+            hlyer = str(double(planting['pfyer']) + 1)
+        hlday = (pfday - 15) % 366
+        print 'Setting hlyer to', hlyer
+        dict_replace(e, 'hlyer', str(hlyer))
+        print 'Setting hlday to', hlday
+        dict_replace(e, 'hlday', str(hlday))
 
 # close file
 campaign.close()

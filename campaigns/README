@@ -7,7 +7,4 @@ include all the cultivar options and parameterizations. Each model folder
 also includes a number of experiment subfolders, which contain Campaign.nc4 
 files, template files, params files, and other experiment specific stuff. 
 
-Also in the campaign/ folder is a generic set of previously used params 
-files under campaign/params/, in case these might be useful for future 
-work. Alot of these have been deprecated so use with caution. 
 

@@ -328,7 +328,6 @@ endif
         <script>
           <text>AET = es + ep
 T_average = (maxt + mint) * 0.5 
-N_uptake = biomass_n * 10 ! kg/ha
 soil_co2 = dlt_biom_c_atm() + dlt_fom_c_atm() + dlt_hum_c_atm() + dlt_res_c_atm
 </text>
           <event>start_of_day</event>

@@ -670,6 +670,271 @@
          <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
          <y_height units="mm" description="plant canopy height">0  3000</y_height>
       </mh179>
+
+<!-- !!!!!!!!!!!!!!!!pSIMS cultivars by joshua elliott!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+      <!-- !!!!!!!!!!!!!!!!!!!!!!!!!! tiller 1 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+      <JE0011 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">100</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">400.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0011>
+      <JE0012 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">110</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">420.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0012>
+      <JE0013 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">120</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">440.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0013>
+      <JE0014 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">130</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">460.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0014>
+      <JE0015 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">140</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">480.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0015>
+      <JE0021 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">120</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">530.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0021>
+      <JE0022 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">130</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">555.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0022>
+      <JE0023 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">140</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">580.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0023>
+      <JE0024 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">150</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">605.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0024>
+      <JE0025 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">160</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">630.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0025>
+      <JE0031 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">160</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">630.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0031>
+      <JE0032 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">170</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">655.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0032>
+      <JE0033 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">180</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">680.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0033>
+      <JE0034 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">190</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">705.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0034>
+      <JE0035 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">200</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">730.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0035>
+
+
+
+
+
+
+
    </Model>
    <Model name="Millet1">
 
@@ -1169,6 +1434,265 @@
       <!--   on N fixation
       -->
       <y_swdef_fix units="0-1" description="stress index on">0.0  1.0</y_swdef_fix>
+
+<!-- !!!!!!!!!!!!!!!!pSIMS cultivars by joshua elliott!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+      <!-- !!!!!!!!!!!!!!!!!!!!!!!!!! tiller 1 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+      <JE0011 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">100</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">400.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0011>
+      <JE0012 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">110</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">420.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0012>
+      <JE0013 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">120</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">440.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0013>
+      <JE0014 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">130</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">460.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0014>
+      <JE0015 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">140</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">480.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0015>
+      <JE0021 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">120</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">530.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0021>
+      <JE0022 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">130</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">555.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0022>
+      <JE0023 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">140</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">580.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0023>
+      <JE0024 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">150</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">605.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0024>
+      <JE0025 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">160</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">630.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0025>
+      <JE0031 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">160</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">630.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0031>
+      <JE0032 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">170</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">655.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0032>
+      <JE0033 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">180</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">680.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0033>
+      <JE0034 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">190</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">705.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0034>
+      <JE0035 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">200</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">730.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0035>
+
 
       <!-- !!!!!!!!!!!!!!!!!!!!!!!!!! tiller 1 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       -->
@@ -1770,6 +2294,264 @@
       -->
       <y_swdef_fix units="0-1" description="stress index on">0.0  1.0</y_swdef_fix>
 
+<!-- !!!!!!!!!!!!!!!!pSIMS cultivars by joshua elliott!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+      <!-- !!!!!!!!!!!!!!!!!!!!!!!!!! tiller 2 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+      <JE0011 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">90</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">400.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0011>
+      <JE0012 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">100</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">420.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0012>
+      <JE0013 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">110</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">440.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0013>
+      <JE0014 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">120</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">460.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0014>
+      <JE0015 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">130</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">480.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0015>
+      <JE0021 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">110</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">530.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0021>
+      <JE0022 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">120</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">555.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0022>
+      <JE0023 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">130</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">580.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0023>
+      <JE0024 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">140</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">605.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0024>
+      <JE0025 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">150</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">630.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0025>
+      <JE0031 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">150</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">630.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0031>
+      <JE0032 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">160</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">655.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0032>
+      <JE0033 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">170</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">680.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0033>
+      <JE0034 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">180</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">705.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0034>
+      <JE0035 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">190</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">730.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0035>
+
       <!-- !!!!!!!!!!!!!!!!!!!!!!!!!! tiller 2 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       -->
       <bj104 cultivar="yes">
@@ -2369,6 +3151,264 @@
       <!--   on N fixation
       -->
       <y_swdef_fix units="0-1" description="stress index on">0.0  1.0</y_swdef_fix>
+
+<!-- !!!!!!!!!!!!!!!!pSIMS cultivars by joshua elliott!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+      <!-- !!!!!!!!!!!!!!!!!!!!!!!!!! tiller 3 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+      <JE0011 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">80</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">400.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0011>
+      <JE0012 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">90</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">420.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0012>
+      <JE0013 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">100</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">440.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0013>
+      <JE0014 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">110</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">460.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0014>
+      <JE0015 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">120</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">480.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0015>
+      <JE0021 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">100</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">530.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0021>
+      <JE0022 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">110</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">555.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0022>
+      <JE0023 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">120</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">580.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0023>
+      <JE0024 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">130</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">605.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0024>
+      <JE0025 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">140</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">630.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0025>
+      <JE0031 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">140</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">630.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0031>
+      <JE0032 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">150</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">655.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0032>
+      <JE0033 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">160</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">680.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0033>
+      <JE0034 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">170</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">705.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0034>
+      <JE0035 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">180</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">730.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0035>
 
       <!-- !!!!!!!!!!!!!!!!!!!!!!!!!! tiller 3 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       -->
@@ -2970,6 +4010,264 @@
       -->
       <y_swdef_fix units="0-1" description="stress index on">0.0  1.0</y_swdef_fix>
 
+<!-- !!!!!!!!!!!!!!!!pSIMS cultivars by joshua elliott!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+      <!-- !!!!!!!!!!!!!!!!!!!!!!!!!! tiller 4 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+      <JE0011 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">70</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">400.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0011>
+      <JE0012 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">80</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">420.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0012>
+      <JE0013 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">90</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">440.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0013>
+      <JE0014 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">100</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">460.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0014>
+      <JE0015 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">110</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">480.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0015>
+      <JE0021 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">90</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">530.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0021>
+      <JE0022 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">100</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">555.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0022>
+      <JE0023 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">110</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">580.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0023>
+      <JE0024 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">120</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">605.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0024>
+      <JE0025 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">130</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">630.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0025>
+      <JE0031 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">130</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">630.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0031>
+      <JE0032 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">140</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">655.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0032>
+      <JE0033 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">150</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">680.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0033>
+      <JE0034 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">160</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">705.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0034>
+      <JE0035 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">170</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">730.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0035>
+
       <!-- !!!!!!!!!!!!!!!!!!!!!!!!!! tiller 4 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       -->
       <bj104 cultivar="yes">
@@ -3569,6 +4867,264 @@
       <!--   on N fixation
       -->
       <y_swdef_fix units="0-1" description="stress index on">0.0  1.0</y_swdef_fix>
+
+<!-- !!!!!!!!!!!!!!!!pSIMS cultivars by joshua elliott!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+      <!-- !!!!!!!!!!!!!!!!!!!!!!!!!! tiller 5 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+      <JE0011 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">60</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">400.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0011>
+      <JE0012 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">70</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">420.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0012>
+      <JE0013 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">80</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">440.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0013>
+      <JE0014 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">90</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">460.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0014>
+      <JE0015 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">100</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">480.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0015>
+      <JE0021 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">80</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">530.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0021>
+      <JE0022 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">90</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">555.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0022>
+      <JE0023 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">100</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">580.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0023>
+      <JE0024 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">110</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">605.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0024>
+      <JE0025 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">120</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">630.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0025>
+      <JE0031 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">120</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">630.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0031>
+      <JE0032 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">130</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">655.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0032>
+      <JE0033 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">140</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">680.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0033>
+      <JE0034 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">150</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">705.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0034>
+      <JE0035 cultivar="yes">
+         <tt_emerg_to_endjuv units="oCd" description="EJvO data - TT from emergence to end of juvenile phase">160</tt_emerg_to_endjuv>
+         <tt_flower_to_maturity units="oCd" description="EJvO PKC96 - TT from flowering to maturity">730.0</tt_flower_to_maturity>
+         <hi_incr units="1/days" description="rate of HI increase (optional)">0.0</hi_incr>
+         <hi_max_pot description="maximum harvest index potential">0.55</hi_max_pot>
+         <head_grain_no_max units="grains/head" description="EJvO data  - potential grains per head [Jones and Carberry, 1994]">2900.0</head_grain_no_max>
+         <grain_gth_rate units="mg/grain/d" description="PKC95; potential grain growth rate [Jones and Carberry, 1994]">0.61</grain_gth_rate>
+         <est_days_emerg_to_init units="d" description="PSC data - estimated days from emergence to floral init.">17</est_days_emerg_to_init>
+         <pp_endjuv_to_init units="oCd/h" description="EJvO data - photoperiod sensitivity">112.4</pp_endjuv_to_init>
+         <tt_flag_to_flower units="oCd" description="EJvO data - TT from flag leaf to flowering">66.1</tt_flag_to_flower>
+         <tt_flower_to_start_grain units="oCd" description="Bieler data - TT from flowering to start grain fill">80.0</tt_flower_to_start_grain>
+         <tt_maturity_to_ripe units="oCd" description="TT from maturity to harvest ripe">1</tt_maturity_to_ripe>
+         <y0_const description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area intercept">510.0</y0_const>
+         <y0_slope description="EJVO 4 plants/m2 n=127, adj r2=0.55 largest leaf area slope">1320.0</y0_slope>
+         <x_stem_wt units="g/stem" description="look up table for canopy height">0  10</x_stem_wt>
+         <y_height units="mm" description="plant canopy height">0  3000</y_height>
+      </JE0035>
 
       <!-- !!!!!!!!!!!!!!!!!!!!!!!!!! tiller 5 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       -->

@@ -325,6 +325,10 @@ for i in range(num_experiments):
     s_tmp['endDate'] = exp_i['end_date']
     s_tmp['log'] = exp_i['log']
     s_tmp['reporting_frequency'] = exp_i['reporting_frequency']
+    if 'micromet' in exp_i.keys():
+        s_tmp['micromet'] = exp_i['micromet']
+    else:
+        s_tmp['micromet'] = 'off' # default to off
     # weather
     s_tmp['weather'] = exp_i['weather']
     # soil
