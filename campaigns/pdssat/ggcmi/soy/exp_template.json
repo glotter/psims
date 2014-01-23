@@ -1,0 +1,251 @@
+{
+  "soil_id": "XY01234567_1",
+  "person_notes": "Joshua Elliott",
+  "local_name": "GenericName",
+  "wst_id": "GENERIC1",
+  "exname": "X1234567SB_1",
+  "institution": "Computation Institute, University of Chicago",
+  "fl_name": "GenericField1",
+  "site_name": "GenericLatitude, GenericLongitude",
+  "trno": "1",
+  "trt_name": "GenericTreatment1",
+  "id_field": "GENERIC",
+  "exname_o": "X1234567SB",
+  "dssat_sequence": {
+    "data": [
+      {
+        "em": "0",
+        "co": "0",
+        "trno": "1",
+        "sq": "1",
+        "trt_name": "GenericTreatment1",
+        "seqid": "1",
+        "sm": "1",
+        "op": "0"
+      }
+    ]
+  },
+  "dssat_simulation_control": {
+    "data": [
+      {
+        "sm": "1",
+        "general": {
+          "sdyer": "80",
+          "sname": "Generic",
+          "nyers": "31",
+          "rseed": "2150",
+          "start": "S",
+          "nreps": "1",
+          "sdday": "001",
+          "smodel": "SBGRO"
+        },
+        "planting": {
+          "pfyer": "80",
+          "plyer": "80",
+          "ph2od": "30",
+          "pfday": "274",
+          "ph2ol": "40",
+          "plday": "294",
+          "ph2ou": "100",
+          "pstmx": "40",
+          "pstmn": "10"
+        },
+        "harvests": {
+          "hfrst": "0",
+          "hlday": "365",
+          "hlyer": "81",
+          "hpcnr": "0",
+          "hpcnp": "100"
+        },
+        "irrigation": {
+          "ithru": "100",
+          "iroff": "GS000",
+          "imeth": "IR001",
+          "imdep": "40",
+          "ireff": ".75",
+          "iramt": "10",
+          "ithrl": "75"
+        },
+        "management": {
+          "irrig": "N",
+          "plant": "A",
+          "ferti": "D",
+          "resid": "A",
+          "harvs": "M"
+        },
+        "methods": {
+          "evapo": "F",
+          "nswit": "1",
+          "light": "E",
+          "wther": "M",
+          "infil": "S",
+          "photo": "L",
+          "mesom": "G",
+          "mesol": "2",
+          "incon": "M",
+          "mesev": "S",
+          "hydro": "R"
+        },
+        "outputs": {
+          "grout": "N",
+          "caout": "N",
+          "ovvew": "Y",
+          "niout": "N",
+          "waout": "N",
+          "fropt": "14",
+          "sumry": "Y",
+          "opout": "N",
+          "chout": "N",
+          "diout": "N",
+          "fname": "N",
+          "vbose": "N",
+          "miout": "N"
+        },
+        "residues": {
+          "rtime": "1",
+          "ripcn": "100",
+          "ridep": "20"
+        },
+        "nitrogen": {
+          "ncode": "FE001",
+          "nmdep": "30",
+          "naoff": "GS000",
+          "nmthr": "10",
+          "namnt": "50"
+        },
+        "options": {
+          "symbi": "Y",
+          "dises": "N",
+          "phosp": "N",
+          "water": "Y",
+          "till": "N",
+          "co2": "M",
+          "potas": "N",
+          "chem": "N",
+          "nitro": "Y"
+        }
+      }
+    ]
+  },
+  "management": {
+    "events": [
+      {
+        "pldp": "4.0",
+        "plrs": "40",
+        "cul_id": "990111",
+        "plds": "R",
+        "crid": "SB",
+        "plpoe": "50",
+        "cul_name": "Generic",
+        "plma": "S",
+        "seqid": "1",
+        "date": "19800101",
+        "pl_name": "Generic",
+        "plpop": "50",
+        "event": "planting"
+      },
+      {
+        "fedep": "15",
+        "feamn": "0",
+        "feacd": "AP002",
+        "fe_name": "event",
+        "fecd": "FE001",
+        "seqid": "1",
+        "date": "1",
+        "event": "fertilizer"
+      },
+      {
+        "fedep": "15",
+        "feamn": "0",
+        "feacd": "AP002",
+        "fe_name": "event",
+        "fecd": "FE001",
+        "seqid": "1",
+        "date": "45",
+        "event": "fertilizer"
+      },
+      {
+        "irstg": "GS000",
+        "irmdp": "40",
+        "iame": "IR001",
+        "irept": "100",
+        "irthr": "75",
+        "seqid": "1",
+        "ireff": "1.00",
+        "date": "19990101",
+        "iamt": "10",
+        "irval": "79.0",
+        "event": "irrigation",
+        "irop": "IR001"
+      },
+      {
+        "seqid": "1",
+        "ha_name": "soybean",
+        "date": "19990101",
+        "event": "harvest"
+      }
+    ]
+  },
+  "dssat_environment_modification": {
+    "data": [
+      {
+        "em": "1",
+        "data": {
+          "erad": "A   0",
+          "ewind": "A   0",
+          "emin": "A   0",
+          "odday": "001",
+          "emax": "A   0",
+          "erain": "A 0.0",
+          "eday": "A   0",
+          "eco2": "R 320",
+          "envnam": "EnvMod",
+          "odyer": "80",
+          "edew": "A   0"
+        }
+      }
+    ]
+  }, 
+  "soil": {
+    "soil_id": "XY01234567_1",
+    "soilLayer": [
+      {
+        "sllb": "15"
+      }
+    ],
+    "sa": "1",
+    "sadat": "19800101"
+  },
+  "initial_conditions": {
+    "icpcr": "SB",
+    "icrp": "0",
+    "icrze": "1",
+    "icdat": "19800101",
+    "icrip": "100",
+    "icrn": "1",
+    "ic_name": "1000kg Residue",
+    "icrdp": "10",
+    "icrag": "1000",
+    "icrz#": "1",
+    "soilLayer": [
+      {
+        "icno3": ".1",
+        "icbl": "30",
+        "icnh4": ".1",
+        "ich2o": ".18"
+      },
+      {
+        "icno3": ".1",
+        "icbl": "100",
+        "icnh4": ".1",
+        "ich2o": ".18"
+      },
+      {
+        "icno3": ".1",
+        "icbl": "200",
+        "icnh4": ".1",
+        "ich2o": ".18"
+      }
+    ]
+   }
+}
