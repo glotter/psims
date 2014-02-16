@@ -59,5 +59,4 @@ do
    arguments="$arguments -$param=${!param}"
 done
 
-echo swift -site $site RunpSIMS.swift $arguments
 swift -site $site RunpSIMS.swift $arguments
