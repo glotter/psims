@@ -1,95 +1,54 @@
 Prerequisites
 =============
-This README will assume that runs will be started from 
-communicado.ci.uchicago.edu and bridled.ci.uchicago.edu.
-Communicado and bridled are behind a firewall. In order
-to connect to those machines, you must first connect
-to login.ci.uchicago.edu. This README assumes that the 
-work will be done on either the UC3 cluster or on OSG.
+The pSIMS application requires that you have several prerequisite packages needed
+before running.
 
-You must be able to SSH from communicado/bridled to UC3
-and OSG. Test your setup by running the following commands:
-
-ssh yourusername@uc3-sub.uchicago.edu
-ssh yourusername@engage-submit3.renci.org
-
-When you run these commands, you should be able to immediately
-connect and get a shell prompt without being asked for a password.
-If this does not happen, check to make sure that the SSH client
-you are using has agent forwarding enabled. The second thing is
-to add your public SSH key to .ssh/authorized_keys on each of these
-remote hosts.
-
-Communicado, uc3-mgt and engage-submit3 must also have Swift installed 
-on it. To download swift, please run the following command:
-
-wget http://www.ci.uchicago.edu/~davidk/DSSAT/swift-r5801.tar.gz
-
-Extract this file in your home directory and add the swift-trunk/bin directory 
-to your PATH via .bashrc. More detailed instructions on how to do this can 
-be found at 
-http://www.ci.uchicago.edu/swift/guides/release-0.93/quickstart/quickstart.html.
-
-Download the psims scripts from SVN onto communicado/bridled. These
-scripts should go into somewhere in GPFS to avoid quota restrictions.
-Run the following command to download the latest copy:
-
-svn co https://svn.ci.uchicago.edu/svn/see/frameworks/impacts/
+Package                  | Location
+-------                    --------
+APSIM                    | http://www.apsim.info/
+Boost                    | http://www.boost.org
+CenW                     | http://www.kirschbaum.id.au/Welcome_Page.htm
+DSSAT                    | http://dssat.net
+Mono                     | http://www.mono-project.com
+nco                      | http://nco.sourceforge.net
+netcdf4                  | http://www.unidata.ucar.edu/software/netcdf
+netcdf4 python libraries | http://code.google.com/p/netcdf4-python
+Oracle Java 7            | http://www.oracle.com/us/downloads/index.html
+Swift 0.95               | http://swiftlang.org
 
 How to Run
 ==========
-The swiftopt.sh script is used to start a pSIMS run. The options you pass to 
+The "psims" script is used to start a pSIMS run. The options you pass to 
 this script will determine which pSIMS runs will be done (including which models) 
 and where they will run.
 
-Usage: swiftopt.sh [-s sitename] [-p paramfile] [-g gridfile]
+Usage: psims [-s sitename] [-p paramfile] [-g gridlist]
 
-The sitename option determines where a run will take place. Currently, the 
-valid options are "osg", "uc3", "midway", and "local".
+The sitename option determines where a run will take place. Currently, valid 
+options are "midway" and "local".
 
-The paramfile and gridfile determine which run will get done. These files are typically stored 
-in psims/campaigns/[model]/[experiment] psims/campaigns/[model]/[experiment]
+The params file defines the path to inputs, outputs, the type of model to run, and
+what post processing steps need to happen.
 
-Here are a few examples:
+The gridlist is a set of latitudes and longitudes that should be processed.
 
-To run CenW on midway with a small grid file you might do something like:
------
-./swiftopt.sh -s midway -p ./campaigns/pcenw/default.a1b/params -g ./campaigns/pcenw/default.a1b/nzsmalltest323
------
+Params File Format
+==================
+Params file format and options here.
 
-To run DSSAT scenario US0007 on OSG [[this scenario is not currently available]]
------
-./swiftopt.sh -s osg -p ./params/US0007 -g ./gridList/US0007
------
+Gridlist Format
+===============
+Gridlist info here.
 
-For the gen_part extraction code for cenw, variable names should be specified as in 
-the cenw output head, except with spaces removed. valid variable names are thus 
-Day
-LAI
-Height
-DBH
-Canopyc
-Bsarea
-Stocking
-SapWood
-Ht-Wood
-Bark
-Foliage
-FineRt
-Crs-Rt
-Branch
-Reprod
-CH2O
-Reserves
-TotalN
-pi
-CAI
-NPP
-NEE
-CAssim
-Respn
-DCFlux
-NCFlux
-TDamage
-TDUnits
-Transp
+How to Modify Swift Configuration
+=================================
+Info about swift.properties here.
+
+Debugging
+=========
+Information about how to debug when things go wrong.
+
+Midway
+======
+Midway specific setup (location of APSIM tar, DSCM75 tar, etc). Information about slurm partitions, QoS limits, scratch filesystems.
+
