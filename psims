@@ -27,8 +27,27 @@ mkdir $rundir || crash "Unable to create run directory"
 if [ ! -f $paramfile ]; then
    crash "Could not find parameter file $paramfile in params!"
 fi
-sed -e '/^[[:space:]]*\(#.*\)*$/d' -e 's/#.*//' -e 's/  */=/' -e 's/^/export /' <$paramfile >$rundir/params.psims
+
+sed -e '/^[[:space:]]*\(#.*\)*$/d' -e 's/#.*//' -e 's/  */=/' -e 's/^/export /' $paramfile > $rundir/params.psims
 source $rundir/params.psims
+
+# Extract input_tars
+if [ -n "$tar_inputs" ]; then
+   echo "Setting up data..."
+   tar_files=$( echo $tar_inputs | sed s/,/' '/g )
+   for file in $tar_files; do
+      extension="${file##*.}"
+      if [ "$extension" == "gz" ] || [ "$extension" == "tgz" ]; then
+         echo "Extracting $file"
+         tar xfz $file --skip-old-files
+      elif [ "$extension" == "tar" ]; then
+         echo "Extracting $file"
+         tar xf $file --skip-old-files
+      else
+         crash "input_tar file $file has an unknown extension - giving up"
+      fi
+   done
+fi
 
 # Copy required files to the rundir
 cp $campaign/*.nc4 $rundir/
@@ -59,4 +78,4 @@ do
    arguments="$arguments -$param=${!param}"
 done
 
-swift -site $site RunpSIMS.swift $arguments
+swift -site $site RunpSIMS.swift $arguments | tee swift.out
