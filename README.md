@@ -4,7 +4,7 @@ The pSIMS application requires that you have several prerequisite packages neede
 before running.
 
 Package                  | Location
--------                    --------
+-------                  | --------
 APSIM                    | http://www.apsim.info/
 Boost                    | http://www.boost.org
 CenW                     | http://www.kirschbaum.id.au/Welcome_Page.htm
