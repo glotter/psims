@@ -141,7 +141,7 @@ for file in $( ls $( echo $outtypes | sed s/,/' *'/g ) 2>/dev/null); do
    ln -s $PWD/$file output/
 done
 run_command tar czhf output.tar.gz output
-dd if=output.tar.gz of=$tar_out bs=16M
+dd if=output.tar.gz of=$tar_out bs=16777216
 
 #################################################################################
 # Extract data from output files into a single 'psims.nc' file with all variables
