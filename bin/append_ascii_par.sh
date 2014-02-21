@@ -130,13 +130,11 @@ for ((i = $si; i < $ei; i++)); do
     grid2=$(($grid2-$lon0_off))
 
     # insert missing longitudes, if necessary
-    echo calling append_missing $next_lon $((grid2-1)) $grid1 >> $HOME/append.txt
     append_missing $next_lon $((grid2-1)) $grid1
 
     # iterate through variables, adding to files
     for var in ${var_names_arr[@]}; do
       # dump variable
-      echo Calling ncdump -v $var ${files[$j]} >> $HOME/append.txt
       var_dump=`ncdump -v $var ${files[$j]}`
 
       # strip header and footer
@@ -156,7 +154,6 @@ for ((i = $si; i < $ei; i++)); do
   done
 
   # insert missing longitudes, if necessary
-  echo calling append_missing $next_lon $num_lons $grid1 >> $HOME/append.txt
   append_missing $next_lon $num_lons $grid1
 done
 

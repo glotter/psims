@@ -37,14 +37,12 @@ if [ -n "$tar_inputs" ]; then
    tar_files=$( echo $tar_inputs | sed s/,/' '/g )
    for file in $tar_files; do
       extension="${file##*.}"
-      if [ "$extension" == "gz" ] || [ "$extension" == "tgz" ]; then
+      if [ "$extension" == "tar" ]; then
          echo "Extracting $file"
-         tar xfz $file --skip-old-files
-      elif [ "$extension" == "tar" ]; then
-         echo "Extracting $file"
-         tar xf $file --skip-old-files
+         tar xf $file 
       else
-         crash "input_tar file $file has an unknown extension - giving up"
+         echo "Extracting $file"
+         tar xfz $file 
       fi
    done
 fi
@@ -78,4 +76,4 @@ do
    arguments="$arguments -$param=${!param}"
 done
 
-swift -site $site RunpSIMS.swift $arguments | tee swift.out
+swift -site $site RunpSIMS.swift $arguments 2>&1 | tee swift.out
