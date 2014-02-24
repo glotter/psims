@@ -75,7 +75,9 @@ Gridlist Format
 A gridlist file contains a list of latitudes and longitudes to be processed, in the format of "lat/lon". Here is an example:
 
 104/114
+
 104/115
+
 104/116
 
 The latitude/longitude format is also appended to the weather and soils variables to determine the pathname to input files for a specific grid point.
