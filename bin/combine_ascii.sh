@@ -1,7 +1,8 @@
 #!/bin/bash
 
-variables=$1
-out_file=$2
+# Usage: combine_ascii.sh params
+params=$1
+source $params
 
 OLD_IFS=$IFS
 IFS=',' 

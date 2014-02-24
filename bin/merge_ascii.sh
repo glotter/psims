@@ -4,13 +4,22 @@
 This script aggregates multiple single-gridpoint netcdf files into one big spatial
 raster netcdf file. The usage is:
 
-  ./merge_ascii.sh [batch] [var_names] [long_names] [units] [num_lons] [num_lats] [delta]
-                   [num_years] [num_scenarios] [ref_year] [lat0] [lon0] [num_vars_per_file]
-                   [file_dir] [out_file]
+batch=$1
+num_vars_per_file=$2
+file_dir=$3
+params=$4
+
+  ./merge_ascii.sh [batch] [num_vars_per_file] [file_dir] [params]
 
 where the input arguments are as follows:
 
 batch: Batch number to run
+num_vars_per_file: Number of variables to store in each file
+file_dir: Directory from which to search for netcdf files, up to depth of two
+params: psims params file (runNNN/params.psims)
+
+The params file should contain:
+
 var_names: List of variable names extracted from netcdf files
 long_names: List of long descriptive names corresponding to var_names
 units: List of units corresponding to var_names
@@ -18,16 +27,14 @@ num_lons: Number of longitude points in spatial raster
 num_lats: Number of latitude points in spatial raster
 delta: Distance(s) between each latitude/longitude grid cell in arcminutes
 num_years: Number of years in netcdf files
-num_scenarios: Number of scenarios in netcdf files
+scens: Number of scenarios in netcdf files
 ref_year: Reference year for times in netcdf files
-lat0: Latitude of grid origin
-lon0: Longitude of grid origin
-num_vars_per_file: Number of variables to store in each file
-file_dir: Directory from which to search for netcdf files, up to depth of two
+lat_zero: Latitude of grid origin
+lon_zero: Longitude of grid origin
 out_file: Name of output file
 
 Example:
-  ./merge_ascii.sh 1 PDAT "Planting date" YrDoy 2 2 30 44 6 1958 90 -180 1 . out.psims.nc4
+  ./merge_ascii.sh 1 1 . params.psims
 '
 
 # ================
@@ -55,7 +62,7 @@ create_blank_cdl() {
   time=${time:1}
 
   # scenario
-  local scenario=($(seq 1 $num_scenarios))
+  local scenario=($(seq 1 $scens))
   scenario=$(printf ",%s" "${scenario[@]}")
   scenario=${scenario:1}
 
@@ -82,7 +89,7 @@ create_blank_cdl() {
   echo -e "\tlat = UNLIMITED ;" >> $cdl_file
   echo -e "\tlon = $num_lons ;" >> $cdl_file
   echo -e "\ttime = $num_years ;" >> $cdl_file
-  echo -e "\tscen = $num_scenarios ;" >> $cdl_file
+  echo -e "\tscen = $scens ;" >> $cdl_file
   echo -e "variables:" >> $cdl_file
   echo -e "\tfloat lat(lat) ;" >> $cdl_file
   echo -e "\t\tlat:units = \"degrees_north\" ;" >> $cdl_file
@@ -117,28 +124,19 @@ append_missing() {
 
 # read inputs from command line
 batch=$1
-var_names=$2
-long_names=$3
-units=$4
-num_lons=$5
-num_lats=$6
-delta=$7
-num_years=$8
-num_scenarios=$9
-ref_year=${10}
-lat0=${11}
-lon0=${12}
-num_vars_per_file=${13}
-file_dir=${14}
-out_file=${15}
+num_vars_per_file=$2
+file_dir=$3
+params=$4
+
+source $params
 
 # parse variables into array
 OLD_IFS=$IFS
 IFS=',' # change file separator
-var_names_arr=($var_names)
+var_names_arr=($variables)
 delta_arr=($delta)
 long_names_arr=($long_names)
-units_arr=($units)
+units_arr=($var_units)
 num_vars=${#var_names_arr[@]}
 IFS=$OLD_IFS # reset file separator
 
@@ -179,20 +177,20 @@ fi
 
 # calculate longitudes
 for ((i = 1; i <= $num_lons; i++)); do
-  lon[$(($i-1))]=$(echo "scale=15;$lon0+$londelta/60*($i-0.5)" | bc)
+  lon[$(($i-1))]=$(echo "scale=15;$lon_zero+$londelta/60*($i-0.5)" | bc)
 done
 
 # calculate latitudes
 for ((i = 1; i <= $num_lats; i++)); do
-  lat[$(($i-1))]=$(echo "scale=15;$lat0-$latdelta/60*($i-0.5)" | bc)
+  lat[$(($i-1))]=$(echo "scale=15;$lat_zero-$latdelta/60*($i-0.5)" | bc)
 done
 
 # calculate lat0 offset of grid into global grid
-lat0_off=$(echo "60*(90-$lat0)/$latdelta" | bc)
+lat0_off=$(echo "60*(90-$lat_zero)/$latdelta" | bc)
 
 # create blank point (time, scenario) grid
 blank_pt=""
-for ((i = 0; i < $(($num_years*$num_scenarios)); i++)); do
+for ((i = 0; i < $(($num_years*$scens)); i++)); do
   blank_pt=$blank_pt"_, "
 done
 blank_pt=${blank_pt%??} # remove extra comma and space
@@ -222,6 +220,12 @@ temp_cdl_file="temp_file_"$batch".cdl"
 
 # create temporary file
 create_blank_cdl sub_vars[@] sub_long_names[@] sub_units[@] $temp_cdl_file
+
+# Extract intermediate tar files
+#find .
+for file in *.tar.gz; do
+   tar xvfz $file
+done
 
 # iterate through all variables
 for var in ${sub_vars[@]}; do

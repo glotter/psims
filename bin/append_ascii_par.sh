@@ -3,23 +3,27 @@
 : '
 The usage is:
 
-  ./append_ascii_par.sh [batch] [num_batches] [var_names] [num_lons] [delta] [num_years]
-                        [num_scenarios] [lon0] [file_dir]
+  ./append_ascii_par.sh [batch] [num_batches] [params] [file_dir] [tar_file]
 
 where the input arguments are as follows:
 
 batch: Batch number to run
 num_batches: Number of total batches
+params: psims param file (runNNN/params.psims)
+file_dir: Directory from which to search for netcdf files, up to depth of two
+tar_file: Name of tar.gz output
+
+The param file should contain:
+
 var_names: List of variable names extracted from netcdf files
 num_lons: Number of longitude points in spatial raster
 delta: Distance(s) between each latitude/longitude grid cell in arcminutes
 num_years: Number of years in netcdf files
 num_scenarios: Number of scenarios in netcdf files
-lon0: Longitude of grid origin
-file_dir: Directory from which to search for netcdf files, up to depth of two
+lon_zero: Longitude of grid origin
 
 Example:
-  ./append_ascii_par.sh 1 1 PDAT 2 30 44 6 -180 .
+  ./append_ascii_par.sh 1 1 params.psims . output.tar.gz
 '
 
 # ==============
@@ -44,24 +48,22 @@ append_missing() {
 # read inputs from command line
 batch=$1
 num_batches=$2
-var_names=$3
-num_lons=$4
-delta=$5
-num_years=$6
-num_scenarios=$7
-lon0=$8
-file_dir=$9
+params=$3
+file_dir=$4
+tar_file=$5
+
+source $params
 
 # parse variables into array
 OLD_IFS=$IFS
 IFS=',' # change file separator
-var_names_arr=($var_names)
+var_names_arr=($variables)
 delta_arr=($delta)
 IFS=$OLD_IFS # reset file separator
 
 # blank point
 blank_pt=""
-for ((i = 0; i < $(($num_years*$num_scenarios)); i++)); do
+for ((i = 0; i < $(($num_years*$scens)); i++)); do
   blank_pt=$blank_pt"1e20, "
 done
 blank_pt=${blank_pt%??} # remove extra comma and space
@@ -103,7 +105,7 @@ else
   echo "Wrong number of delta values. Exiting . . ."
   exit 0
 fi
-lon0_off=$(echo "60*($lon0+180)/$londelta" | bc)
+lon0_off=$(echo "60*($lon_zero+180)/$londelta" | bc)
 
 # iterate over directories, filling in gaps
 for ((i = $si; i < $ei; i++)); do
@@ -154,3 +156,5 @@ for ((i = $si; i < $ei; i++)); do
   # insert missing longitudes, if necessary
   append_missing $next_lon $num_lons $grid1
 done
+
+tar cvfz $tar_file var_files

@@ -1,28 +1,11 @@
 #!/bin/bash -x
 
-out=$1
-executable=$2
-outtypes=$3
-postprocess=$4
-tappwth=$5
-tappinp=$6
-tappcamp=$7
-latidx=$8
-lonidx=$9
-model=${10}
-ref_year=${11}
-delta=${12}
-num_years=${13}
-scens=${14}
-variables=${15}
-long_names=${16}
-var_units=${17}
-num_lats=${18}
-num_lons=${19}
-lat_zero=${20}
-lon_zero=${21}
-out_file=${22}
-shift 22
+latidx=$1
+lonidx=$2
+params=$3
+tar_out=$4
+
+source $params
 
 # run_command - print time stamp before and after run
 # Could also use 'time' here, but this is better in
@@ -158,7 +141,7 @@ for file in $( ls $( echo $outtypes | sed s/,/' *'/g ) 2>/dev/null); do
    ln -s $PWD/$file output/
 done
 run_command tar czhf output.tar.gz output
-dd if=output.tar.gz of=$out bs=16M
+dd if=output.tar.gz of=$tar_out bs=16777216
 
 #################################################################################
 # Extract data from output files into a single 'psims.nc' file with all variables
