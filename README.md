@@ -80,20 +80,37 @@ A gridlist file contains a list of latitudes and longitudes to be processed, in 
 
 104/116
 
-The latitude/longitude format is also appended to the weather and soils variables to determine the pathname to input files for a specific grid point.
-For example, suppose weather is set to /Users/davidk/psims/data/agmerra. For grid 104/114, psims will include all files in the path: /Users/davidk/psims/data/agmerra/104/114/*.
+The latitude/longitude format is also appended to the weather and soils variables to determine the pathname to input 
+files for a specific grid point. For example, suppose weather is set to /Users/davidk/psims/data/agmerra. For grid 
+104/114, psims will include all files in the path: /Users/davidk/psims/data/agmerra/104/114/*.
 
-It is important then, that for data exists in the soils and weather directory for each grid point. Missing data will result in errors.
+It is important then, that for data exists in the soils and weather directory for each grid point. Missing data will 
+result in errors.
 
 How to Modify Swift Configuration
 =================================
-Info about swift.properties here.
+Determining how Swift runs is controlled by a file called conf/swift.properties. The swift.properties file defines the 
+scheduler to use, the location of work and scratch directories, and controls parallelism. More information about 
+swift.properties options can be found at http://swiftlang.org/guides/trunk/userguide/userguide.html#_configuration.
 
 Debugging
 =========
-Information about how to debug when things go wrong.
+When problems occur, there are a few places to look to get answers about why the problems are occuring. The first is the standard output of
+Swift. You will see this info on your screen as psims is running. Since there are many tasks running at once, it may scroll by your screen
+too quickly. This output will also be recorded in runNNN/swift.out.
+
+Another place to look is the runNNN/*.d directory. An info log file should exist in that directory for each failing task. The info file contains
+the stdout and stderr output of RunpSIMS.sh. Each significant command should be logged with a timestamp so you can track the progress and get a
+better idea of what's happening.
 
 Midway
 ======
-Midway specific setup (location of APSIM tar, DSCM75 tar, etc). Information about slurm partitions, QoS limits, scratch filesystems.
+To run pSIMS on midway, the first thing you need to do is load the required modules.
 
+$ module load java ant git mono/2.10 hdf5/1.8 nco/4.3 boost/1.50 netcdf/4.2 jasper python/2.7 cdo/1.6 tcllib/1.15 swift/0.95-RC5 
+
+The conf/swift.properties file is configured to use the sandyb slurm partition. The sandyb partition has 16 cores per node. The default configuration
+is to request nodes in chunks of 3, up to the Midway limit of 1536 total cores.
+
+Running pSIMS jobs on Midway should be done from within the /scratch/midway filesystem.
+Swift will use the /scratch/local filesystem on each node to perform the work, then transfer results back to your current working directory on /scratch/midway.
