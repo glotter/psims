@@ -32,9 +32,6 @@ what post processing steps need to happen.
 
 The gridlist is a set of latitudes and longitudes that should be processed.
 
-Output Files
-============
-Describe output files here.
 
 Params File Format
 ==================
@@ -86,6 +83,19 @@ files for a specific grid point. For example, suppose weather is set to /Users/d
 
 It is important then, that for data exists in the soils and weather directory for each grid point. Missing data will 
 result in errors.
+
+Output Files
+============
+The output/ directory contains a directory for each latitude being processed. Within each latitude directory,
+a tar.gz file exists for each longitude. For example, if your gridList contained a grid 100/546, you would see an
+output file called runNNN/output/100/546output.tar.gz. This file is generated from within the Swift work directory.
+Which files get included in the file is determined by how you set "outtypes" in your parameter file.
+
+The parts/ directory contains the output nc files for each grid being processed. When grid 100/546 is done processing,
+you will see a file called runNNN/parts/100/546.psims.nc.
+
+The combined nc file is saved directly in the runNNN directory. Its name depends on the value of "out_file" in your
+params file. If you set out_file to "out.psims.apsim75.cfsr.whea", the final combined nc file would be called "out.psims.apsim75.cfsr.whea.nc4".
 
 How to Modify Swift Configuration
 =================================
