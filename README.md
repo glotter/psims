@@ -3,18 +3,18 @@ Prerequisites
 The pSIMS application requires that you have several prerequisite packages needed
 before running.
 
-Package                  | Location
--------                  | --------
-APSIM                    | http://www.apsim.info/
-Boost                    | http://www.boost.org
-CenW                     | http://www.kirschbaum.id.au/Welcome_Page.htm
-DSSAT                    | http://dssat.net
-Mono                     | http://www.mono-project.com
-nco                      | http://nco.sourceforge.net
-netcdf4                  | http://www.unidata.ucar.edu/software/netcdf
-netcdf4 python libraries | http://code.google.com/p/netcdf4-python
-Oracle Java 7            | http://www.oracle.com/us/downloads/index.html
-Swift 0.95               | http://swiftlang.org
+Package                  | Location | Type 
+-------                  | -------- | ----
+APSIM                    | http://www.apsim.info/ | Crop model
+Boost                    | http://www.boost.org | Required to run APSIM
+CenW                     | http://www.kirschbaum.id.au/Welcome_Page.htm | Generic forestry model
+DSSAT                    | http://dssat.net | Crop model
+Mono                     | http://www.mono-project.com | REquired to run APSIM
+nco                      | http://nco.sourceforge.net | Required for postprocessing 
+netcdf4                  | http://www.unidata.ucar.edu/software/netcdf | Required 
+netcdf4 python libraries | http://code.google.com/p/netcdf4-python | Required
+Oracle Java 7            | http://www.oracle.com/us/downloads/index.html | Required
+Swift 0.95               | http://swiftlang.org | Required
 
 How to Run
 ==========
@@ -72,9 +72,7 @@ Gridlist Format
 A gridlist file contains a list of latitudes and longitudes to be processed, in the format of "lat/lon". Here is an example:
 
 104/114
-
 104/115
-
 104/116
 
 The latitude/longitude format is also appended to the weather and soils variables to determine the pathname to input 
