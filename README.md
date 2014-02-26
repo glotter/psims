@@ -44,27 +44,27 @@ Parameter    | Description                                                      
 ---------    |-----------                                                                                  |-------
 bintransfer  | Stage in the following binaries with each task, so RunpSIMS.sh has them available           | bintransfer bin/DSCSM045.EXE,pdssat/psims2WTH.py
 campaign     | Directory containing campaign data                                                          | campaign /Users/davidk/psims/data/whe.demo
-delta        | Delta?                                                                                      | delta 30
+delta        | Gridcell spacing in arcminutes                                                              | delta 30
 executable   | Name of executable and arguments to run for each grid                                       | executable DSCSM045.EXE:A:X1234567.WHX
-lat_zero     | Lat zero?                                                                                   | lat_zero 90
-lon_zero     | Lon zero?                                                                                   | lon_zero -180
-long_names   | Long names for variables, in same order that variables are listed                           | long_names "PlantDate,AnthesisDate"
+lat\_zero     | Top edge of the North most grid cell in the campaign                                       | lat\_zero 90
+lon\_zero     | Left edge of the West most grid cell in the campaign                                      | lon\_zero -180
+long\_names   | Long names for variables, in same order that variables are listed                          | long\_names "PlantDate,AnthesisDate"
 model        | Defines the type of model to run. Valid options are dssat45, apsim75, and cenw              | model dssat45
-num_lats     | Number of latitudes to be included in final nc4 file                                        | num_lats 360
-num_lons     | Number of longitudes to be included in final nc4 file                                       | num_lons 720
-num_years    | Number of years to simulate?                                                                | num_years 31
-out_file     | Defines the prefix of the final nc4 filename (eg, $out_file.nc4)                            | out_file out.psims.dssat45.agmerra.wheat.demo
+num\_lats     | Number of latitudes to be included in final nc4 file (starting with lat\_zero)             | num\_lats 360
+num\_lons     | Number of longitudes to be included in final nc4 file (starting with lon\_zero)            | num\_lons 720
+num\_years    | Number of years to simulate?                                                               | num\_years 31
+out\_file     | Defines the prefix of the final nc4 filename (eg, $out\_file.nc4)                          | out\_file out.psims.dssat45.agmerra.wheat.demo
 outtypes     | File extensions of files to include in output tar file                                      | outtypes .WTH,.WHX,.SOL,.OUT,.json,.txt
 refdata      | Directory containing reference data. Will be copied to each simulation                      | refdata /Users/davidk/psims/data/common.isimip
-ref_year     | Reference year                                                                              | ref_year 1980
-scens        | Number of scenarios                                                                         | scens 8
+ref\_year     | Reference year (the first year of the simulation)                                          | ref\_year 1980
+scens        | Number of scenarios in the campaign                                                       | scens 8
 soils        | Directory containing soils                                                                  | soils /Users/davidk/psims/data/soils/hwsd200.wrld.30min
-tappcamp     | Campaign translator application and arguments (':' for space)                               | tappcamp forcamp2json.py:-c:Campaign.nc4
-tappinp      | Translator app for for soils?                                                               | tappinp jsons2dssat.py:-x:X1234567.WHX
-tappwth      | Defines the weather translater application and arguments to use (use : instead of spaces)   | tappwth psims2WTH.py:-o:GENERIC1.WTH
+tappcamp     | Campaign translator application and arguments (':' for space)                               | tappcamp camp2json.py:-c:Campaign.nc4
+tappinp      | Input translator, goes from experiment.json and soil.json to model specific files      | tappinp jsons2dssat.py:-x:X1234567.WHX
+tappwth      | Weather translater, converts .psims.nc format into model specfic weather files             | tappwth psims2WTH.py:-o:GENERIC1.WTH
 postprocess  | Name of program and arguments to run after running executable                               | postprocess ./OUT2psims.py:-i:Summary.OUT
-var_units    | Units to use for each variable, in the same order that variables are listed                 | var_units "DOY,Days,Days,kg/ha,kg/ha,mm,mm,mm"
-variables    | Define the variables to analyze                                                             | variables PDAT,ADAT,MDAT,CWAM
+var\_units    | Units to use for each variable, in the same order that variables are listed               | var\_units "DOY,Days,Days,kg/ha,kg/ha,mm,mm,mm"
+variables    | Define the variables to extract and format                                                  | variables PDAT,ADAT,MDAT,CWAM
 weather      | Defines the directory where weather data is stored                                          | weather /Users/davidk/psims/data/agmerra
 
 Gridlist Format
