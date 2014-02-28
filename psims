@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash 
 #
 # Usage: swiftopt.sh [-s sitename] [-p paramfile] [-g gridlist] 
 
@@ -76,4 +76,5 @@ do
    arguments="$arguments -$param=${!param}"
 done
 
+export SWIFT_HEAP_MAX=5120M
 swift -site $site RunpSIMS.swift $arguments 2>&1 | tee swift.out
