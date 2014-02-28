@@ -726,7 +726,7 @@ class DSSATXFileOutput:
             sdday = for_str(sdday, 0, 'c', 3, zero_pad = True)            
             sb += for_str(sm, 0, 'c', 2) + \
                   for_str('GE', 1, 'c', 11, jtfy = 'l') + \
-                  for_field(sm_str, 'nyers', dC, 4, 'c', 2) + \
+                  for_field(sm_str, 'nyers', dC, 3, 'c', 3) + \
                   for_field(sm_str, 'nreps', dC, 4, 'c', 2) + \
                   for_field(sm_str, 'start', dC, 5, 'c', 1) + \
                   sdyer + sdday + \

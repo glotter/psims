@@ -183,7 +183,7 @@ for var in variables:
     
     # get replacement number
     occ = nan # indicates to replace all instances of key
-    nums = re.findall('\d+', var)
+    nums = re.findall('.*_(\d+)', var)
     if nums != []:
         var = re.sub('_\d+', '', var) # remove number
         occ = int(nums[0])
