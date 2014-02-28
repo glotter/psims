@@ -740,7 +740,6 @@ class DSSATXFileOutput:
         sb += '@N OPTIONS     WATER NITRO SYMBI PHOSP POTAS DISES  CHEM  TILL   CO2\n'
         sm_str = self.__get_obj(tr_data, 'options', {})
         if sm_str != {}:
-            sm_str['co2'] = co2
             sb += for_str(sm, 0, 'c', 2) + \
                   for_str('OP', 1, 'c', 11, jtfy = 'l') + \
                   for_field(sm_str, 'water', dC, 5, 'c', 1) + \
