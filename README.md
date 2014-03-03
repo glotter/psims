@@ -14,7 +14,7 @@ nco                      | http://nco.sourceforge.net                    | Requi
 netcdf4                  | http://www.unidata.ucar.edu/software/netcdf   | Required 
 netcdf4 python libraries | http://code.google.com/p/netcdf4-python       | Required
 Oracle Java 7            | http://www.oracle.com/us/downloads/index.html | Required
-Swift 0.95               | http://swiftlang.org                          | Required
+Swift 0.94.1             | http://swiftlang.org                          | Required
 
 How to Run
 ==========
@@ -72,11 +72,9 @@ Gridlist Format
 ===============
 A gridlist file contains a list of latitudes and longitudes to be processed, in the format of "lat/lon". Here is an example:
 
-104/114
-
-104/115
-
-104/116
+104/114  
+104/115  
+104/116  
 
 The latitude/longitude format is also appended to the weather and soils variables to determine the pathname to input 
 files for a specific grid point. For example, suppose weather is set to /Users/davidk/psims/data/agmerra. For grid 
@@ -118,7 +116,7 @@ Midway
 ======
 To run pSIMS on midway, the first thing you need to do is load the required modules.
 
-$ module load java ant git mono/2.10 hdf5/1.8 nco/4.3 boost/1.50 netcdf/4.2 jasper python/2.7 cdo/1.6 tcllib/1.15 swift/0.95-RC5 
+$ module load java ant git mono/2.10 hdf5/1.8 nco/4.3 boost/1.50 netcdf/4.2 jasper python/2.7 cdo/1.6 tcllib/1.15 swift 
 
 The conf/swift.properties file is configured to use the sandyb slurm partition. The sandyb partition has 16 cores per node. The default configuration
 is to request nodes in chunks of 3, up to the Midway limit of 1536 total cores.
