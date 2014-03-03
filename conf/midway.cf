@@ -1,0 +1,15 @@
+wrapperlog.always.transfer=false
+sitedir.keep=false
+execution.retries=0
+lazy.errors=true
+status.mode=provider
+use.provider.staging=false
+provider.staging.pin.swiftfiles=false
+use.wrapper.staging=false
+config.rundirs=false
+foreach.max.threads=5000
+
+#app midway RunpSIMS=$PWD/../bin/RunpSIMS.sh
+#app midway-long append=$PWD/../bin/append_ascii_par.sh
+#app midway-long merge=$PWD/../bin/merge_ascii.sh
+#app midway-long combine=$PWD/../bin/combine_ascii.sh
