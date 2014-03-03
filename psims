@@ -85,3 +85,5 @@ done
 export SWIFT_HEAP_MAX=5120M
 gensites -p cf ../conf/$site.xml > sites.xml
 swift -sites.file sites.xml -tc.file tc.data -config cf RunpSIMS.swift $arguments 2>&1 | tee swift.out
+echo Generating plot...
+../bin/activityplot.pl RunpSIMS-2*.log
