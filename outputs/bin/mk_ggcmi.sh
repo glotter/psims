@@ -57,8 +57,7 @@ overwrite=$3
 tapp=/project/joshuaelliott/psims/outputs/bin/out2GGCMI.py
 
 # output directories
-pdssatpmdir=$outdir/pDSSAT.pm
-pdssatptdir=$outdir/pDSSAT.pt
+pdssatdir=$outdir/pDSSAT
 papsimdir=$outdir/pAPSIM
 
 # variable names
@@ -68,8 +67,7 @@ papsimvars=yield,pirrww,biom,aet,plant-day,anth-day,maty-day,initr,leach,sco2,sn
 numapsimvars=14
 
 # scenario names
-pdssatpmscens=fullharm_noirr,fullharm_firr,default_noirr,default_firr,harmnon_noirr,harmnon_firr
-pdssatptscens=fullharm_noirr,fullharm_firr
+pdssatscens=fullharm_noirr,fullharm_firr,default_noirr,default_firr,harmnon_noirr,harmnon_firr,fullharm_noirr_pt,fullharm_firr_pt
 papsimscens=$pdssatpmscens
 
 # process all DSSAT and APSIM directories
@@ -122,30 +120,18 @@ for d in `ls $ggcmidir | egrep 'dssat|apsim'`; do
  
   if [[ $mod == "dssat45" ]]; then # dssat
     # make output directories if necessary
-    pmdir=$pdssatpmdir/$climcap # pm
-    if [[ ! -d $pmdir ]]; then mkdir $pmdir; fi
-    pmdir=$pmdir/$cropfull
-    if [[ ! -d $pmdir ]]; then mkdir $pmdir; fi
-    ptdir=$pdssatptdir/$climcap # pt
-    if [[ ! -d $ptdir ]]; then mkdir $ptdir; fi
-    ptdir=$ptdir/$cropfull
-    if [[ ! -d $ptdir ]]; then mkdir $ptdir; fi
+    dssatdir=$pdssatdir/$climcap
+    if [[ ! -d $dssatdir ]]; then mkdir $dssatdir; fi
+    dssatdir=$dssatdir/$cropfull
+    if [[ ! -d $dssatdir ]]; then mkdir $dssatdir; fi
     # create GGCMI files if directory is incomplete
-    if [[ $overwrite == "True" ]] || [[ `ls $pmdir | wc -l` -ne $(($numdssatvars*6)) ]]; then
-      echo "   Processing pDSSAT.pm for directory "$d
-      prefix="pdssat.pm_"$clim"_hist"
-      `$tapp -i $outfile -v "$pdssatvars" -p $prefix -s $suffix -c $crop --scens 1,2,3,4,5,6 --scen_names "$pdssatpmscens"`
-      mv *pdssat.pm* $pmdir # move files
+    if [[ $overwrite == "True" ]] || [[ `ls $dssatdir | wc -l` -ne $(($numdssatvars*8)) ]]; then
+      echo "   Processing pDSSAT for directory "$d
+      prefix="pdssat_"$clim"_hist"
+      `$tapp -i $outfile -v "$pdssatvars" -p $prefix -s $suffix -c $crop --scens 1,2,3,4,5,6,7,8 --scen_names "$pdssatscens"`
+      mv *pdssat* $dssatdir # move files
     else
-      echo "   pDSSAT.pm already processed for "$d
-    fi
-    if [[ $overwrite == "True" ]] || [[ `ls $ptdir | wc -l` -ne $(($numdssatvars*2)) ]]; then
-      echo "Processing pDSSAT.pt for directory "$d
-      prefix="pdssat.pt_"$clim"_hist"
-      `$tapp -i $outfile -v "$pdssatvars" -p $prefix -s $suffix -c $crop --scens 7,8 --scen_names "$pdssatptscens"`
-      mv *pdssat.pt* $ptdir # move files
-    else
-      echo "   pDSSAT.pt already processed for "$d
+      echo "   pDSSAT already processed for "$d
     fi
   else # apsim
     # make output directory if necessary
