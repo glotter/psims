@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 #
 # Usage: swiftopt.sh [-s sitename] [-p paramfile] [-g gridlist] 
 
@@ -7,6 +7,12 @@ crash()
 {
     echo "$@" >&2
     exit 1
+}
+
+# Find absolute path
+abspath()
+{
+   readlink -f $1
 }
 
 # Process command line arguments
@@ -24,7 +30,7 @@ if [ ! -f "conf/$site.xml" ]; then
 fi
 
 # Create next unique run id and run directory
-rundir=$( echo run??? | sed -e 's/^.*run//' | awk '{ printf("run%03d\n", $1+1)}' )
+export rundir=$( abspath $( echo run??? | sed -e 's/^.*run//' | awk '{ printf("run%03d\n", $1+1)}' ))
 mkdir $rundir || crash "Unable to create run directory"
 
 # Set parameters
@@ -34,6 +40,32 @@ fi
 
 sed -e '/^[[:space:]]*\(#.*\)*$/d' -e 's/#.*//' -e 's/  */=/' -e 's/^/export /' $paramfile > $rundir/params.psims
 source $rundir/params.psims
+
+# Check for work_directory location
+if [ -z "$work_directory" ]; then
+   work_directory=$rundir
+else 
+   work_directory=$( abspath $work_directory )/$( basename $rundir )
+   if [ -d "$work_directory" ]; then
+      crash "Work directory $work_directory already exists"
+   fi
+   mkdir -p $work_directory
+   cp $rundir/params.psims $work_directory
+fi
+
+# Copy required files to the work_directory
+cp $campaign/*.nc4 $work_directory/
+cp $gridlist $work_directory/gridList.txt
+cp RunpSIMS.swift $work_directory
+cp bin/RunpSIMS.sh $work_directory
+cp conf/swift.properties $work_directory
+cp conf/$site.xml $work_directory/sites.xml
+cp conf/$site.cf $work_directory/cf
+cp $paramfile $work_directory/paramfile
+chmod a+rw $work_directory/*
+
+cd $work_directory
+source params.psims
 
 # Extract input_tars
 if [ -n "$tar_inputs" ]; then
@@ -51,32 +83,23 @@ if [ -n "$tar_inputs" ]; then
    done
 fi
 
-# Copy required files to the rundir
-cp $campaign/*.nc4 $rundir/
-cp $gridlist $rundir/gridList.txt
-cp RunpSIMS.swift $rundir
-cp bin/RunpSIMS.sh $rundir
-cp conf/swift.properties $rundir
-cp conf/$site.xml $rundir/sites.xml
-cp conf/$site.cf $rundir/cf
-cp $paramfile $rundir/paramfile
-chmod a+rw $rundir/*
-
-# Echo parameters
-echo Run directory $rundir: site=$site paramfile=$paramfile gridlist=$gridlist
-echo -e "\nParameters:"
-cat $rundir/params.psims
-echo
-
 # Record arguments in ABOUT file
-cat << EOF > $rundir/ABOUT
-Running with parameter file $paramfile
+cat << EOF > ABOUT
+Running with parameter file $( abspath $paramfile )
 Running on site $site
-Running with gridlist $gridlist
+Running with gridlist $( abspath $gridlist )
+Run directory $rundir
+Work directory $work_directory
 EOF
 
+# Echo parameters
+echo
+cat ABOUT
+echo -e "\nParameters:"
+cat $work_directory/params.psims
+echo
+
 # Do the run
-cd $rundir
 for param in $( awk '{print $1}' paramfile )
 do
    arguments="$arguments -$param=${!param}"
@@ -88,9 +111,17 @@ export SWIFT_USERHOME=$PWD
 echo "swift -sites.file sites.xml -tc.file tc.data -config cf -resume *.rlog RunpSIMS.swift $arguments 2>&1 | tee -a swift.out" > restart.sh
 chmod +x restart.sh
 
-gensites -p cf ../conf/$site.xml > sites.xml
+gensites -p cf $rundir/../conf/$site.xml > sites.xml
 swift -sites.file sites.xml -tc.file tc.data -config cf RunpSIMS.swift $arguments 2>&1 | tee swift.out
 
 echo Generating plot...
-../bin/activityplot.pl RunpSIMS-2*.log &> /dev/null
+$rundir/../bin/activityplot.pl RunpSIMS-2*.log &> /dev/null
 echo Done
+
+# Move data back to original run directory
+if [ "$rundir" != "$work_directory" ]; then
+   echo Moving data from $work_directory to $rundir...
+   mv $work_directory/* $rundir/
+   rm -r $work_directory
+   echo Done
+fi
