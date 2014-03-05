@@ -93,14 +93,17 @@ Which files get included in the file is determined by how you set "outtypes" in 
 The parts/ directory contains the output nc files for each grid being processed. When grid 100/546 is done processing,
 you will see a file called runNNN/parts/100/546.psims.nc.
 
-The combined nc file is saved directly in the runNNN directory. Its name depends on the value of "out_file" in your
+The combined nc file is saved in the runNNN directory. Its name depends on the value of "out_file" in your
 params file. If you set out_file to "out.psims.apsim75.cfsr.whea", the final combined nc file would be called "out.psims.apsim75.cfsr.whea.nc4".
+
+At the end of each run, a plot is generated in the run directory called activitylot.png. It shows the number of active jobs over time, and the amount
+of time spent staging in and out files to the work directories.
 
 How to Modify Swift Configuration
 =================================
-Determining how Swift runs is controlled by a file called conf/swift.properties. The swift.properties file defines the 
-scheduler to use, the location of work and scratch directories, and controls parallelism. More information about 
-swift.properties options can be found at http://swiftlang.org/guides/trunk/userguide/userguide.html#_configuration.
+Determining how Swift runs is controlled by files called conf/<sitename>.xml and conf/<sitename>.cf. These files define the 
+scheduler to use, the location of work and scratch directories, and the amount of parallelism. More information about 
+swift.properties options can be found at http://swiftlang.org/guides/release-0.94/userguide/userguide.html.
 
 Debugging
 =========
@@ -112,8 +115,17 @@ Another place to look is the runNNN/*.d directory. An info log file should exist
 the stdout and stderr output of RunpSIMS.sh. Each significant command should be logged with a timestamp so you can track the progress and get a
 better idea of what's happening.
 
-Midway
-======
+Restarting failed runs
+======================
+There may be times when a psims run fails. Failures may be caused by problems with the data, the hardware, or with any of
+the intermediate programs involved. Once the original problem has been resolved, you may resume from your run with the
+following commands:
+
+$ cd runNNN
+$ ./restart.sh
+
+Running on the Midway cluster at University of Chicago
+======================================================
 To run pSIMS on midway, the first thing you need to do is load the required modules.
 
 $ module load java ant git mono/2.10 hdf5/1.8 nco/4.3 boost/1.50 netcdf/4.2 jasper python/2.7 cdo/1.6 tcllib/1.15 swift 
