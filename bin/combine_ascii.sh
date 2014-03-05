@@ -11,7 +11,9 @@ num_vars=${#var_names_arr[@]}
 IFS=$OLD_IFS 
 
 psims_files=($( ls $out_file* ))
+first_file=${psims_files[0]}
 final_file=$out_file".nc4"
+cp $first_file $final_file
 
 # Flatten inputs
 find $PWD -mindepth 2 -type f -exec ln -s {} \;
