@@ -32,6 +32,7 @@ fi
 # Create next unique run id and run directory
 export rundir=$( abspath $( echo run??? | sed -e 's/^.*run//' | awk '{ printf("run%03d\n", $1+1)}' ))
 mkdir $rundir || crash "Unable to create run directory"
+workdir=$rundir
 
 # Set parameters
 if [ ! -f $paramfile ]; then
@@ -42,62 +43,56 @@ sed -e '/^[[:space:]]*\(#.*\)*$/d' -e 's/#.*//' -e 's/  */=/' -e 's/^/export /' 
 source $rundir/params.psims
 
 # Check for work_directory location
-if [ -z "$work_directory" ]; then
-   work_directory=$rundir
-else 
-   work_directory=$( abspath $work_directory )/$( basename $rundir )
-   if [ -d "$work_directory" ]; then
-      crash "Work directory $work_directory already exists"
+if [ -n "$work_directory" ]; then
+   workdir="$( abspath $work_directory )/$( basename $rundir )"
+   if [ -d "$workdir" ]; then
+      crash "Work directory $workdir already exists"
    fi
-   mkdir -p $work_directory
-   cp $rundir/params.psims $work_directory
+   mkdir -p $workdir
+   cp $rundir/params.psims $workdir
 fi
 
 # Copy required files to the work_directory
-cp $campaign/*.nc4 $work_directory/
-cp $gridlist $work_directory/gridList.txt
-cp RunpSIMS.swift $work_directory
-cp bin/RunpSIMS.sh $work_directory
-cp conf/swift.properties $work_directory
-cp conf/$site.xml $work_directory/sites.xml
-cp conf/$site.cf $work_directory/cf
-cp $paramfile $work_directory/paramfile
-chmod a+rw $work_directory/*
+cp $campaign/*.nc4 $workdir/
+cp $gridlist $workdir/gridList.txt
+cp RunpSIMS.swift $workdir
+cp bin/RunpSIMS.sh $workdir
+cp conf/swift.properties $workdir
+cp conf/$site.xml $workdir/sites.xml
+cp conf/$site.cf $workdir/cf
+cp $paramfile $workdir/paramfile
+chmod a+rw $workdir/*
 
-cd $work_directory
+cd $workdir
 source params.psims
+
+# Record arguments in ABOUT file
+cat << EOF > ABOUT
+Site $site
+Parameter file $( abspath $paramfile )
+Gridlist $( abspath $gridlist )
+Run directory $rundir
+Work directory $workdir
+EOF
+
+# Echo parameters
+cat ABOUT
+echo -e "\nParameters:"
+cat $workdir/params.psims
+echo
 
 # Extract input_tars
 if [ -n "$tar_inputs" ]; then
    echo "Setting up data..."
    tar_files=$( echo $tar_inputs | sed s/,/' '/g )
    for file in $tar_files; do
-      extension="${file##*.}"
-      if [ "$extension" == "tar" ]; then
-         echo "Extracting $file"
-         tar xf $file 
-      else
-         echo "Extracting $file"
-         tar xfz $file 
-      fi
+      echo "Extracting $file"
+      tar xvf $file 2>&1 | while read line; do
+         x=$((x+1))
+         echo -en "$x files extracted\r"
+      done
    done
 fi
-
-# Record arguments in ABOUT file
-cat << EOF > ABOUT
-Running with parameter file $( abspath $paramfile )
-Running on site $site
-Running with gridlist $( abspath $gridlist )
-Run directory $rundir
-Work directory $work_directory
-EOF
-
-# Echo parameters
-echo
-cat ABOUT
-echo -e "\nParameters:"
-cat $work_directory/params.psims
-echo
 
 # Do the run
 for param in $( awk '{print $1}' paramfile )
@@ -119,9 +114,11 @@ $rundir/../bin/activityplot.pl RunpSIMS-2*.log &> /dev/null
 echo Done
 
 # Move data back to original run directory
-if [ "$rundir" != "$work_directory" ]; then
-   echo Moving data from $work_directory to $rundir...
-   mv $work_directory/* $rundir/
-   rm -r $work_directory
+if [ "$rundir" != "$workdir" ]; then
+   echo Cleaning up data in $workdir...
+   echo rm -rf $workdir/data
+   echo Moving data from $workdir to $rundir...
+   echo mv $workdir/* $rundir/
+   echo rm -r $workdir
    echo Done
 fi
