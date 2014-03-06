@@ -7,7 +7,7 @@ use.provider.staging=false
 provider.staging.pin.swiftfiles=false
 use.wrapper.staging=false
 config.rundirs=false
-foreach.max.threads=5000
+foreach.max.threads=1536
 
 #app midway RunpSIMS=$rundir/../bin/RunpSIMS.sh
 #app midway-long append=$rundir/../bin/append_ascii_par.sh
