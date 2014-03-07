@@ -36,7 +36,8 @@ open(LOG, "$log_filename") || die "Unable to open $log_filename\n";
 # Open data files used for plotting
 open(DAT, ">activity-plot.dat") || die "Unable to create activity-plot.dat\n";
 
-foreach my $line(<LOG>) {
+while(<LOG>) {
+   my $line = $_;
    if( $line =~ m/RuntimeStats\$ProgressTicker/ ) {
       if( $line !~ m/HeapMax/ ) { 
          my @words = split('\s+', $line);
@@ -63,10 +64,11 @@ set term png enhanced size 1000,1000
 set output "activity-plot.png"
 set xlabel "Time in seconds"
 
-set multiplot layout 3,1
+set multiplot layout 4,1
 plot 'activity-plot.dat' using 1:3:(0) title 'Active' with lines
-plot 'activity-plot.dat' using 1:2:(0) title 'Staging in' with line
+plot 'activity-plot.dat' using 1:2:(0) title 'Staging in' with lines
 plot 'activity-plot.dat' using 1:4:(0) title 'Staging out' with lines
+plot 'activity-plot.dat' using 1:5:(0) title 'Completed' with lines
 END
 
 print GP $gp; 

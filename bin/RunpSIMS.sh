@@ -2,10 +2,17 @@
 
 latidx=$1
 lonidx=$2
-params=$3
-tar_out=$4
+tar_out=$3
+shift 3
 
-source $params
+OLDIFS=$IFS
+for file_array in "$@"; do
+   for file in $file_array; do
+      ln -s /$file
+   done
+done
+
+source params.psims
 
 # run_command - print time stamp before and after run
 # Could also use 'time' here, but this is better in
@@ -39,15 +46,6 @@ run_command_redirect() {
    echo
 }
 
-# Flatten directory structure
-echo "Flattening directory structure"
-find $PWD -mindepth 2 -type f -exec ln -s {} \;
-find $PWD -mindepth 2 -type l -exec ln -s {} \;
-
-# Make all python, perl, and bash scripts executable. If tapps or other stuff in any 
-# other language, add suffix here.
-chmod +x *.py *.pl *.sh *.EXE *.exe
-
 ##################################################################################
 # Run tappcamp application to generate the experiment file from the campaign file.
 # Input campaign file called something like campaign.nc; defines the spatial experiment. 
@@ -55,7 +53,7 @@ chmod +x *.py *.pl *.sh *.EXE *.exe
 # that must be changed spatially in the experiment files. The experiment 
 # file is model agnostic and always called experiment.json. 
 tappcamp="$( echo $tappcamp | sed s/:/' '/g ) --latidx $latidx --lonidx $lonidx --ref_year $ref_year --delta $delta --nyers $num_years --nscens $scens" 
-run_command ./$tappcamp
+run_command $tappcamp
 
 ###############################################################################
 # Run tappinp application to generate the input files (.XXX and .SOL for DSSAT 
@@ -65,7 +63,7 @@ if [ "$model" == "apsim75" ] ; then suff=".apsim" ; fi
 if [ "$model" == "cenw" ]    ; then suff=".PJ!" ; fi
 
 tappinp="$( echo $tappinp | sed s/:/' '/g ) "
-run_command ./$tappinp                
+run_command $tappinp                
 
 ###############################################################################
 # Run tappwth application to generate the weather file from the .psims file
@@ -78,7 +76,7 @@ ls -l *$suff 1>&2
 
 for file in *.psims.nc; do 
   tappwth="$( echo $tappwth | sed s/:/' '/g ) -i $file" 
-  run_command ./$tappwth                         
+  run_command $tappwth                         
 done
 
 #########################################################
@@ -89,7 +87,7 @@ executable=$( echo $executable | sed s/:/' '/g )
    # DSSAT45 #
 if [ "$model" == "dssat45" ] ; then 
  commandToRun="$executable"
- run_command_redirect RESULT.OUT ./$commandToRun
+ run_command_redirect RESULT.OUT $commandToRun
 fi 
 
    ###########
@@ -99,7 +97,7 @@ if [ "$model" == "apsim75" ] ; then
    mv *.xml Model/               # If user adds custom [crop].xml file, overwrites the default
    mv ./Model/Apsim.xml ./
    source ./paths.sh                    # Sets boost and mono and ld_lib paths for the worker node
-   run_command mono ./Model/ApsimToSim.exe Generic.apsim
+   run_command mono $rundir/../Model/ApsimToSim.exe Generic.apsim
    for file in *.sim; do
       commandToRun="$executable $file"
       run_command_redirect RESULT.out $commandToRun
@@ -150,7 +148,7 @@ if [ _$postprocess != __ ]; then
  mkdir -p parts
  mkdir -p parts/$latidx
  postprocessToRun="$postprocess --latidx $latidx --lonidx $lonidx --ref_year $ref_year --delta $delta -y $num_years -s $scens -v $variables -u $var_units --output parts/$latidx/$lonidx.psims.nc"
- run_command ./$postprocessToRun
+ run_command $postprocessToRun
  exit_status=$?
 fi
 

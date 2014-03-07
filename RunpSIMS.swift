@@ -1,9 +1,8 @@
 type file;
 
-app (file tar_out, file part_out) RunpSIMS (file scenario[], file weather[], file soils[], file common[], file binary[], 
-                                            string latidx, string lonidx, file param)
+app (file tar_out, file part_out) RunpSIMS (string latidx, string lonidx, string input_files)
 {
-   RunpSIMS latidx lonidx @param @tar_out;
+   RunpSIMS latidx lonidx @tar_out input_files;
 }
 
 app (file outfile) append (file inputArray[], file param) {
@@ -22,7 +21,6 @@ string gridLists[] = readData("gridList.txt");
 file part_outputs[][];
 file scenario_input[] <filesys_mapper; location=@arg("campaign"), pattern="*">;
 file common_input[] <filesys_mapper; location=@arg("refdata"), pattern="*">;	
-file binary_input[] <fixed_array_mapper; files=@arg("bintransfer")>; 
 file params <"params.psims">;
 
 foreach g,i in gridLists {
@@ -39,10 +37,11 @@ foreach g,i in gridLists {
    file tar_output <single_file_mapper; file=@strcat("output/", gridLists[i], "output.tar.gz")>;
    file part_output <single_file_mapper; file=@strcat("parts/", gridLists[i], ".psims.nc")>;
 
-   // Run pSIMS
-   (tar_output, part_output) = RunpSIMS(scenario_input, weather_input, soils_input, common_input, binary_input, gridNames[0], gridNames[1], params);
-   part_outputs[lat][lon] = part_output;
+   string files_in = @strcat(@scenario_input, " ", @weather_input, " ", @soils_input, " ", @common_input, " ", @params);
 
+   // Run pSIMS
+   (tar_output, part_output) = RunpSIMS(gridNames[0], gridNames[1], files_in);
+   part_outputs[lat][lon] = part_output;
 }
 
 # Append
