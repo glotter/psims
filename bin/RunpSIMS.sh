@@ -93,11 +93,11 @@ fi
    ###########
    # APSIM75 #
 if [ "$model" == "apsim75" ] ; then
-   run_command tar -xzvf Apsim75.exe.tar.gz  # expand exe & files needed to run (have correct permissions)
+   run_command tar -xzvf $rundir/../bin/Apsim75.exe.tar.gz  # expand exe & files needed to run (have correct permissions)
    mv *.xml Model/               # If user adds custom [crop].xml file, overwrites the default
    mv ./Model/Apsim.xml ./
    source ./paths.sh                    # Sets boost and mono and ld_lib paths for the worker node
-   run_command mono $rundir/../Model/ApsimToSim.exe Generic.apsim
+   run_command mono Model/ApsimToSim.exe Generic.apsim
    for file in *.sim; do
       commandToRun="$executable $file"
       run_command_redirect RESULT.out $commandToRun
