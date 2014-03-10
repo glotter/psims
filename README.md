@@ -42,7 +42,6 @@ a description of what it does.
 
 Parameter     | Description                                                                           | Example
 ---------     |-----------                                                                            |-------
-bintransfer   | Stage in the following binaries with each task, so RunpSIMS.sh has them available     | bintransfer bin/DSCSM045.EXE,pdssat/psims2WTH.py
 campaign      | Directory containing campaign data                                                    | campaign /Users/davidk/psims/data/whe.demo
 delta         | Gridcell spacing in arcminutes                                                        | delta 30
 executable    | Name of executable and arguments to run for each grid                                 | executable DSCSM045.EXE:A:X1234567.WHX
@@ -67,7 +66,7 @@ postprocess   | Name of program and arguments to run after running executable   
 var\_units    | Units to use for each variable, in the same order that variables are listed           | var\_units "DOY,Days,Days,kg/ha,kg/ha,mm,mm,mm"
 variables     | Define the variables to extract and format                                            | variables PDAT,ADAT,MDAT,CWAM
 weather       | Defines the directory where weather data is stored                                    | weather /Users/davidk/psims/data/agmerra
-work_directory| Defined a work directory where psims data is read from and written to                 | work_directory /scratch/midway/$USER/psims.workdir
+work_directory| Defines a directory to read and write intermediate data (optional)                    | work_directory /scratch/midway/$USER/psims.workdir
 
 Gridlist Format
 ===============
@@ -136,17 +135,5 @@ $ module load java ant git mono/2.10 hdf5/1.8 nco/4.3 boost/1.50 netcdf/4.2 jasp
 The conf/midway.xml file is configured to use the sandyb slurm partition. The sandyb partition has 16 cores per node. The default configuration
 is to request nodes in chunks of 3, up to the Midway limit of 1536 total cores.
 
-There are three main filesystems on Midway:
-
-The /project filesystem is a large, but slower filesystem used for long term storage of data. Data is backed up daily.
-The /scratch/midway filesystem is meant for temporary job data. It is the fastest shared filesystem available on Midway. Data is not backed up. There is soft quota limit of 1T, and a hard limit of 5T.
-Each node also has a local disk called /scratch/local. Speed is very good, but data is not shared across nodes.
-
-Please use the following steps to achieve best performance:
-
-1. Start runs in the /project psims directory
-2. Set work_directory parameter to /scratch/midway/$USER/psims.
-3. Use the tar_inputs parameter to extract soil and climate data into your scratch work_directory.
-4. The soil and climate parameters should reference data relative to $PWD
-5. When the run is complete, output data will be moved back to /project
-
+Start jobs in /project/joshuaelliott/psims. The faster /scratch/midway and /scratch/local disks will be used automatically by Swift to speed things up and decrease
+the load on the project filesystem.
