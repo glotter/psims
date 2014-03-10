@@ -109,7 +109,7 @@ echo "swift -sites.file sites.xml -tc.file tc.data -config cf -resume *.rlog Run
 chmod +x restart.sh
 
 gensites -p cf $rundir/../conf/$site.xml > sites.xml
-swift -sites.file sites.xml -tc.file tc.data -config cf RunpSIMS.swift $arguments 2>&1 | tee swift.out
+swift -sites.file sites.xml -tc.file tc.data -config cf RunpSIMS.swift $arguments -workdir=$workdir 2>&1 | tee swift.out
 
 echo Generating plot...
 $rundir/../bin/activityplot.pl RunpSIMS-2*.log &> /dev/null

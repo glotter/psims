@@ -110,7 +110,7 @@ lon0_off=$(echo "60*($lon_zero+180)/$londelta" | bc)
 # iterate over directories, filling in gaps
 for ((i = $si; i < $ei; i++)); do
   # get latitude index
-  grid1=(`echo ${dcts[$i]} | egrep -o [0-9]+`)
+  grid1=(`basename ${dcts[$i]} | egrep -o [0-9]+`)
   echo "Processing latitude band "$grid1" . . ."
 
   # create files for each variable
