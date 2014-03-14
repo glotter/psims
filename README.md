@@ -121,8 +121,8 @@ There may be times when a psims run fails. Failures may be caused by problems wi
 the intermediate programs involved. Once the original problem has been resolved, you may resume from your run with the
 following commands:
 
-$ cd runNNN
-$ ./restart.sh
+$ cd runNNN   
+$ ./restart.sh   
 
 Running on the Midway cluster
 =============================
