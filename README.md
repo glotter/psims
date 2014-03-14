@@ -22,7 +22,7 @@ The "psims" script is used to start a pSIMS run. The options you pass to
 this script will determine which pSIMS runs will be done (including which models) 
 and where they will run.
 
-Usage: psims [-s sitename] [-p paramfile] [-g gridlist]
+Usage: psims [-s sitename] [-p paramfile] [-g gridlist] [ -t test_result_directory ]
 
 The sitename option determines where a run will take place. Currently, valid 
 options are "midway" and "local".
@@ -32,6 +32,8 @@ what post processing steps need to happen.
 
 The gridlist is a set of latitudes and longitudes that should be processed.
 
+The -t switch allows you to compare the results of the current run to an existing,
+verified result. This is optional.
 
 Params File Format
 ==================
@@ -49,7 +51,7 @@ lat\_zero     | Top edge of the North most grid cell in the campaign            
 lon\_zero     | Left edge of the West most grid cell in the campaign                                  | lon\_zero -180
 long\_names   | Long names for variables, in same order that variables are listed                     | long\_names "PlantDate,AnthesisDate"
 model         | Defines the type of model to run. Valid options are dssat45, apsim75, and cenw        | model dssat45
-num\_lats     |  Number of latitudes to be included in final nc4 file (starting with lat\_zero)        | num\_lats 360
+num\_lats     |  Number of latitudes to be included in final nc4 file (starting with lat\_zero)       | num\_lats 360
 num\_lons     | Number of longitudes to be included in final nc4 file (starting with lon\_zero)       | num\_lons 720
 num\_years    | Number of years to simulate?                                                          | num\_years 31
 out\_file     | Defines the prefix of the final nc4 filename (eg, $out\_file.nc4)                     | out\_file out.psims.dssat45.agmerra.wheat.demo
@@ -67,6 +69,12 @@ var\_units    | Units to use for each variable, in the same order that variables
 variables     | Define the variables to extract and format                                            | variables PDAT,ADAT,MDAT,CWAM
 weather       | Defines the directory where weather data is stored                                    | weather /Users/davidk/psims/data/agmerra
 work_directory| Defines a directory to read and write intermediate data (optional)                    | work_directory /scratch/midway/$USER/psims.workdir
+
+Testing results
+===============
+The -t option allows you to compare the result of your current run to a known good result. The result directory
+should contain a file called test.txt. The test.txt file contains a list of files that will be compared via md5 checksum
+at the end of the run.
 
 Gridlist Format
 ===============

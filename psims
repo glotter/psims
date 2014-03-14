@@ -21,12 +21,19 @@ while [ $# -gt 0 ]; do
     -g) gridlist=$2; shift 2;;
     -p) paramfile=$2; shift 2;;
     -s) site=$2; shift 2;;
-    *) crash "Usage: $0 [-s sitename] [-p paramfile] [-g gridlist]";;
+    -t) test_result=$2; shift 2;;
+    *) crash "Usage: $0 [-s sitename] [-p paramfile] [-g gridlist] [ -t test_result ]";;
   esac
 done
 
 if [ ! -f "conf/$site.xml" ]; then
    crash "Unable to find configuration file conf/$site.xml"
+fi
+
+if [ -z "$test_result" ]; then
+   if [ ! -d "$test_result" ]; then
+      crash "Unable to find test result directory $test_result"
+   fi
 fi
 
 # Create next unique run id and run directory
@@ -114,6 +121,14 @@ swift -sites.file sites.xml -tc.file tc.data -config cf RunpSIMS.swift $argument
 echo Generating plot...
 $rundir/../bin/activityplot.pl RunpSIMS-2*.log &> /dev/null
 echo Done
+
+echo Comparing results to test data at $test_result
+$rundir/../bin/cmp_output.py $rundir $test_result
+if [ "$?" == "0" ]; then
+   echo "Test passed"
+else
+   echo "Test failed"
+fi
 
 # Move data back to original run directory
 if [ "$rundir" != "$workdir" ]; then
