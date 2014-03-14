@@ -30,7 +30,7 @@ if [ ! -f "conf/$site.xml" ]; then
    crash "Unable to find configuration file conf/$site.xml"
 fi
 
-if [ -z "$test_result" ]; then
+if [ -n "$test_result" ]; then
    if [ ! -d "$test_result" ]; then
       crash "Unable to find test result directory $test_result"
    fi
@@ -122,12 +122,14 @@ echo Generating plot...
 $rundir/../bin/activityplot.pl RunpSIMS-2*.log &> /dev/null
 echo Done
 
-echo Comparing results to test data at $test_result
-$rundir/../bin/cmp_output.py $rundir $test_result
-if [ "$?" == "0" ]; then
-   echo "Test passed"
-else
-   echo "Test failed"
+if [ -n "$test_result" ]; then
+   echo Comparing results to test data at $test_result
+   $rundir/../bin/cmp_output.py $rundir $test_result
+   if [ "$?" == "0" ]; then
+      echo "Test passed"
+   else
+      echo "Test failed"
+   fi
 fi
 
 # Move data back to original run directory

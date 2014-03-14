@@ -130,7 +130,7 @@ the intermediate programs involved. Once the original problem has been resolved,
 following commands:
 
 $ cd runNNN   
-$ ./restart.sh   
+$ ./restart.sh
 
 Running on the Midway cluster
 =============================
@@ -145,3 +145,9 @@ is to request nodes in chunks of 3, up to the Midway limit of 1536 total cores.
 
 Start jobs in /project/joshuaelliott/psims. The faster /scratch/midway and /scratch/local disks will be used automatically by Swift to speed things up and decrease
 the load on the project filesystem.
+
+Test data exists in the /project/joshuaelliott filesystem. You can run the following commands to test running the apsim and dssat models:
+
+$ ./psims -s midway -g /project/joshuaelliott/testing/psims.testing/gridlists/dssat45.100 -p /project/joshuaelliott/testing/psims.testing/params/dssat45 -t /project/joshuaelliott/testing/psims.testing/results/dssat45   
+
+$ ./psims -s midway -g /project/joshuaelliott/testing/psims.testing/gridlists/apsim75.100 -p /project/joshuaelliott/testing/psims.testing/params/apsim75 -t /project/joshuaelliott/testing/psims.testing/results/apsim75
