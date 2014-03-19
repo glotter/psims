@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 
 # import modules
-import os
-import datetime
+import os, datetime, warnings
 from netCDF4 import Dataset
 from optparse import OptionParser
 from collections import OrderedDict as od
-from numpy import nan, isnan, empty, zeros, double, array, resize, vectorize
+from numpy import nan, isnan, empty, zeros, ones, double, array, resize, vectorize
 
 # dictionaries of variable descriptions and units
 var_names = {'SDAT': 'Simulation start date', 'PDAT': 'Planting date', \
@@ -172,42 +171,40 @@ ref_date = datetime.datetime(options.ref_year, 1, 1)
 
 # parse data body
 nrows = len(data) - 4
-ncols = len(all_variables)
-trim_data = empty((nrows, ncols), dtype = '|S20')
-for i in range(nrows):
-    offs = 0 # offset to handle anomalous parsing
-    for j in range(ncols):
-        sidx = start_idx.values()[j]
-        eidx = len(data[3]) - 1 if j == ncols - 1 else start_idx.values()[j + 1]
-        dstr = data[i + 4][sidx + offs : eidx + offs]
-        if '*' in dstr and not dstr.endswith('*'): # '*' not in last position
-            offset = dstr.rfind('*') - len(dstr) + 1
-            dstr = dstr[: offset]
-            offs += offset
-        trim_data[i, j] = dstr.strip() # remove spaces
-if len(trim_data) % num_years:
-    raise Exception('Size of data not divisible by number of years')
-if len(trim_data) < num_years * num_scenarios:
-    raise Exception('Exceeded size of data')
-
-# select variables and convert to double
-trim_data = trim_data[:, list(variable_idx)]
-
-# change values with *, -99.9, -99.90, and 9999999 to -99
-func = vectorize(lambda x: '*' in x or '-99.9' == x or '-99.90' == x or '9999999' == x)
-trim_data[func(trim_data)] = '-99'
-
-# convert to double
-trim_data = trim_data.astype(double)
-
-# convert units on the date variables
-# [[JE: James should probably fix this to make sure its smart enough to handle
-#       cases where the user doesn't ask for ADAT or PDAT or whatever]]
-trim_data[trim_data == -99] = nan
-trim_data[:, variables == 'PDAT'] =   trim_data[:, variables == 'PDAT'] % 1000
-trim_data[:, variables == 'ADAT'] = ((trim_data[:, variables == 'ADAT'] % 1000) - trim_data[:, variables == 'PDAT']) % 365
-trim_data[:, variables == 'MDAT'] = ((trim_data[:, variables == 'MDAT'] % 1000) - trim_data[:, variables == 'PDAT']) % 365
-trim_data[isnan(trim_data)] = -99
+tot_years = num_years * num_scenarios
+if nrows % num_years:
+    warnings.warn('Size of data not divisible by number of years')
+    trim_data = -99 * ones((tot_years, len(variable_idx)))
+elif nrows < tot_years:
+    warnings.warn('Exceeded size of data')
+    trim_data = -99 * ones((tot_years, len(variable_idx)))
+else:
+    ncols = len(all_variables)
+    trim_data = empty((nrows, ncols), dtype = '|S20')
+    for i in range(nrows):
+        offs = 0 # offset to handle anomalous parsing
+        for j in range(ncols):
+            sidx = start_idx.values()[j]
+            eidx = len(data[3]) - 1 if j == ncols - 1 else start_idx.values()[j + 1]
+            dstr = data[i + 4][sidx + offs : eidx + offs]
+            if '*' in dstr and not dstr.endswith('*'): # '*' not in last position
+                offset = dstr.rfind('*') - len(dstr) + 1
+                dstr = dstr[: offset]
+                offs += offset
+            trim_data[i, j] = dstr.strip() # remove spaces
+    # select variables and convert to double
+    trim_data = trim_data[:, list(variable_idx)]
+    # change values with *, -99.9, -99.90, and 9999999 to -99
+    func = vectorize(lambda x: '*' in x or '-99.9' == x or '-99.90' == x or '9999999' == x)
+    trim_data[func(trim_data)] = '-99'
+    # convert to double
+    trim_data = trim_data.astype(double)
+    # convert units on the date variables
+    trim_data[trim_data == -99] = nan
+    trim_data[:, variables == 'PDAT'] =   trim_data[:, variables == 'PDAT'] % 1000
+    trim_data[:, variables == 'ADAT'] = ((trim_data[:, variables == 'ADAT'] % 1000) - trim_data[:, variables == 'PDAT']) % 365
+    trim_data[:, variables == 'MDAT'] = ((trim_data[:, variables == 'MDAT'] % 1000) - trim_data[:, variables == 'PDAT']) % 365
+    trim_data[isnan(trim_data)] = -99
 
 # create pSIMS NetCDF4 file
 dirname = os.path.dirname(options.outputfile)

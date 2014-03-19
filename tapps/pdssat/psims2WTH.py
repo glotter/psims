@@ -49,6 +49,10 @@ var_lists = od([('SRAD', ['solar', 'rad', 'rsds', 'srad']), \
                 ('RHUM', ['rhum', 'hur']), \
                 ('VAPR', ['vap', 'vapr'])])
 var_names = array(var_lists.keys())
+unit_names = array([['mj/m^2', 'mj/m2', 'mjm-2'], ['oc', 'degc'], ['oc', 'degc'], \
+                    ['mm'], ['kmday-1', 'km/day', 'kmdy-1', 'km/dy'], ['oc', 'degc'], \
+                    ['mjm-2day-1', 'mjm-2dy-1', 'mj/m^2/day', 'mj/m2/day', 'mj/m2/dy'], \
+                    ['%'], ['kpa']])
 nt = len(time)
 nv = len(var_names)
 alldata = empty((nt, nv)) # includes time
@@ -56,7 +60,7 @@ for i in range(nv):
     var_name = var_names[i]
     var_list = var_lists[var_name]
     found_var = False
-    
+
     for v in var_list:
         matchvar = isin(v, variables)
         if matchvar != []:
@@ -67,26 +71,38 @@ for i in range(nv):
                 units = '' 
                 if 'units' in infile.variables[matchvar].ncattrs():
                     units = infile.variables[matchvar].units
-                
+                units = units.lower().replace(' ', '')
+
                 # convert units, if necessary
-                if var_name == 'SRAD' and units == 'W m-2': # solar
+                if var_name == 'SRAD' and units in ['wm-2', 'w/m^2', 'w/m2']: # solar
                     alldata[:, i] *= 0.0864
-                elif (var_name == 'TMAX' or var_name == 'TMIN') and (units == 'K' or units == 'Degrees (K)'): # temperature
+                    units = unit_names[i][0]
+                elif (var_name == 'TMAX' or var_name == 'TMIN') and units in ['k', 'degrees(k)', 'deg(k)']: # temperature
                     alldata[:, i] -= 273.15
-                elif var_name == 'RAIN' and units == 'kg m-2 s-1': # precip
+                    units = unit_names[i][0]
+                elif var_name == 'RAIN' and units in ['kgm-2s-1', 'kg/m^2/s', 'kg/m2/s']: # precip
                     alldata[:, i] *= 86400
+                    units = unit_names[i][0]
                 elif var_name == 'WIND': # wind
-                    if units == 'm s-1':
+                    if units in ['ms-1', 'm/s']:
                         alldata[:, i] *= 86.4
-                    elif units == 'km h-1':
+                        units = unit_names[i][0]
+                    elif units in ['kmh-1', 'km/h', 'kmhr-1', 'km/hr']:
                         alldata[:, i] *= 24
-                    elif units == 'miles h-1':
+                        units = unit_names[i][0]
+                    elif units in ['milesh-1', 'miles/h', 'mileshr-1', 'miles/hr']:
                         alldata[:, i] *= 38.624256
+                        units = unit_names[i][0]
                 elif var_name == 'SUNH' and units == 'h': # sunh
                     alldata[:, i] *= 100. / 24
-                elif var_name == 'VAPR' and units == 'Pa': # vapor pressure
-                    alldata[:, i] /= 1000.       
- 
+                    units = unit_names[i][0]
+                elif var_name == 'VAPR' and units == 'pa': # vapor pressure
+                    alldata[:, i] /= 1000.
+                    units = unit_names[i][0]
+
+                if not units.lower() in unit_names[i]:
+                    raise Exception('Unknown units for %s' % var_name)         
+                
                 found_var = True
                 break
 
