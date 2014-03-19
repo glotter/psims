@@ -65,6 +65,7 @@ fi
 cp $campaign/*.nc4 $workdir/
 cp $gridlist $workdir/gridList.txt
 cp RunpSIMS.swift $workdir
+cp combine.swift $workdir
 cp bin/RunpSIMS.sh $workdir
 cp conf/swift.properties $workdir
 cp conf/$site.xml $workdir/sites.xml
@@ -112,15 +113,21 @@ done
 export SWIFT_HEAP_MAX=5120M
 export SWIFT_USERHOME=$PWD
 
-echo "swift -sites.file sites.xml -tc.file tc.data -config cf -resume *.rlog RunpSIMS.swift $arguments 2>&1 | tee -a swift.out" > restart.sh
+echo "swift -sites.file sites.xml -tc.file tc.data -config cf -resume *.rlog RunpSIMS.swift $arguments -workdir=$workdir 2>&1 | tee -a swift.out" > restart.sh
 chmod +x restart.sh
 
 gensites -p cf $rundir/../conf/$site.xml > sites.xml
+echo Generating part files...
 swift -sites.file sites.xml -tc.file tc.data -config cf RunpSIMS.swift $arguments -workdir=$workdir 2>&1 | tee swift.out
+echo -e "Done\n"
+
+echo Post processing...
+swift -sites.file sites.xml -tc.file tc.data -config cf combine.swift $arguments -workdir=$workdir 2>&1 | tee -a swift.out
+echo -e "Done\n"
 
 echo Generating plot...
 $rundir/../bin/activityplot.pl RunpSIMS-2*.log &> /dev/null
-echo Done
+echo -e "Done\n"
 
 if [ -n "$test_result" ]; then
    echo Comparing results to test data at $test_result
