@@ -2,9 +2,9 @@
 use strict;
 use Time::Local 'timelocal_nocheck';
 
-# Usage: ./activity-plot.pl run000.log
-if(@ARGV != 1) {
-   print "Usage: $0 <swift.log>\n";
+# Usage: ./activity-plot.pl run000.log activity-plot.png
+if(@ARGV != 2) {
+   print "Usage: $0 <log> <image>\n";
    exit 1;
 }
 
@@ -28,13 +28,19 @@ sub timestamp_to_seconds
    return $time;
 }
 my $first_timestamp=0;
-
-# Read log
 my $log_filename=shift;
-open(LOG, "$log_filename") || die "Unable to open $log_filename\n";
+my $image=shift;
 
-# Open data files used for plotting
-open(DAT, ">activity-plot.dat") || die "Unable to create activity-plot.dat\n";
+my $data_filename = $image;
+$data_filename =~ s{\.[^.]+$}{};
+$data_filename .= ".dat";
+
+my $gp_filename = $image;
+$gp_filename =~ s{\.[^.]+$}{};
+$gp_filename .= ".gp";
+
+open(LOG, "$log_filename") || die "Unable to open $log_filename\n";
+open(DAT, ">$data_filename") || die "Unable to create $data_filename\n";
 
 while(<LOG>) {
    my $line = $_;
@@ -57,21 +63,22 @@ while(<LOG>) {
 }
 
 close(DAT);
-open(GP, ">activity-plot.gp") || die "Unable to create activity-plot.gp";
+open(GP, ">$gp_filename") || die "Unable to create $gp_filename";
 
 my $gp = <<END;
 set term png enhanced size 1000,1000
-set output "activity-plot.png"
+set output "$image"
 set xlabel "Time in seconds"
 
 set multiplot layout 4,1
-plot 'activity-plot.dat' using 1:3:(0) title 'Active' with lines
-plot 'activity-plot.dat' using 1:2:(0) title 'Staging in' with lines
-plot 'activity-plot.dat' using 1:4:(0) title 'Staging out' with lines
-plot 'activity-plot.dat' using 1:5:(0) title 'Completed' with lines
+plot '$data_filename' using 1:3:(0) title 'Active' with lines
+plot '$data_filename' using 1:2:(0) title 'Staging in' with lines
+plot '$data_filename' using 1:4:(0) title 'Staging out' with lines
+plot '$data_filename' using 1:5:(0) title 'Completed' with lines
 END
 
 print GP $gp; 
 close(GP);
-system("gnuplot activity-plot.gp");
-unlink("activity-plot.gp");
+system("gnuplot $gp_filename");
+unlink("$gp_filename");
+

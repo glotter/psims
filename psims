@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Usage: swiftopt.sh [-s sitename] [-p paramfile] [-g gridlist] 
+# Usage: psims -s <sitename> -p <paramfile> -g <gridlist> [ -t test_result ] 
 
 # crash: Report a problem and exit
 crash()
@@ -22,7 +22,7 @@ while [ $# -gt 0 ]; do
     -p) paramfile=$2; shift 2;;
     -s) site=$2; shift 2;;
     -t) test_result=$2; shift 2;;
-    *) crash "Usage: $0 [-s sitename] [-p paramfile] [-g gridlist] [ -t test_result ]";;
+    *) crash "Usage: $0 -s <sitename> -p <paramfile> -g <gridlist> [ -t test_result ]";;
   esac
 done
 
@@ -48,7 +48,6 @@ fi
 
 sed -e '/^[[:space:]]*\(#.*\)*$/d' -e 's/#.*//' -e 's/  */=/' -e 's/^/export /' $paramfile > $rundir/params.psims
 source $rundir/params.psims
-
 export PATH=$PWD/bin:$PWD/tapps/pdssat:$PWD/tapps/papsim:$PATH
 
 # Check for work_directory location
@@ -104,7 +103,6 @@ if [ -n "$tar_inputs" ]; then
    done
 fi
 
-# Do the run
 for param in $( awk '{print $1}' paramfile )
 do
    arguments="$arguments -$param=${!param}"
@@ -113,22 +111,29 @@ done
 export SWIFT_HEAP_MAX=5120M
 export SWIFT_USERHOME=$PWD
 
-echo "swift -sites.file sites.xml -tc.file tc.data -config cf -resume *.rlog RunpSIMS.swift $arguments -workdir=$workdir 2>&1 | tee -a swift.out" > restart.sh
-chmod +x restart.sh
+# Generate restart scripts
+echo "swift -sites.file sites.xml -tc.file tc.data -config cf -resume RunpSIMS*.rlog RunpSIMS.swift $arguments -workdir=$workdir 2>&1 | tee -a swift.out" > restart.sh
+echo "swift -sites.file sites.xml -tc.file tc.data -config cf -resume combine*.rlog combine.swift $arguments -workdir=$workdir 2>&1 | tee -a swift.out" > restart.combine.sh
+chmod +x restart.sh restart.combine.sh
 
+# Generate parts
 gensites -p cf $rundir/../conf/$site.xml > sites.xml
 echo Generating part files...
 swift -sites.file sites.xml -tc.file tc.data -config cf RunpSIMS.swift $arguments -workdir=$workdir 2>&1 | tee swift.out
 echo -e "Done\n"
 
+# Post processing
 echo Post processing...
 swift -sites.file sites.xml -tc.file tc.data -config cf combine.swift $arguments -workdir=$workdir 2>&1 | tee -a swift.out
 echo -e "Done\n"
 
-echo Generating plot...
-$rundir/../bin/activityplot.pl RunpSIMS-2*.log &> /dev/null
+# Plots
+echo Generating plots...
+$rundir/../bin/activityplot.pl combine-2*.log plot-combine.png &> /dev/null 
+$rundir/../bin/activityplot.pl RunpSIMS-2*.log plot-psims.png &> /dev/null
 echo -e "Done\n"
 
+# Testing
 if [ -n "$test_result" ]; then
    echo Comparing results to test data at $test_result
    $rundir/../bin/cmp_output.py $rundir $test_result
