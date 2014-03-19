@@ -13,6 +13,8 @@
     <profile namespace="globus" key="slurm.exclusive">true</profile>           <!-- When set to false, it's easier to get nodes, but things may run slower -->
     <profile namespace="karajan" key="initialScore">10000</profile>            <!-- Set to a high value to start jobs immediately -->
     <profile namespace="globus" key="project">pi-joshuaelliott</profile>       <!-- Project to charge -->
+    <profile namespace="globus" key="highOverAllocation">100</profile>         <!-- Always keep these at 100 -->
+    <profile namespace="globus" key="lowOverAllocation">100</profile>          <!-- Always keep these at 100 -->
     <filesystem provider="local"/>					       <!-- Use local filesytem -->
     <workdirectory>/scratch/midway/{env.USER}/psims.work</workdirectory>       <!-- Work directory for staging in files -->
     <scratch>/scratch/local/{env.USER}/psims.work</scratch>                    <!-- Scratch directory where tasks are run -->
@@ -28,6 +30,8 @@
     <profile namespace="globus" key="nodeGranularity">3</profile>              <!-- Request nodes in blocks of nodeGranularity -->
     <profile namespace="globus" key="maxNodes">3</profile>                     <!-- Maximum number of nodes per Slurm job -->
     <profile namespace="karajan" key="jobThrottle">30</profile>                <!-- Multiply this number by 100 to get the total number of active jobs before Swift starts throttling -->
+    <profile namespace="globus" key="highOverAllocation">100</profile>         <!-- Always keep these at 100 -->
+    <profile namespace="globus" key="lowOverAllocation">100</profile>          <!-- Always keep these at 100 -->
     <profile namespace="globus" key="slurm.exclusive">true</profile>           <!-- When set to false, it's easier to get nodes, but things may run slower -->
     <profile namespace="karajan" key="initialScore">10000</profile>            <!-- Set to a high value to start jobs immediately -->
     <profile namespace="globus" key="project">pi-joshuaelliott</profile>       <!-- Project to charge -->
@@ -46,6 +50,8 @@
     <profile namespace="globus" key="nodeGranularity">3</profile>              <!-- Request nodes in blocks of nodeGranularity -->
     <profile namespace="globus" key="maxNodes">3</profile>                     <!-- Maximum number of nodes per Slurm job -->
     <profile namespace="karajan" key="jobThrottle">30</profile>                <!-- Multiply this number by 100 to get the total number of active jobs before Swift starts throttling -->
+    <profile namespace="globus" key="highOverAllocation">100</profile>         <!-- Always keep these at 100 -->
+    <profile namespace="globus" key="lowOverAllocation">100</profile>          <!-- Always keep these at 100 -->
     <profile namespace="globus" key="slurm.exclusive">true</profile>           <!-- When set to false, it's easier to get nodes, but things may run slower -->
     <profile namespace="karajan" key="initialScore">10000</profile>            <!-- Set to a high value to start jobs immediately -->
     <profile namespace="globus" key="project">pi-joshuaelliott</profile>       <!-- Project to charge -->
