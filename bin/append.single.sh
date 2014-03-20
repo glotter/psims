@@ -3,7 +3,7 @@
 : '
 The usage is:
 
-  ./append.single.sh [lat] [var] [in_dir] [out_dir] [num_lons] [lon_delta] [num_years] [num_scenarios] [lon_zero]
+  ./append.single.sh [lat] [var] [in_dir] [out_dir] [num_lons] [delta] [num_years] [num_scenarios] [lon_zero]
 
 where the input arguments are as follows:
 
