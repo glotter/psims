@@ -4,11 +4,6 @@
 This script aggregates multiple single-gridpoint netcdf files into one big spatial
 raster netcdf file. The usage is:
 
-batch=$1
-num_vars_per_file=$2
-file_dir=$3
-params=$4
-
   ./merge_ascii.sh [batch] [num_vars_per_file] [file_dir] [params]
 
 where the input arguments are as follows:
