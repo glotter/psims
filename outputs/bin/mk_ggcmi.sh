@@ -68,7 +68,7 @@ numapsimvars=14
 
 # scenario names
 pdssatscens=fullharm_noirr,fullharm_firr,default_noirr,default_firr,harmnon_noirr,harmnon_firr,fullharm_noirr_pt,fullharm_firr_pt
-papsimscens=$pdssatpmscens
+papsimscens=fullharm_noirr,fullharm_firr,default_noirr,default_firr,harmnon_noirr,harmnon_firr
 
 # process all DSSAT and APSIM directories
 for d in `ls $ggcmidir | egrep 'dssat|apsim'`; do
