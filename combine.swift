@@ -1,39 +1,48 @@
 type file;
 
-app (file outfile) append (file inputArray[], file param) {
-   append 1 1 @param "./parts" @outfile;
+app (external e) append (string lat, string var, string inputDir, string outputDir, string param) {
+   append lat var inputDir outputDir param;
 }
 
-app (file outfile) merge (int var_num, file inputArray[], file param) {
-   merge var_num "1" "./var_files" @param;
+app (external e) merge (external[string][string] varsDone, int varNum, string fileDir, string outDir, string param) {
+   merge varNum "1" fileDir outDir param;
 }
 
-app (file outfile) combine (file inputArray[], file scenarioInput[], file param) {
-   combine @param;
+app (file outfile, file l) combine (external inputs[], file scenarioInput[], string varDirectory, string param) {
+   combine varDirectory param stdout=@l;
 }
 
-file params <single_file_mapper; file=@strcat(@arg("workdir"), "/params.psims")>;
-file scenario_input[] <filesys_mapper; location=@arg("campaign"), pattern="*">;
-file part_outputs[][] <ext; exec="../bin/findParts.sh" >;
+app (file output) findParts (string workDir) {
+   findParts workDir stdout=@output;
+}
+
+file scenarios[] <filesys_mapper; location=@arg("campaign"), pattern="*">;
+
+string params = @strcat(@arg("workdir"), "/params.psims");
+string variables[] = @strsplit(@arg("variables"), ",");
+string lats[] = readData(findParts(@arg("workdir"))); 
+string partDir = @strcat(@arg("workdir"), "/parts");
+string varDir = @strcat(@arg("workdir"), "/var_files");
+
+external varsCompleted[string][string];
+external varNcs[];
 
 # Append
-file lat_outs[];
-foreach latitude,latval in part_outputs {
-   file latout <single_file_mapper; file=@strcat("lat", latval, ".tar.gz")>;
-   latout = append(part_outputs[latval], params);
-   lat_outs[latval] = latout;
+tracef("\nRunning appends... %k\n", lats);
+foreach lat in lats {
+   foreach var in variables {
+      varsCompleted[lat][var] = append(lat, var, partDir, varDir, params);
+   }
 }
 
 # Merge
-string variable_array[];
-variable_array = @strsplit(@arg("variables"), ",");
-file var_ncs[];
-foreach v,i in variable_array {
-   file var_nc <single_file_mapper; file=@strcat(@arg("out_file"), ".", v, ".nc4")>;
-   var_nc = merge(i+1, lat_outs, params);
-   var_ncs[i] = var_nc;
+tracef("\nRunning merge...%k\n", varsCompleted);
+foreach v,i in variables {
+   varNcs[i] = merge(varsCompleted, i+1, partDir, @arg("workdir"), params);
 }
 
 # Combine 
+tracef("\nRunning combine...%k\n", varNcs);
 file nc <single_file_mapper; file=@strcat(@arg("out_file"), ".nc4")>;
-nc = combine(var_ncs, scenario_input, params);
+file combinelog <"combine.log">;
+(nc, combinelog) = combine(varNcs, scenarios, @arg("workdir"), params);

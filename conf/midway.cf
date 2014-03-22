@@ -10,6 +10,7 @@ config.rundirs=false
 foreach.max.threads=1536
 
 #app midway RunpSIMS=$rundir/../bin/RunpSIMS.sh
-#app midway-long-16 append=$rundir/../bin/append_ascii_par.sh
+#app midway append=$rundir/../bin/append.single.sh
+#app midway findParts=$rundir/../bin/findParts.sh
 #app midway-long-1 merge=$rundir/../bin/merge_ascii.sh
 #app midway-long-1 combine=$rundir/../bin/combine_ascii.sh

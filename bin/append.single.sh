@@ -3,7 +3,7 @@
 : '
 The usage is:
 
-  ./append.single.sh [lat] [var] [in_dir] [out_dir] [num_lons] [lon_delta] [num_years] [num_scenarios] [lon_zero]
+  ./append.single.sh [lat] [var] [in_dir] [out_dir] [params]
 
 where the input arguments are as follows:
 
@@ -11,11 +11,13 @@ lat: Latitude band to process
 var: Variable to process
 in_dir: Directory where part files are located
 out_dir: Directory to save output
-num_lons: Number of longitude points in spatial raster
-delta: Distance between each longitude grid cell in arcminutes
-num_years: Number of years in netcdf files
-num_scenarios: Number of scenarios in netcdf files
-lon_zero: Longitude of grid origin
+params: Script containing the following variables:
+
+	num_lons: Number of longitude points in spatial raster
+	delta: Distance between each longitude grid cell in arcminutes
+	num_years: Number of years in netcdf files
+	num_scenarios: Number of scenarios in netcdf files
+	lon_zero: Longitude of grid origin
 
 Example:
   ./append.single.sh 047 PDAT parts var_files 720 30 31 8 -180
@@ -37,16 +39,32 @@ append_missing() {
   done
 }
 
+# crash: Report a problem and exit
+crash()
+{
+    MSG=$1
+    echo ${MSG}  >&2
+    exit 1
+}
+
 # read inputs from command line
 lat=$1
 var=$2
 in_dir=$3
 out_dir=$4
-num_lons=$5
-delta=$6
-num_years=$7
-num_scenarios=$8
-lon_zero=$9
+params=$5
+
+# Initialize output directories
+if [ ! -d "$out_dir" ]; then
+   mkdir -p $out_dir || crash "Unable to mkdir $out_dir"
+fi
+
+if [ ! -f "$params" ]; then
+   crash "Unable to found params file $params"
+fi
+
+source $params
+num_scenarios=$scens
 
 # blank point
 blank_pt=""
@@ -68,6 +86,7 @@ files=(`find $in_dir/$lat -name \*.psims.nc | grep '[0-9]/[0-9]' | sort`)
 # iterate over files, filling in gaps
 next_lon=1
 for f in ${files[@]}; do
+  echo processing file $f
   # get longitude index
   lon=(`echo $f | egrep -o [0-9]+`)
   lon=`echo ${lon[1]} | sed 's/^0*//'` # remove leading zeros
@@ -78,7 +97,6 @@ for f in ${files[@]}; do
 
   # dump variable
   var_dump=`ncdump -v $var $f`
-
   # strip header and footer
   v=`echo $var_dump | sed "s/.*$var = \(.*\); }/\1/"`
   v=${v%?} # remove extra space

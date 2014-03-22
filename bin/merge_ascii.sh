@@ -4,13 +4,14 @@
 This script aggregates multiple single-gridpoint netcdf files into one big spatial
 raster netcdf file. The usage is:
 
-  ./merge_ascii.sh [batch] [num_vars_per_file] [file_dir] [params]
+  ./merge_ascii.sh [batch] [num_vars_per_file] [file_dir] [output_dir] [params]
 
 where the input arguments are as follows:
 
 batch: Batch number to run
 num_vars_per_file: Number of variables to store in each file
 file_dir: Directory from which to search for netcdf files, up to depth of two
+output_dir: Directory where the output will be stored
 params: psims params file (runNNN/params.psims)
 
 The params file should contain:
@@ -29,7 +30,7 @@ lon_zero: Longitude of grid origin
 out_file: Name of output file
 
 Example:
-  ./merge_ascii.sh 1 1 . params.psims
+  ./merge_ascii.sh 1 1 /path/to/input /path/to/output params.psims
 '
 
 # ================
@@ -121,7 +122,8 @@ append_missing() {
 batch=$1
 num_vars_per_file=$2
 file_dir=$3
-params=$4
+output_dir=$4
+params=$5
 
 source $params
 
@@ -216,12 +218,6 @@ temp_cdl_file="temp_file_"$batch".cdl"
 # create temporary file
 create_blank_cdl sub_vars[@] sub_long_names[@] sub_units[@] $temp_cdl_file
 
-# Extract intermediate tar files
-#find .
-for file in *.tar.gz; do
-   tar xvfz $file
-done
-
 # iterate through all variables
 for var in ${sub_vars[@]}; do
   echo "Appending variable "$var" . . ."
@@ -264,10 +260,11 @@ echo "}" >> $temp_cdl_file
 # convert to netcdf
 echo "Running ncgen . . ."
 if [ ${#sub_vars[@]} -eq 1 ]; then
-  fn=$out_file"."${sub_vars[@]}".nc4"
+  fn=$output_dir/$out_file"."${sub_vars[@]}".nc4"
 else
-  fn=$out_file"."$batch".nc4"
+  fn=$output_dir/$out_file"."$batch".nc4"
 fi
+echo Writing output to $fn
 time ncgen -k4 -o $fn $temp_cdl_file
 
 # remove temporary files

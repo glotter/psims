@@ -9,6 +9,7 @@ string gridLists[] = readData("gridList.txt");
 file scenario_input[] <filesys_mapper; location=@arg("campaign"), pattern="*">;
 file common_input[] <filesys_mapper; location=@arg("refdata"), pattern="*">;	
 file params <"params.psims">;
+tracef("\nCreating part files...\n");
 
 foreach g,i in gridLists {
 

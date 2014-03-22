@@ -49,6 +49,8 @@ fi
 sed -e '/^[[:space:]]*\(#.*\)*$/d' -e 's/#.*//' -e 's/  */=/' -e 's/^/export /' $paramfile > $rundir/params.psims
 source $rundir/params.psims
 export PATH=$PWD/bin:$PWD/tapps/pdssat:$PWD/tapps/papsim:$PATH
+export SWIFT_HEAP_MAX=5120M
+export SWIFT_USERHOME=$PWD
 
 # Check for work_directory location
 if [ -n "$work_directory" ]; then
@@ -108,24 +110,17 @@ do
    arguments="$arguments -$param=${!param}"
 done
 
-export SWIFT_HEAP_MAX=5120M
-export SWIFT_USERHOME=$PWD
-
 # Generate restart scripts
-echo "swift -sites.file sites.xml -tc.file tc.data -config cf -resume RunpSIMS*.rlog RunpSIMS.swift $arguments -workdir=$workdir 2>&1 | tee -a swift.out" > restart.sh
-echo "swift -sites.file sites.xml -tc.file tc.data -config cf -resume combine*.rlog combine.swift $arguments -workdir=$workdir 2>&1 | tee -a swift.out" > restart.combine.sh
+echo "swift -minimal.logging -sites.file sites.xml -tc.file tc.data -config cf -resume RunpSIMS*.rlog RunpSIMS.swift $arguments -workdir=$workdir 2>&1 | tee -a swift.out" > restart.sh
+echo "swift -minimal.logging -sites.file sites.xml -tc.file tc.data -config cf -resume combine*.rlog combine.swift $arguments -workdir=$workdir 2>&1 | tee -a swift.out" > restart.combine.sh
 chmod +x restart.sh restart.combine.sh
 
 # Generate parts
 gensites -p cf $rundir/../conf/$site.xml > sites.xml
-echo Generating part files...
-swift -sites.file sites.xml -tc.file tc.data -config cf RunpSIMS.swift $arguments -workdir=$workdir 2>&1 | tee swift.out
-echo -e "Done\n"
+swift -minimal.logging -sites.file sites.xml -tc.file tc.data -config cf RunpSIMS.swift $arguments -workdir=$workdir 2>&1 | tee -a swift.out
 
 # Post processing
-echo Post processing...
-swift -sites.file sites.xml -tc.file tc.data -config cf combine.swift $arguments -workdir=$workdir 2>&1 | tee -a swift.out
-echo -e "Done\n"
+swift -minimal.logging -sites.file sites.xml -tc.file tc.data -config cf combine.swift $arguments -workdir=$workdir 2>&1 | tee -a swift.out
 
 # Plots
 echo Generating plots...
