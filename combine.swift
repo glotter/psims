@@ -8,8 +8,8 @@ app (external e) merge (external[string][string] varsDone, int varNum, string fi
    merge varNum "1" fileDir outDir param;
 }
 
-app (file outfile, file l) combine (external inputs[], file scenarioInput[], string varDirectory, string param) {
-   combine varDirectory param stdout=@l;
+app (file outfile) combine (external inputs[], file scenarioInput[], string varDirectory, string param) {
+   combine varDirectory param;
 }
 
 app (file output) findParts (string workDir) {
@@ -38,11 +38,11 @@ foreach lat in lats {
 # Merge
 tracef("\nRunning merge...%k\n", varsCompleted);
 foreach v,i in variables {
-   varNcs[i] = merge(varsCompleted, i+1, partDir, @arg("workdir"), params);
+   varNcs[i] = merge(varsCompleted, i+1, varDir, @arg("workdir"), params);
 }
 
 # Combine 
 tracef("\nRunning combine...%k\n", varNcs);
-file nc <single_file_mapper; file=@strcat(@arg("out_file"), ".nc4")>;
-file combinelog <"combine.log">;
-(nc, combinelog) = combine(varNcs, scenarios, @arg("workdir"), params);
+file finalNC4 <single_file_mapper; file=@strcat(@arg("out_file"), ".nc4")>;
+finalNC4 = combine(varNcs, scenarios, @arg("workdir"), params);
+
