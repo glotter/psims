@@ -8,7 +8,7 @@ app (file tar_out, file part_out) RunpSIMS (string latidx, string lonidx, string
 string gridLists[] = readData("gridList.txt");
 file scenario_input[] <filesys_mapper; location=@arg("campaign"), pattern="*">;
 file common_input[] <filesys_mapper; location=@arg("refdata"), pattern="*">;	
-file params <"params.psims">;
+file params <single_file_mapper; file=@strcat(@arg("workdir"), "/params.psims")>;
 tracef("\nCreating part files...\n");
 
 foreach g,i in gridLists {

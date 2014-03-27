@@ -109,7 +109,6 @@ create_blank_cdl() {
 append_missing() {
   local lat1=$1
   local lat2=$2
-
   for ((k = $lat1; k <= $lat2; k++)); do
     cat $blank_lat_file >> $temp_cdl_file
     if [ $k -ne $num_lats ]; then
@@ -126,6 +125,10 @@ output_dir=$4
 params=$5
 
 source $params
+
+if [ ! -d "$output_dir" ]; then
+   mkdir -p $output_dir
+fi
 
 # parse variables into array
 OLD_IFS=$IFS
@@ -195,6 +198,7 @@ blank_pt=${blank_pt%??} # remove extra comma and space
 # create blank latitude band file
 blank_lat_file="blank_lat_file_"$batch".txt"
 touch $blank_lat_file
+echo from 1 to $num_lons
 for ((i = 1; i <= $num_lons; i++)); do
   if [ $i -eq $num_lons ]; then
     echo -n $blank_pt >> $blank_lat_file # no comma, no newline
@@ -233,6 +237,7 @@ for var in ${sub_vars[@]}; do
     grid1=`echo $f | sed "s/.*_\(.*\).txt/\1/"`
     grid1=`echo $grid1 | sed 's/^0*//'` # remove leading zeros
     grid1=$(($grid1-$lat0_off))
+    echo Grid1 is $grid1
 
     # insert missing latitudes, if necessary
     append_missing $next_lat $((grid1-1))
@@ -268,7 +273,7 @@ echo Writing output to $fn
 time ncgen -k4 -o $fn $temp_cdl_file
 
 # remove temporary files
-rm $blank_lat_file
-rm $temp_cdl_file
+#rm $blank_lat_file
+#rm $temp_cdl_file
 
 echo "Done!"
