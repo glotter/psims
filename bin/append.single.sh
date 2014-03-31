@@ -86,11 +86,11 @@ files=(`find $in_dir/$lat -name \*.psims.nc | grep '[0-9]/[0-9]' | sort`)
 # iterate over files, filling in gaps
 next_lon=1
 for f in ${files[@]}; do
-  echo processing file $f
   # get longitude index
-  lon=(`echo $f | egrep -o [0-9]+`)
-  lon=`echo ${lon[1]} | sed 's/^0*//'` # remove leading zeros
+  lon=$( basename $f | egrep -o [0-9]+ )
+  lon=`echo $lon | sed 's/^0*//'` # remove leading zeros
   lon=$(($lon-$lon0_off))
+  echo Processing file $f, lon $lon
 
   # insert missing longitudes, if necessary
   append_missing $next_lon $((lon-1))
