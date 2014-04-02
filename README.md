@@ -22,10 +22,13 @@ The "psims" script is used to start a pSIMS run. The options you pass to
 this script will determine which pSIMS runs will be done (including which models) 
 and where they will run.
 
-Usage: psims [-s sitename] [-p paramfile] [-g gridlist] [ -t test_result_directory ]
+Usage: ./psims -s sitename -p paramfile -g gridlist [ -t test_result_directory ]
 
 The sitename option determines where a run will take place. Currently, valid 
-options are "midway" and "local".
+options are "midway" and "local". The "midway" site is the Midway cluster at 
+the University of Chicago. The "local" site assumes a fairly powerful 12 core 
+machine (like swift.rcc.uchicago.edu). Please do not run with local on a shared 
+head node as it will completely saturate the system.
 
 The params file defines the path to inputs, outputs, the type of model to run, and
 what post processing steps need to happen.
@@ -148,6 +151,6 @@ the load on the project filesystem.
 
 Test data exists in the /project/joshuaelliott filesystem. You can run the following commands to test running the apsim and dssat models:
 
-$ ./psims -s midway -g /project/joshuaelliott/testing/psims.testing/gridlists/dssat45.100 -p /project/joshuaelliott/testing/psims.testing/params/dssat45 -t /project/joshuaelliott/testing/psims.testing/results/dssat45   
+$ ./psims -s midway -g /project/joshuaelliott/testing/psims/gridlists/dssat45.100 -p /project/joshuaelliott/testing/psims/params/dssat45 -t /project/joshuaelliott/testing/psims/results/dssat45   
 
-$ ./psims -s midway -g /project/joshuaelliott/testing/psims.testing/gridlists/apsim75.100 -p /project/joshuaelliott/testing/psims.testing/params/apsim75 -t /project/joshuaelliott/testing/psims.testing/results/apsim75
+$ ./psims -s midway -g /project/joshuaelliott/testing/psims/gridlists/apsim75.100 -p /project/joshuaelliott/testing/psims/params/apsim75 -t /project/joshuaelliott/testing/psims/results/apsim75
