@@ -49,8 +49,9 @@ var_lists = od([('SRAD', ['solar', 'rad', 'rsds', 'srad']), \
                 ('RHUM', ['rhum', 'hur']), \
                 ('VAPR', ['vap', 'vapr'])])
 var_names = array(var_lists.keys())
-unit_names = array([['mj/m^2', 'mj/m2', 'mjm-2'], ['oc', 'degc'], ['oc', 'degc'], \
-                    ['mm'], ['kmday-1', 'km/day', 'kmdy-1', 'km/dy'], ['oc', 'degc'], \
+unit_names = array([['mj/m^2', 'mj/m2', 'mjm-2', 'mjm-2day-1', 'mjm-2d-1', 'mj/m^2/day', 'mj/m2/day'], \
+                    ['oc', 'degc', 'c'], ['oc', 'degc', 'c'], ['mm', 'mm/day'], \
+                    ['kmday-1', 'km/day', 'kmdy-1', 'km/dy'], ['oc', 'degc'], \
                     ['mjm-2day-1', 'mjm-2dy-1', 'mj/m^2/day', 'mj/m2/day', 'mj/m2/dy'], \
                     ['%'], ['kpa']])
 nt = len(time)
