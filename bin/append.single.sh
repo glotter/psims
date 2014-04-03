@@ -12,12 +12,10 @@ var: Variable to process
 in_dir: Directory where part files are located
 out_dir: Directory to save output
 params: Script containing the following variables:
-
-	num_lons: Number of longitude points in spatial raster
-	delta: Distance between each longitude grid cell in arcminutes
-	num_years: Number of years in netcdf files
-	num_scenarios: Number of scenarios in netcdf files
-	lon_zero: Longitude of grid origin
+  num_lons: Number of longitude points in spatial raster
+  delta: Distance between each longitude grid cell in arcminutes
+  lon_zero: Longitude of grid origin
+  num_years: Number of years in netcdf files
 
 Example:
   ./append.single.sh 047 PDAT parts var_files 720 30 31 8 -180
@@ -39,12 +37,12 @@ append_missing() {
   done
 }
 
-# crash: Report a problem and exit
+# crash: report a problem and exit
 crash()
 {
-    MSG=$1
-    echo ${MSG}  >&2
-    exit 1
+  MSG=$1
+  echo ${MSG}  >&2
+  exit 1
 }
 
 # read inputs from command line
@@ -54,7 +52,10 @@ in_dir=$3
 out_dir=$4
 params=$5
 
-# Initialize output directories
+# replace colons with underscores in the variable name
+var=$(echo $var | sed s/:/'_'/g)
+
+# initialize output directories
 if [ ! -d "$out_dir" ]; then
    mkdir -p $out_dir || crash "Unable to mkdir $out_dir"
 fi
@@ -63,15 +64,8 @@ if [ ! -f "$params" ]; then
    crash "Unable to found params file $params"
 fi
 
+# load parameter file options
 source $params
-num_scenarios=$scens
-
-# blank point
-blank_pt=""
-for ((i = 0; i < $(($num_years*$num_scenarios)); i++)); do
-  blank_pt=$blank_pt"1e20, "
-done
-blank_pt=${blank_pt%??} # remove extra comma and space
 
 # calculate lon0 offset of grid into global grid
 lon0_off=$(echo "60*($lon_zero+180)/$delta" | bc)
@@ -82,6 +76,16 @@ touch $out_file
 
 # find all files in directory
 files=(`find $in_dir/$lat -name \*.psims.nc | grep '[0-9]/[0-9]' | sort`)
+
+# read number of scenarios from first file
+num_scenarios=$(ncdump -h ${files[0]} | sed -n 's/scenario = \([0-9]\+\).*/\1/p')
+
+# blank point
+blank_pt=""
+for ((i = 0; i < $(($num_years*$num_scenarios)); i++)); do
+  blank_pt=$blank_pt"1e20, "
+done
+blank_pt=${blank_pt%??} # remove extra comma and space
 
 # iterate over files, filling in gaps
 next_lon=1

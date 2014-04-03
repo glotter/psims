@@ -52,7 +52,11 @@ run_command_redirect() {
 # This file is a single netcdf file that contains arbitary number of variables 
 # that must be changed spatially in the experiment files. The experiment 
 # file is model agnostic and always called experiment.json. 
-tappcamp="$( echo $tappcamp | sed s/:/' '/g ) --latidx $latidx --lonidx $lonidx --ref_year $ref_year --delta $delta --nyers $num_years --nscens $scens" 
+if [ "$model" == "cenw" ] ; then
+   tappcamp="$( echo $tappcamp | sed s/:/' '/g ) --latidx $latidx --lonidx $lonidx --ref_year $ref_year --delta $delta --nyers $num_years"
+else
+   tappcamp="$( echo $tappcamp | sed s/:/' '/g ) --latidx $latidx --lonidx $lonidx --ref_year $ref_year --delta $delta --nyers $num_years --nscens $scens" 
+fi
 run_command $tappcamp
 
 ###############################################################################
@@ -80,7 +84,7 @@ for file in *.psims.nc; do
 done
 
 #########################################################
-################# Run the impact model #################
+################# Run the impact model ##################
 executable=$( echo $executable | sed s/:/' '/g )
 
    ###########
@@ -107,30 +111,24 @@ fi
    ##########
    # CENW40 #
 if [ "$model" == "cenw" ]; then
-   mv CenW.CL! CenW-T.CL!
-   for tt in {0..95..5} ; do
-      let "tlin = ( 129 - $tt )*1461/4"
-      lin=$( printf "%0.f\n" $tlin )
-      tailcom="tail -$lin CenW-T.CL! "
-      $tailcom > CenW.CL!
-      for cap in {1..7} ; do
-         tail -3652 CenW-T.CL! >> CenW.CL!
-      done
-      for hh in {1..9} ; do
-         cp PJHead.TMP CenW.PJ!
-         cat Scene-$hh.PJ! >> CenW.PJ!
-         run_command_redirect RESULT-T.OUT ./$commandToRun
-         echo "Scenario $hh planting year $tt" >> RESULT.OUT
-         cat RESULT-T.OUT >> RESULT.OUT
-         rm RESULT-T.OUT
-         if [ $tt -eq 0 -a $hh -eq 1  ] ; then
-            head -105 CenW.DT! > CenW-101.DT!
-         else
-            tail -102 CenW.DT! | head -101 >> CenW-101.DT!
-         fi
-         rm CenW.DT!
-      done
+ commandToRun="$executable"
+ nCL=$(ls CenW[0-9+]*.CL! | wc -l)
+ nPJ=$(ls CenW[0-9+]*.PJ! | wc -l) 
+ for cl in $(eval echo CenW{1..$nCL}.CL\!); do
+   cp $cl CenW.CL!
+   for pj in $(eval echo CenW{1..$nPJ}.PJ\!); do   
+     cp $pj CenW.PJ!
+     run_command_redirect RESULT-T.OUT $commandToRun
+     echo "$pj with $cl" >> RESULT.OUT
+     cat RESULT-T.OUT >> RESULT.OUT
+     rm RESULT-T.OUT
+     if [ "$cl" == "CenW1.CL!" -a "$pj" == "CenW1.PJ!" ] ; then
+      head -4 CenW.DT! > CenWAll.DT!
+     fi
+     tail -51 CenW.DT! | head -50 >> CenWAll.DT!
+     rm CenW.DT!
    done
+ done
 fi
 
 # Tar and compress output

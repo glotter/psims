@@ -6,7 +6,11 @@ params=$2
 echo input_dir: $input_dir
 echo params: $params
 
+# load parameter file options
 source $params
+
+# replace colons with underscores in the variable names
+variables=$(echo $variables | sed s/:/'_'/g)
 
 OLD_IFS=$IFS
 IFS=',' 
@@ -27,5 +31,5 @@ for ((i = 1; i < $num_vars; i++)); do
    ncks -A -h ${psims_files[$i]} $final_file
 done
 
-echo "Appending campaign file..."
-ncks -A -h Campaign.nc4 $final_file
+# echo "Appending campaign file..."
+# ncks -A -h Campaign.nc4 $final_file

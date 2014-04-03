@@ -48,7 +48,7 @@ fi
 
 sed -e '/^[[:space:]]*\(#.*\)*$/d' -e 's/#.*//' -e 's/  */=/' -e 's/^/export /' $paramfile > $rundir/params.psims
 source $rundir/params.psims
-export PATH=$PWD/bin:$PWD/tapps/pdssat:$PWD/tapps/papsim:$PATH
+export PATH=$PWD/bin:$PWD/tapps:$PWD/tapps/pdssat:$PWD/tapps/papsim:$PWD/tapps/pcenw:$PWD/tapps/pepic:$PATH
 export SWIFT_HEAP_MAX=5120M
 export SWIFT_USERHOME=$PWD
 

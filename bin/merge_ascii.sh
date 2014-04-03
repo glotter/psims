@@ -23,7 +23,6 @@ num_lons: Number of longitude points in spatial raster
 num_lats: Number of latitude points in spatial raster
 delta: Distance(s) between each latitude/longitude grid cell in arcminutes
 num_years: Number of years in netcdf files
-scens: Number of scenarios in netcdf files
 ref_year: Reference year for times in netcdf files
 lat_zero: Latitude of grid origin
 lon_zero: Longitude of grid origin
@@ -124,7 +123,11 @@ file_dir=$3
 output_dir=$4
 params=$5
 
+# load parameter file options
 source $params
+
+# replace colons with underscores in the variable names
+variables=$(echo $variables | sed s/:/'_'/g)
 
 if [ ! -d "$output_dir" ]; then
    mkdir -p $output_dir
@@ -187,6 +190,11 @@ done
 
 # calculate lat0 offset of grid into global grid
 lat0_off=$(echo "60*(90-$lat_zero)/$latdelta" | bc)
+
+# calculate number of scenarios from first file
+first_file=$(ls $file_dir/* | sort -n | head -1)
+size_block=$(head -1 $first_file | grep -o , | wc -l)
+scens=$(($size_block/$num_years))
 
 # create blank point (time, scenario) grid
 blank_pt=""
@@ -273,7 +281,7 @@ echo Writing output to $fn
 time ncgen -k4 -o $fn $temp_cdl_file
 
 # remove temporary files
-#rm $blank_lat_file
-#rm $temp_cdl_file
+# rm $blank_lat_file
+# rm $temp_cdl_file
 
 echo "Done!"
