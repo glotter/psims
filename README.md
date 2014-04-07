@@ -156,6 +156,7 @@ the load on the project filesystem.
 
 Test data exists in the /project/joshuaelliott filesystem. You can run the following commands to test running the apsim and dssat models:
 
-$ ./psims -s midway -g /project/joshuaelliott/testing/psims/gridlists/dssat45.100 -p /project/joshuaelliott/testing/psims/params/dssat45 -t /project/joshuaelliott/testing/psims/results/dssat45   
+$ ./psims -s midway -g /project/joshuaelliott/testing/psims/acceptance/gridlists/dssat45.100 -p /project/joshuaelliott/testing/psims/acceptance/params/dssat45 -t /project/joshuaelliott/testing/psims/acceptance/results/dssat45
 
-$ ./psims -s midway -g /project/joshuaelliott/testing/psims/gridlists/apsim75.100 -p /project/joshuaelliott/testing/psims/params/apsim75 -t /project/joshuaelliott/testing/psims/results/apsim75
+$ ./psims -s midway -g /project/joshuaelliott/testing/psims/acceptance/gridlists/apsim75.100 -p /project/joshuaelliott/testing/psims/acceptance/params/apsim75 -t /project/joshuaelliott/testing/psims/acceptance/results/apsim75
+
