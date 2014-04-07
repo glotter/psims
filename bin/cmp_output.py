@@ -1,45 +1,16 @@
 #!/usr/bin/python
 
-import filecmp
 import os
 import sys
-import tarfile
 import hashlib
 
-# Given a tar file, return a list of checksums for files contained within
-def tar_checksums(tar_fn):
-    tar = tarfile.open(tar_fn)
-    sums = {} 
-    chunk = 1024*1024
-    for member in tar:
-        if not member.isfile():
-            continue
-        f = tar.extractfile(member)
-        h = hashlib.md5()
-        data = f.read(chunk)
-        while data:
-            h.update(data)
-            data = f.read(chunk)
-        sums[member.name] = h.hexdigest()
-    return sums
-
-# Compare two tar files (return True if they're identical)
-def tarcmp(tar1, tar2):
-   tar1_sums = tar_checksums(tar1)
-   tar2_sums = tar_checksums(tar2)
-   retval = True
-
-   for key in set(tar1_sums.keys()).union(tar2_sums.keys()):
-       if key not in tar1_sums:
-           print "%s doesn't contain file %s" % (tar1, key)
-           retval = False
-       elif key not in tar2_sums:
-           print "%s doesn't contain file %s" % (tar2, key)
-           retval = False
-       elif tar1_sums[key] != tar2_sums[key]:
-           print "File %s (in %s) differs" % (key, os.path.basename(tar1))
-           retval = False
-   return retval
+# Given a filename, generate md5 sum
+def md5sum(filename, blocksize=1048576):
+    hash = hashlib.md5()
+    with open(filename, "r+b") as f:
+        for block in iter(lambda: f.read(blocksize), ""):
+            hash.update(block)
+    return hash.hexdigest()
 
 # Command line arguments
 if len(sys.argv) != 3:
@@ -48,25 +19,30 @@ if len(sys.argv) != 3:
 run_dir  = os.path.normpath(sys.argv[1])
 test_dir = os.path.normpath(sys.argv[2])
 
-# Verify test.txt exists
-test_fn = os.path.join(test_dir, "test.txt")
-if not os.path.isfile(test_fn):
-	sys.exit("Error: Unable to find test file %s" % test_file_fn)
-test_file = open(test_fn, "r")
+# Dictionary containing md5 checksums
+test_sums={}
+
+# Read test_dir/test.txt and store values in dict
+testlist = open(os.path.join(test_dir, "test.txt"), "r")
+for line in iter(testlist):
+    [filename, checksum] = line.split()
+    test_sums[filename] = checksum;
 
 # Compare files in test.txt
 ec = 0
-for fn in iter(test_file):  
-   fn = fn.rstrip()
-   filecmp1 = os.path.abspath(os.path.join(test_dir, fn))
-   filecmp2 = os.path.abspath(os.path.join(run_dir, fn))
+for fn, checksum in test_sums.iteritems():
+    fn = fn.rstrip()
+    run_file_path = os.path.abspath(os.path.join(run_dir, fn))
 
-   if fn.endswith(".tar.gz"):
-      if not tarcmp(filecmp1, filecmp2):
-         ec=1
-   else:
-       if not filecmp.cmp(filecmp1, filecmp2):
-           ec=1
-           print "File %s does not match!" % filecmp2
+    if not os.path.isfile(run_file_path):
+        print "File %s was not created in run directory" % fn  
+        ec = 1
+        continue
+
+    run_file_sum = md5sum(run_file_path)
+
+    if test_sums[fn] != run_file_sum:
+        print "File %s generated an incorrect checksum" % fn
+        ec = 1
 
 sys.exit(ec)

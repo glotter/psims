@@ -76,8 +76,13 @@ work_directory| Defines a directory to read and write intermediate data (optiona
 Testing results
 ===============
 The -t option allows you to compare the result of your current run to a known good result. The result directory
-should contain a file called test.txt. The test.txt file contains a list of files that will be compared via md5 checksum
-at the end of the run.
+should contain a file called test.txt. The test.txt file contains a list of files and their md5 checksums. Here is an example
+of a test.txt file:
+
+parts/200/227.psims.nc 8344c87c173f428b134f61d7abc3f485
+parts/200/228.psims.nc 1ecde2bf35ee7b8b39177c6e6cf0aea2
+
+The actual test output files are not needed - the only file that gets read from the test directory is the test.txt file.
 
 Gridlist Format
 ===============
