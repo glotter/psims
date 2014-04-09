@@ -1,5 +1,6 @@
 #!/bin/bash -x
 
+
 latidx=$1
 lonidx=$2
 tar_out=$3
@@ -149,5 +150,7 @@ if [ _$postprocess != __ ]; then
  run_command $postprocessToRun
  exit_status=$?
 fi
+
+echo Ran on node $( hostname ) in working directory $PWD
 
 exit 0
