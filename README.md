@@ -131,6 +131,16 @@ Another place to look is the runNNN/*.d directory. An info log file should exist
 the stdout and stderr output of RunpSIMS.sh. Each significant command should be logged with a timestamp so you can track the progress and get a
 better idea of what's happening.
 
+When a task fails, the data is kept in tact for further analysis. On the midway cluster, this is stored on the local scratch disk on a worker node.
+When the error message is printed, it will contain the node hostname and directory. For example:
+
+Ran on node midway211 in working directory /scratch/local/davidkelly999/psims.work/u/RunpSIMS-uzqdnzol
+
+To view the data, you must connect to the node and change to the directory mentioned. On midway, you can connect to a specific node with the
+following command:
+
+$ sinteractive -n 1 --nodelist=midway403
+
 Restarting failed runs
 ======================
 There may be times when a psims run fails. Failures may be caused by problems with the data, the hardware, or with any of
