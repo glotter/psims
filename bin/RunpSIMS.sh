@@ -1,5 +1,6 @@
 #!/bin/bash -x
 
+echo Ran on node $( hostname ) in working directory $PWD
 
 latidx=$1
 lonidx=$2
@@ -151,6 +152,5 @@ if [ _$postprocess != __ ]; then
  exit_status=$?
 fi
 
-echo Ran on node $( hostname ) in working directory $PWD
 
 exit 0
